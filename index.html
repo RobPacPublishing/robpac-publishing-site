@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness</title>
+    <meta name="title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta name="description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta name="keywords" content="independent publisher, self-help books, fiction novels, diet cookbooks, psychology books, Amazon KDP, free book chapters, wellness guides">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="RobPac Publishing">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.robpacpublishing.com/">
+    <meta property="og:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta property="og:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta property="og:image" content="https://www.robpacpublishing.com/assets/banner-landpage2.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.robpacpublishing.com/">
+    <meta property="twitter:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta property="twitter:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/banner-landpage2.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.robpacpublishing.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo3senzasfondo.png">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RobPac Publishing",
+        "url": "https://www.robpacpublishing.com",
+        "logo": "https://www.robpacpublishing.com/assets/logo3senzasfondo.png",
+        "description": "Independent publishing house delivering quality content across fiction, self-help, health, and specialized non-fiction with over 100 titles on Amazon KDP.",
+        "sameAs": [
+            "https://www.facebook.com/robpacpublishing",
+            "https://www.instagram.com/robpacpublishing",
+            "https://twitter.com/robpacpublish"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@robpacpublishing.com",
+            "contactType": "Customer Service"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "RobPac Publishing",
+        "url": "https://www.robpacpublishing.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.robpacpublishing.com/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .book-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(255,215,0,0.3);
+        }
+        
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); }
+            50% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+        }
+        
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .carousel-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- STICKY NOTIFICATION BAR -->
+    <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-2 text-center text-sm font-semibold">
+        🎉 New Releases Available! Get Your Free Chapter Today → <button onclick="openModal()" class="underline hover:text-amber-100">Click Here</button>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56">
+                    <div>
+                        <h1 class="text-2xl font-bold heading-font text-amber-700">RobPac Publishing</h1>
+                        <p class="text-xs text-gray-500">Independent Publishing House</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Go to homepage">Home</a>
+                    <a href="#featured" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="View featured books">Featured</a>
+                    <a href="#books" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Browse all books">All Books</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Learn about us">About</a>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition shadow-md" aria-label="Get free book chapter">
+                        Free Chapter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER SECTION -->
+    <header id="home" class="relative overflow-hidden">
+        <!-- Original Banner Background -->
+        <div class="relative w-full" style="height: 450px;">
+            <img src="assets/banner-landpage2.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
+            
+            <!-- Logo Position (Top Left) -->
+            <div class="absolute top-8 left-8 z-20 hidden md:block">
+                <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing circular logo" class="h-24 w-24 drop-shadow-2xl" width="96" height="96">
+            </div>
+            
+            <!-- Center Content Overlay -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+                <!-- Title Image -->
+                <img src="assets/robpac-title.png" alt="RobPac Publishing - Independent Book Publisher" class="mb-4 drop-shadow-2xl" style="max-width: 650px; width: 90%;" loading="eager">
+                
+                <!-- Subtitle Image -->
+                <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips - Browse 100+ titles" class="mb-8 drop-shadow-lg" style="max-width: 750px; width: 90%;">
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                    <button onclick="openModal()" class="bg-white text-amber-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-50 transition shadow-2xl cta-pulse transform hover:scale-105" aria-label="Download free book chapter now">
+                        📖 Get Free Chapter Now
+                    </button>
+                    <a href="#books" class="bg-amber-900/80 backdrop-blur-sm border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-900 transition text-center shadow-2xl" aria-label="Browse catalog of 100+ books">
+                        Browse 100+ Books
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-white text-sm drop-shadow-lg font-semibold">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>No Credit Card</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>Instant Access</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>100+ Books</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BADGES -->
+    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-12 text-center">
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">100+</p>
+                    <p class="text-sm text-gray-600 font-medium">Books Published</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">🌍</p>
+                    <p class="text-sm text-gray-600 font-medium">Available Worldwide</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">📚</p>
+                    <p class="text-sm text-gray-600 font-medium">Amazon KDP</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">✓</p>
+                    <p class="text-sm text-gray-600 font-medium">Quality Guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED BOOKS CAROUSEL -->
+    <section id="featured" class="py-20 bg-gradient-to-b from-white to-gray-50" aria-labelledby="featured-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="badge mb-4 inline-block">Featured Selection</span>
+                <h2 id="featured-heading" class="text-4xl lg:text-5xl font-bold heading-font text-gray-900 mb-4">Bestselling Titles</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Explore our most popular books across multiple genres
+                </p>
+            </div>
+
+            <div class="relative">
+                <div class="carousel gap-6 pb-8" id="featuredCarousel">
+                    <!-- Featured Book 1 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer" onclick="openBookModal(0)">
+                            <div class="relative">
+                                <img src="covers/The dark side of charisma.jpg" alt="The Dark Side of Charisma" class="w-full h-[450px] object-cover">
+                                <div class="absolute top-4 right-4">
+                                    <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full mb-3">Psychology</span>
+                                <h3 class="font-bold text-xl mb-2">The Dark Side of Charisma</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Ryan Walker</p>
+                                <p class="text-gray-600 text-sm mb-4">Uncover the hidden manipulation tactics...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 2 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer" onclick="openBookModal(1)">
+                            <div class="relative">
+                                <img src="covers/Whisper in the abyss.jpeg" alt="Whispers in the Abyss" class="w-full h-[450px] object-cover">
+                                <div class="absolute top-4 right-4">
+                                    <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">NEW</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full mb-3">Fiction</span>
+                                <h3 class="font-bold text-xl mb-2">Whispers in the Abyss</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Jackson Blackwood</p>
+                                <p class="text-gray-600 text-sm mb-4">A symphony of realities...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 3 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer" onclick="openBookModal(3)">
+                            <div class="relative">
+                                <img src="covers/Carnivore diet cookbook    USA.jpg" alt="Carnivore Diet Cookbook" class="w-full h-[450px] object-cover">
+                                <div class="absolute top-4 right-4">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">POPULAR</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full mb-3">Diet</span>
+                                <h3 class="font-bold text-xl mb-2">Carnivore Diet Cookbook</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Jordan Prescott</p>
+                                <p class="text-gray-600 text-sm mb-4">Revitalize your health...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 4 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer" onclick="openBookModal(10)">
+                            <div class="relative">
+                                <img src="covers/MINDFULNESS per principianti    ITA.jpg" alt="Mindfulness for Beginners" class="w-full h-[450px] object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-teal-100 text-teal-600 text-xs px-3 py-1 rounded-full mb-3">Self-Help</span>
+                                <h3 class="font-bold text-xl mb-2">Mindfulness for Beginners</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Sarah Mitchell</p>
+                                <p class="text-gray-600 text-sm mb-4">Start your mindfulness journey...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 5 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <div class="relative">
+                                <img src="covers/Mediterranean diet cookbook.jpg" alt="Mediterranean Cookbook" class="w-full h-[450px] object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-yellow-100 text-yellow-600 text-xs px-3 py-1 rounded-full mb-3">Cookbook</span>
+                                <h3 class="font-bold text-xl mb-2">Mediterranean Cookbook</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Elena Romano</p>
+                                <p class="text-gray-600 text-sm mb-4">Authentic Mediterranean recipes...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 6 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <div class="relative">
+                                <img src="covers/Ketogenic diet.jpg" alt="Keto Diet" class="w-full h-[450px] object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full mb-3">Diet</span>
+                                <h3 class="font-bold text-xl mb-2">Ketogenic Diet</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Maria Stevens</p>
+                                <p class="text-gray-600 text-sm mb-4">Transform your health with keto...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 7 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <div class="relative">
+                                <img src="covers/Dark psychology and manipulation_ mastering the hidden arts.jpeg" alt="Dark Psychology" class="w-full h-[450px] object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full mb-3">Psychology</span>
+                                <h3 class="font-bold text-xl mb-2">Dark Psychology</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Thomas Danielson</p>
+                                <p class="text-gray-600 text-sm mb-4">Master the hidden arts...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Book 8 -->
+                    <div class="carousel-item w-80">
+                        <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer">
+                            <div class="relative">
+                                <img src="covers/The art of letting go.jpg" alt="The Art of Letting Go" class="w-full h-[450px] object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="inline-block bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full mb-3">Self-Help</span>
+                                <h3 class="font-bold text-xl mb-2">The Art of Letting Go</h3>
+                                <p class="text-gray-500 text-sm mb-3">by Jennifer Moore</p>
+                                <p class="text-gray-600 text-sm mb-4">Free yourself from past burdens...</p>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-2xl rounded-full p-4 hover:bg-gray-50 transition z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-2xl rounded-full p-4 hover:bg-gray-50 transition z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE CHAPTER CTA BANNER -->
+    <section class="bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600 py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-6xl mb-4">🎁</div>
+            <h2 class="text-4xl lg:text-5xl font-bold heading-font text-white mb-4">
+                Start Reading for Free
+            </h2>
+            <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Get instant access to a free chapter from any book. No credit card required.
+            </p>
+            <button onclick="openModal()" class="bg-white text-purple-600 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl transform hover:scale-105 cta-pulse">
+                Get Your Free Chapter Now
+            </button>
+            <p class="text-purple-200 text-sm mt-6">🔒 Your email is safe with us. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- FULL CATALOG -->
+    <section id="books" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold heading-font text-gray-900 mb-4">Complete Book Catalog</h2>
+                <p class="text-xl text-gray-600">Browse all 70+ titles across multiple categories</p>
+            </div>
+
+            <!-- SEARCH & FILTERS -->
+            <div class="max-w-4xl mx-auto mb-12 space-y-6">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search by title, author, or keyword..." class="w-full px-6 py-5 border-2 border-gray-300 rounded-2xl focus:outline-none focus:border-amber-600 text-lg shadow-sm">
+                    <button onclick="searchBooks()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-amber-600 text-white px-8 py-3 rounded-xl hover:bg-amber-700 font-semibold transition">
+                        Search
+                    </button>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="filterBooks('all')" class="filter-btn px-6 py-3 bg-amber-600 text-white rounded-full font-semibold hover:bg-amber-700 transition shadow-md">All Books</button>
+                    <button onclick="filterBooks('psychology')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Psychology</button>
+                    <button onclick="filterBooks('fiction')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Fiction</button>
+                    <button onclick="filterBooks('self-help')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Self-Help</button>
+                    <button onclick="filterBooks('diet')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Diet & Health</button>
+                    <button onclick="filterBooks('cookbook')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Cookbooks</button>
+                    <button onclick="filterBooks('wellness')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Wellness</button>
+                    <button onclick="filterBooks('business')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Business</button>
+                    <button onclick="filterBooks('children')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Children</button>
+                    <button onclick="filterBooks('hobby')" class="filter-btn px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition">Hobbies</button>
+                </div>
+            </div>
+
+            <!-- BOOKS GRID -->
+            <div id="booksGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 mb-12">
+                <!-- Books will be dynamically loaded here -->
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="flex justify-center items-center gap-4">
+                <button class="px-6 py-3 border-2 border-gray-300 rounded-xl hover:bg-gray-50 font-semibold transition disabled:opacity-50" disabled>Previous</button>
+                <div class="flex gap-2">
+                    <button class="px-5 py-3 bg-amber-600 text-white rounded-xl font-semibold">1</button>
+                    <button class="px-5 py-3 border-2 border-gray-300 rounded-xl hover:bg-gray-50 font-semibold">2</button>
+                    <button class="px-5 py-3 border-2 border-gray-300 rounded-xl hover:bg-gray-50 font-semibold">3</button>
+                </div>
+                <button class="px-6 py-3 border-2 border-gray-300 rounded-xl hover:bg-gray-50 font-semibold transition">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold heading-font text-gray-900 mb-4">What Readers Say</h2>
+                <p class="text-xl text-gray-600">Real reviews from satisfied readers</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        "The quality of these books is outstanding. I've purchased several titles and each one has exceeded my expectations."
+                    </p>
+                    <p class="font-bold">— Sarah M.</p>
+                    <p class="text-sm text-purple-200">Amazon Verified Purchase</p>
+                </div>
+
+                <div class="testimonial-card rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        "Great variety of topics. Whether I'm looking for fiction or self-improvement, I always find something valuable."
+                    </p>
+                    <p class="font-bold">— Michael R.</p>
+                    <p class="text-sm text-purple-200">Amazon Verified Purchase</p>
+                </div>
+
+                <div class="testimonial-card rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        "The free chapter offer convinced me to try, and now I'm a regular reader. Highly recommended!"
+                    </p>
+                    <p class="font-bold">— Jennifer L.</p>
+                    <p class="text-sm text-purple-200">Newsletter Subscriber</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl h-96 flex items-center justify-center shadow-2xl">
+                    <div class="text-center text-white">
+                        <div class="text-8xl mb-4">📚</div>
+                        <p class="font-bold text-4xl heading-font">RobPac Publishing</p>
+                        <p class="text-amber-100 mt-3 text-xl">Est. 2020</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold heading-font text-gray-900 mb-6">About RobPac Publishing</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        We are an independent publishing house committed to delivering quality content across diverse genres. 
+                        With over 100 titles on Amazon KDP, we collaborate with talented authors to bring engaging stories 
+                        and valuable knowledge to readers worldwide.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Our catalog spans fiction, self-help, health and wellness, cookbooks, business strategy, and more. 
+                        Each title is carefully selected to provide readers with either compelling narratives or actionable 
+                        insights that create real impact.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">📖</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">100+ Published Titles</h3>
+                                <p class="text-gray-600">Across major categories and genres</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🌍</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Global Distribution</h3>
+                                <p class="text-gray-600">Available worldwide via Amazon KDP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Quality Commitment</h3>
+                                <p class="text-gray-600">Dedicated to reader satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-600 hover:to-orange-700 transition shadow-lg">
+                        Join Our Reader Community
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold heading-font text-white mb-6">
+                Ready to Start Reading?
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join thousands of readers who have discovered their next favorite book with RobPac Publishing
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openModal()" class="bg-white text-purple-900 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                    📖 Get Free Chapter
+                </button>
+                <a href="#books" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition">
+                    Browse All Books
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="col-span-2">
+                    <h3 class="text-3xl font-bold heading-font mb-4">RobPac Publishing</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Independent publishing house delivering quality content worldwide. 
+                        Over 100 titles across fiction, self-help, health, and more.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📘</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📷</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">🐦</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#featured" class="hover:text-white transition">Featured Books</a></li>
+                        <li><a href="#books" class="hover:text-white transition">All Books</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Categories</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Fiction & Literature</a></li>
+                        <li><a href="#" class="hover:text-white transition">Self-Help</a></li>
+                        <li><a href="#" class="hover:text-white transition">Health & Wellness</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookbooks</a></li>
+                        <li><a href="#" class="hover:text-white transition">Psychology</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm">© 2024 RobPac Publishing. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">📧 info@robpacpublishing.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL LEAD CAPTURE -->
+    <div id="leadModal" class="modal">
+        <div class="bg-white rounded-3xl max-w-2xl w-full mx-4 p-10 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 text-4xl font-light">&times;</button>
+            <div class="text-center mb-8">
+                <div class="text-7xl mb-6">🎁</div>
+                <h3 class="text-4xl font-bold heading-font text-gray-900 mb-4">Get Your Free Chapter</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Choose any book that interests you and receive the first chapter instantly, 
+                    plus exclusive bonus content and early access to new releases!
+                </p>
+            </div>
+            <form class="space-y-5" action="#" method="POST">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">First Name</label>
+                    <input type="text" name="firstName" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-lg" placeholder="Your first name">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Email Address</label>
+                    <input type="email" name="email" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-lg" placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Which book interests you?</label>
+                    <select name="bookInterest" class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent text-lg">
+                        <option>Select a book...</option>
+                        <option>The Dark Side of Charisma - Psychology</option>
+                        <option>Whispers in the Abyss - Fiction</option>
+                        <option>Carnivore Diet Cookbook - Health</option>
+                        <option>Mindfulness for Beginners - Self-Help</option>
+                        <option>All Books - Send me your best picks!</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-5 rounded-xl font-bold text-xl hover:from-amber-600 hover:to-orange-700 transition shadow-lg transform hover:scale-105">
+                    Send Me the Free Chapter
+                </button>
+                <div class="flex items-center justify-center gap-4 text-sm text-gray-500 pt-2">
+                    <span class="flex items-center gap-2">🔒 100% Secure</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-2">✓ No Spam</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-2">Unsubscribe Anytime</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BOOK DETAIL MODAL -->
+    <div id="bookModal" class="modal">
+        <div class="bg-white rounded-3xl max-w-4xl w-full mx-4 overflow-hidden shadow-2xl relative">
+            <button onclick="closeBookModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 text-4xl font-light z-50">&times;</button>
+            
+            <div id="bookModalContent" class="grid md:grid-cols-5 gap-8 p-10">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Complete Books Database with Descriptions & Amazon Links
+        const books = [
+            {
+                title: "The Dark Side of Charisma",
+                author: "Ryan Walker",
+                category: "psychology",
+                cover: "The dark side of charisma.jpg",
+                description: "Explore the dark side of charisma, revealing how charm and influence can be weaponized for manipulation.",
+                longDescription: "A book exploring the dark side of charisma, revealing how charm and influence can be weaponized for manipulation. It offers tools to identify emotional manipulation tactics used by charismatic narcissists in both professional and personal settings. The guide teaches readers to recognize signs of manipulation like gaslighting, defend themselves effectively, and use their own charisma ethically.",
+                amazonLink: "https://www.amazon.com/dp/B0DFC1QLKD",
+                rating: 4.5
+            },
+            {
+                title: "Whispers in the Abyss",
+                author: "Jackson Blackwood",
+                category: "fiction",
+                cover: "Whisper in the abyss.jpeg",
+                description: "A mind-bending journey following forensic acoustician Audrey Connors into a cosmic conflict.",
+                longDescription: "A mind-bending journey following Audrey Connors, a forensic acoustician with the extraordinary ability to hear what others can't. When she discovers a mysterious sound file, she's pulled into a cosmic conflict spanning multiple realities. This thriller blends cutting-edge science with philosophy, exploring consciousness, free will, and the nature of reality itself.",
+                amazonLink: "https://www.amazon.com/dp/B0DK8W7DHW",
+                rating: 4.8
+            },
+            {
+                title: "Ruminazione Mentale",
+                author: "Massimo Recaldi",
+                category: "psychology",
+                cover: "Ruminazione Mentale.jpg",
+                description: "Libera la mente dal pensiero ossessivo con strategie pratiche per gestire stress e ansia.",
+                longDescription: "Una guida completa per liberarsi dalla ruminazione mentale e dai pensieri ossessivi che possono causare stress, ansia e isolamento. Il libro offre una comprensione approfondita delle cause della ruminazione e strategie pratiche per gestirla efficacemente.",
+                amazonLink: "https://www.amazon.it/dp/B0D8TSCF4B",
+                rating: 4.6
+            },
+            {
+                title: "Carnivore Diet Cookbook USA",
+                author: "Jordan Prescott",
+                category: "diet",
+                cover: "Carnivore diet cookbook    USA.jpg",
+                description: "Revitalize your health with meat-based recipes for weight loss, muscle gain, and pain relief.",
+                longDescription: "A comprehensive guide to the carnivore diet featuring meat-based recipes designed for weight loss, muscle gain, and pain relief. This cookbook offers easy-to-follow recipes suitable for busy professionals, health enthusiasts, and parents seeking healthier lifestyle options.",
+                amazonLink: "https://www.amazon.com/dp/B0DCK41S5J",
+                rating: 4.4
+            },
+            {
+                title: "Carnivore Diet Cookbook UK",
+                author: "Jordan Prescott",
+                category: "diet",
+                cover: "Carnivore diet cookbook    UK.jpg",
+                description: "Revitalize your health with meat-based recipes for weight loss, muscle gain, and pain relief.",
+                longDescription: "A comprehensive guide to the carnivore diet featuring meat-based recipes designed for weight loss, muscle gain, and pain relief. This cookbook offers easy-to-follow recipes suitable for busy professionals, health enthusiasts, and parents seeking healthier lifestyle options.",
+                amazonLink: "https://www.amazon.com/dp/B0DCK41S5J",
+                rating: 4.4
+            },
+            {
+                title: "Mediterranean Diet Cookbook",
+                author: "Sophia Russo Bennett",
+                category: "cookbook",
+                cover: "Mediterranean diet cookbook.jpg",
+                description: "Discover Mediterranean secrets from Sicily to Greece with authentic recipes and expert tips.",
+                longDescription: "From the bustling markets of Sicily to the sun-soaked coasts of Greece, this cookbook brings you on a journey through the heart of the Mediterranean. Packed with authentic recipes that celebrate Mediterranean flavors—from succulent lamb roasts to refreshing Aperol Spritzes.",
+                amazonLink: "https://www.amazon.com/dp/B0DJCV1SMF",
+                rating: 4.7
+            },
+            {
+                title: "Ketogenic Diet",
+                author: "Grace Mitchell",
+                category: "diet",
+                cover: "Ketogenic diet.jpg",
+                description: "Transform your health with delicious keto recipes and comprehensive ketogenic lifestyle guide.",
+                longDescription: "A complete guide to the ketogenic diet featuring 100+ recipes for breakfast, lunch, dinner, and desserts. Learn how to transform your health through delicious keto recipes while understanding the science behind ketosis and sustainable weight management.",
+                amazonLink: "https://www.amazon.com/dp/B0DN9VHDSK",
+                rating: 4.5
+            },
+            {
+                title: "Galveston Diet USA",
+                author: "Vivian Harper",
+                category: "diet",
+                cover: "GALVESTON DIET COOKBOOK - USA.jpg",
+                description: "Master midlife nutrition with 80+ recipes for hormonal changes and weight management.",
+                longDescription: "A comprehensive cookbook designed specifically for midlife nutrition challenges, featuring recipes and meal plans based on Galveston Diet principles. Offers solutions for hormonal changes, weight gain, and energy loss with over 80 easy-to-follow recipes.",
+                amazonLink: "https://www.amazon.com/dp/B0DPHJQN9T",
+                rating: 4.6
+            },
+            {
+                title: "Galveston Diet UK",
+                author: "Vivian Harper",
+                category: "diet",
+                cover: "GALVESTON DIET COOKBOOK -  UK.jpg",
+                description: "Master midlife nutrition with 80+ recipes for hormonal changes and weight management.",
+                longDescription: "A comprehensive cookbook designed specifically for midlife nutrition challenges, featuring recipes and meal plans based on Galveston Diet principles. Offers solutions for hormonal changes, weight gain, and energy loss with over 80 easy-to-follow recipes.",
+                amazonLink: "https://www.amazon.com/dp/B0DPHJQN9T",
+                rating: 4.6
+            },
+            {
+                title: "Low-FODMAP Diet",
+                author: "Grace Mitchell",
+                category: "diet",
+                cover: "Low-foodmap diet.jpeg",
+                description: "Take control of digestive health with 60+ delicious low-FODMAP recipes for IBS relief.",
+                longDescription: "The ultimate beginner's guide to the Low-FODMAP Diet with 60+ delicious, easy-to-follow recipes. Includes clear explanations of FODMAP science, complete food lists, meal planning tips, and success stories from real people who found relief.",
+                amazonLink: "https://www.amazon.com/dp/B0DN9WHCGL",
+                rating: 4.5
+            },
+            {
+                title: "Mindfulness for Beginners",
+                author: "Ava Wells",
+                category: "self-help",
+                cover: "MINDFULNESS per principianti    ITA.jpg",
+                description: "Your path to calm and clarity - cultivate awareness, reduce stress, build emotional resilience.",
+                longDescription: "A beginner-friendly guide to mindfulness that teaches fundamental practices for cultivating awareness, reducing stress, and building emotional resilience. Provides practical instruction on integrating mindfulness into daily routines through techniques like mindful breathing and body scans.",
+                amazonLink: "https://www.amazon.com/dp/B0DH4BZX9B",
+                rating: 4.7
+            },
+            {
+                title: "Focus and Mental Clarity",
+                author: "John Keagan",
+                category: "self-help",
+                cover: "Focus and mental clarity.png",
+                description: "Step-by-step guide to overcome procrastination, distraction, and self-doubt.",
+                longDescription: "A practical guide addressing procrastination, distraction, and self-doubt by explaining the science of focus. Offers actionable strategies to rewire the brain, overcome emotional triggers, build sustainable habits, and develop emotional resilience.",
+                amazonLink: "https://www.amazon.com/dp/B0DSKBTXVV",
+                rating: 4.5
+            },
+            {
+                title: "The Art of Letting Go",
+                author: "Ryan Walker",
+                category: "self-help",
+                cover: "The art of letting go.jpg",
+                description: "Break free from toxic relationships and negative patterns with practical strategies.",
+                longDescription: "A transformative guide for those feeling trapped in cycles of stress, anxiety, and dissatisfaction. Offers practical strategies to break free from toxic relationships, negative thought patterns, and unfulfilling careers. Learn to heal old wounds, embrace mindfulness, and create a life of freedom.",
+                amazonLink: "https://www.amazon.com/dp/B0DCWXSCL3",
+                rating: 4.6
+            },
+            {
+                title: "Master Your Anger",
+                author: "John Keagan",
+                category: "self-help",
+                cover: "Master your anger.png",
+                description: "Transform anger into strength with practical strategies for emotional freedom.",
+                longDescription: "Discover how to transform anger into your greatest strength. From identifying triggers to mastering mindfulness and turning conflicts into growth opportunities, this book offers actionable strategies backed by science for emotional resilience.",
+                amazonLink: "https://www.amazon.com/dp/B0DPKWMDH8",
+                rating: 4.4
+            },
+            {
+                title: "The Anxiety Solution",
+                author: "John Keagan",
+                category: "self-help",
+                cover: "The anxiety solution.jpeg",
+                description: "Transform your life and reclaim peace of mind with comprehensive anxiety management.",
+                longDescription: "Transform your life and reclaim your peace of mind with this comprehensive guide. Delves deep into the science, strategies, and insights needed to manage anxiety effectively. Filled with actionable techniques and empowering encouragement.",
+                amazonLink: "https://www.amazon.com/dp/B0DQKKTSLK",
+                rating: 4.7
+            },
+            {
+                title: "Overcoming Self-Sabotage",
+                author: "John Keagan",
+                category: "self-help",
+                cover: "Overcoming self-sabotage.jpeg",
+                description: "Unlock your true potential by breaking free from limiting beliefs and self-doubt.",
+                longDescription: "Discover transformative strategies to break free from limiting beliefs, silence self-doubt, and create a life of authenticity and fulfillment. This introspective guide offers actionable techniques to embrace fears, reframe failure, and build resilience through practical exercises.",
+                amazonLink: "https://www.amazon.com/dp/B0DR5BH3YN",
+                rating: 4.5
+            },
+            {
+                title: "Dark Psychology",
+                author: "Neil Danielson",
+                category: "psychology",
+                cover: "Dark psychology and manipulation_ mastering the hidden arts.jpeg",
+                description: "Master hidden arts of influence while learning to recognize deceptive manipulation.",
+                longDescription: "Unlock the secrets of influence revealing hidden tactics of persuasion, manipulation, and emotional control. Learn to recognize and counter deceptive techniques while harnessing positive influence. Packed with actionable insights and real-world examples.",
+                amazonLink: "https://www.amazon.com/dp/B0DPHN2Q6S",
+                rating: 4.3
+            },
+            {
+                title: "Memory Biases",
+                author: "John Keagan",
+                category: "psychology",
+                cover: "Memory biases.png",
+                description: "Scientific exploration of how memory biases shape reality, identity, and decisions.",
+                longDescription: "A comprehensive scientific exploration of memory biases revealing how the mind shapes reality, identity, and decision-making. Examines phenomena from the Mandela Effect to trauma's impact, drawing from leading research worldwide.",
+                amazonLink: "https://www.amazon.com/dp/B0DNWCM529",
+                rating: 4.6
+            },
+            {
+                title: "Perception and Attention Biases",
+                author: "John Keagan Dr.",
+                category: "psychology",
+                cover: "Perception and Attention Biases.png",
+                description: "Understanding and overcoming cognitive distortions that shape our perceptions.",
+                longDescription: "A comprehensive guide exploring hidden cognitive biases that shape our decisions, judgments, and perceptions. Drawing from cognitive psychology and neuroscience research, explains why we see patterns, how technology exploits biases, and strategies to overcome limitations.",
+                amazonLink: "https://www.amazon.com/dp/B0DNM6SP55",
+                rating: 4.5
+            },
+            {
+                title: "Depression: Integrating Molecular",
+                author: "John Keagan",
+                category: "psychology",
+                cover: "Depression_ integrating molecular.png",
+                description: "Definitive guide to understanding depression through biology, psychology, and society.",
+                longDescription: "Your definitive guide to understanding the complex interplay of biology, psychology, and society in depression. This groundbreaking book unravels the science behind depression, exploring neurotransmitters, neuroplasticity, and inflammation alongside stress, relationships, and culture.",
+                amazonLink: "https://www.amazon.com/dp/B0DPHJN4NP",
+                rating: 4.7
+            },
+            {
+                title: "Beekeeping for Beginners",
+                author: "Adam Clayton",
+                category: "hobby",
+                cover: "Beekeeping for beginners.jpeg",
+                description: "From hive to honey: comprehensive guide from novice to expert beekeeper.",
+                longDescription: "Dive into the fascinating world of beekeeping! This comprehensive manual guides you step-by-step from novice to expert. Includes detailed advice on equipment, season-by-season hive management, bee biology, pest management, and honey harvesting.",
+                amazonLink: "https://www.amazon.com/dp/B0DK5BKG3L",
+                rating: 4.7
+            },
+            {
+                title: "Chess for Beginners",
+                author: "Lucas Grant",
+                category: "hobby",
+                cover: "CHESS for BEGINNERS.jpg",
+                description: "Master chess fundamentals with clear explanations from piece movement to advanced tactics.",
+                longDescription: "Unlock the secrets of chess with this ultimate guide to mastering fundamentals. Explores key rules, strategies, and tactics transforming novices into confident players. From understanding the board to exploring advanced tactics like forks and pins.",
+                amazonLink: "https://www.amazon.com/dp/B0DH4F1JMK",
+                rating: 4.6
+            },
+            {
+                title: "Shinrin-Yoku USA",
+                author: "Saito K. Jackson",
+                category: "wellness",
+                cover: "Shinrin-youku    USA.png",
+                description: "The healing power of the forest - discover transformative Japanese forest bathing.",
+                longDescription: "Discover the transformative power of Shinrin-Yoku, or forest bathing, a Japanese practice inviting you to reconnect with nature. Blending ancient traditions, scientific research, and practical guidance, provides a complete roadmap to immerse in forest healing.",
+                amazonLink: "https://www.amazon.it/dp/B0DSVWJKV1",
+                rating: 4.8
+            },
+            {
+                title: "Shinrin-Yoku ITA",
+                author: "Saito K. Jackson",
+                category: "wellness",
+                cover: "Shinrin-youku    ITA.jpeg",
+                description: "Il potere guaritore della foresta - pratica giapponese per benessere completo.",
+                longDescription: "Scopri il potere rigenerante della foresta con questa guida completa. Questa pratica giapponese è un approccio semplice ma profondo per ridurre stress, migliorare salute e vivere con consapevolezza. Include tecniche per attivare sensi e camminate consapevoli.",
+                amazonLink: "https://www.amazon.it/dp/B0DSVWJKV1",
+                rating: 4.7
+            },
+            {
+                title: "Starlit Encounters",
+                author: "Sofia Valiani",
+                category: "fiction",
+                cover: "Starlit encounters.png",
+                description: "Tales of love, fate, and second chances - heartfelt romantic short stories.",
+                longDescription: "A heartfelt collection of romantic short stories exploring serendipitous moments that bring people together. Follow stories filled with longing, hope, and courage to embrace love. Perfect for fans of tender, uplifting romance.",
+                amazonLink: "https://www.amazon.com/dp/B0DV34H3TT",
+                rating: 4.6
+            },
+            {
+                title: "Restless Silence",
+                author: "Ryan Walker",
+                category: "fiction",
+                cover: "Restless silence.jpg",
+                description: "Introspective journey exploring conflict between hope and resignation.",
+                longDescription: "Takes you deep into the inner world of a protagonist trapped between stasis and evolution. This introspective journey explores the conflict between hope and resignation, asking profound questions about change. For readers who appreciate narratives that challenge the mind.",
+                amazonLink: "https://www.amazon.com/dp/B0DH48RWM4",
+                rating: 4.4
+            },
+            {
+                title: "The Poetic Future",
+                author: "J. Cipher Monroe",
+                category: "fiction",
+                cover: "The poetic future.jpg",
+                description: "Humanity, technology, and the art of progress - profound journey into innovation.",
+                longDescription: "Explore the intersection of cutting-edge innovation and timeless human values. Offers a profound journey into how technology reflects and amplifies what it means to be human. Through philosophy, history, and speculative thought.",
+                amazonLink: "https://www.amazon.com/dp/B0DT5LGHNM",
+                rating: 4.5
+            },
+            {
+                title: "The Final Showdown",
+                author: "Sam Hunter",
+                category: "fiction",
+                cover: "The final showdown.png",
+                description: "Action-packed adventure for young readers seeking Eldorado treasure.",
+                longDescription: "An action-packed adventure for young readers aged 7-10 following Max, Lily, and Sam as they navigate dangerous jungles, solve ancient puzzles, and face villain Drake Blackwood. Combines thrilling escapades with themes of friendship and courage.",
+                amazonLink: "https://www.amazon.com/dp/B0DCP3BF8Q",
+                rating: 4.6
+            },
+            {
+                title: "The Highland Hex",
+                author: "Victoria Ravenscroft",
+                category: "fiction",
+                cover: "The highland hex.jpeg",
+                description: "Magical adventure where ancient Highland magic awakens in misty Scotland.",
+                longDescription: "Return to magical Britain in this thrilling second installment of the Lexicon Arcana series. Hazel Blackwood ventures into misty Scottish Highlands where magic runs wild. Experience breathtaking magical encounters with kelpies, stone circles, and the fearsome Cu Sith.",
+                amazonLink: "https://www.amazon.com/dp/B0DPJM5JKT",
+                rating: 4.7
+            },
+            {
+                title: "The Oxford Odyssey",
+                author: "Victoria Ravenscroft",
+                category: "fiction",
+                cover: "The oxford odyssey.jpeg",
+                description: "Mind-bending adventure in Lexicon Arcana where books achieve consciousness.",
+                longDescription: "Dive into the most mind-bending adventure in the Lexicon Arcana series! Oxford's secret magical university harbors an ancient mystery. When Hazel discovers books achieving consciousness and digital magic evolving, she must face her greatest challenge understanding something that prevents understanding itself.",
+                amazonLink: "https://www.amazon.com/dp/B0DPJNLC8P",
+                rating: 4.6
+            },
+            {
+                title: "The Winchester Whispers",
+                author: "Victoria Ravenscroft",
+                category: "fiction",
+                cover: "The winchester whispers.jpeg",
+                description: "First installment where ancient magic meets modern mystery in Winchester.",
+                longDescription: "Step into a world where ancient magic meets modern mystery! Eleven-year-old Hazel Blackwood thought she was ordinary until her silver birthmark began to glow in Winchester Cathedral's secret library. Discover a magical Britain where books whisper secrets and gargoyles come to life.",
+                amazonLink: "https://www.amazon.com/dp/B0DPJQG2TS",
+                rating: 4.7
+            },
+            {
+                title: "Side Hustle Architecture",
+                author: "Alexander J. Barrett",
+                category: "business",
+                cover: "Side hustle architecture.png",
+                description: "Build sustainable parallel income systems in the digital age.",
+                longDescription: "The ultimate guide to building sustainable side hustles in the digital age. Provides a thorough framework for creating income streams while maintaining your primary career. Discover how to leverage emerging technologies and implement proven frameworks.",
+                amazonLink: "https://www.amazon.com/dp/B0DPDM2YD1",
+                rating: 4.7
+            },
+            {
+                title: "The Digital Leash",
+                author: "J. Cipher Monroe",
+                category: "fiction",
+                cover: "The Digital Leash.jpg",
+                description: "Welcome to 2036: journalist uncovers truth behind GlobalTech's Nexus network.",
+                longDescription: "In a world where thoughts are no longer your own, one journalist uncovers the truth. Welcome to 2036, where GlobalTech controls everything through its Nexus network. Follow Alex Garner's perilous journey exposing corporate manipulation. A chilling yet hopeful exploration of our tech-driven future.",
+                amazonLink: "https://www.amazon.com/dp/B0DJF4ZT6F",
+                rating: 4.5
+            },
+            {
+                title: "The Ecological Renaissance",
+                author: "Alex Sterling",
+                category: "science",
+                cover: "The ecological renaissance.jpeg",
+                description: "Rebuilding future with nature: groundbreaking vision for regenerative ecosystems.",
+                longDescription: "Discover a groundbreaking vision for a regenerative future. Takes you on an inspiring journey to rethink humanity's relationship with Earth, offering actionable insights into creating thriving ecosystems, resilient communities, and sustainable economies.",
+                amazonLink: "https://www.amazon.com/dp/B0DQGQ7Y5N",
+                rating: 4.8
+            },
+            {
+                title: "Mindful Parenting",
+                author: "Eliza Siegel",
+                category: "self-help",
+                cover: "Mindful parenting.jpg",
+                description: "Transform family life with positive discipline and emotional intelligence strategies.",
+                longDescription: "Discover the transformative power of mindful parenting! End tantrums, defiance, and emotional meltdowns while connecting deeply with your child. Learn to set loving boundaries that work, boost emotional intelligence, and raise resilient, self-motivated kids.",
+                amazonLink: "https://www.amazon.com/dp/B0DJJDHNYW",
+                rating: 4.7
+            },
+            {
+                title: "Unlock Your Inner Power",
+                author: "Ryan Walker",
+                category: "self-help",
+                cover: "UNLOCK your INNER POWER.jpg",
+                description: "30-day challenge for personal transformation overcoming limiting beliefs.",
+                longDescription: "A comprehensive 30-day guide for personal transformation helping readers reach full potential through practical strategies. Offers structured day-by-day approach to overcome limiting beliefs, build confidence, master emotions, and boost productivity.",
+                amazonLink: "https://www.amazon.com/dp/B0DJ2RVBGF",
+                rating: 4.6
+            },
+            {
+                title: "The Self-Awareness Revolution",
+                author: "Ryan Walker",
+                category: "self-help",
+                cover: "The self awareness revolution.jpg",
+                description: "Unlock self-awareness power: boost emotional intelligence and make better decisions.",
+                longDescription: "Unlock the power of self-awareness and transform your life! Discover how to boost emotional intelligence, make better decisions with clarity, enhance relationships and leadership skills, align career with authentic self. Packed with cutting-edge research and practical exercises.",
+                amazonLink: "https://www.amazon.com/dp/B0DKDV91C8",
+                rating: 4.7
+            },
+            {
+                title: "Positive Thinking",
+                author: "John Keagan",
+                category: "self-help",
+                cover: "Positive thinking_ the sel awareness.jpeg",
+                description: "Master self-awareness and positive thinking to transform mindset.",
+                longDescription: "A comprehensive guide to developing positive thinking habits through enhanced self-awareness. Learn to identify negative thought patterns, reframe challenging situations, build resilience, and create sustainable positive change through practical exercises.",
+                amazonLink: "https://www.amazon.com/dp/B0DNA3D4VG",
+                rating: 4.5
+            },
+            {
+                title: "Balance in Chaos",
+                author: "Quinn Parker",
+                category: "self-help",
+                cover: "Balance in chaos.png",
+                description: "Simple steps to calmer, healthier life: practical strategies for harmony.",
+                longDescription: "Unlock secrets to a balanced and fulfilling life. This empowering guide offers practical strategies, transformative insights, and actionable steps to reclaim control, find clarity, and live with intention. Your roadmap to harmony and growth.",
+                amazonLink: "https://www.amazon.com/dp/B0DQ4SS1GW",
+                rating: 4.6
+            },
+            {
+                title: "Emotions in Growth",
+                author: "Eliza Siegel",
+                category: "psychology",
+                cover: "Emotions in growth.jpg",
+                description: "Guide children in emotional management: understand adolescent brain and build resilience.",
+                longDescription: "Comprehensive guide for parents, educators, and caregivers on nurturing emotionally intelligent children. Offers cutting-edge insights and practical strategies, diving into understanding the adolescent brain, navigating cultural differences, recognizing distress signs, and harnessing technology.",
+                amazonLink: "https://www.amazon.com/dp/B0DJQLWS1Q",
+                rating: 4.7
+            },
+            {
+                title: "Somatic Art Therapy",
+                author: "Andrew Thornton",
+                category: "psychology",
+                cover: "Somatic art therapy.jpeg",
+                description: "Transform through somatic art therapy blending mindfulness and creative expression.",
+                longDescription: "Discover inner peace through Somatic Art Therapy! Offers a transformative pathway to self-healing, blending mindfulness, body awareness, and creative expression. Designed for managing stress, anxiety, and trauma with easy exercises connecting body's wisdom with art healing. No artistic skills required.",
+                amazonLink: "https://www.amazon.com/dp/B0DNA6JB8M",
+                rating: 4.6
+            },
+            {
+                title: "Artificial Intelligence and Global",
+                author: "Zane Everett",
+                category: "science",
+                cover: "Artificial Intelligence and global.jpg",
+                description: "Exploring AI's impact on global socioeconomic landscape and inequality.",
+                longDescription: "A compelling exploration of AI's impact on our world's socioeconomic landscape. This timely analysis delves into the double-edged sword of AI: its potential to both exacerbate and alleviate global inequalities. Examines ethical dilemmas posed by AI in healthcare, education, and governance.",
+                amazonLink: "https://www.amazon.com/dp/B0DNA7MDVF",
+                rating: 4.7
+            },
+            {
+                title: "Halloween Cookbook",
+                author: "Candice Cauldron",
+                category: "cookbook",
+                cover: "Halloween coobook.jpg",
+                description: "Spooky snacks and creepy treats - 60+ fun Halloween recipes for families.",
+                longDescription: "A Halloween-themed cookbook offering over 60 fun and easy recipes for families. Includes morning breakfast ideas, snacks, main dishes, sides, desserts, and drinks—all designed with Halloween twist. Beyond recipes, serves as complete party planning guide.",
+                amazonLink: "https://www.amazon.com/dp/B0DN9L2JSQ",
+                rating: 4.5
+            },
+            {
+                title: "Plant-Powered Recipes",
+                author: "Grace Mitchell",
+                category: "cookbook",
+                cover: "Plant powered recipes.png",
+                description: "90+ delicious vegetarian recipes for vibrant plant-based eating.",
+                longDescription: "More than a cookbook—it's your ultimate culinary adventure into vibrant vegetarian cuisine! With 90+ diverse and delicious recipes, makes healthy plant-based eating approachable and exciting. Designed for anyone ready to explore healthier, more sustainable diet.",
+                amazonLink: "https://www.amazon.com/dp/B0DN5Z3TG6",
+                rating: 4.6
+            },
+            {
+                title: "Nonna Lina's USA",
+                author: "Antony Lucchesi",
+                category: "cookbook",
+                cover: "Nonna Lina's   USA.jpeg",
+                description: "Stories and recipes from centenarian's heart - authentic Italian cooking.",
+                longDescription: "Discover authentic Italian cooking through the eyes of a remarkable centenarian. Boston chef Anthony preserves his grandmother's culinary legacy, taking readers from Southern Italy to Boston's North End through 55 detailed recipes and family stories.",
+                amazonLink: "https://www.amazon.com/dp/B0DPKBTX9Y",
+                rating: 4.8
+            },
+            {
+                title: "Polpette Revolution",
+                author: "Chef Savorelli",
+                category: "cookbook",
+                cover: "Polpette revolution cookbook.png",
+                description: "Sapori tondi per ogni occasione - oltre 100 ricette di polpette uniche.",
+                longDescription: "Scopri il libro di ricette che rivoluziona la cucina con polpette per ogni occasione! Dai sapori tradizionali italiani alle creazioni dolci, offre oltre 100 ricette uniche e facili con varianti gourmet, vegetariane, regionali e light.",
+                amazonLink: "https://www.amazon.it/dp/B0DPQHJR2R",
+                rating: 4.5
+            },
+            {
+                title: "Mocktail Magic ITA",
+                author: "Chef Savorelli",
+                category: "cookbook",
+                cover: "Mocktail magic    ITA.png",
+                description: "Il mondo dei cocktail analcolici - oltre 100 mocktail unici.",
+                longDescription: "Il ricettario definitivo per chi desidera creare bevande deliziose, colorate e completamente analcoliche. Perfetto per feste, brunch, serate rilassanti. Scopri mocktail frizzanti, cremosi, esotici e detox con tecniche avanzate.",
+                amazonLink: "https://www.amazon.it/dp/B0DRFMKC2W",
+                rating: 4.6
+            },
+            {
+                title: "CUcina al Contrario",
+                author: "Chef Savorelli",
+                category: "cookbook",
+                cover: "CUcina al contrario.png",
+                description: "Ribalta la tua tavola! Viaggio gastronomico rivoluzionario.",
+                longDescription: "Un viaggio gastronomico rivoluzionario che sfida le convenzioni culinarie. Ogni piatto è un'avventura dove dolce diventa salato, consistenze si invertono e contorni diventano protagonisti. Con oltre 50 ricette dettagliate.",
+                amazonLink: "https://www.amazon.it/dp/B0DRRVKS5P",
+                rating: 4.4
+            },
+            {
+                title: "Miyu Introduces Her Friends",
+                author: "Alexia B.",
+                category: "children",
+                cover: "Miyu introduces her friends.jpeg",
+                description: "Coloring book with 10 unique characters for young artists ages 4+.",
+                longDescription: "Dive into a world of imagination with this delightful coloring book! Inside, meet 10 unique characters, each with their own stories and personalities. From Hana the nature explorer to Nana the aspiring astronomer. Perfect for ages 4 and up.",
+                amazonLink: "https://www.amazon.com/dp/B0DMNC122H",
+                rating: 4.7
+            },
+            {
+                title: "Sailor Mouse",
+                author: "Rob Pac",
+                category: "children",
+                cover: "Sailor mouse - coloring book.png",
+                description: "Set sail on whimsical coloring journey with adventurous Sailor Mouse.",
+                longDescription: "Set sail on a whimsical coloring journey! Features charming and adventurous Sailor Mouse exploring enchanting landscapes. With 30 beautifully designed pages, offers hours of creative fun for kids. Perfect for sparking imagination and developing fine motor skills.",
+                amazonLink: "https://www.amazon.com/dp/B0DPN2YZ2S",
+                rating: 4.6
+            },
+            {
+                title: "Adventure in Colors",
+                author: "Rob Pac",
+                category: "children",
+                cover: "Adventure in colors.jpg",
+                description: "Creative coloring adventure for young artists exploring vibrant worlds.",
+                longDescription: "A vibrant coloring book taking young artists on colorful adventures through magical lands. Features diverse scenes and characters designed to inspire creativity and imagination. Perfect for developing artistic skills while having fun.",
+                amazonLink: "https://www.amazon.com/dp/B0DNADMLWP",
+                rating: 4.5
+            },
+            {
+                title: "Psychology of Saving",
+                author: "Ryan Walker",
+                category: "business",
+                cover: "PSYCHOLOGY OF SAVING.jpg",
+                description: "Mastering your money mindset - examine psychological barriers to financial success.",
+                longDescription: "A comprehensive guide examining psychological barriers to financial success, going beyond typical budgeting advice to address emotional aspects of money management. Explores how mental patterns impact financial decisions, offering strategies to overcome impulsive spending and negative money mindsets.",
+                amazonLink: "https://www.amazon.com/dp/B0DPJRVV4Y",
+                rating: 4.5
+            },
+            {
+                title: "Entropia e Resilienza",
+                author: "Rob Pac",
+                category: "philosophy",
+                cover: "Entropia e Resilienza.png",
+                description: "La frammentazione dell'ordine mondiale nella guerra Russia-Ucraina.",
+                longDescription: "Un viaggio intenso nella dinamica di un mondo instabile e frammentato. Dalla geopolitica alle sfide sociali, dai cambiamenti climatici alle innovazioni tecnologiche, esplora come il caos plasma la nostra realtà e come possiamo adattarci.",
+                amazonLink: "https://www.amazon.com/dp/B0DPBW59QC",
+                rating: 4.6
+            },
+            {
+                title: "Emozioni Intrecciate",
+                author: "Sofia Valiani",
+                category: "fiction",
+                cover: "Emozioni intrecciate.png",
+                description: "Cinque storie, un intreccio di emozioni indimenticabili.",
+                longDescription: "Una raccolta di cinque racconti che esplorano l'amore, le seconde possibilità e la forza delle connessioni umane. Ambientate in luoghi suggestivi come Parigi e villaggi italiani, queste storie raccontano personaggi autentici pronti a riscoprire se stessi.",
+                amazonLink: "https://www.amazon.it/dp/B0DTF3SFX1",
+                rating: 4.5
+            },
+            {
+                title: "La Via del Guerriero ITA",
+                author: "Adrian Stone",
+                category: "wellness",
+                cover: "La via del guerriero    ITA.png",
+                description: "Virtù marziali e saggezza buddhista per la crescita spirituale.",
+                longDescription: "Un viaggio profondo attraverso la saggezza del guerriero, dove tecniche antiche si trasformano in strumenti di crescita personale e spirituale. La fusione tra filosofia buddhista e pratica marziale con tecniche concrete per trasformare la pratica quotidiana.",
+                amazonLink: "https://www.amazon.com/dp/B0DN82F4Q3",
+                rating: 4.7
+            },
+            {
+                title: "Il Silenzio delle Vette",
+                author: "Alessandra Montalcini",
+                category: "fiction",
+                cover: "Il silenzio delle vette.png",
+                description: "La verità ha sempre un prezzo - thriller distopico in valle alpina.",
+                longDescription: "In una remota valle alpina, il villaggio di Oberruhe sembra un paradiso. Ma sotto la facciata serena si cela un sistema di controllo spietato. Elisa Hauser scopre un'antica mappa che rivela un passaggio segreto oltre le montagne. Un romanzo distopico che intreccia suspense e azione.",
+                amazonLink: "https://www.amazon.it/dp/B0DSP6RNJB",
+                rating: 4.6
+            },
+            {
+                title: "SILENZIO IRREQUIETO",
+                author: "Ryan Walker",
+                category: "fiction",
+                cover: "SILENZIO IRREQUIETO.jpg",
+                description: "Viaggio nella mente di un protagonista sospeso tra immobilità ed evoluzione.",
+                longDescription: "Un viaggio profondo nella mente di un protagonista senza nome, intrappolato tra stasi ed evoluzione. Attraverso narrazione introspettiva, esplora la lotta interiore di chi si trova sospeso in immobilità esistenziale, dove la speranza è fragile.",
+                amazonLink: "https://www.amazon.it/dp/B0DH4L1NLK",
+                rating: 4.4
+            },
+            {
+                title: "Pellegrini di Speranza",
+                author: "Lorenzo De Sanctis",
+                category: "religion",
+                cover: "Pellegrini di speranza.png",
+                description: "Storia, fede e testimonianze nel Giubileo 2025.",
+                longDescription: "Un viaggio emozionante e spirituale attraverso la storia e il significato dell'Anno Santo. Offre un percorso approfondito che unisce dimensione storica e spirituale del Giubileo, fornendo strumenti pratici per vivere autenticamente l'esperienza del pellegrinaggio.",
+                amazonLink: "https://www.amazon.it/dp/B0DV4FFQ8Y",
+                rating: 4.6
+            },
+            {
+                title: "Oltre il Sentiero",
+                author: "Lorenzo De Sanctis",
+                category: "philosophy",
+                cover: "Oltre il sentiero.png",
+                description: "Etica, natura e vita nel postumano - riflessione sul rapporto uomo-natura.",
+                longDescription: "In un'epoca dominata dalla tecnica e crisi ambientale, il viandante emerge come figura rivoluzionaria. Approfondisce il concetto del cammino come ricerca esistenziale. Include riflessione filosofica, storie di viandanti moderni e spunti pratici.",
+                amazonLink: "https://www.amazon.it/dp/B0DSPZGTLJ",
+                rating: 4.5
+            },
+            {
+                title: "Oltre l'Orizzonte del Tempo",
+                author: "Alessandra Montalcini",
+                category: "fiction",
+                cover: "Oltre l'orizzonte del tempo.jpg",
+                description: "Cronache di una famiglia ritrovata attraverso generazioni e continenti.",
+                longDescription: "Un avvincente romanzo che intreccia vite di tre generazioni di donne divise da oceani e segreti. Quando Eleonora scopre un misterioso diario della nonna, si imbarca in viaggio emozionante da Milano a Buenos Aires. Svela storia d'amore nata durante Seconda Guerra Mondiale.",
+                amazonLink: "https://www.amazon.it/dp/B0DHYCRXSY",
+                rating: 4.6
+            },
+            {
+                title: "Ombre di Ferro",
+                author: "Roberto Pacetti",
+                category: "fiction",
+                cover: "Ombre di ferro.jpg",
+                description: "Tra passato e rinascita - dramma sociale in città dimenticata dal tempo.",
+                longDescription: "In una città dimenticata dal tempo, dove ombre del passato si mescolano con speranze del futuro, nasce storia di coraggio e rinascita. Pianodombra è un luogo carico di ricordi che lotta per risorgere. Dramma sociale intenso che esplora legami umani e potere della memoria.",
+                amazonLink: "https://www.amazon.it/dp/B0DFC6YN4Z",
+                rating: 4.5
+            },
+            {
+                title: "Gesù nel Terzo Millennio",
+                author: "Lorenzo De Sanctis",
+                category: "religion",
+                cover: "Gesù nel terzo millennio.png",
+                description: "Esplorazione teologica di Gesù nel mondo contemporaneo digitale.",
+                longDescription: "Un'esplorazione teologica e sociologica che analizza come la figura di Gesù e i suoi insegnamenti sarebbero percepiti nel mondo contemporaneo. Esamina impatto di globalizzazione e tecnologia digitale sulla spiritualità, immaginando come il messaggio di Gesù potrebbe essere interpretato attraverso social media.",
+                amazonLink: "https://www.amazon.it/dp/B0DF1TM77Z",
+                rating: 4.5
+            },
+            {
+                title: "La Felicità: Un'Illusione Moderna",
+                author: "Marco Fioretti",
+                category: "philosophy",
+                cover: "La felicità_ un'illusione moderna.jpg",
+                description: "Viaggio esilarante nell'ossessione contemporanea per la felicità.",
+                longDescription: "Stanco di sorridere mentre dentro urli? Un viaggio esilarante nel cuore dell'ossessione contemporanea per la felicità. Con dose massiccia di sarcasmo e verità scomode, esplora routine mattutine da incubo, inferno dei social media, corsa al successo, e mindfulness.",
+                amazonLink: "https://www.amazon.com/dp/B0DNAKB7KP",
+                rating: 4.4
+            },
+            {
+                title: "La Psicologia della Superstizione",
+                author: "John Keagan",
+                category: "psychology",
+                cover: "La psicologia della superstizione.png",
+                description: "Origini, funzioni e impatti - viaggio tra credenze e scoperte scientifiche.",
+                longDescription: "Esplora i segreti della mente umana con un viaggio affascinante tra credenze, tradizioni e scoperte scientifiche. Guida attraverso origini storiche e culturali delle superstizioni, dinamiche psicologiche che le alimentano e impatto nella società moderna.",
+                amazonLink: "https://www.amazon.it/dp/B0DPKW7M7M",
+                rating: 4.5
+            },
+            {
+                title: "Psicologia del Lavoro",
+                author: "Dr. Massimo Recaldi",
+                category: "psychology",
+                cover: "Psicologia del lavoro.jpeg",
+                description: "Comprendere e ottimizzare il benessere organizzativo.",
+                longDescription: "Disciplina in rapida espansione che offre strumenti per comprendere dinamiche organizzative e migliorare qualità della vita lavorativa. Approfondisce concetti principali dalle teorie motivazionali ai modelli di leadership, dinamiche di gruppo a gestione del benessere.",
+                amazonLink: "https://www.amazon.it/dp/B0DMRWX57P",
+                rating: 4.6
+            },
+            {
+                title: "Psicologia della Personalità",
+                author: "Dr. Massimo Recaldi",
+                category: "psychology",
+                cover: "Psicologia della personalità.png",
+                description: "L'essenza dell'individualità - fondamenti della personalità.",
+                longDescription: "Scopri fondamenti e complessità della psicologia della personalità. Dalla psicoanalisi alla teoria dei tratti, passando per genetica e neuroscienze, offre panoramica approfondita delle teorie e metodi di valutazione. Ideale per studenti e professionisti.",
+                amazonLink: "https://www.amazon.it/dp/B0DMS1BTZV",
+                rating: 4.6
+            },
+            {
+                title: "Psicologia dello Sviluppo",
+                author: "Dr. Massimo Recaldi",
+                category: "psychology",
+                cover: "Psicologia dello sviluppo.png",
+                description: "Comprendere il ciclo di vita dall'infanzia all'età adulta.",
+                longDescription: "Esplora il processo di crescita dall'infanzia all'età adulta. Fornisce panoramica completa dei modelli teorici, dalle teorie cognitive di Piaget alle dinamiche sociali di Erikson e Bowlby. Illustra come fattori genetici, sociali e culturali influenzino personalità.",
+                amazonLink: "https://www.amazon.it/dp/B0DMV9NDBS",
+                rating: 4.6
+            },
+            {
+                title: "Psicologia di Comunità",
+                author: "Dr. Massimo Recaldi",
+                category: "psychology",
+                cover: "Psicologia di comunità.png",
+                description: "Costruire benessere collettivo attraverso relazioni e dinamiche sociali.",
+                longDescription: "Esplora il ruolo di relazioni, ambiente e dinamiche sociali nel promuovere benessere collettivo. Offre panoramica completa di teorie e modelli di intervento come modello ecologico, empowerment e resilienza. Analizza sfide contemporanee e propone strategie pratiche.",
+                amazonLink: "https://www.amazon.it/dp/B0DMVQNKYS",
+                rating: 4.5
+            },
+            {
+                title: "Psicologia Dinamica",
+                author: "Dr. Massimo Recaldi",
+                category: "psychology",
+                cover: "Psicologia dinamica.png",
+                description: "Le profondità della psiche - processi inconsci e conflitti interiori.",
+                longDescription: "Rappresenta una delle prospettive più affascinanti della psicologia, concentrandosi sulla comprensione dei processi inconsci e conflitti che plasmano la mente. Offre introduzione completa ai fondamenti dalle teorie di Freud fino agli sviluppi moderni.",
+                amazonLink: "https://www.amazon.it/dp/B0DMRBGVMS",
+                rating: 4.6
+            }
+        ];
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            displayBooks(books);
+        });
+
+        function displayBooks(booksToDisplay) {
+            const grid = document.getElementById('booksGrid');
+            grid.innerHTML = '';
+            
+            booksToDisplay.forEach((book, index) => {
+                const bookCard = `
+                    <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${index})">
+                        <img src="covers/${book.cover}" alt="${book.title}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Cover+Not+Found'">
+                        <div class="p-4">
+                            <span class="inline-block bg-${getCategoryColor(book.category)}-100 text-${getCategoryColor(book.category)}-600 text-xs px-2 py-1 rounded-full mb-2">${book.category}</span>
+                            <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
+                            <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
+                            <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm transition">View Details</button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += bookCard;
+            });
+        }
+
+        function getCategoryColor(category) {
+            const colors = {
+                'psychology': 'purple',
+                'diet': 'orange',
+                'self-help': 'teal',
+                'fiction': 'blue',
+                'cookbook': 'yellow',
+                'business': 'green',
+                'hobby': 'gray',
+                'science': 'indigo',
+                'children': 'pink',
+                'religion': 'amber',
+                'philosophy': 'slate',
+                'wellness': 'emerald'
+            };
+            return colors[category] || 'gray';
+        }
+
+        function filterBooks(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-600', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+            event.target.classList.remove('bg-gray-100', 'text-gray-700');
+            event.target.classList.add('bg-amber-600', 'text-white');
+            
+            if (category === 'all') {
+                displayBooks(books);
+            } else {
+                const filtered = books.filter(book => book.category === category);
+                displayBooks(filtered);
+            }
+            
+            document.getElementById('booksGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function searchBooks() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = books.filter(book => 
+                book.title.toLowerCase().includes(searchTerm) ||
+                book.author.toLowerCase().includes(searchTerm) ||
+                book.category.toLowerCase().includes(searchTerm)
+            );
+            displayBooks(filtered);
+        }
+
+        function openBookModal(bookIndex) {
+            const book = books[bookIndex];
+            const modal = document.getElementById('bookModal');
+            const content = document.getElementById('bookModalContent');
+            
+            const stars = '⭐'.repeat(Math.floor(book.rating || 4.5));
+            
+            content.innerHTML = `
+                <div class="md:col-span-2">
+                    <img src="covers/${book.cover}" alt="${book.title}" class="w-full rounded-xl shadow-lg" onerror="this.src='https://via.placeholder.com/400x600?text=Cover'">
+                    <div class="mt-4 flex items-center gap-2">
+                        <span class="text-2xl">${stars}</span>
+                        <span class="text-gray-600 font-semibold">${book.rating || 4.5}/5</span>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-3 flex flex-col">
+                    <div class="mb-4">
+                        <span class="inline-block bg-${getCategoryColor(book.category)}-100 text-${getCategoryColor(book.category)}-600 text-sm px-3 py-1 rounded-full mb-3 uppercase font-semibold">${book.category}</span>
+                        <h2 class="text-3xl font-bold heading-font text-gray-900 mb-2">${book.title}</h2>
+                        <p class="text-xl text-gray-600 mb-4">by ${book.author}</p>
+                    </div>
+                    
+                    <div class="flex-1 mb-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">About This Book</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">${book.description}</p>
+                        ${book.longDescription ? `<p class="text-gray-600 leading-relaxed">${book.longDescription}</p>` : ''}
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="${book.amazonLink}" target="_blank" class="flex-1 bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-xl font-bold text-center hover:from-amber-600 hover:to-orange-700 transition shadow-lg">
+                            📚 Buy on Amazon
+                        </a>
+                        <button onclick="closeBookModal(); openModal();" class="flex-1 bg-purple-600 text-white py-4 rounded-xl font-bold hover:bg-purple-700 transition shadow-lg">
+                            📖 Get Free Chapter
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookModal() {
+            const modal = document.getElementById('bookModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openModal() {
+            document.getElementById('leadModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('leadModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('featuredCarousel');
+            const scrollAmount = 350;
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        window.onclick = function(event) {
+            const leadModal = document.getElementById('leadModal');
+            const bookModal = document.getElementById('bookModal');
+            if (event.target == leadModal) {
+                closeModal();
+            }
+            if (event.target == bookModal) {
+                closeBookModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+                closeBookModal();
+            }
+        });
+
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBooks();
+            }
+        });
+    </script>
+
+</body>
+</html>
