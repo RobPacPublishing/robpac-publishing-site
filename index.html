@@ -1619,9 +1619,10 @@
             const grid = document.getElementById('booksGrid');
             grid.innerHTML = '';
             
-            booksToDisplay.forEach((book, index) => {
+            booksToDisplay.forEach((book) => {
+                const originalIndex = books.findIndex(b => b.title === book.title && b.author === book.author);
                 const bookCard = `
-                    <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${index})">
+                    <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${originalIndex})">
                         <img src="covers/${book.cover}" alt="${book.title}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Cover+Not+Found'">
                         <div class="p-4">
                             <span class="inline-block bg-${getCategoryColor(book.category)}-100 text-${getCategoryColor(book.category)}-600 text-xs px-2 py-1 rounded-full mb-2">${book.category}</span>
