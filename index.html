@@ -168,39 +168,90 @@
     </style>
 
 <script>
-/* === RobPac: description sanitizer (only change) === */
+/* === RobPac: Robust description de-dup (layout untouched) === */
 (function(){
-  function __rp_normalizeSpaces(s){ return String(s||'').replace(/\s+/g,' ').trim(); }
-  function __rp_trimEdges(s){ return String(s||'').replace(/^[\s.·…]+/,'').replace(/[\s.·…]+$/,'').trim(); }
-  function __rp_merge(shortDesc,longDesc){
-    var s = __rp_trimEdges(__rp_normalizeSpaces(shortDesc));
-    var l = __rp_trimEdges(__rp_normalizeSpaces(longDesc));
-    if(!s) return l;
-    if(!l) return s;
-    var tail = s.split(' ').slice(-6).join(' ');
-    if(tail && l.toLowerCase().startsWith(tail.toLowerCase())) return s + ' ' + l.slice(tail.length).trim();
-    if(l.toLowerCase().startsWith(s.toLowerCase())) return l.slice(s.length).trim() || s;
-    var joiner = /[.!?]$/.test(s) ? ' ' : '. ';
-    return s + joiner + l;
-  }
-  function __rp_dedupeLeadingLines(text, maxCheck){
-    maxCheck = maxCheck||2;
-    var lines = String(text||'').split(/\r?\n/).map(function(l){return l.trim();}).filter(Boolean);
-    var seen = Object.create(null), out = [];
-    for(var i=0;i<lines.length;i++){
-      var key = lines[i].toLowerCase();
-      if(i<maxCheck && seen[key]) continue;
-      seen[key] = true; out.push(lines[i]);
+  function norm(s){ return String(s||'').replace(/\s+/g,' ').trim(); }
+  function stripEnd(s){ return String(s||'').replace(/[ \t]*[.…]+$/,'').trim(); }
+  function looksDuplicated(text){
+    if(!text) return false;
+    var t = norm(text).toLowerCase();
+    var parts = t.split(/(?<=[\.\!\?…])\s+/);
+    for(var i=1;i<parts.length;i++){
+      var a = stripEnd(parts[i-1]); var b = stripEnd(parts[i]);
+      if(a && a === b) return true;
     }
-    return out.join('\n');
+    var paras = t.split(/\n+/);
+    for(var j=1;j<paras.length;j++){
+      var pa = stripEnd(paras[j-1]); var pb = stripEnd(paras[j]);
+      if(pa && pa === pb) return true;
+    }
+    var half = Math.floor(t.length/2);
+    if(half>30){
+      var a2 = stripEnd(t.slice(0,half));
+      var b2 = stripEnd(t.slice(half));
+      if(b2.startsWith(a2)) return true;
+    }
+    return false;
   }
+  function cleanText(text){
+    var original = String(text||'');
+    var t = original;
+    var paras = t.split(/\r?\n+/).map(function(s){return s.trim();}).filter(Boolean);
+    var outParas = [];
+    for(var i=0;i<paras.length;i++){
+      var cur = stripEnd(paras[i]).toLowerCase();
+      if(i>0){
+        var prev = stripEnd(paras[i-1]).toLowerCase();
+        if(cur === prev) continue;
+      }
+      outParas.push(paras[i]);
+    }
+    t = outParas.join('\n');
+
+    var parts = t.split(/(?<=[\.\!\?…])\s+/);
+    var out = [];
+    for(var j=0;j<parts.length;j++){
+      var s = parts[j].trim();
+      if(!s) continue;
+      var base = stripEnd(s).toLowerCase();
+      if(out.length){
+        var prevBase = stripEnd(out[out.length-1]).toLowerCase();
+        if(base === prevBase) continue;
+      }
+      out.push(s);
+    }
+    t = out.join(' ');
+
+    var tt = norm(t);
+    var half = Math.floor(tt.length/2);
+    if(half>30){
+      var first = stripEnd(tt.slice(0,half));
+      var second = stripEnd(tt.slice(half));
+      if(second.startsWith(first)) t = tt.slice(0,half).trim();
+    }
+    t = stripEnd(t);
+    return t || original;
+  }
+
   window.__rp_sanitizeDescription = function(book){
     try{
-      var merged = __rp_merge(book.description||'', book.longDescription||'');
-      var tidy = __rp_dedupeLeadingLines(merged, 2);
-      return tidy;
-    }catch(e){ return book.description || ''; }
+      var merged = (book && (book.description || '') + (book.longDescription ? (' ' + book.longDescription) : '')) || '';
+      return cleanText(merged);
+    }catch(e){ return (book && (book.description||'')) || ''; }
   };
+
+  function sanitizeAll(){
+    var nodes = document.querySelectorAll('p, .description, [data-desc], .book-description');
+    nodes.forEach(function(el){
+      var txt = el.textContent || '';
+      if(looksDuplicated(txt)){
+        el.textContent = cleanText(txt);
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', sanitizeAll);
+  var obs = new MutationObserver(function(){ sanitizeAll(); });
+  obs.observe(document.documentElement, {subtree:true, childList:true});
 })();
 </script>
 
@@ -1663,7 +1714,7 @@
                     
                     <div class="flex-1 mb-6">
                         <h3 class="text-lg font-bold text-gray-900 mb-3">About This Book</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">${__rp_sanitizeDescription(book)}</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">${book.description}</p>
                         ${book.longDescription ? `<p class="text-gray-600 leading-relaxed">${book.longDescription}</p>` : ''}
                     </div>
                     
