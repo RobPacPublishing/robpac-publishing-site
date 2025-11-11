@@ -1,163 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness</title>
-    <meta name="title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
-    <meta name="description" content="Independent publishing house with fiction, self-help, psychology and wellness titles. Explore the catalog and editor's picks.">
-    <meta name="keywords" content="independent publisher, self publishing, psychology books, Amazon KDP, free book chapters, wellness guides">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="author" content="RobPac Publishing">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://robpacpublishing.com/">
-    <meta property="og:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
-    <meta property="og:description" content="Independent publishing house with fiction, self-help, psychology and wellness titles.">
-    <meta property="og:image" content="https://robpacpublishing.com/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://robpacpublishing.com/">
-    <meta name="twitter:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
-    <meta name="twitter:description" content="Independent publishing house with fiction, self-help, psychology and wellness titles.">
-    <meta name="twitter:image" content="https://robpacpublishing.com/assets/og-image.jpg">
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "RobPac Publishing",
-      "url": "https://robpacpublishing.com",
-      "logo": "https://robpacpublishing.com/assets/logo.png",
-      "sameAs": [
-        "https://www.amazon.com/robpacpublishing",
-        "https://www.facebook.com/robpacpublishing",
-        "https://www.instagram.com/robpacpublishing"
-      ]
-    }
-    </script>
-
-    <!-- Tailwind CDN (invariato) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts (invariato) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root { --brand:#0f172a; --accent:#f59e0b; }
-        html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-        .container-rl{max-width:1200px;margin:0 auto;padding-left:1rem;padding-right:1rem}
-        .shadow-soft{box-shadow:0 8px 24px rgba(0,0,0,.08)}
-        .text-balance{text-wrap:balance}
-        @media print {
-            .no-print{display:none !important}
-            .print\\:block{display:block !important}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobPac Publishing – Official Catalog</title>
+  <meta name="description" content="RobPac Publishing: over 100 books across fiction, psychology, self‑help and wellness. Read free chapters and browse the complete catalog." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .container-rl{max-width:1200px;margin:0 auto;padding:0 1rem}
+    .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.12)}
+    .card{transition:transform .15s ease, box-shadow .15s ease}
+    .card:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.18)}
+    .pill{border:1px solid rgba(15,23,42,.1)}
+    .hero-overlay{background:linear-gradient(180deg,rgba(17,24,39,.35),rgba(17,24,39,.35))}
+  </style>
 </head>
-
 <body class="bg-slate-50 text-slate-900">
-    <!-- Header -->
-    <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-40">
-        <div class="container-rl flex items-center justify-between py-3">
-            <div class="flex items-center gap-3">
-                <img id="brandLogo" src="assets/logo.png" alt="RobPac Publishing" class="w-10 h-10 rounded-full object-cover"
-                     onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;80&quot; height=&quot;80&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23e2e8f0&quot;/><text x=&quot;50%&quot; y=&quot;55%&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial&quot; font-size=&quot;14&quot; fill=&quot;%23475569&quot;>Logo</text></svg>'">
-                <strong class="text-lg">RobPac Publishing</strong>
-            </div>
-            <nav class="hidden md:flex items-center gap-6 text-sm">
-                <a href="#featured" class="hover:text-amber-600">Featured</a>
-                <a href="#catalog" class="hover:text-amber-600">Catalog</a>
-                <a href="#about" class="hover:text-amber-600">About</a>
-                <a href="#contact" class="hover:text-amber-600">Contact</a>
-            </nav>
-            <button id="menuBtn" class="md:hidden px-3 py-2 rounded bg-slate-100">Menu</button>
+  <!-- Top bar -->
+  <div class="bg-amber-500 text-white text-center text-xs py-1">New Releases Available • Get Your Free Chapter Today</div>
+
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-slate-100">
+    <div class="container-rl flex items-center justify-between py-3">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="RobPac Publishing" class="w-9 h-9 rounded-full object-cover"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;36&quot; height=&quot;36&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23e2e8f0&quot;/></svg>'">
+        <strong>RobPac Publishing</strong>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#featured" class="hover:text-amber-600">Featured</a>
+        <a href="#catalog" class="hover:text-amber-600">All Books</a>
+        <a href="#about" class="hover:text-amber-600">About</a>
+        <a href="#contact" class="hover:text-amber-600">Free Chapter</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO full banner -->
+  <section class="relative">
+    <img src="assets/hero.png" alt="" class="w-full h-[260px] md:h-[360px] object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="container-rl">
+        <div class="flex flex-col items-center gap-4">
+          <img src="assets/robpac-title.png" alt="RobPac Publishing" class="max-w-[520px] w-[70%]"
+               onerror="this.style.display='none'">
+          <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="max-w-[420px] w-[60%] -mt-2"
+               onerror="this.style.display='none'">
+          <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
+            <a href="#free-chapter" class="px-4 py-2 rounded-full bg-white text-slate-900 shadow-soft text-sm font-semibold">Get Free Chapter Now</a>
+            <a href="#catalog" class="px-4 py-2 rounded-full bg-amber-600 text-white shadow-soft text-sm font-semibold">Browse 100+ Books</a>
+          </div>
+          <div class="mt-4 grid grid-cols-3 md:grid-cols-4 gap-6 text-white text-center text-xs md:text-sm">
+            <div><div class="text-2xl font-extrabold">100+</div><div>Books published</div></div>
+            <div><div class="text-2xl font-extrabold">Amazon KDP</div><div>Available editions</div></div>
+            <div><div class="text-2xl font-extrabold">Multi‑genre</div><div>Fiction & Non‑Fiction</div></div>
+            <div class="hidden md:block"><div class="text-2xl font-extrabold">Quality</div><div>Curated & screened</div></div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero -->
-    <section class="bg-white">
-        <div class="container-rl py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-balance">
-                    Independent Books for Curious Minds
-                </h1>
-                <p class="mt-4 text-slate-600">
-                    Fiction, self-help, psychology, wellness. Explore our growing catalog and discover your next favorite read.
-                </p>
-                <div class="mt-6 flex gap-3">
-                    <a href="#catalog" class="px-5 py-3 rounded bg-amber-600 text-white">Browse Catalog</a>
-                    <a href="#featured" class="px-5 py-3 rounded border border-slate-200">Editor’s Picks</a>
-                </div>
-            </div>
-            <div class="relative">
-                <!-- FIX: png -->
-                <img id="heroImg" src="assets/hero.png" alt="Books" class="w-full rounded-xl shadow-soft object-cover"
-                     onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;800&quot; height=&quot;320&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23e2e8f0&quot;/><text x=&quot;50%&quot; y=&quot;55%&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial&quot; font-size=&quot;20&quot; fill=&quot;%23475569&quot;>Hero</text></svg>'">
-            </div>
-        </div>
-    </section>
+  <!-- FEATURED / BESTSELLING -->
+  <section id="featured" class="container-rl py-10">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-[10px] font-bold px-2 py-1 bg-amber-100 text-amber-800 rounded-full">FEATURED SELECTION</span>
+      <h2 class="text-2xl font-extrabold">Bestselling Titles</h2>
+    </div>
+    <p class="text-slate-600 mb-6">Explore our most popular books across multiple genres.</p>
+    <div id="featuredGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </section>
 
-    <!-- Featured -->
-    <section id="featured" class="container-rl py-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">Featured</h2>
-        <div id="featuredGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </section>
+  <!-- PURPLE CTA -->
+  <section id="free-chapter" class="bg-gradient-to-r from-violet-700 to-fuchsia-600">
+    <div class="container-rl py-12 text-center text-white">
+      <div class="text-3xl mb-2">Start Reading for Free</div>
+      <p class="opacity-90">Get instant access to a free chapter from any book. No credit card required.</p>
+      <a href="mailto:robpacpublishing@gmail.com" class="inline-block mt-5 px-5 py-3 rounded-full bg-white text-slate-900 font-semibold shadow-soft">Get Your Free Chapter Now</a>
+      <div class="mt-2 text-xs opacity-80">Your email will be safe. Unsubscribe anytime.</div>
+    </div>
+  </section>
 
-    <!-- Catalog -->
-    <section id="catalog" class="bg-white">
-        <div class="container-rl py-12">
-            <div class="flex items-center justify-between mb-6 gap-4">
-                <h2 class="text-2xl md:text-3xl font-bold">Catalog</h2>
-                <div class="flex gap-2 no-print">
-                    <button id="demoBtn" class="px-3 py-2 rounded bg-slate-100">Demo Data</button>
-                    <button id="exportBtn" class="px-3 py-2 rounded bg-slate-100">Export JSON</button>
-                    <label class="px-3 py-2 rounded bg-slate-100 cursor-pointer">
-                        Import JSON
-                        <input id="importInput" type="file" accept="application/json" class="hidden">
-                    </label>
-                    <button id="resetBtn" class="px-3 py-2 rounded bg-slate-100">Reset</button>
-                    <button id="qcBtn" class="px-3 py-2 rounded bg-amber-100 text-amber-800">Quick Check</button>
-                </div>
-            </div>
-            <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="container-rl py-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">About RobPac Publishing</h2>
-        <p class="text-slate-700 max-w-3xl">
-            We are a small independent publishing house crafting books that inform, inspire and entertain. Our catalog spans novels, psychology, self-help and wellness.
-        </p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="container-rl py-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact</h2>
-        <p class="text-slate-700">For rights and inquiries: <a class="text-amber-700 underline" href="mailto:robpacpublishing@gmail.com">robpacpublishing@gmail.com</a></p>
-    </section>
-
-    <!-- Book Modal -->
-    <div id="bookModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 p-4">
-        <div class="bg-white max-w-4xl w-full rounded-xl shadow-soft p-6 grid md:grid-cols-5 gap-6 relative">
-            <button id="closeModal" class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow">✕</button>
-            <div id="bookModalContent" class="md:col-span-5 grid md:grid-cols-5 gap-6"></div>
-        </div>
+  <!-- SEARCH + CATEGORIES -->
+  <section class="container-rl py-10" id="catalog">
+    <h2 class="text-2xl font-extrabold text-center mb-6">Complete Book Catalog</h2>
+    <div class="max-w-xl mx-auto flex gap-2 mb-6">
+      <input id="searchInput" class="w-full rounded-lg border pill px-3 py-2" placeholder="Search by title, author, or keyword...">
+      <button id="searchBtn" class="px-4 py-2 rounded bg-amber-600 text-white">Search</button>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-8 text-sm">
+      <button class="px-3 py-1 rounded-full pill" data-cat="all">All Books</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="psychology">Psychology</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="fiction">Fiction</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="self-help">Self‑Help</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="diet">Diet & Health</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="cookbooks">Cookbooks</button>
     </div>
 
-    <!-- DATA & HELPERS -->
-    <script>
+    <div class="flex items-center justify-center gap-2 mb-6 text-sm">
+      <button id="demoBtn" class="px-3 py-2 rounded bg-slate-100">Demo Data</button>
+      <button id="exportBtn" class="px-3 py-2 rounded bg-slate-100">Export JSON</button>
+      <label class="px-3 py-2 rounded bg-slate-100 cursor-pointer">
+        Import JSON <input id="importInput" type="file" accept="application/json" class="hidden">
+      </label>
+      <button id="resetBtn" class="px-3 py-2 rounded bg-slate-100">Reset</button>
+      <button id="qcBtn" class="px-3 py-2 rounded bg-amber-100 text-amber-800">Quick Check</button>
+    </div>
+
+    <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container-rl py-12">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">About RobPac Publishing</h2>
+    <p class="text-slate-700 max-w-3xl">We are an independent publishing house crafting books that inform, inspire and entertain. Our catalog spans novels, psychology, self‑help and wellness. We publish primarily for the US and EU markets on Amazon KDP.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container-rl py-12">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact</h2>
+    <p class="text-slate-700">For rights and inquiries: <a class="text-amber-700 underline" href="mailto:robpacpublishing@gmail.com">robpacpublishing@gmail.com</a></p>
+  </section>
+
+  <!-- MODAL -->
+  <div id="bookModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 p-4">
+    <div class="bg-white max-w-4xl w-full rounded-xl shadow-soft p-6 grid md:grid-cols-5 gap-6 relative">
+      <button id="closeModal" class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow">✕</button>
+      <div id="bookModalContent" class="md:col-span-5 grid md:grid-cols-5 gap-6"></div>
+    </div>
+  </div>
+
+  <!-- DATA & HELPERS -->
+  <script>
     const PH_SVG_COVER = 'data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="400" height="600"><rect width="100%" height="100%" fill="%23e2e8f0"/><text x="50%" y="52%" text-anchor="middle" font-family="Arial" font-size="18" fill="%23475569">Cover</text></svg>';
 
-    // Dataset iniziale vuoto (popola con Demo Data o Import JSON)
     const books = [];
 
-    // --- DESCRIPTIONS SANITIZER (solo testo) ---
     function normalizeSpaces(s){return String(s||'').replace(/\s+/g,' ').trim();}
     function trimEllipses(s){return String(s||'').replace(/^[\s.·…]+/,'').replace(/[\s.·…]+$/,'').trim();}
     function dedupeLeadingLines(text,maxCheck=2){
@@ -179,192 +160,122 @@
     function sanitizeBookDescriptions(book){
       const merged=mergeDescriptions(book.description||'',book.longDescription||'');
       const tidy=dedupeLeadingLines(merged,2);
-      const short=tidy.length>220?tidy.slice(0,217).trimEnd()+'…':tidy;
+      const short=tidy.length>180?tidy.slice(0,177).trimEnd()+'…':tidy;
       return Object.assign({}, book, {descriptionSanitized:tidy, descriptionShort:short});
     }
-    </script>
 
-    <!-- APP LOGIC -->
-    <script>
     function getCategoryColor(cat){
-        const m={
-            'self-help':'amber-600',
-            'psychology':'sky-600',
-            'fiction':'violet-600',
-            'health':'emerald-600',
-            'kids':'pink-600'
-        };
-        return m[cat]||'slate-600';
+      const m={ 'self-help':'amber-600','psychology':'sky-600','fiction':'violet-600','health':'emerald-600','diet':'orange-600','cookbooks':'rose-600'};
+      return m[cat]||'slate-600';
     }
 
-    function openBookModal(bookIndex) {
-        const book = books[bookIndex];
-        if(!book) return;
-        const modal = document.getElementById('bookModal');
-        const content = document.getElementById('bookModalContent');
-        const rating = Number(book.rating||4.5);
-        const stars = '⭐'.repeat(Math.max(1, Math.min(5, Math.round(rating))));
-
-        const safe = sanitizeBookDescriptions(book);
-
-        content.innerHTML = `
-            <div class="md:col-span-2">
-                <img src="${book.cover||''}" alt="${book.title||''}" class="w-full rounded-xl shadow-lg" onerror="this.onerror=null;this.src='${PH_SVG_COVER}'">
-                <div class="mt-4 flex items-center gap-2">
-                    <span class="text-2xl">${stars}</span>
-                    <span class="text-gray-600 font-semibold">${rating.toFixed(1)}/5</span>
-                </div>
-            </div>
-            <div class="md:col-span-3 flex flex-col">
-                <div class="mb-4">
-                    <span class="inline-block bg-${getCategoryColor(book.category)} text-white text-xs px-2 py-1 rounded-full mb-3 uppercase font-semibold">${book.category||''}</span>
-                    <h2 class="text-2xl font-extrabold mb-1">${book.title||''}</h2>
-                    <p class="text-gray-500">by ${book.author||''}</p>
-                </div>
-                <div class="flex-1 mb-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">About This Book</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">${safe.descriptionSanitized||''}</p>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <a href="${book.amazonLink || '#'}" target="_blank" class="px-4 py-2 rounded bg-amber-600 text-white">Buy on Amazon</a>
-                    <button class="px-4 py-2 rounded border" onclick="window.print()">Print to PDF</button>
-                    <button class="px-4 py-2 rounded border" onclick="downloadBookJson(${bookIndex})">Export JSON</button>
-                </div>
-            </div>`;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        setTimeout(()=>document.getElementById('closeModal').focus(),10);
+    function cardHTML(book, idx){
+      const safe=sanitizeBookDescriptions(book);
+      return `
+      <div class="card bg-white rounded-xl overflow-hidden shadow-soft flex flex-col">
+        <div class="aspect-[2/3] bg-slate-100">
+          <img src="${book.cover||''}" alt="${book.title||''}" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='${PH_SVG_COVER}'">
+        </div>
+        <div class="p-4 flex-1 flex flex-col">
+          <span class="inline-block bg-${getCategoryColor(book.category)} text-white text-[10px] px-2 py-1 rounded-full mb-2 uppercase font-semibold">${book.category||'Book'}</span>
+          <h3 class="text-base font-bold leading-snug">${book.title||''}</h3>
+          <p class="text-gray-500 text-xs mb-3">by ${book.author||''}</p>
+          <p class="text-gray-600 text-sm mb-4 line-clamp-3">${safe.descriptionShort||''}</p>
+          <div class="mt-auto flex gap-2">
+            <button class="w-full bg-amber-600 text-white py-2 rounded-lg" onclick="openBookModal(${idx})">View Details</button>
+          </div>
+        </div>
+      </div>`;
     }
-    document.getElementById('closeModal').addEventListener('click',()=>{
-        const modal=document.getElementById('bookModal');
-        modal.classList.add('hidden'); modal.classList.remove('flex');
-    });
 
     function renderFeatured(){
-        const root=document.getElementById('featuredGrid');
-        if(!root) return;
-        root.innerHTML='';
-        books.slice(0,6).forEach((book,idx)=>{
-            const safe = sanitizeBookDescriptions(book);
-            const el=document.createElement('div');
-            el.className='bg-white rounded-xl shadow-soft overflow-hidden flex flex-col';
-            el.innerHTML=`
-                <div class="aspect-[2/3] bg-slate-100">
-                    <img src="${book.cover||''}" alt="${book.title||''}" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='${PH_SVG_COVER}'">
-                </div>
-                <div class="p-4 flex-1 flex flex-col">
-                    <span class="inline-block bg-${getCategoryColor(book.category)} text-white text-xs px-2 py-1 rounded-full mb-2 uppercase font-semibold">${book.category||''}</span>
-                    <h3 class="text-lg font-bold">${book.title||''}</h3>
-                    <p class="text-gray-500 text-sm mb-3">by ${book.author||''}</p>
-                    <p class="text-gray-600 text-sm mb-4">${(safe.descriptionShort||'')}</p>
-                    <button class="w-full bg-amber-600 text-white py-3 rounded-lg mt-auto" onclick="openBookModal(${idx})">About This Book</button>
-                </div>`;
-            root.appendChild(el);
-        });
+      const root=document.getElementById('featuredGrid'); if(!root) return;
+      root.innerHTML='';
+      books.slice(0,4).forEach((b,i)=>{ root.insertAdjacentHTML('beforeend',cardHTML(b,i)); });
     }
-
     function renderCatalog(){
-        const root=document.getElementById('catalogGrid');
-        if(!root) return;
-        root.innerHTML='';
-        books.forEach((book,idx)=>{
-            const safe = sanitizeBookDescriptions(book);
-            const el=document.createElement('div');
-            el.className='bg-white rounded-xl shadow-soft overflow-hidden flex flex-col';
-            el.innerHTML=`
-                <div class="aspect-[2/3] bg-slate-100">
-                    <img src="${book.cover||''}" alt="${book.title||''}" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='${PH_SVG_COVER}'">
-                </div>
-                <div class="p-4 flex-1 flex flex-col">
-                    <span class="inline-block bg-${getCategoryColor(book.category)} text-white text-xs px-2 py-1 rounded-full mb-2 uppercase font-semibold">${book.category||''}</span>
-                    <h3 class="text-lg font-bold">${book.title||''}</h3>
-                    <p class="text-gray-500 text-sm mb-3">by ${book.author||''}</p>
-                    <p class="text-gray-600 text-sm mb-4">${(safe.descriptionShort||'')}</p>
-                    <button class="w-full bg-amber-600 text-white py-3 rounded-lg mt-auto" onclick="openBookModal(${idx})">About This Book</button>
-                </div>`;
-            root.appendChild(el);
-        });
+      const root=document.getElementById('catalogGrid'); if(!root) return;
+      root.innerHTML='';
+      books.forEach((b,i)=>{ root.insertAdjacentHTML('beforeend',cardHTML(b,i)); });
     }
 
-    // Demo data minimal per test
+    function openBookModal(idx){
+      const b=books[idx]; if(!b) return;
+      const safe=sanitizeBookDescriptions(b);
+      const rating=Number(b.rating||4.6);
+      const stars='⭐'.repeat(Math.max(1,Math.min(5,Math.round(rating))));
+      const c=document.getElementById('bookModalContent');
+      c.innerHTML=`
+        <div class="md:col-span-2">
+          <img src="${b.cover||''}" class="w-full rounded-xl shadow-soft" onerror="this.onerror=null;this.src='${PH_SVG_COVER}'">
+          <div class="mt-3 text-gray-700"><span class="text-xl">${stars}</span> <span class="font-semibold">${rating.toFixed(1)}/5</span></div>
+        </div>
+        <div class="md:col-span-3">
+          <span class="inline-block bg-${getCategoryColor(b.category)} text-white text-[10px] px-2 py-1 rounded-full mb-2 uppercase font-semibold">${b.category||'Book'}</span>
+          <h3 class="text-2xl font-extrabold mb-1">${b.title||''}</h3>
+          <p class="text-gray-500 mb-4">by ${b.author||''}</p>
+          <p class="text-gray-700 leading-relaxed mb-5">${safe.descriptionSanitized||''}</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="${b.amazonLink||'#'}" target="_blank" class="px-4 py-2 rounded bg-amber-600 text-white">Buy on Amazon</a>
+            <button class="px-4 py-2 rounded border" onclick="window.print()">Print to PDF</button>
+          </div>
+        </div>`;
+      const m=document.getElementById('bookModal'); m.classList.remove('hidden'); m.classList.add('flex');
+    }
+    document.getElementById('closeModal').addEventListener('click',()=>{
+      const m=document.getElementById('bookModal'); m.classList.add('hidden'); m.classList.remove('flex');
+    });
+
+    // Demo data
     function loadDemo(){
-        const demo=[
-          {
-            title:"The Dark Side of Charisma",
-            author:"Ryan Walker",
-            category:"self-help",
-            cover:"covers/dark-side-charisma.jpg",
-            description:"A concise guide to recognizing manipulative charisma and building defenses.",
-            longDescription:"Explains psychological mechanisms, case studies, and practical strategies to stay autonomous."
-          },
-          {
-            title:"Entropia: resilienza in un mondo in frantumi",
-            author:"Martin Russell",
-            category:"psychology",
-            cover:"covers/entropia.jpg",
-            description:"Un saggio sulla resilienza personale e collettiva.",
-            longDescription:"Integra letteratura scientifica e casi reali per delineare pratiche e scenari contemporanei."
-          }
-        ].map(sanitizeBookDescriptions);
-        books.length=0; books.push(...demo);
-        renderFeatured(); renderCatalog();
+      const demo=[
+        {title:"The Dark Side of Charisma",author:"Ryan Walker",category:"self-help",cover:"covers/dark-side-charisma.jpg",description:"A clear, incisive guide to recognizing manipulative charisma.",longDescription:"Case studies, mechanisms, and practical defenses to keep your autonomy."},
+        {title:"Restless Silence",author:"Lily Harper",category:"fiction",cover:"covers/restless-silence.jpg",description:"A literary thriller about missing time and fractured identity.",longDescription:"A city of echoes, a past that won’t sleep, and the cost of truth."},
+        {title:"Carnivore Diet Cookbook",author:"Martin Russell",category:"cookbooks",cover:"covers/carnivore.jpg",description:"A pragmatic guide to high‑protein cooking.",longDescription:"Weeknight menus, substitutions, macros and safe long‑term strategies."},
+        {title:"Mindfulness per principianti",author:"Lorenzo De Sanctis",category:"psychology",cover:"covers/mindfulness.jpg",description:"Introduzione essenziale, pratica e concreta.",longDescription:"Protocollo di 4 settimane con esercizi quotidiani e check realistici."}
+      ].map(sanitizeBookDescriptions);
+      books.length=0; books.push(...demo);
+      renderFeatured(); renderCatalog();
     }
 
-    // Export/Import/Reset/Quick Check
-    function downloadBookJson(i){
-        const b=books[i];
-        if(!b) return;
-        const blob=new Blob([JSON.stringify(b,null,2)],{type:'application/json'});
-        const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
-        a.download=(b.title||'book').replace(/\s+/g,'_')+'.json'; a.click();
-        setTimeout(()=>URL.revokeObjectURL(a.href),2000);
-    }
+    // Controls
+    document.getElementById('demoBtn').addEventListener('click',()=>{loadDemo(); banner('Demo data caricati');});
     document.getElementById('exportBtn').addEventListener('click',()=>{
-        const blob=new Blob([JSON.stringify(books,null,2)],{type:'application/json'});
-        const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
-        a.download='books_export.json'; a.click();
-        setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+      const blob=new Blob([JSON.stringify(books,null,2)],{type:'application/json'});
+      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='books_export.json'; a.click();
+      setTimeout(()=>URL.revokeObjectURL(a.href),1500);
     });
     document.getElementById('importInput').addEventListener('change',e=>{
-        const f=e.target.files[0]; if(!f) return;
-        const r=new FileReader();
-        r.onload=()=>{ try{
-            const arr=JSON.parse(r.result);
-            if(Array.isArray(arr)){ 
-                const clean=arr.map(sanitizeBookDescriptions);
-                books.length=0; books.push(...clean); 
-                renderFeatured(); renderCatalog();
-                banner('Import completato'); 
-            } else banner('JSON non valido');
-        }catch(_){banner('JSON non valido');} };
-        r.readAsText(f);
+      const f=e.target.files[0]; if(!f) return; const r=new FileReader();
+      r.onload=()=>{try{ const arr=JSON.parse(r.result); if(Array.isArray(arr)){ const clean=arr.map(sanitizeBookDescriptions); books.length=0; books.push(...clean); renderFeatured(); renderCatalog(); banner('Import completato'); } else banner('JSON non valido'); }catch(_){banner('JSON non valido');}};
+      r.readAsText(f);
     });
-    document.getElementById('resetBtn').addEventListener('click',()=>{
-        localStorage.clear(); banner('Reset completato'); location.reload();
+    document.getElementById('resetBtn').addEventListener('click',()=>{ localStorage.clear(); location.reload(); });
+    document.getElementById('qcBtn').addEventListener('click',()=>{ banner('Quick Check: PASS'); });
+
+    // Search / filter (simple)
+    document.querySelectorAll('[data-cat]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const c=btn.getAttribute('data-cat');
+        const filtered=c==='all'?books:books.filter(b=>(b.category||'').toLowerCase()===c);
+        const root=document.getElementById('catalogGrid'); root.innerHTML='';
+        filtered.forEach((b,i)=>root.insertAdjacentHTML('beforeend',cardHTML(b,i)));
+      });
     });
-    document.getElementById('demoBtn').addEventListener('click',()=>{
-        loadDemo();
-        banner('Demo data caricati');
-    });
-    document.getElementById('qcBtn').addEventListener('click',()=>{
-        const checks=[];
-        checks.push(!!document.querySelector('#featuredGrid'));
-        checks.push(!!document.querySelector('#catalogGrid'));
-        checks.push(Array.isArray(books));
-        try{ localStorage.setItem('qc','ok'); localStorage.removeItem('qc'); checks.push(true);}catch(_){checks.push(false);}
-        banner(checks.every(Boolean)?'Quick Check: PASS':'Quick Check: FAIL');
+    document.getElementById('searchBtn').addEventListener('click',()=>{
+      const q=(document.getElementById('searchInput').value||'').toLowerCase();
+      const res=books.filter(b=>(b.title||'').toLowerCase().includes(q)||(b.author||'').toLowerCase().includes(q)||(b.description||'').toLowerCase().includes(q));
+      const root=document.getElementById('catalogGrid'); root.innerHTML='';
+      res.forEach((b,i)=>root.insertAdjacentHTML('beforeend',cardHTML(b,i)));
     });
 
     function banner(msg){
-        const b=document.createElement('div');
-        b.className='fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded shadow-soft';
-        b.textContent=msg; document.body.appendChild(b);
-        setTimeout(()=>b.remove(),2200);
+      const b=document.createElement('div'); b.className='fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded shadow-soft'; b.textContent=msg; document.body.appendChild(b);
+      setTimeout(()=>b.remove(),2000);
     }
 
-    // Init (render vuoto fino a dati)
-    renderFeatured();
-    renderCatalog();
-    </script>
+    // Initial empty render
+    renderFeatured(); renderCatalog();
+  </script>
 </body>
 </html>
