@@ -12,28 +12,46 @@
     .fixed-ratio{position:relative;padding-top:150%;background:#f1f5f9}
     .fixed-ratio>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.12)}
-    .line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-    .carousel{display:flex;gap:24px;overflow-x:auto}
+    .carousel{display:flex;gap:24px;overflow-x:auto;scrollbar-width:thin}
     .carousel-item{flex:0 0 270px}
     .text-xxs{font-size:.7rem;line-height:1rem}
+    .hero-bg{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),center/cover no-repeat url('assets/hero.png');}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
+
   <header class="bg-white border-b">
     <div class="container-rl flex items-center gap-3 py-3">
       <img src="assets/logo.png" alt="RobPac Publishing" class="w-8 h-8 rounded-full object-cover" onerror="this.style.display='none'">
       <strong>RobPac Publishing</strong>
+      <nav class="ml-auto space-x-6 text-sm">
+        <a href="#featured" class="hover:underline">Featured</a>
+        <a href="#catalog" class="hover:underline">Catalog</a>
+        <a href="#about" class="hover:underline">About</a>
+      </nav>
     </div>
   </header>
 
-  <section class="container-rl py-8">
+  <section class="hero-bg">
+    <div class="container-rl py-16 text-white">
+      <h1 class="text-4xl font-extrabold mb-2">Independent Books for Curious Minds</h1>
+      <p class="max-w-2xl">Fiction, self-help, psychology, wellness. Explore our growing catalog and discover your next favorite read.</p>
+    </div>
+  </section>
+
+  <section id="featured" class="container-rl py-10">
     <h2 class="text-2xl font-extrabold mb-4">Bestselling Titles</h2>
     <div id="featuredTrack" class="carousel"></div>
   </section>
 
-  <section class="container-rl py-8">
+  <section id="catalog" class="container-rl py-8">
     <h2 class="text-2xl font-extrabold text-center mb-6">Complete Book Catalog</h2>
     <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </section>
+
+  <section id="about" class="container-rl py-10">
+    <h2 class="text-xl font-bold mb-2">About RobPac Publishing</h2>
+    <p>We are a small independent publishing house crafting books that inform, inspire and entertain.</p>
   </section>
 
   <div id="bookModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 p-4">
@@ -48,51 +66,62 @@
   (function(){
     var PH = 'data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="400" height="600"><rect width="100%" height="100%" fill="%23e2e8f0"/><text x="50%" y="52%" text-anchor="middle" font-family="Arial" font-size="18" fill="%23475569">Cover</text></svg>';
     var books = [];
-    try{ books = JSON.parse(document.getElementById('books-data').textContent) || []; }catch(_){}
+    try { books = JSON.parse(document.getElementById('books-data').textContent) || []; } catch(e) { books = []; }
 
-    function card(b, idx){
-      return ''
-      + '<div class="bg-white rounded-xl overflow-hidden shadow-soft flex flex-col carousel-item">'
-      + '  <div class="fixed-ratio">'
-      + '    <img src="'+(b.cover||'')+'" alt="'+(b.title||'')+'" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\''+PH+'\'">'
-      + '  </div>'
-      + '  <div class="p-4 flex-1 flex flex-col">'
-      + '    <span class="inline-block bg-gray-700 text-white text-xxs px-2 py-1 rounded-full mb-2 uppercase font-semibold">'+(b.category||'Book')+'</span>'
-      + '    <h3 class="text-base font-bold leading-snug">'+(b.title||'')+'</h3>'
-      + '    <p class="text-gray-500 text-xs mb-3">by '+(b.author||'')+'</p>'
-      + '    <p class="text-gray-700 text-sm mb-4 line-clamp-3">'+(b.description||'')+'</p>'
-      + '    <div class="mt-auto"><button class="w-full bg-yellow-600 text-white py-2 rounded-lg" data-idx="'+idx+'" onclick="openBookModal(this.dataset.idx)">View Details</button></div>'
-      + '  </div>'
-      + '</div>';
+    // Stable index
+    for (var i=0;i<books.length;i++){ books[i].__idx = i; }
+
+    function createCard(b){
+      var el = document.createElement('div');
+      el.className = 'bg-white rounded-xl overflow-hidden shadow-soft flex flex-col carousel-item';
+      el.innerHTML =
+        '<div class="fixed-ratio">\
+           <img src="'+(b.cover||'')+'" alt="'+(b.title||'')+'" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\''+PH+'\'">\
+         </div>\
+         <div class="p-4 flex-1 flex flex-col">\
+           <span class="inline-block bg-gray-700 text-white text-xxs px-2 py-1 rounded-full mb-2 uppercase font-semibold">'+(b.category||'Book')+'</span>\
+           <h3 class="text-base font-bold leading-snug">'+(b.title||'')+'</h3>\
+           <p class="text-gray-500 text-xs mb-4">by '+(b.author||'')+'</p>\
+           <div class="mt-auto"><button class="w-full bg-yellow-600 text-white py-2 rounded-lg">View Details</button></div>\
+         </div>';
+      el.querySelector('button').addEventListener('click', function(){ openBookModal(b.__idx); });
+      return el;
     }
 
     function render(){
-      for(var i=0;i<books.length;i++) books[i].__idx=i;
-      var ft = document.getElementById('featuredTrack'); ft.innerHTML='';
+      var ft = document.getElementById('featuredTrack');
+      ft.innerHTML='';
       var top = books.slice(0,12);
-      for(var i=0;i<top.length;i++) ft.insertAdjacentHTML('beforeend', card(top[i], top[i].__idx));
-      var grid=document.getElementById('catalogGrid'); grid.innerHTML='';
-      for(var j=0;j<books.length;j++) grid.insertAdjacentHTML('beforeend', card(books[j], books[j].__idx));
+      for (var i=0;i<top.length;i++){ ft.appendChild(createCard(top[i])); }
+
+      var grid = document.getElementById('catalogGrid');
+      grid.innerHTML='';
+      for (var j=0;j<books.length;j++){ grid.appendChild(createCard(books[j])); }
     }
 
     window.openBookModal = function(idx){
       idx = Number(idx);
       var b = books[idx]; if(!b) return;
       var c = document.getElementById('bookModalContent');
-      c.innerHTML = ''
-        + '<div class="md:col-span-2"><div class="fixed-ratio"><img src="'+(b.cover||'')+'" alt="'+(b.title||'')+'" decoding="async" onerror="this.onerror=null;this.src=\''+PH+'\'"></div></div>'
-        + '<div class="md:col-span-3">'
-        + '  <h3 class="text-2xl font-extrabold mb-1">'+(b.title||'')+'</h3>'
-        + '  <p class="text-gray-500 mb-4">by '+(b.author||'')+'</p>'
-        + '  <p class="text-gray-800 leading-relaxed whitespace-normal">'+(b.description||'')+'</p>'
-        + '  <div class="flex gap-3 mt-5">'
-        + '    <a href="'+(b.amazonLink||'#')+'" target="_blank" class="px-4 py-2 rounded bg-yellow-600 text-white">Buy on Amazon</a>'
-        + '  </div>'
-        + '</div>';
-      var m=document.getElementById('bookModal'); m.classList.remove('hidden'); m.classList.add('flex');
+      c.innerHTML =
+        '<div class="md:col-span-2"><div class="fixed-ratio"><img src="'+(b.cover||'')+'" alt="'+(b.title||'')+'" decoding="async" onerror="this.onerror=null;this.src=\''+PH+'\'"></div></div>\
+         <div class="md:col-span-3">\
+           <span class="inline-block bg-gray-700 text-white text-xxs px-2 py-1 rounded-full mb-2 uppercase font-semibold">'+(b.category||'Book')+'</span>\
+           <h3 class="text-2xl font-extrabold mb-1">'+(b.title||'')+'</h3>\
+           <p class="text-gray-500 mb-4">by '+(b.author||'')+'</p>\
+           <h4 class="font-semibold mb-2">About This Book</h4>\
+           <p class="text-gray-800 leading-relaxed whitespace-pre-wrap">'+(b.description||'')+'</p>\
+           <div class="flex gap-3 mt-5">\
+             <a href="'+(b.amazonLink||'#')+'" target="_blank" class="px-4 py-2 rounded bg-yellow-600 text-white">Buy on Amazon</a>\
+           </div>\
+         </div>';
+      var m = document.getElementById('bookModal');
+      m.classList.remove('hidden'); m.classList.add('flex');
     };
+
     document.getElementById('closeModal').addEventListener('click', function(){
-      var m=document.getElementById('bookModal'); m.classList.add('hidden'); m.classList.remove('flex');
+      var m = document.getElementById('bookModal');
+      m.classList.add('hidden'); m.classList.remove('flex');
     });
 
     render();
