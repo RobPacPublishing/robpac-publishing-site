@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RobPac Publishing — Catalog</title>
+  <title>RobPac Publishing</title>
   <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
@@ -12,10 +12,7 @@
     .fixed-ratio{position:relative;padding-top:150%;background:#f1f5f9}
     .fixed-ratio>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.12)}
-    .carousel{display:flex;gap:24px;overflow-x:auto;scrollbar-width:thin}
-    .carousel-item{flex:0 0 270px}
     .text-xxs{font-size:.7rem;line-height:1rem}
-    .hero-bg{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),center/cover no-repeat url('assets/hero.png');}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -32,20 +29,31 @@
     </div>
   </header>
 
-  <section class="hero-bg">
-    <div class="container-rl py-16 text-white">
-      <h1 class="text-4xl font-extrabold mb-2">Independent Books for Curious Minds</h1>
-      <p class="max-w-2xl">Fiction, self-help, psychology, wellness. Explore our growing catalog and discover your next favorite read.</p>
+  <section class="container-rl py-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl font-extrabold leading-tight">Independent Books<br/>for Curious Minds</h1>
+        <p class="mt-3 text-gray-600">Fiction, self-help, psychology, wellness. Explore our growing catalog and discover your next favorite read.</p>
+        <div class="mt-6 space-x-3">
+          <a href="#catalog" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded">Browse Catalog</a>
+          <a href="#featured" class="inline-block bg-white border px-4 py-2 rounded text-gray-700">Editor's Picks</a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <img src="assets/hero.png" alt="Books" class="w-full h-auto rounded-lg shadow-soft" onerror="this.style.display='none'">
+      </div>
     </div>
   </section>
 
-  <section id="featured" class="container-rl py-10">
-    <h2 class="text-2xl font-extrabold mb-4">Bestselling Titles</h2>
-    <div id="featuredTrack" class="carousel"></div>
+  <section id="featured" class="bg-gray-100">
+    <div class="container-rl py-8">
+      <h2 class="text-2xl font-extrabold mb-4">Featured</h2>
+      <div id="featuredTrack" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
   </section>
 
   <section id="catalog" class="container-rl py-8">
-    <h2 class="text-2xl font-extrabold text-center mb-6">Complete Book Catalog</h2>
+    <h2 class="text-2xl font-extrabold mb-6">Catalog</h2>
     <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
   </section>
 
@@ -67,13 +75,11 @@
     var PH = 'data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="400" height="600"><rect width="100%" height="100%" fill="%23e2e8f0"/><text x="50%" y="52%" text-anchor="middle" font-family="Arial" font-size="18" fill="%23475569">Cover</text></svg>';
     var books = [];
     try { books = JSON.parse(document.getElementById('books-data').textContent) || []; } catch(e) { books = []; }
-
-    // Stable index
     for (var i=0;i<books.length;i++){ books[i].__idx = i; }
 
     function createCard(b){
       var el = document.createElement('div');
-      el.className = 'bg-white rounded-xl overflow-hidden shadow-soft flex flex-col carousel-item';
+      el.className = 'bg-white rounded-xl overflow-hidden shadow-soft flex flex-col';
       el.innerHTML =
         '<div class="fixed-ratio">\
            <img src="'+(b.cover||'')+'" alt="'+(b.title||'')+'" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\''+PH+'\'">\
@@ -91,7 +97,7 @@
     function render(){
       var ft = document.getElementById('featuredTrack');
       ft.innerHTML='';
-      var top = books.slice(0,12);
+      var top = books.slice(0,8);
       for (var i=0;i<top.length;i++){ ft.appendChild(createCard(top[i])); }
 
       var grid = document.getElementById('catalogGrid');
