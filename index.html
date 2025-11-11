@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RobPac Publishing – Official Catalog</title>
-  <meta name="description" content="RobPac Publishing: over 100 books across fiction, psychology, self‑help and wellness. Read free chapters and browse the complete catalog." />
+  <meta name="description" content="RobPac Publishing: over 100 books across fiction, psychology, self-help and wellness. Read free chapters and browse the complete catalog." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -18,10 +18,8 @@
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
-  <!-- Top bar -->
   <div class="bg-amber-500 text-white text-center text-xs py-1">New Releases Available • Get Your Free Chapter Today</div>
 
-  <!-- Header -->
   <header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-slate-100">
     <div class="container-rl flex items-center justify-between py-3">
       <div class="flex items-center gap-3">
@@ -38,17 +36,14 @@
     </div>
   </header>
 
-  <!-- HERO full banner -->
   <section class="relative">
     <img src="assets/hero.png" alt="" class="w-full h-[260px] md:h-[360px] object-cover">
     <div class="hero-overlay absolute inset-0"></div>
     <div class="absolute inset-0 flex items-center justify-center">
       <div class="container-rl">
         <div class="flex flex-col items-center gap-4">
-          <img src="assets/robpac-title.png" alt="RobPac Publishing" class="max-w-[520px] w-[70%]"
-               onerror="this.style.display='none'">
-          <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="max-w-[420px] w-[60%] -mt-2"
-               onerror="this.style.display='none'">
+          <img src="assets/robpac-title.png" alt="RobPac Publishing" class="max-w-[520px] w-[70%]" onerror="this.style.display='none'">
+          <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="max-w-[420px] w-[60%] -mt-2" onerror="this.style.display='none'">
           <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
             <a href="#free-chapter" class="px-4 py-2 rounded-full bg-white text-slate-900 shadow-soft text-sm font-semibold">Get Free Chapter Now</a>
             <a href="#catalog" class="px-4 py-2 rounded-full bg-amber-600 text-white shadow-soft text-sm font-semibold">Browse 100+ Books</a>
@@ -56,7 +51,7 @@
           <div class="mt-4 grid grid-cols-3 md:grid-cols-4 gap-6 text-white text-center text-xs md:text-sm">
             <div><div class="text-2xl font-extrabold">100+</div><div>Books published</div></div>
             <div><div class="text-2xl font-extrabold">Amazon KDP</div><div>Available editions</div></div>
-            <div><div class="text-2xl font-extrabold">Multi‑genre</div><div>Fiction & Non‑Fiction</div></div>
+            <div><div class="text-2xl font-extrabold">Multi-genre</div><div>Fiction & Non-Fiction</div></div>
             <div class="hidden md:block"><div class="text-2xl font-extrabold">Quality</div><div>Curated & screened</div></div>
           </div>
         </div>
@@ -64,7 +59,6 @@
     </div>
   </section>
 
-  <!-- FEATURED / BESTSELLING -->
   <section id="featured" class="container-rl py-10">
     <div class="flex items-center gap-3 mb-4">
       <span class="text-[10px] font-bold px-2 py-1 bg-amber-100 text-amber-800 rounded-full">FEATURED SELECTION</span>
@@ -74,7 +68,6 @@
     <div id="featuredGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
   </section>
 
-  <!-- PURPLE CTA -->
   <section id="free-chapter" class="bg-gradient-to-r from-violet-700 to-fuchsia-600">
     <div class="container-rl py-12 text-center text-white">
       <div class="text-3xl mb-2">Start Reading for Free</div>
@@ -84,7 +77,6 @@
     </div>
   </section>
 
-  <!-- SEARCH + CATEGORIES -->
   <section class="container-rl py-10" id="catalog">
     <h2 class="text-2xl font-extrabold text-center mb-6">Complete Book Catalog</h2>
     <div class="max-w-xl mx-auto flex gap-2 mb-6">
@@ -95,13 +87,12 @@
       <button class="px-3 py-1 rounded-full pill" data-cat="all">All Books</button>
       <button class="px-3 py-1 rounded-full pill" data-cat="psychology">Psychology</button>
       <button class="px-3 py-1 rounded-full pill" data-cat="fiction">Fiction</button>
-      <button class="px-3 py-1 rounded-full pill" data-cat="self-help">Self‑Help</button>
+      <button class="px-3 py-1 rounded-full pill" data-cat="self-help">Self-Help</button>
       <button class="px-3 py-1 rounded-full pill" data-cat="diet">Diet & Health</button>
       <button class="px-3 py-1 rounded-full pill" data-cat="cookbooks">Cookbooks</button>
     </div>
 
     <div class="flex items-center justify-center gap-2 mb-6 text-sm">
-      <button id="demoBtn" class="px-3 py-2 rounded bg-slate-100">Demo Data</button>
       <button id="exportBtn" class="px-3 py-2 rounded bg-slate-100">Export JSON</button>
       <label class="px-3 py-2 rounded bg-slate-100 cursor-pointer">
         Import JSON <input id="importInput" type="file" accept="application/json" class="hidden">
@@ -113,19 +104,16 @@
     <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="container-rl py-12">
     <h2 class="text-2xl md:text-3xl font-bold mb-4">About RobPac Publishing</h2>
-    <p class="text-slate-700 max-w-3xl">We are an independent publishing house crafting books that inform, inspire and entertain. Our catalog spans novels, psychology, self‑help and wellness. We publish primarily for the US and EU markets on Amazon KDP.</p>
+    <p class="text-slate-700 max-w-3xl">We are an independent publishing house crafting books that inform, inspire and entertain. Our catalog spans novels, psychology, self-help and wellness. We publish primarily for the US and EU markets on Amazon KDP.</p>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="container-rl py-12">
     <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact</h2>
     <p class="text-slate-700">For rights and inquiries: <a class="text-amber-700 underline" href="mailto:robpacpublishing@gmail.com">robpacpublishing@gmail.com</a></p>
   </section>
 
-  <!-- MODAL -->
   <div id="bookModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 p-4">
     <div class="bg-white max-w-4xl w-full rounded-xl shadow-soft p-6 grid md:grid-cols-5 gap-6 relative">
       <button id="closeModal" class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow">✕</button>
@@ -133,10 +121,8 @@
     </div>
   </div>
 
-  <!-- DATA & HELPERS -->
   <script>
     const PH_SVG_COVER = 'data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="400" height="600"><rect width="100%" height="100%" fill="%23e2e8f0"/><text x="50%" y="52%" text-anchor="middle" font-family="Arial" font-size="18" fill="%23475569">Cover</text></svg>';
-
     const books = [];
 
     function normalizeSpaces(s){return String(s||'').replace(/\s+/g,' ').trim();}
@@ -226,20 +212,40 @@
       const m=document.getElementById('bookModal'); m.classList.add('hidden'); m.classList.remove('flex');
     });
 
-    // Demo data
-    function loadDemo(){
-      const demo=[
-        {title:"The Dark Side of Charisma",author:"Ryan Walker",category:"self-help",cover:"covers/dark-side-charisma.jpg",description:"A clear, incisive guide to recognizing manipulative charisma.",longDescription:"Case studies, mechanisms, and practical defenses to keep your autonomy."},
-        {title:"Restless Silence",author:"Lily Harper",category:"fiction",cover:"covers/restless-silence.jpg",description:"A literary thriller about missing time and fractured identity.",longDescription:"A city of echoes, a past that won’t sleep, and the cost of truth."},
-        {title:"Carnivore Diet Cookbook",author:"Martin Russell",category:"cookbooks",cover:"covers/carnivore.jpg",description:"A pragmatic guide to high‑protein cooking.",longDescription:"Weeknight menus, substitutions, macros and safe long‑term strategies."},
-        {title:"Mindfulness per principianti",author:"Lorenzo De Sanctis",category:"psychology",cover:"covers/mindfulness.jpg",description:"Introduzione essenziale, pratica e concreta.",longDescription:"Protocollo di 4 settimane con esercizi quotidiani e check realistici."}
-      ].map(sanitizeBookDescriptions);
-      books.length=0; books.push(...demo);
+    // AUTO LOAD CATALOG (tries several filenames in project root or /assets)
+    async function autoLoadCatalog(){
+      const candidates=[
+        'libri_backup_2025-11-07 -.json',
+        'libri_backup_2025-11-07.json',
+        'assets/libri_backup_2025-11-07 -.json',
+        'assets/libri_backup_2025-11-07.json',
+        'books.json'
+      ];
+      for(const p of candidates){
+        try{
+          const res=await fetch(p, {cache:'no-store'});
+          if(res.ok){
+            const arr=await res.json();
+            if(Array.isArray(arr)){
+              const clean=arr.map(sanitizeBookDescriptions);
+              books.length=0; books.push(...clean);
+              renderFeatured(); renderCatalog();
+              banner('Catalog loaded: '+p);
+              return true;
+            }
+          }
+        }catch(e){ /* continue */ }
+      }
+      if(location.protocol==='file:'){
+        banner('Open via a local server or import JSON manually.');
+      }else{
+        banner('Catalog JSON not found.');
+      }
       renderFeatured(); renderCatalog();
+      return false;
     }
 
-    // Controls
-    document.getElementById('demoBtn').addEventListener('click',()=>{loadDemo(); banner('Demo data caricati');});
+    // Manual controls
     document.getElementById('exportBtn').addEventListener('click',()=>{
       const blob=new Blob([JSON.stringify(books,null,2)],{type:'application/json'});
       const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='books_export.json'; a.click();
@@ -253,29 +259,13 @@
     document.getElementById('resetBtn').addEventListener('click',()=>{ localStorage.clear(); location.reload(); });
     document.getElementById('qcBtn').addEventListener('click',()=>{ banner('Quick Check: PASS'); });
 
-    // Search / filter (simple)
-    document.querySelectorAll('[data-cat]').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const c=btn.getAttribute('data-cat');
-        const filtered=c==='all'?books:books.filter(b=>(b.category||'').toLowerCase()===c);
-        const root=document.getElementById('catalogGrid'); root.innerHTML='';
-        filtered.forEach((b,i)=>root.insertAdjacentHTML('beforeend',cardHTML(b,i)));
-      });
-    });
-    document.getElementById('searchBtn').addEventListener('click',()=>{
-      const q=(document.getElementById('searchInput').value||'').toLowerCase();
-      const res=books.filter(b=>(b.title||'').toLowerCase().includes(q)||(b.author||'').toLowerCase().includes(q)||(b.description||'').toLowerCase().includes(q));
-      const root=document.getElementById('catalogGrid'); root.innerHTML='';
-      res.forEach((b,i)=>root.insertAdjacentHTML('beforeend',cardHTML(b,i)));
-    });
-
     function banner(msg){
       const b=document.createElement('div'); b.className='fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded shadow-soft'; b.textContent=msg; document.body.appendChild(b);
-      setTimeout(()=>b.remove(),2000);
+      setTimeout(()=>b.remove(),2500);
     }
 
-    // Initial empty render
-    renderFeatured(); renderCatalog();
+    // Boot
+    autoLoadCatalog();
   </script>
 </body>
 </html>
