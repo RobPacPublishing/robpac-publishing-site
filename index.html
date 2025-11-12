@@ -1,162 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>RobPac Publishing</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-<style>
-  .hero-banner{background:#000 url('assets/hero.png') center/cover no-repeat; min-height:420px;}
-  .logo-img{height:42px;}
-  .book-card{background:#fff; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.06); overflow:hidden; border:1px solid #eef0f4;}
-  .book-cover{width:100%; aspect-ratio:2/3; object-fit:cover; background:#f1f5f9;}
-  .badge{font-size:.725rem; padding:.25rem .5rem; border-radius:.5rem; background:#d1fae5; color:#065f46; font-weight:600; display:inline-block;}
-  .bests-row{display:flex; gap:1rem; overflow-x:auto; padding-bottom:.5rem; scroll-snap-type:x mandatory;}
-  .bests-row .book-card{min-width:260px; max-width:260px; scroll-snap-align:start;}
-  .catalog-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem;}
-  .btn{display:inline-flex; align-items:center; justify-content:center; padding:.55rem 1rem; border-radius:.5rem; font-weight:600;}
-  .btn-primary{background:#f59e0b; color:#111827;}
-  .btn-ghost{background:#f3f4f6; color:#111827;}
-  .modal-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; align-items:center; justify-content:center; z-index:50;}
-  .modal{max-width:960px; width:92vw; max-height:90vh; overflow:auto; background:#fff; border-radius:14px; padding:1rem;}
-  .hidden{display:none;}
-  .book-author{color:#6b7280;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RobPac Publishing</title>
+  <link rel="icon" href="assets/logo3senzasfondo.png">
+  <!-- CDN Tailwind (come in origine; warning in console innocuo) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* --- HERO / INTESTAZIONE --- */
+    .hero-banner{
+      background: url('assets/hero.png') center/cover no-repeat;
+      min-height: 520px;
+      position: relative;
+    }
+    .hero-overlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.05) 100%);
+    }
+    .brand-lockup{
+      position:absolute; left:7%; top:18%;
+      color:#f5e6b3; text-shadow: 0 2px 6px rgba(0,0,0,.45);
+    }
+    .brand-lockup img.title{ max-width: 720px; width: 60vw; }
+    .brand-lockup img.subtitle{ max-width: 560px; width: 48vw; margin-top:.5rem; }
+
+    /* --- CARTE LIBRI (dimensioni allineate) --- */
+    .book-card{
+      width: 260px;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.08);
+      background: #fff;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .book-cover{
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      background: #edf2f7;
+      display: block;
+    }
+    .book-body{ padding: 12px 14px 14px; display:flex; flex-direction:column; gap:6px; }
+    .badge{ font-size: .70rem; padding:.2rem .5rem; background:#fef3c7; color:#92400e; border-radius:8px; display:inline-block; }
+    .title{ font-weight: 700; line-height:1.1; }
+    .author{ color:#4a5568; font-size: .9rem; }
+    .btn{ background:#f59e0b; color:#111827; font-weight:700; padding:.6rem 1rem; border-radius:10px; }
+    .btn:hover{ filter: brightness(0.95); }
+
+    /* --- CAROSELLO BESTSELLER --- */
+    .hscroll{ display:flex; gap:16px; overflow-x:auto; padding: 8px 6px; scroll-snap-type:x mandatory; }
+    .hscroll > *{ scroll-snap-align:start; }
+
+    /* --- CATALOGO --- */
+    .catalog-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 20px; }
+
+    /* --- MODALE DETTAGLI --- */
+    .modal-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; z-index:50; }
+    .modal{ width:min(980px,92vw); background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 20px 70px rgba(0,0,0,.35); }
+    .modal-body{ display:grid; grid-template-columns: 300px 1fr; gap:22px; padding:24px; }
+    .modal .cover{ width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:#edf2f7; }
+    .close-x{ position:absolute; right:18px; top:12px; font-size:26px; cursor:pointer; color:#374151; }
+    @media (max-width: 860px){
+      .modal-body{ grid-template-columns: 1fr; }
+      .brand-lockup img.title{ width:78vw; }
+      .brand-lockup img.subtitle{ width:62vw; }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <div class="text-white bg-orange-500 text-sm py-2 text-center">
-    <span class="font-semibold">New Releases Available!</span> Get Your Free Chapter Today → <a class="underline" href="#">Click Here</a>
-  </div>
-  <header class="border-b border-gray-200">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<body class="bg-gray-50 text-gray-900">
+  <!-- HEADER -->
+  <header class="w-full bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="assets/logo3senzasfondo.png" class="logo-img" alt="RobPac logo" onerror="this.style.display='none'">
-        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="h-8 sm:h-9">
+        <img src="assets/logo3senzasfondo.png" alt="RobPac logo" class="w-9 h-9">
+        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="h-6 md:h-7">
       </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#featured" class="hover:underline">Featured</a>
-        <a href="#catalog" class="hover:underline">All Books</a>
-        <a href="#about" class="hover:underline">About</a>
-      </nav>
-      <a href="#" class="btn btn-primary">Free Chapter</a>
+      <a href="#catalog" class="btn text-sm">Free Chapter</a>
     </div>
   </header>
-  <section class="hero-banner flex items-center">
-    <div class="container mx-auto px-4">
-      <img src="assets/robpac-title.png" alt="RobPac Publishing" class="w-72 sm:w-96 mb-2 drop-shadow-md">
-      <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="w-80 sm:w-[28rem] drop-shadow">
-      <div class="mt-6 flex items-center gap-3">
-        <a class="btn btn-ghost" href="#catalog">Get Free Chapter Now</a>
-        <a class="btn btn-primary" href="#catalog">Browse 100+ Books</a>
+
+  <!-- HERO -->
+  <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="brand-lockup">
+      <img src="assets/robpac-title.png" class="title" alt="RobPac Publishing">
+      <img src="assets/sottotitolo.png" class="subtitle" alt="A World of Books at Your Fingertips">
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href="#catalog" class="btn">Get Free Chapter Now</a>
+        <a href="#catalog" class="btn">Browse 100+ Books</a>
       </div>
     </div>
   </section>
 
-  <section id="featured" class="container mx-auto px-4 py-10">
-    <h2 class="text-2xl font-extrabold mb-3">Bestselling Titles</h2>
-    <div id="bestsRow" class="bests-row"></div>
-  </section>
+  <main class="max-w-7xl mx-auto px-4 py-10">
+    <!-- BESTSELLERS (SENZA DESCRIZIONE) -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Bestselling Titles</h2>
+      <div id="bestsellers" class="hscroll"></div>
+    </section>
 
-  <section id="catalog" class="container mx-auto px-4 pb-16">
-    <div class="flex items-center justify-between mb-3">
-      <h2 class="text-2xl font-extrabold">Complete Book Catalog</h2>
-      <div class="flex items-center gap-2">
-        <input id="search" class="border border-gray-300 rounded px-3 py-2 w-64" placeholder="Search by title, author, or keyword..." />
-        <button id="searchBtn" class="btn btn-primary">Search</button>
-      </div>
-    </div>
-    <div id="catalogGrid" class="catalog-grid"></div>
-  </section>
+    <!-- CATALOGO COMPLETO -->
+    <section id="catalog" class="mt-12">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Complete Book Catalog</h2>
+      <div id="catalogGrid" class="catalog-grid"></div>
+    </section>
+  </main>
 
-  <div id="modalWrap" class="modal-backdrop">
+  <!-- MODALE -->
+  <div id="modalRoot" class="modal-backdrop">
     <div class="modal relative">
-      <button id="modalClose" class="absolute right-3 top-3 text-gray-500 hover:text-gray-800">&times;</button>
-      <div class="grid md:grid-cols-2 gap-6">
-        <img id="mCover" class="book-cover rounded" alt="cover">
+      <button class="close-x" aria-label="Close" onclick="closeModal()">×</button>
+      <div class="modal-body">
+        <img id="mCover" class="cover" alt="Book cover">
         <div>
-          <div id="mBadge" class="badge mb-2 hidden"></div>
-          <h3 id="mTitle" class="text-3xl font-extrabold"></h3>
-          <p id="mAuthor" class="book-author mt-1"></p>
-          <h4 class="mt-6 font-bold">About This Book</h4>
-          <p id="mDesc" class="mt-2 leading-relaxed"></p>
+          <div class="badge mb-2" id="mCat"></div>
+          <h3 class="text-3xl font-extrabold leading-tight" id="mTitle"></h3>
+          <p class="mt-1 text-lg text-gray-600" id="mAuthor"></p>
+          <h4 class="mt-6 mb-2 font-bold text-gray-800">About This Book</h4>
+          <p id="mDesc" class="leading-relaxed"></p>
           <div class="mt-6 flex gap-3">
-            <a id="mAmazon" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon</a>
-            <a id="mSample" target="_blank" rel="noopener" class="btn btn-ghost">Get Free Chapter</a>
+            <a id="mAmazon" target="_blank" rel="noopener" class="btn">Buy on Amazon</a>
+            <a id="mSample" target="_blank" rel="noopener" class="btn">Get Free Chapter</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-<script>
-async function fetchBooks(){
-  const paths=['./libri_backup_2025-11-07%20-.json','./libri_backup_2025-11-07 -.json','libri_backup_2025-11-07%20-.json','libri_backup_2025-11-07 -.json'];
-  for(const p of paths){
-    try{const r=await fetch(p,{cache:'no-cache'}); if(r.ok) return await r.json();}catch(e){}
-  }
-  throw new Error('Catalog JSON not found');
-}
-function getTitle(b){return b.titolo||b.title||b.Titolo||b.name||'Untitled';}
-function getAuthor(b){return b.autore||b.author||b.Author||'';}
-function getCategory(b){return b.categoria||b.category||b.genre||b.genere||'';}
-function getImage(b){return b.copertina||b.cover||b.image||b.img||b.thumbnail||'';}
-function getDesc(b){return b.descrizione||b.longDescription||b.description||'';}
-function getAmazon(b){return b.linkAmazon||b.amazon||b.url||b.link||'#';}
-const ph='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600"><rect width="100%" height="100%" fill="#f1f5f9"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#94a3b8">Cover</text></svg>');
-function coverOrPh(src){if(!src) return ph; return src.replace(/ /g,'%20');}
-function cardTemplate(b,i){
-  const t=getTitle(b), a=getAuthor(b), c=getCategory(b), img=coverOrPh(getImage(b));
-  return `<article class="book-card" data-idx="${i}">
-    <img class="book-cover" src="${img}" alt="${t}" onerror="this.src='${ph}'"/>
-    <div class="p-4">
-      ${c?`<span class="badge mb-2">${c}</span>`:''}
-      <h3 class="book-title font-semibold text-lg leading-snug">${t}</h3>
-      <p class="book-author mt-1 text-sm">by ${a||'—'}</p>
-      <button class="btn btn-primary w-full mt-3" data-open="${i}">View Details</button>
-    </div>
-  </article>`;
-}
-let ALL=[];
-function render(books){
-  const best=books.slice(0,8);
-  document.getElementById('bestsRow').innerHTML = best.map((b,i)=>cardTemplate(b,i)).join('');
-  const grid=document.getElementById('catalogGrid');
-  grid.innerHTML = books.map((b,i)=>cardTemplate(b,i)).join('');
-  document.querySelectorAll('[data-open]').forEach(btn=>{
-    btn.addEventListener('click',()=>openModal(books[btn.dataset.open|0]));
-  });
-}
-const wrap=document.getElementById('modalWrap');
-const mCover=document.getElementById('mCover');
-const mBadge=document.getElementById('mBadge');
-const mTitle=document.getElementById('mTitle');
-const mAuthor=document.getElementById('mAuthor');
-const mDesc=document.getElementById('mDesc');
-const mAmazon=document.getElementById('mAmazon');
-const mSample=document.getElementById('mSample');
-document.getElementById('modalClose').onclick=()=>wrap.style.display='none';
-wrap.addEventListener('click',e=>{if(e.target===wrap) wrap.style.display='none';});
-function openModal(b){
-  const t=getTitle(b), a=getAuthor(b), c=getCategory(b), img=coverOrPh(getImage(b));
-  mCover.src=img; mCover.onerror=()=>{mCover.src=ph;};
-  mTitle.textContent=t; mAuthor.textContent=a?`by ${a}`:'';
-  if(c){mBadge.textContent=c; mBadge.classList.remove('hidden');}else{mBadge.classList.add('hidden');}
-  mDesc.textContent=getDesc(b)||'';
-  const link=getAmazon(b)||'#'; mAmazon.href=link; mSample.href=link;
-  wrap.style.display='flex';
-}
-function norm(s){return (s||'').toLowerCase();}
-function match(b,q){const t=[getTitle(b),getAuthor(b),getCategory(b),getDesc(b)].join(' ').toLowerCase(); return t.includes(q);}
-document.getElementById('searchBtn').addEventListener('click',()=>{
-  const q=norm(document.getElementById('search').value);
-  const list=q?ALL.filter(b=>match(b,q)):ALL.slice();
-  const grid=document.getElementById('catalogGrid');
-  grid.innerHTML=list.map((b,i)=>cardTemplate(b,i)).join('');
-  document.querySelectorAll('[data-open]').forEach(btn=>{
-    btn.addEventListener('click',()=>openModal(list[btn.dataset.open|0]));
-  });
-});
-(async()=>{ALL=await fetchBooks(); render(ALL);})();
-</script>
+  <script>
+    /* -------- RISOLUZIONE COPERTINE --------
+       - Se nel JSON c’è solo il filename, aggiungo 'covers/'.
+       - Se è un http, forzo https.
+       - Se manca del tutto, uso un placeholder. */
+    function resolveCover(book){
+      const picks = [
+        book.cover, book.image, book.img, book.thumbnail,
+        book.copertina, book.cover_url, book.image_url
+      ].filter(Boolean);
+      let url = picks[0] || "";
+      if(!url) return "assets/hero.png"; // placeholder già presente nel progetto
+      if(/^https?:\/\//i.test(url)) return url.replace(/^http:\/\//i, "https://");
+      if(!url.startsWith("covers/")) url = "covers/" + url;
+      return url;
+    }
+
+    /* -------- DESCRIZIONE COMPLETA (SOLO MODALE) -------- */
+    function fullDescription(book){
+      const picks = [
+        book.descrizione, book.description, book.desc, book.sinossi, book.abstract
+      ].filter(Boolean);
+      return picks[0] || "";
+    }
+
+    function categoryOf(book){ return book.category || book.categoria || book.genre || "Self-help"; }
+    function authorOf(book){ return book.author || book.autore || "Unknown Author"; }
+    function titleOf(book){ return book.title || book.titolo || "Untitled"; }
+
+    /* -------- CARD (SENZA DESCRIZIONE) -------- */
+    function card(book){
+      const div = document.createElement("div");
+      div.className = "book-card";
+      div.innerHTML = `
+        <img class="book-cover" alt="Cover of ${titleOf(book)}">
+        <div class="book-body">
+          <span class="badge">${categoryOf(book)}</span>
+          <div class="title">${titleOf(book)}</div>
+          <div class="author">by ${authorOf(book)}</div>
+          <button class="btn mt-2">View Details</button>
+        </div>
+      `;
+      const img = div.querySelector("img.book-cover");
+      img.src = resolveCover(book);
+      img.onerror = () => { img.src = "assets/hero.png"; }; // fallback sicuro nel progetto
+      div.querySelector("button").onclick = () => openModal(book);
+      return div;
+    }
+
+    /* -------- MODALE -------- */
+    function openModal(book){
+      const mCover = document.getElementById("mCover");
+      mCover.src = resolveCover(book);
+      mCover.onerror = () => { mCover.src = "assets/hero.png"; };
+
+      document.getElementById("mCat").textContent = categoryOf(book);
+      document.getElementById("mTitle").textContent = titleOf(book);
+      document.getElementById("mAuthor").textContent = "by " + authorOf(book);
+      document.getElementById("mDesc").textContent = fullDescription(book);
+
+      document.getElementById("mAmazon").href = book.amazon || book.link_amazon || "#";
+      document.getElementById("mSample").href = book.sample || book.free_chapter || "#";
+
+      document.getElementById("modalRoot").style.display = "flex";
+    }
+    function closeModal(){ document.getElementById("modalRoot").style.display = "none"; }
+
+    /* -------- BOOT -------- */
+    async function boot(){
+      try{
+        const res = await fetch("libri_backup_2025-11-07 -.json");
+        const books = await res.json();
+
+        // Bestsellers: primi 6, senza descrizione
+        const bestWrap = document.getElementById("bestsellers");
+        books.slice(0, 6).forEach(b => bestWrap.appendChild(card(b)));
+
+        // Catalogo completo, stessa card
+        const grid = document.getElementById("catalogGrid");
+        books.forEach(b => grid.appendChild(card(b)));
+      }catch(e){
+        console.error("Errore nel caricamento dei libri:", e);
+      }
+    }
+    boot();
+  </script>
 </body>
 </html>
