@@ -1,113 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RobPac Publishing</title>
-  <!-- Tailwind via CDN (ok for this static single-file) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .container-narrow{max-width:1100px}
-    .shadow-soft{box-shadow:0 8px 20px rgba(0,0,0,.08)}
-    .card{transition:transform .15s ease}
-    .card:hover{transform:translateY(-2px)}
-    .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .scroll-snap-x{scroll-snap-type:x mandatory}
-    .snap-start{scroll-snap-align:start}
-    .backdrop{background:rgba(0,0,0,.45)}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RobPac Publishing</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<style>
+  .hero-banner{background:#000 url('assets/hero.png') center/cover no-repeat; min-height:420px;}
+  .logo-img{height:42px;}
+  .book-card{background:#fff; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.06); overflow:hidden; border:1px solid #eef0f4;}
+  .book-cover{width:100%; aspect-ratio:2/3; object-fit:cover; background:#f1f5f9;}
+  .badge{font-size:.725rem; padding:.25rem .5rem; border-radius:.5rem; background:#d1fae5; color:#065f46; font-weight:600; display:inline-block;}
+  .bests-row{display:flex; gap:1rem; overflow-x:auto; padding-bottom:.5rem; scroll-snap-type:x mandatory;}
+  .bests-row .book-card{min-width:260px; max-width:260px; scroll-snap-align:start;}
+  .catalog-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; padding:.55rem 1rem; border-radius:.5rem; font-weight:600;}
+  .btn-primary{background:#f59e0b; color:#111827;}
+  .btn-ghost{background:#f3f4f6; color:#111827;}
+  .modal-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; align-items:center; justify-content:center; z-index:50;}
+  .modal{max-width:960px; width:92vw; max-height:90vh; overflow:auto; background:#fff; border-radius:14px; padding:1rem;}
+  .hidden{display:none;}
+  .book-author{color:#6b7280;}
+</style>
 </head>
-<body class="bg-white text-slate-800">
-  <!-- Topbar -->
-  <div class="w-full bg-amber-500 text-white text-sm">
-    <div class="container mx-auto container-narrow px-4 py-2">
-      <span class="font-semibold">New Releases Available!</span> Get Your Free Chapter Today → <a class="underline" href="#free">Click Here</a>
-    </div>
+<body class="bg-white text-gray-900">
+  <div class="text-white bg-orange-500 text-sm py-2 text-center">
+    <span class="font-semibold">New Releases Available!</span> Get Your Free Chapter Today → <a class="underline" href="#">Click Here</a>
   </div>
-
-  <!-- Header -->
-  <header class="border-b">
-    <div class="container mx-auto container-narrow px-4 py-3 flex items-center gap-4">
-      <img src="assets/logo3senzasfondo.png" alt="RobPac circular logo" class="h-10 w-10 object-contain" />
-      <div>
-        <div class="text-xl font-semibold">RobPac Publishing</div>
-        <div class="text-xs text-slate-500 -mt-1">Independent Publishing House</div>
+  <header class="border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo3senzasfondo.png" class="logo-img" alt="RobPac logo" onerror="this.style.display='none'">
+        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="h-8 sm:h-9">
       </div>
-      <nav class="ml-auto flex items-center gap-6 text-sm">
-        <a href="#featured" class="hover:text-amber-600">Featured</a>
-        <a href="#catalog" class="hover:text-amber-600">Catalog</a>
-        <a href="#about" class="hover:text-amber-600">About</a>
-        <a href="#free" class="rounded-full bg-amber-500 px-4 py-2 text-white font-medium shadow-soft hover:bg-amber-600">Free Chapter</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#featured" class="hover:underline">Featured</a>
+        <a href="#catalog" class="hover:underline">All Books</a>
+        <a href="#about" class="hover:underline">About</a>
       </nav>
+      <a href="#" class="btn btn-primary">Free Chapter</a>
     </div>
   </header>
-
-  <!-- Hero -->
-  <section class="relative">
-    <img src="assets/hero.png" alt="Open book with magical light" class="w-full h-[360px] object-cover" />
-    <div class="absolute inset-0 bg-black/35"></div>
-    <div class="absolute inset-0 flex items-center">
-      <div class="container mx-auto container-narrow px-6">
-        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="h-16 md:h-20 drop-shadow-lg" />
-        <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="mt-2 h-8 md:h-10 drop-shadow" />
-        <div class="mt-6 flex gap-3">
-          <a id="free" href="#catalog" class="rounded-full bg-white/90 px-5 py-2 font-semibold text-slate-800 shadow-soft hover:bg-white">Get Free Chapter Now</a>
-          <a href="#catalog" class="rounded-full bg-amber-600 px-5 py-2 font-semibold text-white shadow-soft hover:bg-amber-700">Browse 100+ Books</a>
-        </div>
+  <section class="hero-banner flex items-center">
+    <div class="container mx-auto px-4">
+      <img src="assets/robpac-title.png" alt="RobPac Publishing" class="w-72 sm:w-96 mb-2 drop-shadow-md">
+      <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="w-80 sm:w-[28rem] drop-shadow">
+      <div class="mt-6 flex items-center gap-3">
+        <a class="btn btn-ghost" href="#catalog">Get Free Chapter Now</a>
+        <a class="btn btn-primary" href="#catalog">Browse 100+ Books</a>
       </div>
     </div>
   </section>
 
-  <!-- Badges -->
-  <section class="bg-slate-50 border-y">
-    <div class="container mx-auto container-narrow px-4 py-6 grid grid-cols-3 gap-6 text-center text-sm">
-      <div><div class="text-xl font-bold">100+</div><div class="text-slate-500">Books Published</div></div>
-      <div><div class="text-xl font-bold">Amazon KDP</div><div class="text-slate-500">Available editions</div></div>
-      <div><div class="text-xl font-bold">Quality</div><div class="text-slate-500">Curated & screened</div></div>
+  <section id="featured" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-extrabold mb-3">Bestselling Titles</h2>
+    <div id="bestsRow" class="bests-row"></div>
+  </section>
+
+  <section id="catalog" class="container mx-auto px-4 pb-16">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-2xl font-extrabold">Complete Book Catalog</h2>
+      <div class="flex items-center gap-2">
+        <input id="search" class="border border-gray-300 rounded px-3 py-2 w-64" placeholder="Search by title, author, or keyword..." />
+        <button id="searchBtn" class="btn btn-primary">Search</button>
+      </div>
     </div>
+    <div id="catalogGrid" class="catalog-grid"></div>
   </section>
 
-  <!-- Featured / Bestsellers (NO DESCRIPTION IN CARDS) -->
-  <section id="featured" class="container mx-auto container-narrow px-4 py-10">
-    <h2 class="text-2xl font-bold">Bestselling Titles</h2>
-    <p class="text-slate-600 text-sm mb-4">Explore our most popular books across multiple genres.</p>
-    <div id="featuredRow" class="flex gap-4 overflow-x-auto scroll-snap-x pb-2"></div>
-  </section>
-
-  <!-- Catalog -->
-  <section id="catalog" class="container mx-auto container-narrow px-4 pb-16">
-    <h2 class="text-2xl font-bold mb-4">Complete Book Catalog</h2>
-    <div class="mb-4 flex gap-2">
-      <input id="q" type="search" placeholder="Search by title, author, or keyword..." class="w-full rounded border px-4 py-2" />
-      <button id="btnSearch" class="rounded bg-amber-600 px-4 py-2 text-white font-medium hover:bg-amber-700">Search</button>
-    </div>
-    <div id="grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="bg-slate-50">
-    <div class="container mx-auto container-narrow px-4 py-12">
-      <h2 class="text-2xl font-bold mb-2">About RobPac Publishing</h2>
-      <p class="text-slate-700">We are a small independent publishing house crafting books that inform, inspire and entertain. Our catalog spans novels, psychology, self-help and wellness. We publish primarily for the US and EU markets on Amazon KDP.</p>
-    </div>
-  </section>
-
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 hidden items-start justify-center p-4 sm:p-8 z-50">
-    <div class="absolute inset-0 backdrop"></div>
-    <div class="relative max-w-5xl w-full bg-white rounded-xl overflow-hidden shadow-2xl">
-      <button id="closeModal" class="absolute right-3 top-3 text-slate-500 hover:text-black text-xl" aria-label="Close">✕</button>
-      <div class="grid md:grid-cols-[320px,1fr] gap-6 p-6">
-        <img id="mCover" class="w-full h-[420px] object-cover rounded-lg shadow-soft" alt="cover"/>
+  <div id="modalWrap" class="modal-backdrop">
+    <div class="modal relative">
+      <button id="modalClose" class="absolute right-3 top-3 text-gray-500 hover:text-gray-800">&times;</button>
+      <div class="grid md:grid-cols-2 gap-6">
+        <img id="mCover" class="book-cover rounded" alt="cover">
         <div>
-          <span id="mCategory" class="inline-block rounded-full bg-emerald-100 text-emerald-700 text-xs px-2 py-1 mb-2"></span>
-          <h3 id="mTitle" class="text-3xl font-extrabold leading-snug"></h3>
-          <div id="mAuthor" class="text-slate-600 mb-4"></div>
-          <h4 class="font-semibold mb-1">About This Book</h4>
-          <p id="mDescr" class="text-slate-700 whitespace-pre-line"></p>
+          <div id="mBadge" class="badge mb-2 hidden"></div>
+          <h3 id="mTitle" class="text-3xl font-extrabold"></h3>
+          <p id="mAuthor" class="book-author mt-1"></p>
+          <h4 class="mt-6 font-bold">About This Book</h4>
+          <p id="mDesc" class="mt-2 leading-relaxed"></p>
           <div class="mt-6 flex gap-3">
-            <a id="mAmazon" class="rounded bg-amber-600 px-4 py-2 text-white font-medium hover:bg-amber-700" target="_blank" rel="noopener">Buy on Amazon</a>
-            <a class="rounded bg-violet-600 px-4 py-2 text-white font-medium hover:bg-violet-700" href="#free">Get Free Chapter</a>
+            <a id="mAmazon" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon</a>
+            <a id="mSample" target="_blank" rel="noopener" class="btn btn-ghost">Get Free Chapter</a>
           </div>
         </div>
       </div>
@@ -115,141 +89,74 @@
   </div>
 
 <script>
-// ---------- Utilities
-const $ = (sel, el=document) => el.querySelector(sel);
-const $$ = (sel, el=document) => [...el.querySelectorAll(sel)];
-const pick = (o, ks) => ks.find(k => k in o && o[k] != null && String(o[k]).trim() !== "") || null;
-const txt = (s) => (s??"").toString().trim();
-
-// Try multiple JSON paths (spaces are tricky on CDNs)
-const DATA_CANDIDATES = [
-  "./libri_backup_2025-11-07%20-.json",
-  "./libri_backup_2025-11-07 -.json",
-  "/libri_backup_2025-11-07%20-.json",
-  "/libri_backup_2025-11-07 -.json"
-];
-
-async function loadBooks() {
-  let lastErr;
-  for (const url of DATA_CANDIDATES) {
-    try {
-      const res = await fetch(url, {cache:"no-cache"});
-      if (!res.ok) throw new Error(res.status + " " + url);
-      const data = await res.json();
-      if (Array.isArray(data)) return data;
-      if (data && Array.isArray(data.books)) return data.books;
-    } catch (e) { lastErr = e; }
+async function fetchBooks(){
+  const paths=['./libri_backup_2025-11-07%20-.json','./libri_backup_2025-11-07 -.json','libri_backup_2025-11-07%20-.json','libri_backup_2025-11-07 -.json'];
+  for(const p of paths){
+    try{const r=await fetch(p,{cache:'no-cache'}); if(r.ok) return await r.json();}catch(e){}
   }
-  console.error("JSON load failed:", lastErr);
-  return [];
+  throw new Error('Catalog JSON not found');
 }
-
-function normalizeBook(raw){
-  const titleK = pick(raw, ["titolo","title"]) || "BOOK";
-  const authorK = pick(raw, ["autore","author"]) || "";
-  const coverK = pick(raw, ["copertina","cover","image"]) || "";
-  const catK = pick(raw, ["categoria","category"]) || "";
-  const descrLongK = pick(raw, ["descrizione","longDescription","description"]) || "";
-  const amazonK = pick(raw, ["amazon","amazonLink","link","url"]) || "";
-
-  return {
-    title: txt(raw[titleK] ?? raw[titleK]) || txt(raw["title"]) || "BOOK",
-    author: txt(raw[authorK] ?? raw[authorK]) || txt(raw["author"]) || "",
-    cover: txt(raw[coverK] ?? raw[coverK]) || "",
-    category: txt(raw[catK] ?? raw[catK]) || "Self-help",
-    descrizione: txt(raw[descrLongK] ?? raw[descrLongK]) || "",
-    amazon: txt(raw[amazonK] ?? raw[amazonK]) || ""
-  };
-}
-
-function card(book, idx){
-  // NO DESCRIPTION HERE (as richiesto)
-  return `
-  <article class="card min-w-[260px] max-w-[260px] snap-start bg-white rounded-xl shadow-soft overflow-hidden">
-    <img src="${book.cover || 'https://placehold.co/600x900?text=Cover'}" alt="${book.title}" class="h-[320px] w-full object-cover bg-slate-100" />
+function getTitle(b){return b.titolo||b.title||b.Titolo||b.name||'Untitled';}
+function getAuthor(b){return b.autore||b.author||b.Author||'';}
+function getCategory(b){return b.categoria||b.category||b.genre||b.genere||'';}
+function getImage(b){return b.copertina||b.cover||b.image||b.img||b.thumbnail||'';}
+function getDesc(b){return b.descrizione||b.longDescription||b.description||'';}
+function getAmazon(b){return b.linkAmazon||b.amazon||b.url||b.link||'#';}
+const ph='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600"><rect width="100%" height="100%" fill="#f1f5f9"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#94a3b8">Cover</text></svg>');
+function coverOrPh(src){if(!src) return ph; return src.replace(/ /g,'%20');}
+function cardTemplate(b,i){
+  const t=getTitle(b), a=getAuthor(b), c=getCategory(b), img=coverOrPh(getImage(b));
+  return `<article class="book-card" data-idx="${i}">
+    <img class="book-cover" src="${img}" alt="${t}" onerror="this.src='${ph}'"/>
     <div class="p-4">
-      <span class="inline-block text-xs rounded-full bg-emerald-100 text-emerald-700 px-2 py-1 mb-2">${book.category}</span>
-      <h3 class="font-semibold leading-snug">${book.title}</h3>
-      <div class="text-sm text-slate-500 mb-3">by ${book.author || '—'}</div>
-      <button data-idx="${idx}" class="btn-details w-full rounded bg-amber-600 px-3 py-2 text-white font-medium hover:bg-amber-700">View Details</button>
+      ${c?`<span class="badge mb-2">${c}</span>`:''}
+      <h3 class="book-title font-semibold text-lg leading-snug">${t}</h3>
+      <p class="book-author mt-1 text-sm">by ${a||'—'}</p>
+      <button class="btn btn-primary w-full mt-3" data-open="${i}">View Details</button>
     </div>
   </article>`;
 }
-
-function gridCard(book, idx){
-  // Catalog grid (no snippet either to evitare duplicazioni)
-  return `
-  <article class="card bg-white rounded-xl shadow-soft overflow-hidden">
-    <img src="${book.cover || 'https://placehold.co/600x900?text=Cover'}" alt="${book.title}" class="h-[300px] w-full object-cover bg-slate-100" />
-    <div class="p-4">
-      <span class="inline-block text-xs rounded-full bg-emerald-100 text-emerald-700 px-2 py-1 mb-2">${book.category}</span>
-      <h3 class="font-semibold leading-snug">${book.title}</h3>
-      <div class="text-sm text-slate-500 mb-3">by ${book.author || '—'}</div>
-      <button data-idx="${idx}" class="btn-details w-full rounded bg-amber-600 px-3 py-2 text-white font-medium hover:bg-amber-700">View Details</button>
-    </div>
-  </article>`;
+let ALL=[];
+function render(books){
+  const best=books.slice(0,8);
+  document.getElementById('bestsRow').innerHTML = best.map((b,i)=>cardTemplate(b,i)).join('');
+  const grid=document.getElementById('catalogGrid');
+  grid.innerHTML = books.map((b,i)=>cardTemplate(b,i)).join('');
+  document.querySelectorAll('[data-open]').forEach(btn=>{
+    btn.addEventListener('click',()=>openModal(books[btn.dataset.open|0]));
+  });
 }
-
+const wrap=document.getElementById('modalWrap');
+const mCover=document.getElementById('mCover');
+const mBadge=document.getElementById('mBadge');
+const mTitle=document.getElementById('mTitle');
+const mAuthor=document.getElementById('mAuthor');
+const mDesc=document.getElementById('mDesc');
+const mAmazon=document.getElementById('mAmazon');
+const mSample=document.getElementById('mSample');
+document.getElementById('modalClose').onclick=()=>wrap.style.display='none';
+wrap.addEventListener('click',e=>{if(e.target===wrap) wrap.style.display='none';});
 function openModal(b){
-  $("#mCover").src = b.cover || 'https://placehold.co/600x900?text=Cover';
-  $("#mCover").alt = b.title;
-  $("#mCategory").textContent = b.category || "";
-  $("#mTitle").textContent = b.title;
-  $("#mAuthor").textContent = b.author ? `by ${b.author}` : "";
-  // FULL DESCRIPTION from JSON only
-  $("#mDescr").textContent = b.descrizione || "";
-  $("#mAmazon").href = b.amazon || "#";
-  $("#modal").classList.remove("hidden");
-  $("#modal").classList.add("flex");
-  document.body.style.overflow = "hidden";
+  const t=getTitle(b), a=getAuthor(b), c=getCategory(b), img=coverOrPh(getImage(b));
+  mCover.src=img; mCover.onerror=()=>{mCover.src=ph;};
+  mTitle.textContent=t; mAuthor.textContent=a?`by ${a}`:'';
+  if(c){mBadge.textContent=c; mBadge.classList.remove('hidden');}else{mBadge.classList.add('hidden');}
+  mDesc.textContent=getDesc(b)||'';
+  const link=getAmazon(b)||'#'; mAmazon.href=link; mSample.href=link;
+  wrap.style.display='flex';
 }
-
-function closeModal(){
-  $("#modal").classList.add("hidden");
-  $("#modal").classList.remove("flex");
-  document.body.style.overflow = "";
-}
-
-(async function init(){
-  const rawBooks = await loadBooks();
-  const books = rawBooks.map(normalizeBook);
-
-  // Featured: first 8
-  const feat = books.slice(0, 8);
-  $("#featuredRow").innerHTML = feat.map((b,i)=>card(b,i)).join("");
-
-  // Catalog grid
-  const grid = $("#grid");
-  grid.innerHTML = books.map((b,i)=>gridCard(b,i)).join("");
-
-  // Delegated handlers
-  document.addEventListener("click", (e)=>{
-    const btn = e.target.closest(".btn-details");
-    if(btn){
-      const idx = Number(btn.getAttribute("data-idx"));
-      const list = [...$$(".btn-details")];
-      // figure out if from featured or grid; map to right book
-      let b = books[idx]; // in grid mapping it's correct since we rendered all in order
-      // Try safer lookup by title text in same card
-      if(!b){
-        const titleEl = e.target.closest("article")?.querySelector("h3");
-        const t = titleEl?.textContent?.trim();
-        b = books.find(x=>x.title===t) || feat.find(x=>x.title===t);
-      }
-      if(b) openModal(b);
-    }
+function norm(s){return (s||'').toLowerCase();}
+function match(b,q){const t=[getTitle(b),getAuthor(b),getCategory(b),getDesc(b)].join(' ').toLowerCase(); return t.includes(q);}
+document.getElementById('searchBtn').addEventListener('click',()=>{
+  const q=norm(document.getElementById('search').value);
+  const list=q?ALL.filter(b=>match(b,q)):ALL.slice();
+  const grid=document.getElementById('catalogGrid');
+  grid.innerHTML=list.map((b,i)=>cardTemplate(b,i)).join('');
+  document.querySelectorAll('[data-open]').forEach(btn=>{
+    btn.addEventListener('click',()=>openModal(list[btn.dataset.open|0]));
   });
-
-  $("#closeModal").addEventListener("click", closeModal);
-  $("#modal").addEventListener("click", (e)=>{ if(e.target.id==="modal") closeModal(); });
-
-  // Search
-  $("#btnSearch").addEventListener("click", ()=>{
-    const q = $("#q").value.trim().toLowerCase();
-    const filtered = !q ? books : books.filter(b=>[b.title,b.author,b.category].join(" ").toLowerCase().includes(q));
-    grid.innerHTML = filtered.map((b,i)=>gridCard(b,i)).join("");
-  });
-})();
+});
+(async()=>{ALL=await fetchBooks(); render(ALL);})();
 </script>
 </body>
 </html>
