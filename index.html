@@ -256,13 +256,7 @@
 </script>
 
 
-<script>
-function resolveCover(path) {
-  if (!path) return 'covers/placeholder.png';
-  if (/^https?:\/\//i.test(path)) return path;
-  return 'covers/' + String(path).replace(/^covers[\\/]/i, '');
-}
-</script>
+<style>.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;} .hero-wrap{position:relative;}</style>
 </head>
 <body class="bg-gray-50">
 
@@ -299,7 +293,7 @@ function resolveCover(path) {
     <header id="home" class="relative overflow-hidden">
         <!-- Original Banner Background -->
         <div class="relative w-full" style="height: 450px;">
-            <img src="assets/banner-landpage2.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
+            <img src="assets/hero.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="hero-bg absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager" aria-hidden="true">
             
             <!-- Logo Position (Top Left) -->
             <div class="absolute top-8 left-8 z-20 hidden md:block">
@@ -344,7 +338,7 @@ function resolveCover(path) {
     </header>
 
     <!-- TRUST BADGES -->
-    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators">
+    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators" class="hero-wrap">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center items-center gap-12 text-center">
                 <div>
@@ -1605,7 +1599,7 @@ function resolveCover(path) {
                         <div class="carousel-item w-80">
                             <div class="book-card bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer" onclick="openBookModal(${bookIndex})">
                                 <div class="relative">
-                                    <img src="${resolveCover(book.cover)}" alt="${book.title}" class="w-full h-[450px] object-cover" onerror="this.src='https://via.placeholder.com/300x450?text=Cover+Not+Found'">
+                                    <img src="${book.cover}" alt="${book.title}" class="w-full h-[450px] object-cover" onerror="this.src='https://via.placeholder.com/300x450?text=Cover+Not+Found'">
                                     ${badge}
                                 </div>
                                 <div class="p-6">
@@ -1638,7 +1632,7 @@ function resolveCover(path) {
                 const originalIndex = books.findIndex(b => b.title === book.title && b.author === book.author);
                 const bookCard = `
                     <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${originalIndex})">
-                        <img src="${resolveCover(book.cover)}" alt="${book.title}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Cover+Not+Found'">
+                        <img src="${book.cover}" alt="${book.title}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Cover+Not+Found'">
                         <div class="p-4">
                             <span class="inline-block bg-${getCategoryColor(book.category)}-100 text-${getCategoryColor(book.category)}-600 text-xs px-2 py-1 rounded-full mb-2">${book.category}</span>
                             <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
@@ -1706,7 +1700,7 @@ function resolveCover(path) {
             
             content.innerHTML = `
                 <div class="md:col-span-2">
-                    <img src="${resolveCover(book.cover)}" alt="${book.title}" class="w-full rounded-xl shadow-lg" onerror="this.src='https://via.placeholder.com/400x600?text=Cover'">
+                    <img src="${book.cover}" alt="${book.title}" class="w-full rounded-xl shadow-lg" onerror="this.src='https://via.placeholder.com/400x600?text=Cover'">
                     <div class="mt-4 flex items-center gap-2">
                         <span class="text-2xl">${stars}</span>
                         <span class="text-gray-600 font-semibold">${book.rating || 4.5}/5</span>
