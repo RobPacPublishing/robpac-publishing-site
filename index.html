@@ -2,138 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RobPac Publishing</title>
+
+  <!-- Tailwind via CDN (già usato nel progetto) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon/logo -->
+  <link rel="icon" href="assets/logo3senzasfondo.png" />
   <style>
-    /* Keep look & feel; do not alter layout beyond hero + cards */
-    .hero-wrap{
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-wrap img.hero-bg{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-    .hero-content{ position: relative; z-index: 1; }
-    .card-cover{ width: 100%; height: 360px; object-fit: cover; border-top-left-radius: 1rem; border-top-right-radius: 1rem;}
-    .book-card{ border-radius: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,.12); background: #fff; overflow:hidden;}
-    .tag{ font-size:.75rem; padding:.25rem .5rem; border-radius:999px; background:#e6f9f0; color:#15937a; display:inline-block;}
-    .grid-books{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.25rem;}
-    @media (min-width:768px){ .grid-books{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
-    .btn{ display:inline-flex; align-items:center; justify-content:center; padding:.8rem 1.25rem; border-radius:.75rem; background:#ef7d00; color:#fff; font-weight:700; }
-    .btn:hover{ filter:brightness(.95) }
+    .shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.08); }
+    .card-img { width:100%; height: 360px; object-fit: cover; border-radius: 12px; }
+    .grid-auto-fit { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    /* Fix altezza hero immagine sotto testi */
+    .hero-wrap { position: relative; overflow: hidden; }
+    .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .hero-content { position: relative; z-index: 1; }
+    /* Carosello “bestsellers” semplice orizzontale */
+    .scroll-x { overflow-x: auto; scroll-snap-type: x mandatory; }
+    .snap { scroll-snap-align: start; min-width: 280px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:.75rem 1.25rem; border-radius:.75rem; font-weight:600; }
+    .btn-primary { background:#cc7a00; color:white; }
+    .btn-primary:hover { filter:brightness(.95); }
+    .pill { display:inline-block; padding:.25rem .6rem; border-radius:999px; font-size:.75rem; font-weight:600; background:#e6f7f0; color:#0f7b4f; }
+    /* Modal */
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; padding: 1rem; z-index:50; }
+    .modal-open { display:flex; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <!-- HEADER / HERO -->
-  <header class="hero-wrap">
-    <img src="assets/hero.png" alt="RobPac Publishing banner" class="hero-bg"/>
-    <div class="hero-content max-w-6xl mx-auto px-4 pt-10 pb-20">
-      <div class="flex items-center gap-3 mb-6">
-        <img src="assets/logo3senzasfondo.png" alt="RobPac logo" class="w-10 h-10 rounded-full"/>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Top bar -->
+  <div class="w-full bg-orange-500 text-white text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+      <span>✨ New Releases Available! Get Your Free Chapter Today → <a href="#" class="underline">Click Here</a></span>
+      <a class="btn btn-primary !py-1 !px-3 !rounded-full" href="#">Free Chapter</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="w-full bg-white border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+      <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing circular logo" class="w-8 h-8"/>
+      <div>
         <div class="font-semibold">RobPac Publishing</div>
+        <div class="text-xs text-gray-500 -mt-0.5">Independent Publishing House</div>
       </div>
-      <div class="max-w-3xl">
-        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="w-full max-w-xl mb-2"/>
-        <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="w-full max-w-md opacity-90"/>
-      </div>
-      <div class="mt-6 flex gap-4">
-        <a href="#catalog" class="btn">Browse 100+ Books</a>
-      </div>
+      <nav class="ml-auto hidden sm:flex gap-6 text-sm text-gray-700">
+        <a href="#" class="hover:text-black">Home</a>
+        <a href="#featured" class="hover:text-black">Featured</a>
+        <a href="#catalog" class="hover:text-black">All Books</a>
+        <a href="#about" class="hover:text-black">About</a>
+      </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-10">
-    <section id="bestsellers" class="mb-12">
-      <h2 class="text-3xl font-bold mb-4">Bestselling Titles</h2>
-      <div id="bestsellerGrid" class="grid-books"></div>
-    </section>
-
-    <section id="catalog" class="mb-20">
-      <h2 class="text-3xl font-bold mb-4">Complete Book Catalog</h2>
-      <div class="mb-4">
-        <input id="search" type="search" placeholder="Search by title, author, or keyword…" class="w-full border rounded-lg p-3"/>
+  <!-- HERO: logo/titoli/pulsanti sopra, immagine sotto -->
+  <section class="hero-wrap relative">
+    <img src="assets/hero.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="hero-img" />
+    <div class="hero-content max-w-6xl mx-auto px-4 py-16 sm:py-20">
+      <div class="max-w-3xl">
+        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="w-[520px] max-w-full mb-3 drop-shadow" />
+        <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="w-[420px] max-w-full mb-8 drop-shadow" />
+        <div class="flex gap-4">
+          <a class="btn btn-primary shadow-soft" href="#free-chapter">Get Free Chapter Now</a>
+          <a class="btn bg-white shadow-soft hover:bg-gray-50" href="#catalog">Browse 100+ Books</a>
+        </div>
       </div>
-      <div id="catalogGrid" class="grid-books"></div>
-    </section>
-  </main>
+      <div class="h-12"></div>
+    </div>
+  </section>
+
+  <!-- KPI row (immutato) -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      <div><div class="text-2xl font-bold">100+</div><div class="text-sm text-gray-500">Books Published</div></div>
+      <div><div class="text-2xl font-bold">🌍</div><div class="text-sm text-gray-500">Available Worldwide</div></div>
+      <div><div class="text-2xl font-bold">📦</div><div class="text-sm text-gray-500">Amazon KDP</div></div>
+      <div><div class="text-2xl font-bold">✔️</div><div class="text-sm text-gray-500">Quality Guaranteed</div></div>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS -->
+  <section id="featured" class="max-w-6xl mx-auto px-4 py-10">
+    <div class="mb-6">
+      <div class="text-xs uppercase tracking-widest text-orange-600 font-bold">Featured Selection</div>
+      <h2 class="text-3xl font-extrabold mt-1">Bestselling Titles</h2>
+      <p class="text-gray-600 mt-1">Explore our most popular books across multiple genres</p>
+    </div>
+
+    <div id="bestsellersRow" class="scroll-x flex gap-6 pb-2"></div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog" class="max-w-6xl mx-auto px-4 py-10">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold">Complete Book Catalog</h2>
+      <p class="text-gray-600">Search by title, author, or keyword.</p>
+      <div class="mt-3 flex gap-2">
+        <input id="searchInput" type="text" class="w-full border rounded-lg px-3 py-2" placeholder="Search..." />
+        <button id="searchBtn" class="btn bg-gray-900 text-white">Search</button>
+      </div>
+    </div>
+
+    <div id="catalogGrid" class="grid-auto-fit"></div>
+  </section>
+
+  <!-- MODAL DETTAGLI -->
+  <div id="bookModal" class="modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 relative">
+      <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-black" aria-label="Close">✕</button>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img id="modalCover" src="" alt="Cover" class="w-full h-[420px] object-cover rounded-xl shadow-soft" />
+        <div>
+          <div class="text-xs pill mb-2" id="modalGenre">Self-help</div>
+          <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+          <div id="modalAuthor" class="text-gray-500 mt-1"></div>
+
+          <div class="mt-6">
+            <h4 class="font-semibold mb-1">About This Book</h4>
+            <p id="modalDesc" class="text-gray-700 leading-relaxed"></p>
+          </div>
+
+          <div class="mt-6 flex gap-3">
+            <a id="amazonBtn" target="_blank" rel="noopener" class="btn btn-primary">🛒 Buy on Amazon</a>
+            <a id="sampleBtn" target="_blank" rel="noopener" class="btn bg-purple-600 text-white">📖 Get Free Chapter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="about" class="mt-16 py-10 text-center text-sm text-gray-500">
+    © <span id="year"></span> RobPac Publishing — Independent Publishing House
+  </footer>
 
   <script>
-    // Minimal fix map for the two mismatched covers ONLY
-    // DO NOT modify other books or fields
-    const coverFix = {
-      "Dark Psychology and Manipulation": "covers/dark-psychology-and-manipulation.jpg",
-      "SHINRIN-YOKU (USA)": "covers/shinrin-yoku-usa.jpg"
-    };
+    // Data
+    const JSON_SOURCES = ["libri_backup.json", "books.json", "books"];
+    const BESTSELLERS_MAX = 8;
 
-    // Helper: create a card (without short description in the card body)
-    function cardHTML(b){
-      const cover = coverFix[b.title] ?? b.cover ?? b.image ?? b.img ?? "";
-      const rating = b.rating ?? 4.5;
-      const amazon = b.amazonLink ?? b.amazon ?? "#";
-      return `
-      <article class="book-card">
-        <img src="${cover}" alt="${b.title} cover" class="card-cover" onerror="this.src='covers/placeholder.jpg'"/>
-        <div class="p-4">
-          <span class="tag">${(b.category||'Self-help')}</span>
-          <h3 class="text-xl font-bold mt-2">${b.title}</h3>
-          <p class="text-slate-600 text-sm mb-3">by ${b.author||'—'}</p>
-          <a href="${amazon}" target="_blank" rel="noopener" class="btn w-full">View Details</a>
-        </div>
-      </article>`;
+    // Helpers
+    function safeCoverPath(value) {
+      if (!value) return "";
+      // se è già assoluto o inizia con covers/
+      if (/^(https?:)?\/\//i.test(value) || value.startsWith("covers/")) return value;
+      return `covers/${value}`;
     }
 
-    // Load data from the single JSON file the user renamed: libri_backup.json
-    async function loadBooks(){
-      try{
-        const res = await fetch('libri_backup.json', {cache:'no-store'});
-        const raw = await res.json();
+    function byPriority(a, b) {
+      // se esistono rating o tag "bestseller"/"popular" potresti ordinarli; qui manteniamo l'ordine del JSON
+      return 0;
+    }
 
-        // The file may be shaped as { books:[...] } or { items:[...] } or flat array
-        let all = Array.isArray(raw) ? raw : (raw.books || raw.items || raw.data || []);
+    // DOM refs
+    const bestRow = document.getElementById("bestsellersRow");
+    const grid = document.getElementById("catalogGrid");
+    const modal = document.getElementById("bookModal");
+    const closeModalBtn = document.getElementById("closeModal");
+    const modalCover = document.getElementById("modalCover");
+    const modalGenre = document.getElementById("modalGenre");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalAuthor = document.getElementById("modalAuthor");
+    const modalDesc = document.getElementById("modalDesc");
+    const amazonBtn = document.getElementById("amazonBtn");
+    const sampleBtn = document.getElementById("sampleBtn");
 
-        // Normalize very lightly, do NOT change values except cover swap above
-        all = all.map(x => ({
-          title: x.title || x.titolo || "",
-          author: x.author || x.autore || "",
-          category: x.category || x.genere || "Self-help",
-          cover: x.cover || x.copertina || x.image || x.img || "",
-          amazonLink: x.amazonLink || x.amazon || x.link || "#",
-          rating: x.rating || x.voto || 4.5,
-          bestseller: !!x.bestseller || x.top === true
-        }));
+    // Modal controls
+    function openModal() { modal.classList.add("modal-open"); }
+    function closeModal() { modal.classList.remove("modal-open"); }
+    closeModalBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
 
-        // Render bestsellers (first 6 where bestseller flag or first 6 items)
-        const best = all.filter(b=>b.bestseller).slice(0,6);
-        const bestSrc = (best.length ? best : all.slice(0,6));
-        document.getElementById('bestsellerGrid').innerHTML = bestSrc.map(cardHTML).join("");
+    function bookCard(book, snap=false) {
+      const div = document.createElement("div");
+      if (snap) div.className = "snap";
+      div.innerHTML = `
+        <div class="bg-white rounded-2xl p-4 shadow-soft">
+          <img class="card-img mb-3" src="${safeCoverPath(book.cover || book.image || "")}" alt="${book.title || 'Book cover'}">
+          <div class="pill mb-2">${book.genre || 'Self-help'}</div>
+          <h3 class="font-bold text-lg leading-tight">${book.title || ''}</h3>
+          <div class="text-sm text-gray-500 mb-4">by ${book.author || ''}</div>
+          <button class="btn btn-primary w-full">View Details</button>
+        </div>`;
+      // solo nel modal la descrizione completa
+      div.querySelector("button").addEventListener("click", () => showDetails(book));
+      return div;
+    }
 
-        // Render catalog
-        const grid = document.getElementById('catalogGrid');
-        function render(list){ grid.innerHTML = list.map(cardHTML).join(""); }
-        render(all);
+    function showDetails(b) {
+      modalCover.src = safeCoverPath(b.cover || b.image || "");
+      modalCover.alt = b.title || "Cover";
+      modalGenre.textContent = b.genre || "Self-help";
+      modalTitle.textContent = b.title || "";
+      modalAuthor.textContent = b.author ? `by ${b.author}` : "";
+      modalDesc.textContent = b.descrizione || b.description || "";
 
-        // Simple search
-        const q = document.getElementById('search');
-        q.addEventListener('input', e => {
-          const v = e.target.value.toLowerCase().trim();
-          if(!v) return render(all);
-          render(all.filter(b =>
-            (b.title||'').toLowerCase().includes(v) ||
-            (b.author||'').toLowerCase().includes(v) ||
-            (b.category||'').toLowerCase().includes(v)
-          ));
-        });
-      }catch(err){
-        console.error('Error loading libri_backup.json', err);
+      // Link Amazon e sample se presenti
+      const amazon = b.amazon || b.amazon_link || b.linkAmazon || "";
+      amazonBtn.href = amazon || "#";
+      amazonBtn.classList.toggle("opacity-50", !amazon);
+
+      const sample = b.sample || b.free_chapter || b.sample_link || "";
+      sampleBtn.href = sample || "#";
+      sampleBtn.classList.toggle("opacity-50", !sample);
+
+      openModal();
+    }
+
+    async function readJSON() {
+      for (const name of JSON_SOURCES) {
+        try {
+          const r = await fetch(name, { cache: "no-store" });
+          if (!r.ok) continue;
+          const raw = await r.json();
+          if (Array.isArray(raw)) return raw;
+          if (raw && Array.isArray(raw.books)) return raw.books;
+          if (raw && Array.isArray(raw.items)) return raw.items;
+          if (raw && Array.isArray(raw.data)) return raw.data;
+        } catch(_) {}
       }
+      return [];
     }
-    loadBooks();
+
+    function buildBestsellers(list) {
+      bestRow.innerHTML = "";
+      // mantieni ordine; prendi i primi BESTSELLERS_MAX
+      list.slice(0, BESTSELLERS_MAX).forEach(b => {
+        bestRow.appendChild(bookCard(b, true));
+      });
+    }
+
+    function buildCatalog(list) {
+      grid.innerHTML = "";
+      list.forEach(b => grid.appendChild(bookCard(b)));
+    }
+
+    async function bootstrap() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const books = (await readJSON()).sort(byPriority);
+
+      // BESTSELLERS: nessuna descrizione nelle card, solo nel modal (già implementato)
+      buildBestsellers(books);
+
+      // CATALOGO
+      buildCatalog(books);
+
+      // Ricerca base
+      const input = document.getElementById("searchInput");
+      document.getElementById("searchBtn").addEventListener("click", () => {
+        const q = (input.value || "").toLowerCase().trim();
+        const filtered = !q ? books : books.filter(b => {
+          return [b.title, b.author, b.genre, b.descrizione, b.description]
+            .filter(Boolean)
+            .some(v => String(v).toLowerCase().includes(q));
+        });
+        buildCatalog(filtered);
+      });
+    }
+
+    bootstrap();
   </script>
 </body>
 </html>
