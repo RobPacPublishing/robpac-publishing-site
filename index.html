@@ -1694,6 +1694,54 @@
             }
         });
     </script>
+<script>
+/* FIX mirato: riallinea le cover SOLO per due titoli specifici, senza toccare altro */
+(function () {
+  function swapCoversByTitle(titleA, titleB) {
+    try {
+      // Se usi una variabile globale con i libri caricati (es. window.ALL_BOOKS o simile), prova in ordine:
+      var sources = [window.ALL_BOOKS, window.books, window.catalogData, window.__BOOKS__].filter(Boolean);
+      if (!sources.length) return; // niente da fare se i dati non sono globali
+
+      sources.forEach(function (arr) {
+        var a = arr.find(b => (b.title || "").trim().toLowerCase() === titleA.toLowerCase());
+        var b = arr.find(b => (b.title || "").trim().toLowerCase() === titleB.toLowerCase());
+        if (a && b && a.cover && b.cover) {
+          var tmp = a.cover;
+          a.cover = b.cover;
+          b.cover = tmp;
+        }
+      });
+
+      // Forza un leggero re-render delle immagini già presenti nelle card,
+      // SENZA toccare altro: aggiorna solo l'attributo src se il titolo combacia.
+      document.querySelectorAll("[data-book-title]").forEach(function (card) {
+        var t = (card.getAttribute("data-book-title") || "").trim().toLowerCase();
+        if (t === titleA.toLowerCase() || t === titleB.toLowerCase()) {
+          var img = card.querySelector("img");
+          var cover = null;
+
+          // recupera la cover aggiornata dalle stesse sorgenti
+          for (const arr of sources) {
+            var m = arr.find(b => (b.title || "").trim().toLowerCase() === t);
+            if (m && m.cover) { cover = m.cover; break; }
+          }
+
+          if (img && cover) {
+            // Se la tua app salva solo il nome file, prefissa la cartella covers/
+            var src = /^https?:\/\//i.test(cover) ? cover : ("covers/" + cover);
+            if (img.getAttribute("src") !== src) img.setAttribute("src", src);
+          }
+        }
+      });
+    } catch (e) { /* silenzioso: nessun altro effetto collaterale */ }
+  }
+
+  // Le due correzioni richieste
+  swapCoversByTitle("Dark Psychology and Manipulation", "Restless Silence");
+  swapCoversByTitle("SHINRIN-YOKU (USA)", "Due Cuori, Una Santità");
+})();
+</script>
 
 </body>
 </html>
