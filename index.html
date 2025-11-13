@@ -18,14 +18,14 @@
     <meta property="og:url" content="https://www.robpacpublishing.com/">
     <meta property="og:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
     <meta property="og:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
-    <meta property="og:image" content="https://www.robpacpublishing.com/assets/banner-landpage2.png">
+    <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.robpacpublishing.com/">
     <meta property="twitter:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
     <meta property="twitter:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
-    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/banner-landpage2.png">
+    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/hero.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.robpacpublishing.com/">
@@ -166,95 +166,6 @@
             background-clip: text;
         }
     </style>
-
-<script>
-/* === RobPac: Robust description de-dup (layout untouched) === */
-(function(){
-  function norm(s){ return String(s||'').replace(/\s+/g,' ').trim(); }
-  function stripEnd(s){ return String(s||'').replace(/[ \t]*[.…]+$/,'').trim(); }
-  function looksDuplicated(text){
-    if(!text) return false;
-    var t = norm(text).toLowerCase();
-    var parts = t.split(/(?<=[\.\!\?…])\s+/);
-    for(var i=1;i<parts.length;i++){
-      var a = stripEnd(parts[i-1]); var b = stripEnd(parts[i]);
-      if(a && a === b) return true;
-    }
-    var paras = t.split(/\n+/);
-    for(var j=1;j<paras.length;j++){
-      var pa = stripEnd(paras[j-1]); var pb = stripEnd(paras[j]);
-      if(pa && pa === pb) return true;
-    }
-    var half = Math.floor(t.length/2);
-    if(half>30){
-      var a2 = stripEnd(t.slice(0,half));
-      var b2 = stripEnd(t.slice(half));
-      if(b2.startsWith(a2)) return true;
-    }
-    return false;
-  }
-  function cleanText(text){
-    var original = String(text||'');
-    var t = original;
-    var paras = t.split(/\r?\n+/).map(function(s){return s.trim();}).filter(Boolean);
-    var outParas = [];
-    for(var i=0;i<paras.length;i++){
-      var cur = stripEnd(paras[i]).toLowerCase();
-      if(i>0){
-        var prev = stripEnd(paras[i-1]).toLowerCase();
-        if(cur === prev) continue;
-      }
-      outParas.push(paras[i]);
-    }
-    t = outParas.join('\n');
-
-    var parts = t.split(/(?<=[\.\!\?…])\s+/);
-    var out = [];
-    for(var j=0;j<parts.length;j++){
-      var s = parts[j].trim();
-      if(!s) continue;
-      var base = stripEnd(s).toLowerCase();
-      if(out.length){
-        var prevBase = stripEnd(out[out.length-1]).toLowerCase();
-        if(base === prevBase) continue;
-      }
-      out.push(s);
-    }
-    t = out.join(' ');
-
-    var tt = norm(t);
-    var half = Math.floor(tt.length/2);
-    if(half>30){
-      var first = stripEnd(tt.slice(0,half));
-      var second = stripEnd(tt.slice(half));
-      if(second.startsWith(first)) t = tt.slice(0,half).trim();
-    }
-    t = stripEnd(t);
-    return t || original;
-  }
-
-  window.__rp_sanitizeDescription = function(book){
-    try{
-      var merged = (book && (book.description || '') + (book.longDescription ? (' ' + book.longDescription) : '')) || '';
-      return cleanText(merged);
-    }catch(e){ return (book && (book.description||'')) || ''; }
-  };
-
-  function sanitizeAll(){
-    var nodes = document.querySelectorAll('p, .description, [data-desc], .book-description');
-    nodes.forEach(function(el){
-      var txt = el.textContent || '';
-      if(looksDuplicated(txt)){
-        el.textContent = cleanText(txt);
-      }
-    });
-  }
-  document.addEventListener('DOMContentLoaded', sanitizeAll);
-  var obs = new MutationObserver(function(){ sanitizeAll(); });
-  obs.observe(document.documentElement, {subtree:true, childList:true});
-})();
-</script>
-
 </head>
 <body class="bg-gray-50">
 
@@ -291,7 +202,7 @@
     <header id="home" class="relative overflow-hidden">
         <!-- Original Banner Background -->
         <div class="relative w-full" style="height: 450px;">
-            <img src="assets/banner-landpage2.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
+            <img src="assets/hero.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
             
             <!-- Logo Position (Top Left) -->
             <div class="absolute top-8 left-8 z-20 hidden md:block">
@@ -1784,37 +1695,5 @@
         });
     </script>
 
-
-<!-- Minimal hotfix: swap in correct covers for 2 titles by looking them up in libri_backup.json -->
-<script>
-(function(){
-  const norm = s => (s||"").trim().toLowerCase();
-  function applyFix(){
-    fetch('libri_backup.json').then(r=>r.json()).then(data=>{
-      const list = Array.isArray(data) ? data : (data.items || data.data || []);
-      function coverOf(title){
-        const t = norm(title);
-        const it = list.find(x => norm(x.title || x.Titolo) === t);
-        return it && (it.cover || it.Cover || it.image);
-      }
-      function setCover(title){
-        const t = norm(title);
-        const heading = Array.from(document.querySelectorAll('h2,h3,h4'))
-          .find(h => norm(h.textContent) === t);
-        if(!heading) return;
-        const card = heading.closest('.card, .book-card, .group, .rounded-xl, .rounded-2xl, .shadow') || heading.parentElement;
-        if(!card) return;
-        const img = card.querySelector('img');
-        const src = coverOf(title);
-        if(img && src){ img.src = src; img.removeAttribute('srcset'); }
-      }
-      setCover("Dark Psychology and Manipulation");
-      setCover("SHINRIN-YOKU (USA)");
-    }).catch(()=>{});
-  }
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", applyFix);
-  else applyFix();
-})();
-</script>
 </body>
 </html>
