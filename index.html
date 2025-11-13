@@ -255,8 +255,6 @@
 })();
 </script>
 
-
-<style>.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;} .hero-wrap{position:relative;}</style>
 </head>
 <body class="bg-gray-50">
 
@@ -293,7 +291,7 @@
     <header id="home" class="relative overflow-hidden">
         <!-- Original Banner Background -->
         <div class="relative w-full" style="height: 450px;">
-            <img src="assets/hero.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="hero-bg absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager" aria-hidden="true">
+            <img src="assets/banner-landpage2.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
             
             <!-- Logo Position (Top Left) -->
             <div class="absolute top-8 left-8 z-20 hidden md:block">
@@ -338,7 +336,7 @@
     </header>
 
     <!-- TRUST BADGES -->
-    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators" class="hero-wrap">
+    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center items-center gap-12 text-center">
                 <div>
@@ -1786,5 +1784,37 @@
         });
     </script>
 
+
+<!-- Minimal hotfix: swap in correct covers for 2 titles by looking them up in libri_backup.json -->
+<script>
+(function(){
+  const norm = s => (s||"").trim().toLowerCase();
+  function applyFix(){
+    fetch('libri_backup.json').then(r=>r.json()).then(data=>{
+      const list = Array.isArray(data) ? data : (data.items || data.data || []);
+      function coverOf(title){
+        const t = norm(title);
+        const it = list.find(x => norm(x.title || x.Titolo) === t);
+        return it && (it.cover || it.Cover || it.image);
+      }
+      function setCover(title){
+        const t = norm(title);
+        const heading = Array.from(document.querySelectorAll('h2,h3,h4'))
+          .find(h => norm(h.textContent) === t);
+        if(!heading) return;
+        const card = heading.closest('.card, .book-card, .group, .rounded-xl, .rounded-2xl, .shadow') || heading.parentElement;
+        if(!card) return;
+        const img = card.querySelector('img');
+        const src = coverOf(title);
+        if(img && src){ img.src = src; img.removeAttribute('srcset'); }
+      }
+      setCover("Dark Psychology and Manipulation");
+      setCover("SHINRIN-YOKU (USA)");
+    }).catch(()=>{});
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", applyFix);
+  else applyFix();
+})();
+</script>
 </body>
 </html>
