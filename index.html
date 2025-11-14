@@ -13,8 +13,6 @@
   .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.4rem; padding:.7rem 1rem; border-radius:.75rem; font-weight:700; }
   .btn-primary{ background:#ea580c; color:#fff; }
   .btn-outline{ border:1px solid #e5e7eb; }
-  .snap{ scroll-snap-align:start; }
-  .scrollcards{ scroll-snap-type:x mandatory; }
   .modal{ position:fixed; inset:0; background:rgba(15,23,42,.55); display:none; align-items:center; justify-content:center; z-index:50;}
   .modal.open{ display:flex; }
 </style>
@@ -35,7 +33,7 @@
 
     <!-- HERO image under text -->
     <div class="relative">
-      <img src="./assets/hero.png" alt="Open book with magical light – RobPac Publishing banner showcasing world of books" class="w-full max-h-[420px] object-cover">
+      <img src="./assets/hero.png" alt="Open book with magical light – RobPac Publishing banner" class="w-full max-h-[420px] object-cover" loading="eager">
       <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
       <div class="absolute top-8 left-1/2 -translate-x-1/2 text-center px-4">
         <h1 class="text-4xl md:text-5xl font-bold text-yellow-900 drop-shadow">RobPac Publishing</h1>
@@ -132,12 +130,16 @@
     return encodeURI("./" + v);
   }
 
+  const PLACEHOLDER = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900"><rect width="100%" height="100%" fill="#f1f5f9"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="28">Cover</text></svg>'
+  );
+
   function card(book){
-    const coverSrc = getCover(book);
+    const coverSrc = getCover(book) || PLACEHOLDER;
     const el = document.createElement('div');
     el.className = 'bg-white rounded-2xl p-4 shadow-soft';
     el.innerHTML = `
-      <img class="card-img mb-3" src="${coverSrc}" alt="${book.title||'Book cover'}" onerror="this.style.display='none'">
+      <img class="card-img mb-3" src="${coverSrc}" alt="${book.title||'Book cover'}" loading="lazy" onerror="this.src='${PLACEHOLDER}'">
       <div class="pill mb-2">${book.genre || 'Self-help'}</div>
       <h3 class="font-bold text-lg leading-tight">${book.title || ''}</h3>
       <div class="text-sm text-slate-500 mb-4">by ${book.author || ''}</div>
@@ -148,7 +150,7 @@
   }
 
   function showDetails(b){
-    modalCover.src = getCover(b);
+    modalCover.src = getCover(b) || PLACEHOLDER;
     modalCover.alt = b.title || 'Cover';
     modalGenre.textContent = b.genre || 'Self-help';
     modalTitle.textContent = b.title || '';
@@ -166,7 +168,7 @@
     modal.classList.add('open');
   }
 
-  // load JSON: prefer libri_backup.json, fallback to books.json
+  // load JSON: prefer libri_backup.json, fallback to specific backup and books.json
   async function loadData(){
     const out = [];
     async function tryFetch(path){
