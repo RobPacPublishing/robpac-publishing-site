@@ -1,136 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RobPac Publishing — Catalog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RobPac Publishing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{--bg:#f7f8fb;--card:#fff;--text:#0f172a;--muted:#64748b;--brand:#ea580c;}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text)}
-    header{padding:20px 28px;background:#fff;box-shadow:0 1px 0 rgba(15,23,42,.06);position:sticky;top:0;z-index:10}
-    header h1{margin:0;font-size:20px;font-weight:700}
-    main{max-width:1100px;margin:24px auto;padding:0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 20px rgba(15,23,42,.06);overflow:hidden;display:flex;flex-direction:column}
-    .cover{width:100%;aspect-ratio:3/4;object-fit:cover;background:#e2e8f0}
-    .body{padding:14px 14px 16px}
-    .title{font-weight:700;margin:8px 0 6px;font-size:16px;line-height:1.25;min-height:40px}
-    .author{color:var(--muted);font-size:13px;margin:0 0 8px}
-    .desc{color:var(--muted);font-size:13px;height:40px;overflow:hidden}
-    .btn{margin-top:12px;display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
-         padding:10px 12px;border-radius:10px;font-weight:700;font-size:13px;text-align:center}
-    .pill{display:inline-block;font-size:11px;color:#0f766e;background:#ccfbf1;border:1px solid #99f6e4;
-          padding:2px 8px;border-radius:999px}
-    .bar{display:flex;align-items:center;gap:10px}
+    :root{--brand:#f59e0b;--ink:#0f172a}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink)}
+    .btn{background:var(--brand);color:#fff;border-radius:12px;padding:.7rem 1.1rem;font-weight:700;box-shadow:0 6px 14px rgba(245,158,11,.25)}
+    .badge{display:inline-block;background:#ecfccb;color:#166534;font-weight:700;border-radius:14px;padding:.2rem .55rem;font-size:.7rem}
+    .card{border-radius:20px;background:#fff;box-shadow:0 8px 28px rgba(2,6,23,.08);overflow:hidden}
+    .cover{width:100%;height:320px;object-fit:cover;background:#f1f5f9}
+    .hero-wrap{position:relative;isolation:isolate}
+    .hero-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.0) 0%,rgba(255,255,255,.9) 75%,#fff 100%);z-index:1}
+    .hero{background:url('assets/hero.png') center/cover no-repeat; min-height:360px}
   </style>
 </head>
-<body>
-  <header><h1>RobPac Publishing — Book Catalog</h1></header>
-  <main>
-    <div id="cards" class="grid"></div>
-  </main>
+<body class="bg-white">
+  <!-- NAV -->
+  <header class="w-full sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
+      <img src="assets/logo3senzasfondo.png" alt="RobPac logo" class="w-9 h-9">
+      <div class="text-lg font-extrabold tracking-wide">RobPac Publishing</div>
+      <div class="ml-auto flex items-center gap-3">
+        <a href="#catalog" class="btn">Browse 100+ Books</a>
+        <a href="#" class="btn !bg-[#ff6b6b]">Get Free Chapter</a>
+      </div>
+    </div>
+  </header>
 
-<script>
-(async function(){
-  const cards = document.getElementById('cards');
-  const JSON_SOURCES = ["books.json","libri_backup.json"];
+  <!-- HERO -->
+  <section class="hero-wrap">
+    <div class="hero"></div>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="-mt-48 relative z-10 py-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold drop-shadow-sm">A World of Books at Your Fingertips</h1>
+        <p class="mt-3 text-slate-700 max-w-2xl">Independent Publishing House focused on quality non‑fiction and engaging fiction for global readers.</p>
+        <div class="mt-5 flex gap-3">
+          <a href="#catalog" class="btn">Browse 100+ Books</a>
+          <a href="#" class="btn !bg-[#10b981]">Get Free Chapter Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  async function tryFetch(url){
-    try{
-      const r = await fetch(url,{cache:"no-store"});
-      if(!r.ok) return null;
-      const data = await r.json();
-      return Array.isArray(data) ? data : (data.items || data.data || null);
-    }catch(e){ return null; }
-  }
+  <!-- STATS -->
+  <section class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="card p-5 text-center">
+      <div class="text-3xl font-extrabold">100+</div>
+      <div class="text-slate-600">Books Published</div>
+    </div>
+    <div class="card p-5 text-center">
+      <div class="text-3xl font-extrabold">🌍</div>
+      <div class="text-slate-600">Available Worldwide</div>
+    </div>
+    <div class="card p-5 text-center">
+      <div class="text-3xl font-extrabold">✔</div>
+      <div class="text-slate-600">Quality Guaranteed</div>
+    </div>
+  </section>
 
-  function normalize(b){
-    if ('titolo' in b){ // books.json style (IT)
-      return {
-        title: b.titolo?.trim() || "",
-        author: b.autore?.trim() || "",
-        image: b.immagine?.trim() || "",
-        description: b.descrizione?.trim() || "",
-        amazon: b.linkAmazon?.trim() || "",
-        tag: (b.sottogenere || b.genere || "").toLowerCase()
-      };
+  <!-- CATALOG -->
+  <section id="catalog" class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="text-2xl font-extrabold mb-4">Complete Book Catalog</h2>
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <template id="book-card">
+    <div class="card">
+      <img class="cover" data-role="cover" alt="Book cover">
+      <div class="p-4 space-y-3">
+        <span class="badge" data-role="genre">Self-help</span>
+        <h3 class="font-extrabold text-lg" data-role="title">Title</h3>
+        <div class="text-slate-600 text-sm">by <span data-role="author">Author</span></div>
+        <p class="text-slate-700 text-sm line-clamp-3" data-role="desc"></p>
+        <div class="pt-2">
+          <a class="btn inline-block" target="_blank" rel="noopener" data-role="link">View Details</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    async function tryFetch(url){
+      try{ const r = await fetch(url,{cache:"no-store"}); if(!r.ok) throw 0; return await r.json(); }
+      catch(_){ return []; }
     }
-    // fallback generic
-    return {
-      title: b.title?.trim() || "",
-      author: b.author?.trim() || b.autore?.trim() || "",
-      image: (b.cover || b.image || "").trim(),
-      description: (b.description || b.descrizione || "").trim(),
-      amazon: (b.amazon || b.linkAmazon || "").trim(),
-      tag: (b.subgenre || b.sottogenere || b.genre || "").toLowerCase()
-    };
-  }
+    function pick(v, ...keys){
+      for(const k of keys){ if(v && v[k] != null) return v[k]; }
+      return undefined;
+    }
+    function text(v){ return v==null ? "" : String(v); }
 
-  // Prefer books.json, then fallback
-  let list = null;
-  for (const s of JSON_SOURCES){
-    const d = await tryFetch(s);
-    if (d && d.length){ list = d; break; }
-  }
-  if (!list){ cards.innerHTML = "<p>Catalog unavailable.</p>"; return; }
+    function pickImage(b){
+      const url = pick(b,"immagine","image","img","coverUrl");
+      if(url && /^https?:\/\//i.test(url)) return url;
+      const file = pick(b,"cover","copertina");
+      if(file) return "covers/" + file;
+      return "assets/robpac-title.png";
+    }
+    function pickTitle(b){ return pick(b,"titolo","title") || "Untitled"; }
+    function pickAuthor(b){ return pick(b,"autore","author") || "Unknown"; }
+    function pickDesc(b){ return pick(b,"descrizione","description") || ""; }
+    function pickGenre(b){ return pick(b,"sottogenere","subgenre","genere","genre") || "Self‑help"; }
+    function pickLink(b){ return pick(b,"linkAmazon","link","url") || "#"; }
 
-  // map & render
-  const items = list.map(normalize).filter(x=>x.title);
-  const frag = document.createDocumentFragment();
-
-  for (const b of items){
-    const card = document.createElement('div');
-    card.className = 'card';
-
-    const img = document.createElement('img');
-    img.className = 'cover';
-    // allow http(s) links, else assume local covers folder
-    img.src = /^https?:\/\//i.test(b.image) ? b.image : (b.image ? ("covers/"+b.image) : "");
-    img.alt = b.title + " cover";
-    card.appendChild(img);
-
-    const body = document.createElement('div');
-    body.className = 'body';
-
-    const bar = document.createElement('div');
-    bar.className = 'bar';
-    const pill = document.createElement('span');
-    pill.className = 'pill';
-    pill.textContent = (b.tag || "self-help");
-    bar.appendChild(pill);
-    body.appendChild(bar);
-
-    const h3 = document.createElement('div');
-    h3.className = 'title';
-    h3.textContent = b.title;
-    body.appendChild(h3);
-
-    const by = document.createElement('div');
-    by.className = 'author';
-    by.textContent = "by " + (b.author || "—");
-    body.appendChild(by);
-
-    const d = document.createElement('div');
-    d.className = 'desc';
-    d.textContent = b.description || "";
-    body.appendChild(d);
-
-    if (b.amazon){
-      const a = document.createElement('a');
-      a.className = 'btn';
-      a.href = b.amazon; a.target = "_blank"; a.rel = "noopener";
-      a.textContent = "View Details";
-      body.appendChild(a);
+    async function loadBooks(){
+      // PRIORITÀ: books.json poi fallback a libri_backup.json
+      const primary = await tryFetch("books.json");
+      if(Array.isArray(primary) && primary.length) return primary;
+      return await tryFetch("libri_backup.json");
     }
 
-    card.appendChild(body);
-    frag.appendChild(card);
-  }
+    function renderBooks(list){
+      const grid = document.getElementById("grid");
+      const tpl = document.getElementById("book-card");
+      grid.innerHTML = "";
+      list.forEach(b => {
+        const el = tpl.content.cloneNode(true);
+        el.querySelector("[data-role='cover']").src = pickImage(b);
+        el.querySelector("[data-role='title']").textContent = text(pickTitle(b));
+        el.querySelector("[data-role='author']").textContent = text(pickAuthor(b));
+        el.querySelector("[data-role='desc']").textContent = text(pickDesc(b));
+        el.querySelector("[data-role='genre']").textContent = text(pickGenre(b));
+        el.querySelector("[data-role='link']").href = pickLink(b);
+        grid.appendChild(el);
+      });
+    }
 
-  cards.appendChild(frag);
-})();
-</script>
+    loadBooks().then(renderBooks);
+  </script>
 </body>
 </html>
