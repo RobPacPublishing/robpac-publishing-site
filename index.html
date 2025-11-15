@@ -528,7 +528,7 @@
             </div>
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-400 text-sm">© 2024 RobPac Publishing. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">📧 info@robpacpublishing.com</p>
+                <p class="text-gray-400 text-sm">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f262129200f3d202d3f2e2c3f3a2d23263c27262128612c2022">[email&#160;protected]</a></p>
             </div>
         </div>
     </footer>
@@ -590,9 +590,43 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Complete Books Database with Descriptions & Amazon Links
-        const books = [
+        let books = [];
+        
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                books = data.map(book => ({
+                    title: book.titolo,
+                    author: book.autore,
+                    description: book.descrizione.replace(/[🔥⚡🎯📚🎉💪✨🌟🍹]/g, '').trim(),
+                    cover: book.immagine,
+                    amazonLink: book.linkAmazon,
+                    category: mapCategory(book.sottogenere),
+                    rating: 4.5,
+                    price: book.prezzo,
+                    currency: book.valuta
+                }));
+                
+                books.sort((a, b) => a.title.localeCompare(b.title));
+                populateFeaturedCarousel();
+                displayBooks(books);
+            });
+
+        function mapCategory(sottogenere) {
+            const mapping = {
+                'Self-Help': 'self-help',
+                'Science Fiction & Fantasy': 'fiction',
+                'Cookbooks, Food & Wine': 'cookbook',
+                'Literature & Fiction': 'fiction',
+                'Religion & Spirituality': 'religion',
+                'Crescita Personale e Benessere': 'self-help'
+            };
+            return mapping[sottogenere] || 'psychology';
+        }
+
+        const booksOLD = [
             {
                 title: "The Dark Side of Charisma",
                 author: "Ryan Walker",
@@ -1473,7 +1507,6 @@
                 amazonLink: "https://www.amazon.com/dp/B0FHW98R17",
                 rating: 4.5
             }
-        ];
 
         // Populate Featured Carousel
         function populateFeaturedCarousel() {
@@ -1513,9 +1546,8 @@
                                 </div>
                                 <div class="p-6">
                                     <span class="inline-block bg-${getCategoryColor(book.category)}-100 text-${getCategoryColor(book.category)}-600 text-xs px-3 py-1 rounded-full mb-3">${book.category.charAt(0).toUpperCase() + book.category.slice(1)}</span>
-                                    <h3 class="font-bold text-xl mb-2">${book.title}</h3>
+                                    <h3 class="font-bold text-xl mb-2 line-clamp-2">${book.title}</h3>
                                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
-                                    <p class="text-gray-600 text-sm mb-4">${book.description.substring(0, 50)}...</p>
                                     <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
                                 </div>
                             </div>
@@ -1527,11 +1559,6 @@
         }
 
         // Initialize on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            books.sort((a, b) => a.title.localeCompare(b.title));
-            populateFeaturedCarousel();
-            displayBooks(books);
-        });
 
         function displayBooks(booksToDisplay) {
             const grid = document.getElementById('booksGrid');
@@ -1685,15 +1712,4 @@
             if (event.key === 'Escape') {
                 closeModal();
                 closeBookModal();
-            }
-        });
-
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchBooks();
-            }
-        });
-    </script>
-
-</body>
-</html>
+     
