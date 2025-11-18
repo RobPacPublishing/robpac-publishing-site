@@ -316,25 +316,25 @@
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- eBook 1 -->
                     <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(0)">
-                        <img src="assets/free-ebooks/cover libro 1.png" alt="Reading Guide 2024 Cover" class="rounded-lg h-48 w-full object-cover mb-4">
-                        <h4 class="font-bold text-xl mb-2">Reading Guide 2024</h4>
-                        <p class="text-gray-600 text-sm mb-4">Build better reading habits and discover your next favorite book with proven strategies</p>
+                        <img src="assets/free-ebooks/cover%20libro%201.png" alt="Read More in 30 Days Cover" class="rounded-lg h-48 w-full object-cover mb-4">
+                        <h4 class="font-bold text-xl mb-2">Read More in 30 Days</h4>
+                        <p class="text-gray-600 text-sm mb-4">A simple plan for busy people who love books</p>
                         <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
                     </div>
                     
                     <!-- eBook 2 -->
                     <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(1)">
-                        <img src="assets/free-ebooks/cover libro 2.png" alt="Book Recommendations Cover" class="rounded-lg h-48 w-full object-cover mb-4">
-                        <h4 class="font-bold text-xl mb-2">Book Recommendations</h4>
-                        <p class="text-gray-600 text-sm mb-4">Curated must-read books across all genres with detailed reviews and ratings</p>
+                        <img src="assets/free-ebooks/cover%20libro%202.png" alt="Find Your Next Favorite Book Cover" class="rounded-lg h-48 w-full object-cover mb-4">
+                        <h4 class="font-bold text-xl mb-2">Find Your Next Favorite Book</h4>
+                        <p class="text-gray-600 text-sm mb-4">A mood-based guide to smart reading choices</p>
                         <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
                     </div>
                     
                     <!-- eBook 3 -->
                     <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(2)">
-                        <img src="assets/free-ebooks/cover libro 3.png" alt="Author Insights Cover" class="rounded-lg h-48 w-full object-cover mb-4">
-                        <h4 class="font-bold text-xl mb-2">Author Insights</h4>
-                        <p class="text-gray-600 text-sm mb-4">Exclusive behind-the-scenes content and interviews with our published authors</p>
+                        <img src="assets/free-ebooks/cover%20libro%203.png" alt="Behind the Pages Cover" class="rounded-lg h-48 w-full object-cover mb-4">
+                        <h4 class="font-bold text-xl mb-2">Behind the Pages</h4>
+                        <p class="text-gray-600 text-sm mb-4">Real stories, lessons, and inspiration from independent authors</p>
                         <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
                     </div>
                 </div>
@@ -553,7 +553,7 @@ function openFreeEbookModal(type) {
 }
 
 function selectEbook(type) {
-    const titles = ['Reading Guide 2024','Book Recommendations','Author Insights'];
+    const titles = ['Read More in 30 Days','Find Your Next Favorite Book','Behind the Pages'];
     document.getElementById('selectedEbook').value = type;
     document.getElementById('selectedEbookTitle').textContent = titles[type];
     document.getElementById('ebookChoice').style.display = 'none';
