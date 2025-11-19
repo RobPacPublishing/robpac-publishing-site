@@ -533,45 +533,11 @@ function scrollCarousel(dir) { document.getElementById('featuredCarousel').scrol
 
 populateFeaturedCarousel();
 
-document.getElementById('ebookDownloadForm').addEventListener('submit', async function(e) {
+document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    
-    const name = this.querySelector('input[name="name"]').value;
-    const email = this.querySelector('input[name="email"]').value;
-    const selectedEbook = document.getElementById('selectedEbook').value;
-    
-    try {
-        const response = await fetch('/api/send-ebook', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: email,
-                name: name,
-                ebook: selectedEbook
-            })
-        });
-        
-        if (response.ok) {
-            alert('Thank you! Check your email for the download.');
-            document.getElementById('ebookDownloadForm').reset();
-            closeModal();
-        } else {
-            alert('There was an issue. Please try again.');
-            console.error('Error:', await response.json());
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('There was an issue sending your request. Please try again.');
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
+    const formData = new FormData(this);
+    alert('Thank you! Check your email for the download link.');
+    closeModal();
 });
 
 
@@ -599,7 +565,47 @@ function backToChoice() {
     document.getElementById('ebookForm').style.display = 'none';
 }
 
-
+document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.querySelector('input[name="name"]').value;
+    const email = this.querySelector('input[name="email"]').value;
+    const selectedEbook = document.getElementById('selectedEbook').value;
+    const ebookTitles = ['Read More in 30 Days','Find Your Next Favorite Book','Behind the Pages'];
+    const ebookTitle = ebookTitles[selectedEbook];
+    
+    // Crea hidden form per FormSubmit
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://formsubmit.co/robpacpublishing@gmail.com';
+    form.style.display = 'none';
+    
+    const nameInput = document.createElement('input');
+    nameInput.type = 'hidden';
+    nameInput.name = 'name';
+    nameInput.value = name;
+    
+    const emailInput = document.createElement('input');
+    emailInput.type = 'hidden';
+    emailInput.name = 'email';
+    emailInput.value = email;
+    
+    const ebookInput = document.createElement('input');
+    ebookInput.type = 'hidden';
+    ebookInput.name = 'ebook';
+    ebookInput.value = ebookTitle;
+    
+    const redirectInput = document.createElement('input');
+    redirectInput.type = 'hidden';
+    redirectInput.name = '_next';
+    redirectInput.value = window.location.href;
+    
+    form.appendChild(nameInput);
+    form.appendChild(emailInput);
+    form.appendChild(ebookInput);
+    form.appendChild(redirectInput);
+    document.body.appendChild(form);
+    form.submit();
+});
 
 displayBooks(books);
 </script>
