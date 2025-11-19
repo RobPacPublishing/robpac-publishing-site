@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 600px; margin: 20px auto; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%); padding: 40px 20px; text-align: center; color: white; }
+        .logo { font-size: 32px; font-weight: bold; margin-bottom: 10px; }
+        .tagline { font-size: 14px; opacity: 0.9; }
+        .content { padding: 40px 30px; }
+        .greeting { font-size: 18px; margin-bottom: 20px; }
+        .greeting strong { color: #d97706; }
+        .ebook-section { background: #fef3c7; border-left: 4px solid #d97706; padding: 20px; border-radius: 6px; margin: 25px 0; }
+        .ebook-title { font-size: 18px; font-weight: bold; color: #92400e; margin-bottom: 10px; }
+        .ebook-icon { font-size: 40px; margin: 15px 0; }
+        .section-title { font-size: 20px; font-weight: bold; color: #d97706; margin: 30px 0 20px 0; }
+        .book-item { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px; margin-bottom: 12px; display: flex; gap: 15px; }
+        .book-item-img { width: 60px; height: 90px; background: #e5e7eb; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .book-item-text h4 { font-size: 14px; font-weight: bold; margin-bottom: 5px; color: #1f2937; }
+        .book-item-text p { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+        .book-link { display: inline-block; padding: 8px 16px; background: #d97706; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .book-link:hover { background: #b45309; }
+        .cta-section { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 20px; border-radius: 6px; margin: 25px 0; text-align: center; }
+        .cta-button { display: inline-block; padding: 14px 32px; background: #d97706; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; margin-top: 10px; }
+        .cta-button:hover { background: #b45309; }
+        .footer { background: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; border-top: 1px solid #e5e7eb; }
+        .footer a { color: #d97706; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📚 RobPac Publishing</div>
+            <div class="tagline">Your Free eBook Download</div>
+        </div>
+
+        <div class="content">
+            <div class="greeting">
+                Hi <strong>Roberto</strong>,
+            </div>
+
+            <p>Thank you for downloading <strong>"Read More in 30 Days"</strong>! We're excited to have you join our reading community.</p>
+
+            <div class="ebook-section">
+                <div class="ebook-icon">📖</div>
+                <div class="ebook-title">Your Free eBook is Attached</div>
+                <p style="font-size: 14px; color: #92400e; margin-top: 10px;">Download and enjoy "Read More in 30 Days" — a simple plan for busy people who love books.</p>
+            </div>
+
+            <div class="section-title">📚 You Might Also Enjoy</div>
+            <p style="margin-bottom: 15px; color: #6b7280;">Based on your interest, we handpicked these titles from our catalog:</p>
+
+            
+            <div class="book-item">
+                <div class="book-item-img">📕</div>
+                <div class="book-item-text">
+                    <h4>Focus and Mental Clarity</h4>
+                    <p>by John Keagan</p>
+                    <a href="https://www.amazon.com/dp/B0DSKBTXVV" target="_blank" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-item-img">📕</div>
+                <div class="book-item-text">
+                    <h4>Overcoming Self-Sabotage</h4>
+                    <p>by John Keagan</p>
+                    <a href="https://www.amazon.com/dp/B0DR5BH3YN" target="_blank" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-item-img">📕</div>
+                <div class="book-item-text">
+                    <h4>Master Your Anger</h4>
+                    <p>by John Keagan</p>
+                    <a href="https://www.amazon.com/dp/B0DPKWMDH8" target="_blank" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-item-img">📕</div>
+                <div class="book-item-text">
+                    <h4>Autostima Infrangibile</h4>
+                    <p>by Massimo Recaldi</p>
+                    <a href="https://www.amazon.it/dp/B0FB36DGV7" target="_blank" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-item-img">📕</div>
+                <div class="book-item-text">
+                    <h4>RUMINAZIONE MENTALE</h4>
+                    <p>by Massimo Recaldi</p>
+                    <a href="https://www.amazon.it/dp/B0D8TSCF4B" target="_blank" class="book-link">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3 style="color: #1e40af; margin-bottom: 10px;">Explore Our Full Catalog</h3>
+                <p style="color: #1e40af; margin-bottom: 15px;">Discover 100+ books across fiction, self-help, psychology, wellness, and more.</p>
+                <a href="https://www.robpacpublishing.com" class="cta-button">Browse All Books</a>
+            </div>
+
+            <p style="margin-top: 20px; color: #6b7280; font-size: 14px;">Happy reading! If you have any questions, feel free to reach out.</p>
+            <p style="margin-top: 10px; color: #6b7280; font-size: 14px;">Best regards,<br><strong>The RobPac Publishing Team</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 RobPac Publishing. All rights reserved.</p>
+            <p><a href="https://www.robpacpublishing.com">www.robpacpublishing.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
