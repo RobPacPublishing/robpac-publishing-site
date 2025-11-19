@@ -533,11 +533,45 @@ function scrollCarousel(dir) { document.getElementById('featuredCarousel').scrol
 
 populateFeaturedCarousel();
 
-document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
+document.getElementById('ebookDownloadForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const formData = new FormData(this);
-    alert('Thank you! Check your email for the download link.');
-    closeModal();
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    const name = this.querySelector('input[name="name"]').value;
+    const email = this.querySelector('input[name="email"]').value;
+    const selectedEbook = document.getElementById('selectedEbook').value;
+    
+    try {
+        const response = await fetch('/api/send-ebook', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                name: name,
+                ebook: selectedEbook
+            })
+        });
+        
+        if (response.ok) {
+            alert('Thank you! Check your email for the download.');
+            document.getElementById('ebookDownloadForm').reset();
+            closeModal();
+        } else {
+            alert('There was an issue. Please try again.');
+            console.error('Error:', await response.json());
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an issue sending your request. Please try again.');
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 
@@ -565,11 +599,7 @@ function backToChoice() {
     document.getElementById('ebookForm').style.display = 'none';
 }
 
-document.getElementById('ebookDownloadForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you! Check your email for the download link.');
-    closeModal();
-});
+
 
 displayBooks(books);
 </script>
