@@ -463,7 +463,7 @@ function displayBooks(booksToDisplay) {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full aspect-[2/3] object-cover" onerror="this.src='https://via.placeholder.com/300x450'">
+                <img src="${book.cover}" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/200x260'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
@@ -496,7 +496,6 @@ function openBookModal(idx) {
             <p class="text-gray-700 leading-relaxed mb-6">${book.description}</p>
             <div class="flex gap-3">
                 <a href="${book.amazonLink}" target="_blank" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy on Amazon</a>
-                <button onclick="closeBookModal();openModal()" class="flex-1 bg-purple-600 text-white py-4 rounded-xl font-bold hover:bg-purple-700">Get Free eBook</button>
             </div>
         </div>`;
     document.getElementById('bookModal').classList.add('active');
