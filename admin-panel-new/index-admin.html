@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobPac Publishing - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 RobPac Publishing - Admin Panel</h1>
+            <p class="subtitle">Gestione Catalogo Libri</p>
+        </div>
+
+        <!-- Form Aggiungi Libro -->
+        <div class="section">
+            <h2>Aggiungi Nuovo Libro</h2>
+            <form id="libro-form">
+                <div class="form-group">
+                    <label for="titolo">Titolo *</label>
+                    <input type="text" id="titolo" placeholder="Titolo del libro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="autore">Autore *</label>
+                    <input type="text" id="autore" placeholder="Nome dell'autore" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria *</label>
+                    <select id="categoria" required>
+                        <option value="">Seleziona categoria</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="self-help">Self-Help</option>
+                        <option value="cookbook">Cookbook</option>
+                        <option value="psychology">Psychology</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descrizione">Descrizione *</label>
+                    <textarea id="descrizione" placeholder="Descrizione del libro" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cover">Link Copertina (URL Cloudinary) *</label>
+                    <input type="url" id="cover" placeholder="https://res.cloudinary.com/..." required>
+                    <small>Es: https://res.cloudinary.com/robpac/image/upload/f_auto,q_80/v1755169599/copertine/byealvv4jfqewzi47ged.png</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="amazonLink">Link Amazon (o altro) *</label>
+                    <input type="url" id="amazonLink" placeholder="https://www.amazon.com/dp/..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating (1-5)</label>
+                    <input type="number" id="rating" min="1" max="5" step="0.1" value="4.5">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+            </form>
+        </div>
+
+        <!-- Strumenti Gestione -->
+        <div class="section">
+            <h2>Gestione Dati</h2>
+            <div class="tools">
+                <button id="esporta-btn" class="btn btn-secondary">📥 Esporta JSON</button>
+                <button id="importa-btn" class="btn btn-secondary">📤 Importa JSON</button>
+                <input type="file" id="importa-file" accept=".json" style="display: none;">
+            </div>
+        </div>
+
+        <!-- Filtri e Ricerca -->
+        <div class="section">
+            <h2>Catalogo Libri</h2>
+            <div class="filtri">
+                <input type="text" id="cerca" placeholder="Cerca per titolo o autore...">
+                <select id="filtro-categoria">
+                    <option value="">Tutte le categorie</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="cookbook">Cookbook</option>
+                    <option value="psychology">Psychology</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Lista Libri -->
+        <div id="libri-grid" class="libri-grid"></div>
+
+        <!-- Statistiche -->
+        <div class="section" id="statistiche" style="display: none;">
+            <h2>Statistiche</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="tot-libri">0</div>
+                    <div class="stat-label">Libri Totali</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="tot-fiction">0</div>
+                    <div class="stat-label">Fiction</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="tot-self-help">0</div>
+                    <div class="stat-label">Self-Help</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="tot-cookbook">0</div>
+                    <div class="stat-label">Cookbook</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="tot-psychology">0</div>
+                    <div class="stat-label">Psychology</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifiche -->
+    <div id="notifica" class="notifica"></div>
+
+    <!-- Modal Modifica -->
+    <div id="modal-modifica" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modifica Libro</h2>
+            <form id="modifica-form">
+                <input type="hidden" id="modifica-index">
+                <div class="form-group">
+                    <label for="mod-titolo">Titolo</label>
+                    <input type="text" id="mod-titolo" required>
+                </div>
+                <div class="form-group">
+                    <label for="mod-autore">Autore</label>
+                    <input type="text" id="mod-autore" required>
+                </div>
+                <div class="form-group">
+                    <label for="mod-categoria">Categoria</label>
+                    <select id="mod-categoria" required>
+                        <option value="fiction">Fiction</option>
+                        <option value="self-help">Self-Help</option>
+                        <option value="cookbook">Cookbook</option>
+                        <option value="psychology">Psychology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mod-descrizione">Descrizione</label>
+                    <textarea id="mod-descrizione" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mod-cover">Link Copertina</label>
+                    <input type="url" id="mod-cover" required>
+                </div>
+                <div class="form-group">
+                    <label for="mod-amazonLink">Link Amazon</label>
+                    <input type="url" id="mod-amazonLink" required>
+                </div>
+                <div class="form-group">
+                    <label for="mod-rating">Rating</label>
+                    <input type="number" id="mod-rating" min="1" max="5" step="0.1">
+                </div>
+                <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+                <button type="button" class="btn btn-secondary" onclick="chiudiModal()">Annulla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
