@@ -313,31 +313,7 @@
                     <p class="text-gray-600">Select one and get instant access</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- eBook 1 -->
-                    <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(0)">
-                        <div class="flex justify-center mb-4"><img src="assets/free-ebooks/cover1.png" alt="Read More in 30 Days Cover" class="rounded-lg h-48 object-contain"></div>
-                        <h4 class="font-bold text-xl mb-2">Read More in 30 Days</h4>
-                        <p class="text-gray-600 text-sm mb-4">A simple plan for busy people who love books</p>
-                        <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
-                    </div>
-                    
-                    <!-- eBook 2 -->
-                    <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(1)">
-                        <div class="flex justify-center mb-4"><img src="assets/free-ebooks/cover2.png" alt="Find Your Next Favorite Book Cover" class="rounded-lg h-48 object-contain"></div>
-                        <h4 class="font-bold text-xl mb-2">Find Your Next Favorite Book</h4>
-                        <p class="text-gray-600 text-sm mb-4">A mood-based guide to smart reading choices</p>
-                        <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
-                    </div>
-                    
-                    <!-- eBook 3 -->
-                    <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(2)">
-                        <div class="flex justify-center mb-4"><img src="assets/free-ebooks/cover3.png" alt="Behind the Pages Cover" class="rounded-lg h-48 object-contain"></div>
-                        <h4 class="font-bold text-xl mb-2">Behind the Pages</h4>
-                        <p class="text-gray-600 text-sm mb-4">Real stories, lessons, and inspiration from independent authors</p>
-                        <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
-                    </div>
-                </div>
+                <div class="grid md:grid-cols-3 gap-6" id="ebookChoiceGrid"></div>
             </div>
             
             <!-- Step 2: Form Email -->
@@ -553,9 +529,8 @@ function openFreeEbookModal(type) {
 }
 
 function selectEbook(type) {
-    const titles = ['Read More in 30 Days','Find Your Next Favorite Book','Behind the Pages'];
     document.getElementById('selectedEbook').value = type;
-    document.getElementById('selectedEbookTitle').textContent = titles[type];
+    document.getElementById('selectedEbookTitle').textContent = freeEbooks[type].title;
     document.getElementById('ebookChoice').style.display = 'none';
     document.getElementById('ebookForm').style.display = 'block';
 }
@@ -570,8 +545,7 @@ document.getElementById('ebookDownloadForm').addEventListener('submit', function
     const name = this.querySelector('input[name="name"]').value;
     const email = this.querySelector('input[name="email"]').value;
     const selectedEbook = document.getElementById('selectedEbook').value;
-    const ebookTitles = ['Read More in 30 Days','Find Your Next Favorite Book','Behind the Pages'];
-    const ebookTitle = ebookTitles[selectedEbook];
+    const ebookTitle = freeEbooks[selectedEbook].title;
     
     // Crea hidden form per FormSubmit
     const form = document.createElement('form');
@@ -608,6 +582,52 @@ document.getElementById('ebookDownloadForm').addEventListener('submit', function
 });
 
 displayBooks(books);
+
+// Free eBooks data - sincronizzato con modal
+const freeEbooks = [
+    {
+        title: 'Read More in 30 Days',
+        description: 'A simple plan for busy people who love books',
+        cover: 'assets/free-ebooks/cover1.png'
+    },
+    {
+        title: 'Find Your Next Favorite Book',
+        description: 'A mood-based guide to smart reading choices',
+        cover: 'assets/free-ebooks/cover2.png'
+    },
+    {
+        title: 'Behind the Pages',
+        description: 'Real stories, lessons, and inspiration from independent authors',
+        cover: 'assets/free-ebooks/cover3.png'
+    }
+];
+
+function renderFreeEbooks() {
+    const grid = document.getElementById('freeEbooksGrid');
+    grid.innerHTML = freeEbooks.map((ebook, idx) => `
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
+            <h3 class="text-2xl font-bold mb-3">${ebook.title}</h3>
+            <p class="text-gray-600 mb-6">${ebook.description}</p>
+            <button onclick="openFreeEbookModal(${idx})" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
+        </div>
+    `).join('');
+}
+
+function renderEbookChoice() {
+    const grid = document.getElementById('ebookChoiceGrid');
+    grid.innerHTML = freeEbooks.map((ebook, idx) => `
+        <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(${idx})">
+            <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
+            <h4 class="font-bold text-xl mb-2">${ebook.title}</h4>
+            <p class="text-gray-600 text-sm mb-4">${ebook.description}</p>
+            <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
+        </div>
+    `).join('');
+}
+
+renderFreeEbooks();
+renderEbookChoice();
 </script>
 
 
@@ -618,26 +638,7 @@ displayBooks(books);
                 <h2 class="text-4xl font-black heading-font mb-4">Get Your Free eBook</h2>
                 <p class="text-xl text-gray-600">Download exclusive guides and start your reading journey today</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-6xl mb-4">📖</div>
-                    <h3 class="text-2xl font-bold mb-3">Reading Guide</h3>
-                    <p class="text-gray-600 mb-6">Complete guide to building better reading habits and discovering your next favorite book</p>
-                    <button onclick="openFreeEbookModal(0)" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-6xl mb-4">📚</div>
-                    <h3 class="text-2xl font-bold mb-3">Book Recommendations</h3>
-                    <p class="text-gray-600 mb-6">Curated list of must-read books across all genres with detailed reviews</p>
-                    <button onclick="openFreeEbookModal(1)" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <div class="text-6xl mb-4">✨</div>
-                    <h3 class="text-2xl font-bold mb-3">Author Insights</h3>
-                    <p class="text-gray-600 mb-6">Behind-the-scenes look at our publishing process and exclusive author interviews</p>
-                    <button onclick="openFreeEbookModal(2)" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
-                </div>
-            </div>
+            <div id="freeEbooksGrid" class="grid md:grid-cols-3 gap-8"></div>
         </div>
     </section>
 
