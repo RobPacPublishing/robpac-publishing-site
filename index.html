@@ -464,10 +464,10 @@ function populateFeaturedCarousel() {
     books.slice(0,10).forEach((book,i) => {
         const badge = i < 3 ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>' : '';
         carousel.innerHTML += `
-            <div class="carousel-item w-80">
+            <div class="carousel-item w-60">
                 <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-[450px] object-cover" onerror="this.src='https://via.placeholder.com/300x450'">
+                        <img src="${book.cover}" class="w-full h-[330px] object-cover" onerror="this.src='https://via.placeholder.com/240x330'">
                         ${badge}
                     </div>
                     <div class="p-6">
