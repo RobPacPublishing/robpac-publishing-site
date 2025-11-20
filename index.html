@@ -440,10 +440,10 @@ function populateFeaturedCarousel() {
     books.slice(0,10).forEach((book,i) => {
         const badge = i < 3 ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>' : '';
         carousel.innerHTML += `
-            <div class="carousel-item w-60">
+            <div class="carousel-item w-48">
                 <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-[330px] object-cover" onerror="this.src='https://via.placeholder.com/240x330'">
+                        <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/192x320'">
                         ${badge}
                     </div>
                     <div class="p-6">
@@ -463,7 +463,7 @@ function displayBooks(booksToDisplay) {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-[330px] object-cover" onerror="this.src='https://via.placeholder.com/240x330'">
+                <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='https://via.placeholder.com/192x320'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
