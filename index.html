@@ -463,7 +463,7 @@ function displayBooks(booksToDisplay) {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/200x260'">
+                <img src="${book.cover}" class="w-full h-[330px] object-cover" onerror="this.src='https://via.placeholder.com/240x330'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
