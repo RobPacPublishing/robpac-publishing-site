@@ -736,8 +736,10 @@ function renderEbookChoice() {
     </footer>
 
 <script>
-renderFreeEbooks();
-renderEbookChoice();
+document.addEventListener('DOMContentLoaded', function() {
+    renderFreeEbooks();
+    renderEbookChoice();
+});
 </script>
 
 </body>
