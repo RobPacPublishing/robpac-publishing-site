@@ -745,67 +745,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- CLOUDINARY_KILL_SWITCH_V1 -->
 <script>
-(function(){
-  function toLocal(src){
-    try{
-      if(!src) return src;
-      if(src.includes('cloudinary.com')){
-        const clean = src.split('?')[0].split('#')[0];
-        const fname = clean.split('/').pop();
-        return '/covers/' + fname;
-      }
-      return src;
-    }catch(e){
-      return src;
+/* CLOUDINARY_KILL_SWITCH_V1 */
+(function () {
+  'use strict';
+
+  const ENABLED = true;
+  const PLACEHOLDER = '/covers/placeholder.svg';
+
+  function isCloudinaryUrl(u) {
+    return typeof u === 'string' && u.includes('cloudinary.com');
+  }
+
+  function extractFilename(u) {
+    try {
+      const url = new URL(u, location.href);
+      const path = url.pathname || '';
+      const m = path.match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif))$/i);
+      return m ? m[1] : null;
+    } catch (e) {
+      const m = String(u).match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif))$/i);
+      return m ? m[1] : null;
     }
   }
 
-  function fixImg(img){
-    if(!img || img.__rppFixed) return;
-    img.__rppFixed = true;
+  function toLocalCoverUrl(cloudinaryUrl) {
+    const fname = extractFilename(cloudinaryUrl);
+    if (!fname) return null;
+    return '/covers/' + fname;
+  }
 
-    const cur = img.getAttribute('src') || '';
-    if(cur.includes('cloudinary.com')){
-      img.setAttribute('src', toLocal(cur));
+  function applyPlaceholder(img) {
+    if (!img || img.dataset.localCoverFallback === '1') return;
+    img.dataset.localCoverFallback = '1';
+    img.src = PLACEHOLDER;
+  }
+
+  function replaceImgIfNeeded(img) {
+    if (!ENABLED || !img) return;
+
+    const cur = img.currentSrc || img.src || '';
+    if (!isCloudinaryUrl(cur)) return;
+
+    const local = toLocalCoverUrl(cur);
+    if (!local) {
+      applyPlaceholder(img);
+      return;
     }
 
-    img.addEventListener('error', function(){
-      const now = img.getAttribute('src') || '';
-      if(now.includes('cloudinary.com')){
-        img.src = toLocal(now);
-        return;
-      }
-      img.onerror = null;
-      img.src = '/covers/placeholder.svg';
-    });
+    img.dataset.cloudinaryReplaced = '1';
+    img.onerror = function () { applyPlaceholder(img); };
+    img.src = local;
   }
 
-  function fixAll(){
-    document.querySelectorAll('img').forEach(fixImg);
+  function scanAll() {
+    document.querySelectorAll('img').forEach(replaceImgIfNeeded);
   }
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', fixAll);
+  // Run now + after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scanAll);
   } else {
-    fixAll();
+    scanAll();
   }
 
-  const mo = new MutationObserver((muts)=>{
-    for(const m of muts){
-      if(m.type === 'childList'){
-        m.addedNodes.forEach(n=>{
-          if(n && n.nodeType === 1){
-            if(n.tagName === 'IMG') fixImg(n);
-            if(n.querySelectorAll) n.querySelectorAll('img').forEach(fixImg);
-          }
-        });
+  // Catch dynamically inserted images (carousels, lazy-load, etc.)
+  const mo = new MutationObserver(function (mutations) {
+    for (const m of mutations) {
+      if (m.type === 'attributes' && m.target && m.target.tagName === 'IMG' && (m.attributeName === 'src' || m.attributeName === 'srcset')) {
+        replaceImgIfNeeded(m.target);
       }
-      if(m.type === 'attributes' && m.attributeName === 'src' && m.target && m.target.tagName === 'IMG'){
-        fixImg(m.target);
+      if (m.addedNodes && m.addedNodes.length) {
+        m.addedNodes.forEach(function (n) {
+          if (!n || n.nodeType !== 1) return;
+          if (n.tagName === 'IMG') replaceImgIfNeeded(n);
+          n.querySelectorAll && n.querySelectorAll('img').forEach(replaceImgIfNeeded);
+        });
       }
     }
   });
-  mo.observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:['src']});
+
+  mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
 })();
 </script>
 
