@@ -166,6 +166,102 @@
             background-clip: text;
         }
     </style>
+
+    <!-- LOCAL_COVERS_ONLY_V2 -->
+    <script>
+    (function () {
+      'use strict';
+
+      const PLACEHOLDER = '/covers/placeholder.svg';
+      const BLOCK_FRAGMENT = 'cloudinary.com';
+
+      function isBlockedUrl(u) {
+        return typeof u === 'string' && u.toLowerCase().includes(BLOCK_FRAGMENT);
+      }
+
+      function extractFilename(u) {
+        try {
+          const url = new URL(String(u), location.href);
+          const path = url.pathname || '';
+          const m = path.match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif|svg))$/i);
+          return m ? m[1] : null;
+        } catch (e) {
+          const m = String(u).match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif|svg))$/i);
+          return m ? m[1] : null;
+        }
+      }
+
+      function normalizeCoverUrl(input) {
+        if (!input) return PLACEHOLDER;
+        let v = String(input).trim();
+        if (!v) return PLACEHOLDER;
+
+        // Already local
+        if (v.startsWith('/covers/')) return v;
+        if (v.startsWith('covers/')) return '/' + v;
+
+        // Bare filename (no slashes)
+        if (!v.includes('/') && /\.(png|jpe?g|webp|gif|svg)$/i.test(v)) return '/covers/' + v;
+
+        // Cloudinary (try to map to local by filename; otherwise placeholder)
+        if (isBlockedUrl(v)) {
+          const fname = extractFilename(v);
+          return fname ? ('/covers/' + fname) : PLACEHOLDER;
+        }
+
+        // Any other absolute URL is not allowed for covers
+        if (/^https?:\/\//i.test(v)) return PLACEHOLDER;
+
+        // Relative paths outside /covers/ are allowed only if explicitly relative
+        return v;
+      }
+
+      // Expose for internal usage
+      window.__RPP_COVERS_ONLY = { normalize: normalizeCoverUrl, placeholder: PLACEHOLDER };
+
+      // Hard block: prevent Cloudinary URLs from ever landing in img.src (and therefore in the network)
+      function patchImgSetter(prop) {
+        const proto = HTMLImageElement && HTMLImageElement.prototype;
+        if (!proto) return;
+        const desc = Object.getOwnPropertyDescriptor(proto, prop);
+        if (!desc || !desc.set || !desc.get) return;
+
+        Object.defineProperty(proto, prop, {
+          configurable: true,
+          enumerable: desc.enumerable,
+          get: function () { return desc.get.call(this); },
+          set: function (value) {
+            try {
+              const v = String(value || '');
+              if (isBlockedUrl(v)) {
+                const safe = normalizeCoverUrl(v);
+                return desc.set.call(this, safe);
+              }
+            } catch (e) {}
+            return desc.set.call(this, value);
+          }
+        });
+      }
+
+      patchImgSetter('src');
+      patchImgSetter('srcset');
+
+      // Patch setAttribute for IMG to block cloudinary before fetch
+      const _setAttribute = Element.prototype.setAttribute;
+      Element.prototype.setAttribute = function (name, value) {
+        try {
+          if (this && this.tagName === 'IMG' && (name === 'src' || name === 'srcset')) {
+            const v = String(value || '');
+            if (isBlockedUrl(v)) {
+              return _setAttribute.call(this, name, normalizeCoverUrl(v));
+            }
+          }
+        } catch (e) {}
+        return _setAttribute.call(this, name, value);
+      };
+    })();
+    </script>
+
 </head>
 <body class="bg-gray-50">
 
@@ -443,7 +539,7 @@ function populateFeaturedCarousel() {
             <div class="carousel-item w-48">
                 <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
+                        <img src="${safeCover(book.cover)}" class="w-full h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
                         ${badge}
                     </div>
                     <div class="p-6">
@@ -456,14 +552,29 @@ function populateFeaturedCarousel() {
     });
 }
 
-function displayBooks(booksToDisplay) {
+
+function safeCover(u) {
+    try {
+        if (window.__RPP_COVERS_ONLY && typeof window.__RPP_COVERS_ONLY.normalize === 'function') {
+            return window.__RPP_COVERS_ONLY.normalize(u);
+        }
+    } catch (e) {}
+    return u || '/covers/placeholder.svg';
+}
+
+// Normalize all book covers before first render (prevents any Cloudinary URL from ever reaching the DOM/network)
+try {
+    books.forEach(b => { b.cover = safeCover(b.cover); });
+} catch (e) {}
+
+function displayBooks(booksToDisplay)function displayBooks(booksToDisplay) {
     const grid = document.getElementById('booksGrid');
     grid.innerHTML = '';
     booksToDisplay.forEach(book => {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" onerror="this.src='/covers/placeholder.svg'">
+                <img src="${safeCover(book.cover)}" class="w-full h-80 object-contain bg-gray-100" onerror="this.src='/covers/placeholder.svg'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
@@ -487,7 +598,7 @@ function openBookModal(idx) {
     const book = books[idx];
     document.getElementById('bookModalContent').innerHTML = `
         <div class="md:col-span-2">
-            <img src="${book.cover}" class="w-full rounded-xl shadow-lg" onerror="this.src='/covers/placeholder.svg'">
+            <img src="${safeCover(book.cover)}" class="w-full rounded-xl shadow-lg" onerror="this.src='/covers/placeholder.svg'">
         </div>
         <div class="md:col-span-3">
             <h2 class="text-3xl font-bold heading-font mb-2">${book.title}</h2>
@@ -745,85 +856,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- CLOUDINARY_KILL_SWITCH_V1 -->
 <script>
-/* CLOUDINARY_KILL_SWITCH_V1 */
 (function () {
   'use strict';
+  const api = window.__RPP_COVERS_ONLY;
+  if (!api || typeof api.normalize !== 'function') return;
 
-  const ENABLED = true;
-  const PLACEHOLDER = '/covers/placeholder.svg';
-
-  function isCloudinaryUrl(u) {
-    return typeof u === 'string' && u.includes('cloudinary.com');
+  function scan() {
+    document.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src') || '';
+      if (src && src.toLowerCase().includes('cloudinary.com')) img.setAttribute('src', api.normalize(src));
+      const srcset = img.getAttribute('srcset') || '';
+      if (srcset && srcset.toLowerCase().includes('cloudinary.com')) img.removeAttribute('srcset');
+    });
   }
 
-  function extractFilename(u) {
-    try {
-      const url = new URL(u, location.href);
-      const path = url.pathname || '';
-      const m = path.match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif))$/i);
-      return m ? m[1] : null;
-    } catch (e) {
-      const m = String(u).match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif))$/i);
-      return m ? m[1] : null;
-    }
-  }
+  scan();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan);
 
-  function toLocalCoverUrl(cloudinaryUrl) {
-    const fname = extractFilename(cloudinaryUrl);
-    if (!fname) return null;
-    return '/covers/' + fname;
-  }
-
-  function applyPlaceholder(img) {
-    if (!img || img.dataset.localCoverFallback === '1') return;
-    img.dataset.localCoverFallback = '1';
-    img.src = PLACEHOLDER;
-  }
-
-  function replaceImgIfNeeded(img) {
-    if (!ENABLED || !img) return;
-
-    const cur = img.currentSrc || img.src || '';
-    if (!isCloudinaryUrl(cur)) return;
-
-    const local = toLocalCoverUrl(cur);
-    if (!local) {
-      applyPlaceholder(img);
-      return;
-    }
-
-    img.dataset.cloudinaryReplaced = '1';
-    img.onerror = function () { applyPlaceholder(img); };
-    img.src = local;
-  }
-
-  function scanAll() {
-    document.querySelectorAll('img').forEach(replaceImgIfNeeded);
-  }
-
-  // Run now + after DOM ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', scanAll);
-  } else {
-    scanAll();
-  }
-
-  // Catch dynamically inserted images (carousels, lazy-load, etc.)
-  const mo = new MutationObserver(function (mutations) {
-    for (const m of mutations) {
-      if (m.type === 'attributes' && m.target && m.target.tagName === 'IMG' && (m.attributeName === 'src' || m.attributeName === 'srcset')) {
-        replaceImgIfNeeded(m.target);
-      }
-      if (m.addedNodes && m.addedNodes.length) {
-        m.addedNodes.forEach(function (n) {
-          if (!n || n.nodeType !== 1) return;
-          if (n.tagName === 'IMG') replaceImgIfNeeded(n);
-          n.querySelectorAll && n.querySelectorAll('img').forEach(replaceImgIfNeeded);
-        });
-      }
-    }
-  });
-
+  const mo = new MutationObserver(scan);
   mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
 })();
 </script>

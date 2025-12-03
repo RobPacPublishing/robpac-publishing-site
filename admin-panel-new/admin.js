@@ -1,6 +1,47 @@
 let libri = [];
 const STORAGE_KEY = 'robpac_libri';
 
+// ===== LOCAL COVERS ONLY (no Cloudinary / no remote URLs) =====
+const COVER_PLACEHOLDER = '/covers/placeholder.svg';
+const CLOUDINARY_FRAGMENT = 'cloudinary.com';
+
+function _isCloudinary(u) {
+    return typeof u === 'string' && u.toLowerCase().includes(CLOUDINARY_FRAGMENT);
+}
+
+function _extractFilename(u) {
+    try {
+        const url = new URL(String(u), location.href);
+        const path = url.pathname || '';
+        const m = path.match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif|svg))$/i);
+        return m ? m[1] : null;
+    } catch (e) {
+        const m = String(u).match(/\/([^\/?#]+\.(?:png|jpe?g|webp|gif|svg))$/i);
+        return m ? m[1] : null;
+    }
+}
+
+function normalizeCover(input) {
+    if (!input) return COVER_PLACEHOLDER;
+    let v = String(input).trim();
+    if (!v) return COVER_PLACEHOLDER;
+
+    if (v.startsWith('/covers/')) return v;
+    if (v.startsWith('covers/')) return '/' + v;
+
+    if (!v.includes('/') && /\.(png|jpe?g|webp|gif|svg)$/i.test(v)) return '/covers/' + v;
+
+    if (_isCloudinary(v)) {
+        const fname = _extractFilename(v);
+        return fname ? ('/covers/' + fname) : COVER_PLACEHOLDER;
+    }
+
+    if (/^https?:\/\//i.test(v)) return COVER_PLACEHOLDER;
+
+    return v;
+}
+
+
 // Carica libri da localStorage al caricamento
 document.addEventListener('DOMContentLoaded', () => {
     caricaLibri();
@@ -41,7 +82,7 @@ function aggiungiLibro() {
         title: document.getElementById('titolo').value,
         author: document.getElementById('autore').value,
         category: document.getElementById('categoria').value,
-        cover: document.getElementById('cover').value,
+        cover: normalizeCover(document.getElementById('cover').value),
         description: document.getElementById('descrizione').value,
         amazonLink: document.getElementById('amazonLink').value,
         rating: parseFloat(document.getElementById('rating').value) || 4.5
@@ -83,7 +124,7 @@ function renderLibri() {
         return `
             <div class="libro-card">
                 <div class="libro-cover">
-                    <img src="${libro.cover}" alt="${libro.title}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22200%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3ENo Image%3C/text%3E%3C/svg%3E'">
+                    <img src="${normalizeCover(libro.cover)}" alt="${libro.title}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22300%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22200%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3ENo Image%3C/text%3E%3C/svg%3E'">
                 </div>
                 <div class="libro-info">
                     <span class="libro-categoria">${libro.category}</span>
@@ -125,7 +166,7 @@ function salvaModifiche(e) {
         title: document.getElementById('mod-titolo').value,
         author: document.getElementById('mod-autore').value,
         category: document.getElementById('mod-categoria').value,
-        cover: document.getElementById('mod-cover').value,
+        cover: normalizeCover(document.getElementById('mod-cover').value),
         description: document.getElementById('mod-descrizione').value,
         amazonLink: document.getElementById('mod-amazonLink').value,
         rating: parseFloat(document.getElementById('mod-rating').value) || 4.5
@@ -154,6 +195,18 @@ function salvaLibri() {
 function caricaLibri() {
     const salvati = localStorage.getItem(STORAGE_KEY);
     libri = salvati ? JSON.parse(salvati) : [];
+
+    // Migrazione automatica: elimina eventuali URL Cloudinary/remote già salvati
+    let changed = false;
+    try {
+        libri = (Array.isArray(libri) ? libri : []).map(l => {
+            const c = normalizeCover(l && l.cover);
+            if (l && l.cover !== c) changed = true;
+            return { ...(l || {}), cover: c };
+        });
+    } catch (e) {}
+
+    if (changed) salvaLibri();
 }
 
 function esportaJSON() {
@@ -186,7 +239,7 @@ function importaJSON(e) {
             }
 
             if (confirm(`Importare ${dati.length} libri? I dati esistenti verranno sovrascritti.`)) {
-                libri = dati;
+                libri = (Array.isArray(dati) ? dati : []).map(l => ({ ...(l || {}), cover: normalizeCover(l && l.cover) }));
                 salvaLibri();
                 renderLibri();
                 aggiornaNumerazione();
