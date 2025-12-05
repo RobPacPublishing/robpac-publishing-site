@@ -429,8 +429,19 @@
     }
 
     function coverSrc(url) {
+      if (url === null || url === undefined) return PLACEHOLDER;
+
+      url = String(url).trim();
       if (!url) return PLACEHOLDER;
-      return url;
+
+      if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("data:")) return url;
+
+      if (url.startsWith("/covers/")) return url;
+      if (url.startsWith("covers/")) return "/" + url;
+
+      if (url.startsWith("/")) return url;
+
+      return "/covers/" + url;
     }
 
     function createCard(book, onOpen) {
