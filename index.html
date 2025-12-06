@@ -347,8 +347,34 @@
 let books = [];
 function populateFeaturedCarousel() {
     const carousel = document.getElementById('featuredCarousel');
-    books.slice(0,10).forEach((book,i) => {
-        const badge = i < 3 ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>' : '';
+    if (!carousel) return;
+
+    // Prevent duplication on re-renders
+    carousel.innerHTML = '';
+
+    const isTruthy = (v) => v === true || v === 1 || v === '1' || (typeof v === 'string' && v.toLowerCase() === 'true');
+
+    const isBestseller = (b) =>
+        isTruthy(b?.bestseller) || isTruthy(b?.bestSeller) || isTruthy(b?.isBestseller) ||
+        (Array.isArray(b?.tags) && b.tags.some(t => String(t).toLowerCase().includes('bestseller')));
+
+    const isFeatured = (b) =>
+        isTruthy(b?.featured) || isTruthy(b?.isFeatured) ||
+        (Array.isArray(b?.tags) && b.tags.some(t => String(t).toLowerCase().includes('featured')));
+
+    // Prefer explicitly tagged items; otherwise fall back to the first 10
+    const bestsellers = books.filter(isBestseller);
+    const featured = books.filter(isFeatured).filter(b => !bestsellers.includes(b));
+    const rest = books.filter(b => !bestsellers.includes(b) && !featured.includes(b));
+    const list = [...bestsellers, ...featured, ...rest].slice(0, 10);
+
+    list.forEach((book, i) => {
+        const badge = isBestseller(book) || (bestsellers.length === 0 && i < 3)
+            ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>'
+            : (isFeatured(book)
+                ? '<div class="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEATURED</div>'
+                : '');
+
         carousel.innerHTML += `
             <div class="carousel-item w-48">
                 <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
@@ -416,7 +442,9 @@ async function loadBooks() {
             amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || ''
         }));
         displayBooks(books);
-    } catch (err) {
+    
+        populateFeaturedCarousel();
+} catch (err) {
         console.error('Failed to load books.json', err);
     }
 }
