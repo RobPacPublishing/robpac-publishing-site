@@ -279,9 +279,15 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-4xl font-black heading-font text-center mb-12">Featured Books</h2>
             <div class="relative">
-                <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg">←</button>
+                <button type="button" onclick="scrollCarousel('left')" aria-label="Scroll featured books left"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition">
+                    ←
+                </button>
                 <div id="featuredCarousel" class="carousel gap-6 px-12"></div>
-                <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg">→</button>
+                <button type="button" onclick="scrollCarousel('right')" aria-label="Scroll featured books right"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition">
+                    →
+                </button>
             </div>
         </div>
     </section>
@@ -369,43 +375,29 @@ function populateFeaturedCarousel() {
     const list = [...bestsellers, ...featured, ...rest].slice(0, 10);
 
     list.forEach((book, i) => {
-        const badge = isBestseller(book) || (bestsellers.length === 0 && i < 3)
-            ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>'
+        const badge = (isBestseller(book) || (bestsellers.length === 0 && i < 3))
+            ? '<div class="absolute top-3 left-3 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold shadow">BESTSELLER</div>'
             : (isFeatured(book)
-                ? '<div class="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEATURED</div>'
+                ? '<div class="absolute top-3 left-3 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow">FEATURED</div>'
                 : '');
 
-        carousel.innerHTML += `
-            <div class="carousel-item w-48">
-                <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
+        const idx = books.indexOf(book);
+
+        carousel.insertAdjacentHTML('beforeend', `
+            <div class="carousel-item w-48 md:w-56">
+                <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition" onclick="openBookModal(${idx})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
+                        <img src="${book.cover}" alt="${book.title}" class="w-full h-72 md:h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
                         ${badge}
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 line-clamp-2">${book.title}</h3>
+                    <div class="p-4">
+                        <h3 class="font-bold text-base mb-1 leading-snug line-clamp-2">${book.title}</h3>
                         <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
-                        <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700">View Details</button>
+                        <button type="button" class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 transition">View Details</button>
                     </div>
                 </div>
-            </div>`;
-    });
-}
-
-function displayBooks(booksToDisplay) {
-    const grid = document.getElementById('booksGrid');
-    grid.innerHTML = '';
-    booksToDisplay.forEach(book => {
-        const idx = books.indexOf(book);
-        grid.innerHTML += `
-            <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" onerror="this.src='/covers/placeholder.svg'">
-                <div class="p-4">
-                    <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
-                    <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
-                    <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm">View Details</button>
-                </div>
-            </div>`;
+            </div>
+        `);
     });
 }
 
@@ -415,13 +407,13 @@ function normalizeCover(cover) {
     const s = String(cover).trim();
 
     // If already local path, keep it (ensure leading '/')
-    if (s.startsWith('/covers/')) return s;
-    if (s.startsWith('covers/')) return '/' + s;
+    if (s.startsWith('/covers/')) return encodeURI(s);
+    if (s.startsWith('covers/')) return encodeURI('/' + s);
 
-    // Hard block Cloudinary: prefer local filename if we can recover it
+// Hard block Cloudinary: prefer local filename if we can recover it
     if (/cloudinary/i.test(s)) {
         const m = s.match(/\/([^\/\?]+\.(?:jpg|jpeg|png|webp|gif))(?=$|\?)/i);
-        if (m && m[1]) return '/covers/' + m[1];
+        if (m && m[1]) return encodeURI('/covers/' + m[1]);
         return '/covers/placeholder.svg';
     }
 
@@ -442,9 +434,8 @@ async function loadBooks() {
             amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || ''
         }));
         displayBooks(books);
-    
         populateFeaturedCarousel();
-} catch (err) {
+    } catch (err) {
         console.error('Failed to load books.json', err);
     }
 }
@@ -480,10 +471,12 @@ function openBookModal(idx) {
 function closeBookModal() { document.getElementById('bookModal').classList.remove('active'); }
 function openModal() { document.getElementById('leadModal').classList.add('active'); }
 function closeModal() { document.getElementById('leadModal').classList.remove('active'); }
-function scrollCarousel(dir) { document.getElementById('featuredCarousel').scrollBy({left: dir==='left'?-350:350, behavior:'smooth'}); }
-
-populateFeaturedCarousel();
-
+function scrollCarousel(dir) {
+    const el = document.getElementById('featuredCarousel');
+    if (!el) return;
+    const amount = 360;
+    el.scrollBy({ left: dir === 'left' ? -amount : amount, behavior: 'smooth' });
+}
 document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(this);
