@@ -383,6 +383,27 @@ function displayBooks(booksToDisplay) {
     });
 }
 
+
+function normalizeCover(cover) {
+    if (!cover) return '/covers/placeholder.svg';
+    const s = String(cover).trim();
+
+    // If already local path, keep it (ensure leading '/')
+    if (s.startsWith('/covers/')) return s;
+    if (s.startsWith('covers/')) return '/' + s;
+
+    // Hard block Cloudinary: prefer local filename if we can recover it
+    if (/cloudinary/i.test(s)) {
+        const m = s.match(/\/([^\/\?]+\.(?:jpg|jpeg|png|webp|gif))(?=$|\?)/i);
+        if (m && m[1]) return '/covers/' + m[1];
+        return '/covers/placeholder.svg';
+    }
+
+    // Allow other absolute URLs as-is (not Cloudinary); images still have onerror fallback
+    return s;
+}
+
+
 async function loadBooks() {
     try {
         const res = await fetch('books.json', { cache: 'no-store' });
@@ -391,7 +412,7 @@ async function loadBooks() {
         const arr = Array.isArray(data) ? data : [];
         books = arr.map(b => ({
             ...b,
-            cover: b.cover || '/covers/placeholder.svg',
+            cover: normalizeCover(b.cover),
             amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || ''
         }));
         displayBooks(books);
