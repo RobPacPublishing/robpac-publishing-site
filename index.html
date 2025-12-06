@@ -28,56 +28,13 @@
       min-height:100vh;
     }
     .wrap{max-width:1200px;margin:0 auto;padding:18px 18px 42px}
-    header{position:relative; z-index:50;}
-.siteNav{
-  position:sticky; top:0; z-index:50;
-  background: rgba(255,255,255,.96);
-  backdrop-filter:saturate(180%) blur(10px);
-  border-bottom:1px solid rgba(0,0,0,.06);
-  box-shadow: 0 14px 34px rgba(0,0,0,.20);
-}
-.navInner{
-  max-width:1200px; margin:0 auto;
-  padding:14px 18px;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:16px;
-}
-.navBrand{display:flex; align-items:center; gap:12px; text-decoration:none;}
-.navLogo{height:56px; width:56px; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.25));}
-.navBrandText{display:flex; flex-direction:column; gap:2px;}
-.navTitleImg{display:block; height:34px; width:auto; max-width:520px;}
-.navTagline{font-size:12px; color:rgba(17,24,39,.65); letter-spacing:.2px;}
-.navControls{display:flex; align-items:center; gap:10px; min-width:320px;}
-.siteNav .search{
-  flex:1;
-  display:flex; align-items:center; gap:10px;
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(0,0,0,.04);
-  border:1px solid rgba(0,0,0,.10);
-}
-.siteNav .search .icon{opacity:.65; color:#111827;}
-.siteNav .search input{
-  width:100%;
-  border:0; outline:none;
-  background:transparent;
-  color:#111827;
-  font-size:14px;
-}
-.siteNav select{
-  border-radius:999px;
-  padding:10px 12px;
-  border:1px solid rgba(0,0,0,.10);
-  background: rgba(0,0,0,.04);
-  color:#111827;
-  font-size:14px;
-}
-@media (max-width: 860px){
-  .navInner{flex-direction:column; align-items:stretch;}
-  .navControls{min-width:unset;}
-  .navTitleImg{max-width:420px; height:30px;}
-}
-.topbar{display:flex;align-items:center;gap:14px;padding:12px 18px;max-width:1200px;margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(180%) blur(10px);
+      background: linear-gradient(180deg, rgba(7,10,18,.92), rgba(7,10,18,.55));
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{display:flex;align-items:center;gap:14px;padding:12px 18px;max-width:1200px;margin:0 auto}
     .brand{display:flex;align-items:center;gap:12px;min-width:220px}
     .logo{
       width:72px;height:72px;border-radius:50%;
@@ -334,42 +291,178 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-    }</style>
+    }
+
+    /* STEP 3: Restored hero banner layout (visual only, local assets) */
+    .heroBanner{
+      position: relative;
+      height: 450px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #0b1022;
+      margin-top: 18px;
+    }
+    .heroBanner .heroImg{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.02);
+    }
+    .heroBanner::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 420px at 50% 40%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
+      pointer-events:none;
+    }
+    .heroOverlay{
+      position:absolute; inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 18px 18px 26px;
+      z-index: 2;
+    }
+    .heroBrandLogo{
+      position:absolute;
+      top:16px; left:16px;
+      width:64px; height:64px;
+      border-radius:50%;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
+      display:grid; place-items:center;
+      overflow:hidden;
+    }
+    .heroBrandLogo img{width:100%; height:100%; object-fit:contain;}
+    .heroTitleImg{
+      max-width: 780px;
+      width: min(92vw, 780px);
+      height:auto;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,.55));
+    }
+    .heroSubtitleImg{
+      max-width: 920px;
+      width: min(94vw, 920px);
+      height:auto;
+      margin-top: 2px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.42));
+    }
+    .heroSubtitleText{
+      display:none;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(18px, 3vw, 34px);
+      letter-spacing: .2px;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 10px 18px rgba(0,0,0,.55);
+      margin-top: 2px;
+      padding: 0 10px;
+    }
+    .heroCtas{
+      margin-top: 18px;
+      display:flex;
+      gap: 16px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap: wrap;
+    }
+    .heroBtn{
+      appearance:none;
+      border:0;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      font-size: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.40);
+      transform: translateZ(0);
+      transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+      user-select:none;
+    }
+    .heroBtn:focus{outline: 2px solid rgba(202,165,71,.75); outline-offset: 3px;}
+    .heroBtn:hover{transform: translateY(-1px) scale(1.01); filter: brightness(1.02);}
+    .heroBtnFree{
+      background: rgba(255,255,255,.90);
+      color: #7a4a00;
+      border: 3px solid rgba(126,78,199,.55);
+    }
+    .heroBtnBrowse{
+      background: rgba(102,57,24,.86);
+      color: rgba(255,255,255,.95);
+      border: 2px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(6px);
+    }
+    @media (max-width: 720px){
+      .heroBanner{height: 360px;}
+      .heroBrandLogo{display:none;}
+      .heroBtn{font-size:16px; padding: 12px 18px;}
+    }
+
+</style>
 </head>
 <body>
   <header>
-    <nav class="siteNav" role="navigation" aria-label="Main navigation">
-      <div class="navInner">
-        <a class="navBrand" href="#home">
-          <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing logo" class="navLogo" width="56" height="56" loading="eager">
-          <div class="navBrandText">
-            <span class="sr-only">RobPac Publishing</span>
-            <img src="assets/robpac-title.png" alt="RobPac Publishing" class="navTitleImg" loading="eager">
-            <div class="navTagline">Independent Publishing House</div>
-          </div>
-        </a>
-
-        <div class="navControls">
-          <div class="search">
-            <span class="icon" aria-hidden="true">⌕</span>
-            <input id="q" type="search" placeholder="Search by title..." autocomplete="off" />
-          </div>
-          <select id="genre" aria-label="Filter by genre">
-            <option value="">All genres</option>
-          </select>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="assets/logo3senzasfondo.png" alt="" class="logoImg" width="96" height="96" loading="eager">
         </div>
+        <h1 class="title">
+          <span class="sr-only">RobPac Publishing</span>
+          <img src="assets/robpac-title.png" alt="RobPac Publishing" class="titleImg" loading="eager">
+        </h1>
       </div>
-    </nav>
+
+      <div class="controls">
+        <div class="search">
+          <span class="icon">⌕</span>
+          <input id="q" type="search" placeholder="Search by title..." autocomplete="off" />
+        </div>
+        <select id="genre">
+          <option value="">All genres</option>
+        </select>
+      </div>
+    </div>
   </header>
 
   <main class="wrap">
-    <section class="hero" aria-label="Hero">
-      <div class="left">
-        <div class="pill">● Independent books, guides & illustrated stories</div>
-        <h2>Browse the catalog and find your next read.</h2>
+    <header id="home" class="heroBanner" aria-label="Hero">
+      <div class="heroBrandLogo" aria-hidden="true">
+        <img src="assets/logo3senzasfondo.png" alt="">
       </div>
-      <div class="right" aria-hidden="true"></div>
-    </section>
+
+      <img class="heroImg" src="assets/hero.png" alt="Open book with light and magic" width="1920" height="450" loading="eager">
+
+      <div class="heroOverlay">
+        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="heroTitleImg" loading="eager">
+        <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="heroSubtitleImg" loading="eager"
+             onerror="this.style.display='none'; var t=document.getElementById('heroSubtitleText'); if(t) t.style.display='block';">
+        <div id="heroSubtitleText" class="heroSubtitleText">A World of Books at Your Fingertips</div>
+
+        <div class="heroCtas" role="group" aria-label="Primary actions">
+          <a class="heroBtn heroBtnFree" href="#grid" aria-label="Get free ebook (scroll)">
+            📖 Get Free eBook Now
+          </a>
+          <a class="heroBtn heroBtnBrowse" href="#grid" aria-label="Browse the catalog">
+            Browse 100+ Books
+          </a>
+        </div>
+      </div>
+    </header>
 
     <div class="countrow">
       <div id="count" class="count">0 books</div>
