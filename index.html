@@ -269,7 +269,20 @@
       aspect-ratio: 3 / 4.2;
     }
     .modal .mcover img{width:100%;height:100%;object-fit:cover;display:block}
-    .modal h3{margin:2px 0 8px;font-size:22px}
+    .modal .mtitle{
+      margin:2px 0 10px;
+      font-size:30px;
+      line-height:1.12;
+      font-weight:850;
+      letter-spacing:.2px;
+    }
+    .modal .aboutTitle{
+      margin:12px 0 8px;
+      font-size:16px;
+      letter-spacing:.04em;
+      text-transform: uppercase;
+      color: rgba(233,238,252,.72);
+    }
     .modal .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
     .modal .desc{
       color: rgba(233,238,252,.88);
@@ -581,15 +594,16 @@
 
   <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Book details">
     <div class="panel" role="document">
-      <button class="close" id="close" aria-label="Close">×</button>
+      <button class="close" id="close" aria-label="Close">✕</button>
       <div class="content">
         <div class="mcover"><img id="mCover" src="/covers/placeholder.svg" alt=""></div>
         <div class="mtext">
-          <h3 id="mTitle"></h3>
+          <h2 id="mTitle" class="mtitle"></h2>
           <div id="mMeta" class="meta"></div>
+          <h3 class="aboutTitle">About This Book</h3>
           <div id="mDesc" class="desc"></div>
           <div class="actions">
-            <a id="mBuy" class="btn primary" href="#" target="_blank" rel="noopener">Buy Now</a>
+            <a id="mBuy" class="btn primary" href="#" target="_blank" rel="noopener">Buy on Amazon</a>
           </div>
         </div>
       </div>
