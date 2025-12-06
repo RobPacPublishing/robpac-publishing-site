@@ -1,858 +1,672 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RobPac Publishing | Independent Books, Guides & Illustrated Stories</title>
-  <meta name="description" content="Browse RobPac Publishing's catalog: independent books, guides, fiction, and illustrated stories. Discover by genre, search by title, and buy on Amazon." />
-
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <meta name="theme-color" content="#070a12" />
-
-  <style>
-    :root{
-      --bg0:#070a12; --bg1:#0b1022; --muted:#a7b0c2;
-      --text:#e9eefc; --accent:#caa547; --line:rgba(255,255,255,.08);
-      --shadow:0 12px 40px rgba(0,0,0,.5);
-      --radius:18px;
-      --font: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background: radial-gradient(900px 500px at 20% 0%, rgba(202,165,71,.18), transparent 55%),
-                  radial-gradient(1000px 600px at 80% 10%, rgba(122,167,255,.15), transparent 60%),
-                  linear-gradient(180deg, var(--bg0), var(--bg1));
-      min-height:100vh;
-    }
-    .wrap{max-width:1200px;margin:0 auto;padding:18px 18px 42px}
-    header{
-      position:sticky;top:0;z-index:10;
-      backdrop-filter:saturate(180%) blur(10px);
-      background: linear-gradient(180deg, rgba(7,10,18,.92), rgba(7,10,18,.55));
-      border-bottom:1px solid var(--line);
-    }
-    .topbar{display:flex;align-items:center;gap:14px;padding:12px 18px;max-width:1200px;margin:0 auto}
-    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
-    .logo{
-      width:72px;height:72px;border-radius:50%;
-      background: rgba(255,255,255,.04);
-      border:1px solid var(--line);
-      display:grid;place-items:center;
-      overflow:hidden;
-      box-shadow: 0 10px 24px rgba(0,0,0,.35);
-      flex:0 0 auto;
-    }
-    .logo svg{width:22px;height:22px;display:block}
-    .title{
-      margin:0;
-      display:flex;
-      align-items:center;
-      height:72px;
-    }
-    .titleImg{
-      height:54px;
-      width:auto;
-      display:block;
-      filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
-    }
-    .logoImg{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
-    }
-    .sr-only{
-      position:absolute;
-      width:1px;height:1px;
-      padding:0;margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;border:0;
-    }
-    .controls{
-      display:flex;align-items:center;gap:10px;
-      flex:1;
-      justify-content:flex-end;
-      min-width:0;
-    }
-    .search{
-      flex:1;
-      max-width:460px;
-      position:relative;
-      min-width:160px;
-    }
-    .search input{
-      width:100%;
-      background: rgba(255,255,255,.06);
-      border:1px solid var(--line);
-      color:var(--text);
-      padding:10px 12px 10px 36px;
-      border-radius:999px;
-      outline:none;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
-    }
-    .search input::placeholder{color:rgba(233,238,252,.55)}
-    .search .icon{
-      position:absolute;left:12px;top:50%;transform:translateY(-50%);
-      opacity:.7;font-size:14px
-    }
-    select{
-      background: rgba(255,255,255,.06);
-      border:1px solid var(--line);
-      color:var(--text);
-      padding:10px 12px;
-      border-radius:999px;
-      outline:none;
-    }
-    main{padding-top:18px}
-    .hero{
-      display:flex;gap:18px;align-items:stretch;
-      background: linear-gradient(135deg, rgba(122,167,255,.15), rgba(202,165,71,.10));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-    }
-    .hero .left{
-      flex:1;min-width:260px;padding:22px 22px 18px;
-      background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.05));
-    }
-    .pill{
-      display:inline-flex;gap:8px;align-items:center;
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.10);
-      padding:6px 10px;border-radius:999px;
-      font-size:12px;color:rgba(233,238,252,.85);
-      margin-bottom:12px;
-    }
-    .hero h2{
-      margin:0;
-      font-size:34px;
-      line-height:1.1;
-      letter-spacing:-.2px;
-    }
-    .hero .right{
-      width:44%;
-      min-width:320px;
-      position:relative;
-      background:
-        radial-gradient(700px 350px at 30% 10%, rgba(202,165,71,.25), transparent 60%),
-        radial-gradient(700px 350px at 60% 60%, rgba(122,167,255,.25), transparent 60%),
-        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.35));
-    }
-    .hero .right::before{
-      content:"";
-      position:absolute;inset:18px 22px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(240px 240px at 25% 30%, rgba(255,255,255,.10), transparent 60%),
-        radial-gradient(280px 280px at 70% 70%, rgba(255,255,255,.08), transparent 65%);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
-      opacity:.9;
-      pointer-events:none;
-    }
-
-    .countrow{
-      display:flex;align-items:center;justify-content:space-between;
-      margin:20px 2px 10px;
-      color:rgba(233,238,252,.85);
-    }
-    .count{font-size:13px;opacity:.9}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap:14px;
-    }
-    .card{
-      background: rgba(255,255,255,.04);
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      cursor:pointer;
-      transition: transform .15s ease, border-color .15s ease, background .15s ease;
-      outline:none;
-      display:flex;
-      flex-direction:column;
-    }
-    .card:hover, .card:focus{
-      transform: translateY(-3px);
-      border-color: rgba(202,165,71,.35);
-      background: rgba(255,255,255,.06);
-    }
-    .cover{
-      aspect-ratio: 3 / 4.2;
-      background: rgba(0,0,0,.25);
-      display:grid;place-items:center;
-      overflow:hidden;
-    }
-    .cover img{width:100%;height:100%;object-fit:cover;display:block}
-    .info{padding:10px 10px 12px;display:flex;flex-direction:column;gap:10px;flex:1}
-    .info .title{
-      font-family: var(--font);
-      font-size:12.5px;
-      color:var(--text);
-      letter-spacing:0;
-      white-space:normal;
-      margin:0;
-      text-shadow:none;
-      line-height:1.25;
-    }
-    .genre{display:flex;gap:6px;flex-wrap:wrap}
-    .badge{
-      font-size:11px;
-      padding:4px 8px;
-      border-radius:999px;
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.10);
-      color:rgba(233,238,252,.85);
-    }
-    .card-actions{margin-top:auto;display:flex;gap:8px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:14px;
-      text-decoration:none;font-weight:700;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      cursor:pointer;user-select:none;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(202,165,71,.92), rgba(202,165,71,.60));
-      border-color: rgba(202,165,71,.72);
-      color:#111;
-    }
-    .btn.small{padding:8px 10px;border-radius:12px;font-size:12px;width:100%}
-
-    .modal{
-      position:fixed;inset:0;
-      background: rgba(0,0,0,.65);
-      display:none;align-items:center;justify-content:center;
-      padding:20px;z-index:50;
-    }
-    .modal.open{display:flex}
-    .modal .panel{
-      width:min(980px, 100%);
-      max-height: min(86vh, 900px);
-      overflow:auto;
-      background: linear-gradient(180deg, rgba(14,22,46,.98), rgba(10,16,34,.98));
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:22px;
-      box-shadow: 0 24px 80px rgba(0,0,0,.7);
-      position:relative;
-    }
-    .modal .close{
-      position:absolute;right:12px;top:12px;
-      width:40px;height:40px;border-radius:12px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:var(--text);
-      cursor:pointer;
-      display:grid;place-items:center;
-      font-size:18px;
-    }
-    .modal .content{
-      display:grid;
-      grid-template-columns: 320px 1fr;
-      gap:18px;
-      padding:18px;
-    }
-    .modal .mcover{
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.2);
-      aspect-ratio: 3 / 4.2;
-    }
-    .modal .mcover img{width:100%;height:100%;object-fit:cover;display:block}
-    .modal .mtitle{
-      margin:2px 0 10px;
-      font-size:30px;
-      line-height:1.12;
-      font-weight:850;
-      letter-spacing:.2px;
-    }
-    .modal .aboutTitle{
-      margin:12px 0 8px;
-      font-size:16px;
-      letter-spacing:.04em;
-      text-transform: uppercase;
-      color: rgba(233,238,252,.72);
-    }
-    .modal .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-    .modal .desc{
-      color: rgba(233,238,252,.88);
-      line-height:1.55;
-      font-size:14px;
-      white-space:pre-wrap;
-    }
-    .actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    footer{margin-top:24px;color:rgba(233,238,252,.55);font-size:12px;text-align:center;padding:18px 6px}
-    @media (max-width: 860px){
-      .hero{flex-direction:column}
-      .hero .right{width:100%;min-width:0;height:200px}
-      .modal .content{grid-template-columns:1fr}
-    }
-  
-    /* Brand hero image (local asset) */
-    .hero .right{
-      background-image: url("assets/hero.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* STEP 3: Restored hero banner layout (visual only, local assets) */
-    .heroBanner{
-      position: relative;
-      height: 450px;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: #0b1022;
-      margin-top: 18px;
-    }
-    .heroBanner .heroImg{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.02);
-    }
-    .heroBanner::after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(900px 420px at 50% 40%, rgba(0,0,0,.10), rgba(0,0,0,.55)),
-        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
-      pointer-events:none;
-    }
-    .heroOverlay{
-      position:absolute; inset:0;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding: 18px 18px 26px;
-      z-index: 2;
-    }
-    .heroBrandLogo{
-      position:absolute;
-      top:16px; left:16px;
-      width:64px; height:64px;
-      border-radius:50%;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.22);
-      box-shadow: 0 18px 40px rgba(0,0,0,.45);
-      display:grid; place-items:center;
-      overflow:hidden;
-    }
-    .heroBrandLogo img{width:100%; height:100%; object-fit:contain;}
-    .heroTitleImg{
-      max-width: 780px;
-      width: min(92vw, 780px);
-      height:auto;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 18px 28px rgba(0,0,0,.55));
-    }
-    .heroSubtitleImg{
-      max-width: 920px;
-      width: min(94vw, 920px);
-      height:auto;
-      margin-top: 2px;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.42));
-    }
-    .heroSubtitleText{
-      display:none;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(18px, 3vw, 34px);
-      letter-spacing: .2px;
-      color: rgba(255,255,255,.92);
-      text-shadow: 0 10px 18px rgba(0,0,0,.55);
-      margin-top: 2px;
-      padding: 0 10px;
-    }
-    .heroCtas{
-      margin-top: 18px;
-      display:flex;
-      gap: 16px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap: wrap;
-    }
-    .heroBtn{
-      appearance:none;
-      border:0;
-      cursor:pointer;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      letter-spacing: .2px;
-      font-size: 18px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.40);
-      transform: translateZ(0);
-      transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
-      user-select:none;
-    }
-    .heroBtn:focus{outline: 2px solid rgba(202,165,71,.75); outline-offset: 3px;}
-    .heroBtn:hover{transform: translateY(-1px) scale(1.01); filter: brightness(1.02);}
-    .heroBtnFree{
-      background: rgba(255,255,255,.90);
-      color: #7a4a00;
-      border: 3px solid rgba(126,78,199,.55);
-    }
-    .heroBtnBrowse{
-      background: rgba(102,57,24,.86);
-      color: rgba(255,255,255,.95);
-      border: 2px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(6px);
-    }
-    @media (max-width: 720px){
-      .heroBanner{height: 360px;}
-      .heroBrandLogo{display:none;}
-      .heroBtn{font-size:16px; padding: 12px 18px;}
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
-      gap:22px;
-    }
-    .card{
-      background:#ffffff;
-      border:1px solid rgba(0,0,0,.06);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: 0 12px 28px rgba(0,0,0,.18);
-      cursor:pointer;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      outline:none;
-      display:flex;
-      flex-direction:column;
-    }
-    .card:hover, .card:focus{
-      transform: translateY(-12px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-    }
-    .cover{
-      height:320px;
-      background:#f3f4f6;
-      display:block;
-      overflow:hidden;
-    }
-    .cover img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      background:#f3f4f6;
-      display:block;
-    }
-    .info{
-      padding:16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      flex:1;
-      color:#111;
-    }
-    .title{
-      margin:0;
-      font-weight:800;
-      font-size:16px;
-      line-height:1.25;
-      height:auto;
-      color:#111;
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-      min-height:40px;
-    }
-    .badge{
-      font-size:11px;
-      padding:4px 10px;
-      border-radius:999px;
-      background:#f3f4f6;
-      border:1px solid rgba(0,0,0,.06);
-      color:rgba(17,17,17,.78);
-    }
-    .actions{
-      margin-top:14px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 14px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:700;
-      border:1px solid rgba(0,0,0,.10);
-      background:#f8fafc;
-      color:#111;
-      cursor:pointer;
-      user-select:none;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 10px 18px rgba(0,0,0,.12);
-      background:#ffffff;
-      border-color: rgba(0,0,0,.14);
-    }
-    .btn.primary{
-      background:#d97706;
-      border-color:#d97706;
-      color:#fff;
-    }
-    .btn.primary:hover{
-      background:#b45309;
-      border-color:#b45309;
-    }
-
-    @media (max-width: 720px){
-      .grid{grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:16px;}
-      .cover{height:280px;}
-      .info{padding:12px;}
-    }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness</title>
+    <meta name="title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta name="description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta name="keywords" content="independent publisher, self-help books, fiction novels, diet cookbooks, psychology books, Amazon KDP, free book chapters, wellness guides">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="RobPac Publishing">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.robpacpublishing.com/">
+    <meta property="og:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta property="og:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.robpacpublishing.com/">
+    <meta property="twitter:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
+    <meta property="twitter:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
+    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/hero.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.robpacpublishing.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo3senzasfondo.png">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RobPac Publishing",
+        "url": "https://www.robpacpublishing.com",
+        "logo": "https://www.robpacpublishing.com/assets/logo3senzasfondo.png",
+        "description": "Independent publishing house delivering quality content across fiction, self-help, health, and specialized non-fiction with over 100 titles on Amazon KDP.",
+        "sameAs": [
+            "https://www.facebook.com/robpacpublishing",
+            "https://www.instagram.com/robpacpublishing",
+            "https://twitter.com/robpacpublish"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@robpacpublishing.com",
+            "contactType": "Customer Service"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "RobPac Publishing",
+        "url": "https://www.robpacpublishing.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.robpacpublishing.com/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .book-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(255,215,0,0.3);
+        }
+        
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); }
+            50% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+        }
+        
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .carousel-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <img src="assets/logo3senzasfondo.png" alt="" class="logoImg" width="96" height="96" loading="eager">
-        </div>
-        <h1 class="title">
-          <span class="sr-only">RobPac Publishing</span>
-          <img src="assets/robpac-title.png" alt="RobPac Publishing" class="titleImg" loading="eager">
-        </h1>
-      </div>
+<body class="bg-gray-50">
 
-      <div class="controls">
-        <div class="search">
-          <span class="icon">⌕</span>
-          <input id="q" type="search" placeholder="Search by title..." autocomplete="off" />
-        </div>
-        <select id="genre">
-          <option value="">All genres</option>
-        </select>
-      </div>
+<!-- STICKY NOTIFICATION BAR -->
+    <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-2 text-center text-sm font-semibold">
+        🎉 New Releases Available! Get Your Free eBook Today → <button onclick="openModal()" class="underline hover:text-amber-100">Click Here</button>
     </div>
-  </header>
 
-  <main class="wrap">
-    <header id="home" class="heroBanner" aria-label="Hero">
-      <div class="heroBrandLogo" aria-hidden="true">
-        <img src="assets/logo3senzasfondo.png" alt="">
-      </div>
-
-      <img class="heroImg" src="assets/hero.png" alt="Open book with light and magic" width="1920" height="450" loading="eager">
-
-      <div class="heroOverlay">
-        <img src="assets/robpac-title.png" alt="RobPac Publishing" class="heroTitleImg" loading="eager">
-        <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips" class="heroSubtitleImg" loading="eager"
-             onerror="this.style.display='none'; var t=document.getElementById('heroSubtitleText'); if(t) t.style.display='block';">
-        <div id="heroSubtitleText" class="heroSubtitleText">A World of Books at Your Fingertips</div>
-
-        <div class="heroCtas" role="group" aria-label="Primary actions">
-          <a class="heroBtn heroBtnFree" href="#grid" aria-label="Get free ebook (scroll)">
-            📖 Get Free eBook Now
-          </a>
-          <a class="heroBtn heroBtnBrowse" href="#grid" aria-label="Browse the catalog">
-            Browse 100+ Books
-          </a>
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56">
+                    <div>
+                        <h1 class="text-2xl font-bold heading-font text-amber-700">RobPac Publishing</h1>
+                        <p class="text-xs text-gray-500">Independent Publishing House</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Go to homepage">Home</a>
+                    <a href="#featured" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="View featured books">Featured</a>
+                    <a href="#books" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Browse all books">All Books</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Learn about us">About</a>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition shadow-md" aria-label="Get free book chapter">
+                        Free eBook
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- HERO BANNER SECTION -->
+    <header id="home" class="relative overflow-hidden">
+        <!-- Original Banner Background -->
+        <div class="relative w-full" style="height: 450px;">
+            <img src="assets/hero.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
+            
+            <!-- Logo Position (Top Left) -->
+            <div class="absolute top-8 left-8 z-20 hidden md:block">
+                <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing circular logo" class="h-24 w-24 drop-shadow-2xl" width="96" height="96">
+            </div>
+            
+            <!-- Center Content Overlay -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+                <!-- Title Image -->
+                <img src="assets/robpac-title.png" alt="RobPac Publishing - Independent Book Publisher" class="mb-4 drop-shadow-2xl" style="max-width: 650px; width: 90%;" loading="eager">
+                
+                <!-- Subtitle Image -->
+                <img src="assets/sottotitolo.png" alt="A World of Books at Your Fingertips - Browse 100+ titles" class="mb-8 drop-shadow-lg" style="max-width: 750px; width: 90%;">
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                    <button onclick="openModal()" class="bg-white text-amber-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-50 transition shadow-2xl cta-pulse transform hover:scale-105" aria-label="Download free book chapter now">
+                        📖 Get Free eBook Now
+                    </button>
+                    <a href="#books" class="bg-amber-900/80 backdrop-blur-sm border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-900 transition text-center shadow-2xl" aria-label="Browse catalog of 100+ books">
+                        Browse 100+ Books
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-white text-sm drop-shadow-lg font-semibold">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>No Credit Card</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>Instant Access</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>100+ Books</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="countrow">
-      <div id="count" class="count">0 books</div>
-    </div>
-
-    <div id="grid" class="grid" aria-label="Books grid"></div>
-
-    <footer>© <span id="year"></span> RobPac Publishing. All rights reserved.</footer>
-  </main>
-
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Book details">
-    <div class="panel" role="document">
-      <button class="close" id="close" aria-label="Close">✕</button>
-      <div class="content">
-        <div class="mcover"><img id="mCover" src="/covers/placeholder.svg" alt=""></div>
-        <div class="mtext">
-          <h2 id="mTitle" class="mtitle"></h2>
-          <div id="mMeta" class="meta"></div>
-          <h3 class="aboutTitle">About This Book</h3>
-          <div id="mDesc" class="desc"></div>
-          <div class="actions">
-            <a id="mBuy" class="btn primary" href="#" target="_blank" rel="noopener">Buy on Amazon</a>
-          </div>
+    <!-- TRUST BADGES -->
+    <section class="bg-white py-6 shadow-md" aria-label="Trust indicators">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-12 text-center">
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">100+</p>
+                    <p class="text-sm text-gray-600 font-medium">Books Published</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">🌍</p>
+                    <p class="text-sm text-gray-600 font-medium">Available Worldwide</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">📚</p>
+                    <p class="text-sm text-gray-600 font-medium">Amazon KDP</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
+                <div>
+                    <p class="text-3xl font-bold text-amber-600">✓</p>
+                    <p class="text-sm text-gray-600 font-medium">Quality Guaranteed</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    
+    <!-- FEATURED BOOKS -->
+    <section id="featured" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-black heading-font text-center mb-12">Featured Books</h2>
+            <div class="relative">
+                <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg">←</button>
+                <div id="featuredCarousel" class="carousel gap-6 px-12"></div>
+                <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BROWSE COLLECTION -->
+    <section id="books" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-black heading-font text-center mb-8">Browse Our Collection</h2>
+            <div class="flex justify-center gap-3 mb-8 flex-wrap">
+                <button onclick="filterBooks('all')" class="filter-btn bg-amber-600 text-white px-6 py-2 rounded-full font-semibold">All Books</button>
+                <button onclick="filterBooks('self-help')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Self-Help</button>
+                <button onclick="filterBooks('fiction')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Fiction</button>
+                <button onclick="filterBooks('cookbook')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Cookbooks</button>
+            </div>
+            <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- EBOOK MODAL -->
+    <div id="leadModal" class="modal">
+        <div class="bg-white rounded-2xl max-w-4xl mx-4 p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-3xl">✕</button>
+            
+            <!-- Step 1: Scelta eBook -->
+            <div id="ebookChoice">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🎁</div>
+                    <h3 class="text-4xl font-black mb-2">Choose Your Free eBook</h3>
+                    <p class="text-gray-600">Select one and get instant access</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6" id="ebookChoiceGrid"></div>
+            </div>
+            
+            <!-- Step 2: Form Email -->
+            <div id="ebookForm" style="display:none;">
+                <button onclick="backToChoice()" class="text-gray-600 mb-4">← Back to selection</button>
+                <div class="text-center mb-6">
+                    <div class="text-6xl mb-4">📧</div>
+                    <h3 class="text-3xl font-black mb-2">Almost There!</h3>
+                    <p class="text-gray-600">Enter your email to receive: <span id="selectedEbookTitle" class="font-bold text-amber-600"></span></p>
+                </div>
+                <form id="ebookDownloadForm" class="max-w-md mx-auto space-y-4">
+                    <input type="hidden" id="selectedEbook" name="ebook" value="">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:outline-none">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:outline-none">
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-lg font-bold text-lg hover:from-amber-600 hover:to-orange-700">Send Me My Free eBook</button>
+                    <p class="text-center text-sm text-gray-500">🔒 100% Secure • No Spam • Unsubscribe Anytime</p>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    "use strict";
+    <!-- BOOK MODAL -->
+    <div id="bookModal" class="modal">
+        <div class="bg-white rounded-2xl max-w-5xl mx-4 p-8 max-h-[90vh] overflow-y-auto relative">
+            <button onclick="closeBookModal()" class="absolute top-4 right-4 z-10">✕</button>
+            <div id="bookModalContent" class="grid md:grid-cols-5 gap-8"></div>
+        </div>
+    </div>
 
-    const PLACEHOLDER = "/covers/placeholder.svg";
-
-    const $q = document.getElementById("q");
-    const $genre = document.getElementById("genre");
-    const $grid = document.getElementById("grid");
-
-    const state = { all: [], filtered: [], genres: new Set(), q: "", genre: "" };
-
-    function normalizeBook(raw){
-      const title = raw.title ?? raw.titolo ?? "Untitled";
-      const genre = raw.genre ?? raw.genere ?? "";
-      const description = raw.description ?? raw.descrizione ?? "";
-      const amazonLink =
-        raw.amazonLink ?? raw.amazon ?? raw.amazon_url ?? raw.linkAmazon ?? raw.link_amazon ?? raw.link ?? "";
-      const cover =
-        raw.cover ?? raw.immagine ?? raw.image ?? raw.thumbnail ?? raw.copertina ?? "";
-      return { title, genre, description, amazonLink, cover };
-    }
-
-    function withLeadingSlash(u){
-      u = String(u || "").trim();
-      if (!u) return "";
-      if (u.startsWith("http://") || u.startsWith("https://")) return u;
-      if (u.startsWith("/")) return u;
-      return "/" + u;
-    }
-
-    function uniq(arr){
-      const out = [];
-      const seen = new Set();
-      for (const x of arr){
-        if (!x) continue;
-        const k = String(x);
-        if (seen.has(k)) continue;
-        seen.add(k);
-        out.push(k);
-      }
-      return out;
-    }
-
-    function buildCoverCandidates(url){
-      if (!url) return [PLACEHOLDER];
-      url = String(url).trim();
-      if (!url || url === PLACEHOLDER) return [PLACEHOLDER];
-      if (url.startsWith("http://") || url.startsWith("https://")) return [url];
-
-      url = withLeadingSlash(url);
-
-      const lower = url.toLowerCase();
-      const candidates = [url];
-      if (lower !== url) candidates.push(lower);
-
-      const lastDot = url.lastIndexOf(".");
-      const lastSlash = url.lastIndexOf("/");
-      const hasExt = (lastDot > lastSlash);
-
-      const exts = [".jpg", ".jpeg", ".png", ".webp"];
-      if (hasExt){
-        const stem = url.slice(0, lastDot);
-        for (const e of exts) candidates.push(stem + e);
-      } else {
-        for (const e of exts) candidates.push(url + e);
-      }
-      return uniq(candidates);
-    }
-
-    function setImgWithFallback(imgEl, url){
-      const cands = buildCoverCandidates(url);
-      imgEl.dataset.cands = JSON.stringify(cands);
-      imgEl.dataset.ci = "0";
-      imgEl.src = cands[0];
-      imgEl.onerror = () => {
-        try{
-          const c = JSON.parse(imgEl.dataset.cands || "[]");
-          let i = parseInt(imgEl.dataset.ci || "0", 10);
-          i += 1;
-          imgEl.dataset.ci = String(i);
-          imgEl.src = c[i] || PLACEHOLDER;
-        } catch {
-          imgEl.src = PLACEHOLDER;
-        }
-      };
-    }
-
-    function createCard(book, onOpen) {
-      const card = document.createElement("article");
-      card.className = "card";
-      card.tabIndex = 0;
-
-      const cover = document.createElement("div");
-      cover.className = "cover";
-
-      const img = document.createElement("img");
-      img.loading = "lazy";
-      img.alt = book.title;
-      setImgWithFallback(img, book.cover);
-      cover.appendChild(img);
-
-      const info = document.createElement("div");
-      info.className = "info";
-
-      const h = document.createElement("h3");
-      h.className = "title";
-      h.textContent = book.title;
-
-      const g = document.createElement("div");
-      g.className = "genre";
-
-      const b = document.createElement("span");
-      b.className = "badge";
-      b.textContent = book.genre || "Uncategorized";
-      g.appendChild(b);
-
-      const actions = document.createElement("div");
-      actions.className = "card-actions";
-
-      const buy = document.createElement("a");
-      buy.className = "btn primary small";
-      buy.textContent = "Buy Now";
-      buy.href = book.amazonLink || "#";
-      buy.target = "_blank";
-      buy.rel = "noopener";
-      buy.style.display = book.amazonLink ? "inline-flex" : "none";
-      buy.addEventListener("click", (e) => { e.stopPropagation(); });
-      actions.appendChild(buy);
-
-      info.appendChild(h);
-      info.appendChild(g);
-      info.appendChild(actions);
-
-      card.appendChild(cover);
-      card.appendChild(info);
-
-      const open = () => onOpen(book);
-      card.addEventListener("click", open);
-      card.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
-      });
-
-      return card;
-    }
-
-    function setCount(n, total) {
-      const el = document.getElementById("count");
-      el.textContent = total === n ? `${n} books` : `${n} books (filtered from ${total})`;
-    }
-
-    function openModal(book) {
-      const modal = document.getElementById("modal");
-      const mTitle = document.getElementById("mTitle");
-      const mDesc = document.getElementById("mDesc");
-      const mCover = document.getElementById("mCover");
-      const mBuy = document.getElementById("mBuy");
-      const mMeta = document.getElementById("mMeta");
-
-      mTitle.textContent = book.title;
-      mDesc.textContent = book.description || "No description available.";
-      setImgWithFallback(mCover, book.cover);
-      mCover.alt = book.title;
-
-      mMeta.innerHTML = "";
-      const genreBadge = document.createElement("span");
-      genreBadge.className = "badge";
-      genreBadge.textContent = book.genre || "Uncategorized";
-      mMeta.appendChild(genreBadge);
-
-      if (book.amazonLink) {
-        mBuy.href = book.amazonLink;
-        mBuy.style.display = "inline-flex";
-      } else {
-        mBuy.href = "#";
-        mBuy.style.display = "none";
-      }
-
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeModal() {
-      const modal = document.getElementById("modal");
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-
-    function draw() {
-      $grid.innerHTML = "";
-      for (const book of state.filtered) $grid.appendChild(createCard(book, openModal));
-      setCount(state.filtered.length, state.all.length);
-    }
-
-    function applyFilters() {
-      const q = state.q.trim().toLowerCase();
-      const g = state.genre;
-      state.filtered = state.all.filter(b => {
-        const okQ = !q || String(b.title).toLowerCase().includes(q);
-        const okG = !g || (b.genre || "").toLowerCase() === g.toLowerCase();
-        return okQ && okG;
-      });
-      draw();
-    }
-
-    function buildGenreOptions() {
-      const genres = Array.from(state.genres).filter(Boolean).sort((a,b)=>a.localeCompare(b));
-      $genre.innerHTML = "";
-      const first = document.createElement("option");
-      first.value = "";
-      first.textContent = "All genres";
-      $genre.appendChild(first);
-      for (const g of genres) {
-        const opt = document.createElement("option");
-        opt.value = g;
-        opt.textContent = g;
-        $genre.appendChild(opt);
-      }
-    }
-
-    async function loadBooks() {
-      const res = await fetch("books.json?cb=" + Date.now(), { cache: "no-store" });
-      const raw = await res.json();
-      state.all = raw.map(normalizeBook);
-      state.genres = new Set(state.all.map(b => (b.genre || "").trim()).filter(Boolean));
-      buildGenreOptions();
-      state.filtered = [...state.all];
-      draw();
-    }
-
-    document.getElementById("close").addEventListener("click", closeModal);
-    document.getElementById("modal").addEventListener("click", (e) => {
-      if (e.target.id === "modal") closeModal();
+    <script>
+let books = [];
+function populateFeaturedCarousel() {
+    const carousel = document.getElementById('featuredCarousel');
+    books.slice(0,10).forEach((book,i) => {
+        const badge = i < 3 ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>' : '';
+        carousel.innerHTML += `
+            <div class="carousel-item w-48">
+                <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
+                    <div class="relative">
+                        <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
+                        ${badge}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 line-clamp-2">${book.title}</h3>
+                        <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
+                        <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700">View Details</button>
+                    </div>
+                </div>
+            </div>`;
     });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+}
 
-    $q.addEventListener("input", () => { state.q = $q.value; applyFilters(); });
-    $genre.addEventListener("change", () => { state.genre = $genre.value; applyFilters(); });
+function displayBooks(booksToDisplay) {
+    const grid = document.getElementById('booksGrid');
+    grid.innerHTML = '';
+    booksToDisplay.forEach(book => {
+        const idx = books.indexOf(book);
+        grid.innerHTML += `
+            <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
+                <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" onerror="this.src='/covers/placeholder.svg'">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
+                    <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
+                    <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm">View Details</button>
+                </div>
+            </div>`;
+    });
+}
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+async function loadBooks() {
+    try {
+        const res = await fetch('books.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        const arr = Array.isArray(data) ? data : [];
+        books = arr.map(b => ({
+            ...b,
+            cover: b.cover || '/covers/placeholder.svg',
+            amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || ''
+        }));
+        displayBooks(books);
+    } catch (err) {
+        console.error('Failed to load books.json', err);
+    }
+}
 
-    loadBooks().catch(err => { console.error("Failed to load books.json", err); setCount(0, 0); });
-  </script>
+function filterBooks(cat) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-600','text-white');
+        btn.classList.add('bg-gray-100','text-gray-700');
+    });
+    event.target.classList.remove('bg-gray-100','text-gray-700');
+    event.target.classList.add('bg-amber-600','text-white');
+    displayBooks(cat === 'all' ? books : books.filter(b => b.category === cat));
+}
+
+function openBookModal(idx) {
+    const book = books[idx];
+    document.getElementById('bookModalContent').innerHTML = `
+        <div class="md:col-span-2">
+            <img src="${book.cover}" class="w-full rounded-xl shadow-lg" onerror="this.src='/covers/placeholder.svg'">
+        </div>
+        <div class="md:col-span-3">
+            <h2 class="text-3xl font-bold heading-font mb-2">${book.title}</h2>
+            <p class="text-xl text-gray-600 mb-4">by ${book.author}</p>
+            <h3 class="text-lg font-bold mb-3">About This Book</h3>
+            <p class="text-gray-700 leading-relaxed mb-6">${book.description}</p>
+            <div class="flex gap-3">
+                <a href="${book.amazonLink}" target="_blank" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy on Amazon</a>
+            </div>
+        </div>`;
+    document.getElementById('bookModal').classList.add('active');
+}
+
+function closeBookModal() { document.getElementById('bookModal').classList.remove('active'); }
+function openModal() { document.getElementById('leadModal').classList.add('active'); }
+function closeModal() { document.getElementById('leadModal').classList.remove('active'); }
+function scrollCarousel(dir) { document.getElementById('featuredCarousel').scrollBy({left: dir==='left'?-350:350, behavior:'smooth'}); }
+
+populateFeaturedCarousel();
+
+document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    alert('Thank you! Check your email for the download link.');
+    closeModal();
+});
+
+
+
+function openFreeEbookModal(type) {
+    if(type !== undefined) {
+        selectEbook(type);
+    } else {
+        document.getElementById('ebookChoice').style.display = 'block';
+        document.getElementById('ebookForm').style.display = 'none';
+    }
+    document.getElementById('leadModal').classList.add('active');
+}
+
+function selectEbook(type) {
+    document.getElementById('selectedEbook').value = type;
+    document.getElementById('selectedEbookTitle').textContent = freeEbooks[type].title;
+    document.getElementById('ebookChoice').style.display = 'none';
+    document.getElementById('ebookForm').style.display = 'block';
+}
+
+function backToChoice() {
+    document.getElementById('ebookChoice').style.display = 'block';
+    document.getElementById('ebookForm').style.display = 'none';
+}
+
+document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.querySelector('input[name="name"]').value;
+    const email = this.querySelector('input[name="email"]').value;
+    const selectedEbook = document.getElementById('selectedEbook').value;
+    const ebookTitle = freeEbooks[selectedEbook].title;
+    
+    // Crea hidden form per FormSubmit
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://formsubmit.co/robpacpublishing@gmail.com';
+    form.style.display = 'none';
+    
+    const nameInput = document.createElement('input');
+    nameInput.type = 'hidden';
+    nameInput.name = 'name';
+    nameInput.value = name;
+    
+    const emailInput = document.createElement('input');
+    emailInput.type = 'hidden';
+    emailInput.name = 'email';
+    emailInput.value = email;
+    
+    const ebookInput = document.createElement('input');
+    ebookInput.type = 'hidden';
+    ebookInput.name = 'ebook';
+    ebookInput.value = ebookTitle;
+    
+    const redirectInput = document.createElement('input');
+    redirectInput.type = 'hidden';
+    redirectInput.name = '_next';
+    redirectInput.value = window.location.href;
+    
+    form.appendChild(nameInput);
+    form.appendChild(emailInput);
+    form.appendChild(ebookInput);
+    form.appendChild(redirectInput);
+    document.body.appendChild(form);
+    form.submit();
+});
+
+// Free eBooks data - sincronizzato con modal
+const freeEbooks = [
+    {
+        title: 'Read More in 30 Days',
+        description: 'A simple plan for busy people who love books',
+        cover: 'assets/free-ebooks/cover1.png'
+    },
+    {
+        title: 'Find Your Next Favorite Book',
+        description: 'A mood-based guide to smart reading choices',
+        cover: 'assets/free-ebooks/cover2.png'
+    },
+    {
+        title: 'Behind the Pages',
+        description: 'Real stories, lessons, and inspiration from independent authors',
+        cover: 'assets/free-ebooks/cover3.png'
+    }
+];
+
+function renderFreeEbooks() {
+    const grid = document.getElementById('freeEbooksGrid');
+    grid.innerHTML = freeEbooks.map((ebook, idx) => `
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
+            <h3 class="text-2xl font-bold mb-3">${ebook.title}</h3>
+            <p class="text-gray-600 mb-6">${ebook.description}</p>
+            <button onclick="openFreeEbookModal(${idx})" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
+        </div>
+    `).join('');
+}
+
+function renderEbookChoice() {
+    const grid = document.getElementById('ebookChoiceGrid');
+    grid.innerHTML = freeEbooks.map((ebook, idx) => `
+        <div class="border-2 border-gray-200 rounded-xl p-6 hover:border-amber-500 transition cursor-pointer" onclick="selectEbook(${idx})">
+            <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
+            <h4 class="font-bold text-xl mb-2">${ebook.title}</h4>
+            <p class="text-gray-600 text-sm mb-4">${ebook.description}</p>
+            <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
+        </div>
+    `).join('');
+}
+
+</script>
+
+    <!-- FREE EBOOKS SECTION -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 to-amber-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black heading-font mb-4">Get Your Free eBook</h2>
+                <p class="text-xl text-gray-600">Download exclusive guides and start your reading journey today</p>
+            </div>
+            <div id="freeEbooksGrid" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl h-96 flex items-center justify-center shadow-2xl">
+                    <div class="text-center text-white">
+                        <div class="text-8xl mb-4">📚</div>
+                        <p class="font-bold text-4xl heading-font">RobPac Publishing</p>
+                        <p class="text-amber-100 mt-3 text-xl">Est. 2020</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold heading-font text-gray-900 mb-6">About RobPac Publishing</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        We are an independent publishing house committed to delivering quality content across diverse genres. 
+                        With over 100 titles on Amazon KDP, we collaborate with talented authors to bring engaging stories 
+                        and valuable knowledge to readers worldwide.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Our catalog spans fiction, self-help, health and wellness, cookbooks, business strategy, and more. 
+                        Each title is carefully selected to provide readers with either compelling narratives or actionable 
+                        insights that create real impact.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">📖</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">100+ Published Titles</h3>
+                                <p class="text-gray-600">Across major categories and genres</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">🌍</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Global Distribution</h3>
+                                <p class="text-gray-600">Available worldwide via Amazon KDP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-2xl">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Quality Commitment</h3>
+                                <p class="text-gray-600">Dedicated to reader satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="col-span-2">
+                    <h3 class="text-3xl font-bold heading-font mb-4">RobPac Publishing</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Independent publishing house delivering quality content worldwide. 
+                        Over 100 titles across fiction, self-help, health, and more.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📘</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📷</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">🐦</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#featured" class="hover:text-white transition">Featured Books</a></li>
+                        <li><a href="#books" class="hover:text-white transition">All Books</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Categories</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Fiction</a></li>
+                        <li><a href="#" class="hover:text-white transition">Self-Help</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookbooks</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2024 RobPac Publishing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    loadBooks();
+    renderFreeEbooks();
+    renderEbookChoice();
+});
+</script>
+
 </body>
 </html>
