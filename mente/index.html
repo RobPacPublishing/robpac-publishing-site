@@ -10,213 +10,294 @@
 </head>
 
 <body class="bg-gray-50 text-gray-900">
-  <header class="bg-white border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center gap-3">
-        <img src="/assets/dr-pac.png" alt="Dr. Pac Psicologia" class="h-12 w-auto object-contain" />
-        <div class="leading-tight">
-          <div class="font-extrabold text-lg">Dr. Pac</div>
-          <div class="text-sm text-gray-600 font-semibold">Dentro la Mente</div>
-        </div>
-      </a>
-
-      <nav class="hidden sm:flex items-center gap-6">
-        <a href="/" class="text-gray-700 hover:text-amber-700 font-semibold transition">RobPac Publishing</a>
-        <a href="#collane" class="text-gray-700 hover:text-amber-700 font-semibold transition">Collane</a>
-        <a href="#materiali" class="text-gray-700 hover:text-amber-700 font-semibold transition">Materiali</a>
-        <a href="#contatti" class="text-gray-700 hover:text-amber-700 font-semibold transition">Contatti</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-10">
-        <div class="max-w-3xl">
-          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Dentro la Mente</h1>
-          <p class="mt-4 text-gray-700 text-lg font-semibold">
-            Un hub editoriale e didattico dedicato alle principali aree della psicologia, con un taglio rigoroso, accessibile e orientato allo studio.
-            Le collane sono pensate per accompagnare un percorso strutturato, dalla base teorica alla lettura critica dei modelli.
-          </p>
-          <div class="mt-5 inline-flex items-center rounded-xl border border-amber-200 bg-amber-50 px-4 py-2 text-amber-900 font-extrabold">
-            Pagina in aggiornamento editoriale: contenuti e collegamenti vengono ampliati progressivamente.
-          </div>
-          <p class="mt-4 text-gray-600">
-            Nota di trasparenza: i contenuti hanno finalità informative e formative e non sostituiscono valutazioni cliniche, psicoterapia o interventi professionali personalizzati.
-          </p>
-
-          <div class="mt-7 flex flex-col sm:flex-row gap-3">
-            <a href="#collane" class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
-              Esplora le collane
-            </a>
-            <a href="#materiali" class="inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition">
-              Vai ai materiali
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="collane" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div class="flex items-end justify-between gap-4 flex-wrap">
-        <div>
-          <h2 class="text-2xl font-extrabold">Collane</h2>
-          <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
-            Ogni collana raccoglie episodi, testi e materiali coerenti tra loro. L’ordine proposto è progressivo, ma puoi entrare dal tema che ti serve.
-          </p>
-        </div>
-        <div class="text-sm text-gray-600 font-semibold">
-          Aggiornamenti continui · Struttura “cross-collane” pronta per espansione
-        </div>
+<body class="bg-gray-50 text-gray-900">
+  <!-- PUBLIC VIEW: Maintenance / editorial update notice -->
+  <div id="publicView" class="min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-xl bg-white border border-gray-200 rounded-3xl shadow-xl p-8 sm:p-10 text-center">
+      <div class="flex justify-center">
+        <img src="/assets/dr-pac.png" alt="Dr. Pac Psicologia" class="h-28 sm:h-32 w-auto object-contain" />
       </div>
 
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <a class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition" href="#materiali">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicologia della Personalità</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">Attiva</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Tratti, modelli disposizionali, strumenti di misura, epistemologia minima, lettura critica della letteratura.
-          </div>
-          <div class="mt-3 text-amber-800 font-extrabold">Apri materiali →</div>
-        </a>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicologia dello Sviluppo</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Sviluppo tipico e atipico, attaccamento, traiettorie evolutive, contesti familiari e scolastici, indicatori di rischio.
-          </div>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicologia Cognitiva</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Attenzione, memoria, decisione, bias, linguaggio, percezione, metodi sperimentali e interpretazione dei risultati.
-          </div>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicologia Dinamica</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Modelli psicodinamici, difese, relazioni oggettuali, concetti clinici in forma didattica e critica delle semplificazioni.
-          </div>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicologia del Lavoro</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Benessere organizzativo, stress, leadership, motivazione, selezione, assessment, etica e qualità delle evidenze.
-          </div>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <div class="flex items-center justify-between gap-4">
-            <div class="font-extrabold text-lg">Psicobiologia</div>
-            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
-          </div>
-          <div class="mt-2 text-gray-700 font-semibold">
-            Neuroscienze di base, sistemi neuroendocrini, emozione e cognizione, limiti delle inferenze, miti e falsi “shortcut”.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="materiali" class="bg-white border-t border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h2 class="text-2xl font-extrabold">Materiali</h2>
-        <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
-          Qui puoi collegare i contenuti accessori della collana: eBook gratuiti, guide complete a pagamento, pagine di approfondimento e risorse citate.
-          Mantieni i link “stabili” e aggiorna solo i contenuti, così la comunicazione a voce resta semplice.
-        </p>
-
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <div class="font-extrabold text-lg">eBook gratuiti</div>
-            <p class="mt-2 text-gray-700 font-semibold">
-              In questa sezione saranno raccolti i download collegati agli episodi e ai capitoli della collana, con organizzazione progressivamente più strutturata.
-            </p>
-            <div class="mt-4">
-              <a href="/free-ebook" class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
-                Area download
-              </a>
-            </div>
-            <p class="mt-3 text-sm text-gray-600 font-semibold">
-              Se la tua pagina “Free eBook” è già attiva sul sito principale, questo pulsante resta coerente con l’esperienza attuale.
-            </p>
-          </div>
-
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <div class="font-extrabold text-lg">Guide complete e volumi</div>
-            <p class="mt-2 text-gray-700 font-semibold">
-              In questa sezione saranno disponibili i prodotti editoriali più consistenti, inclusi eBook completi, raccolte tematiche e, se opportuno, bundle per collana.
-            </p>
-            <div class="mt-4">
-              <a href="/#all-books" class="inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition">
-                Catalogo
-              </a>
-            </div>
-            <p class="mt-3 text-sm text-gray-600 font-semibold">
-              È prevista, se utile, una pagina dedicata esclusivamente alla linea “Dr. Pac”, distinta dal catalogo generale.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-6 bg-gray-50 border border-gray-200 rounded-2xl p-6">
-          <div class="font-extrabold text-lg">Link pubblici (da inserire in descrizioni e audio)</div>
-          <p class="mt-2 text-gray-700 font-semibold">
-            Per ridurre attrito, usa sempre link brevi e invariabili: questa pagina resta l’ingresso unico e rimanda ai materiali aggiornati.
-            Se desideri URL ancora più corti, puoi aggiungere un reindirizzamento stabile, ad esempio <span class="font-extrabold">robpacpublishing.com/mente</span> come “hub” e, in futuro, alias come <span class="font-extrabold">/psico</span> o <span class="font-extrabold">/drpac</span> che rimandano qui.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contatti" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <h2 class="text-2xl font-extrabold">Contatti</h2>
-      <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
-        Per richieste editoriali e comunicazioni: usa il canale più adatto al contesto. Se preferisci centralizzare, collega qui un’unica email.
+      <h1 class="mt-6 text-2xl sm:text-3xl font-extrabold tracking-tight">Pagina in aggiornamento editoriale</h1>
+      <p class="mt-4 text-gray-700 font-semibold">
+        Contenuti e collegamenti vengono ampliati progressivamente.
+      </p>
+      <p class="mt-3 text-gray-600">
+        Se stai cercando i materiali della collana, questa pagina verrà resa navigabile non appena la struttura definitiva sarà completata.
       </p>
 
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <div class="font-extrabold">Email</div>
-          <p class="mt-2 text-gray-700 font-semibold">robpacpublishing@gmail.com</p>
+      <!-- OWNER ACCESS (lightweight gate) -->
+      <div class="mt-8 text-left bg-gray-50 border border-gray-200 rounded-2xl p-5">
+        <div class="text-sm text-gray-700 font-extrabold">Accesso riservato (solo autore)</div>
+        <div class="mt-3 flex flex-col sm:flex-row gap-3">
+          <input id="accessKeyInput" type="password" autocomplete="current-password"
+                 class="w-full rounded-xl border border-gray-300 px-4 py-3 font-semibold focus:outline-none focus:ring-2 focus:ring-amber-200"
+                 placeholder="Chiave di accesso" />
+          <button id="accessBtn"
+                  class="rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
+            Entra
+          </button>
         </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <div class="font-extrabold">Sito</div>
-          <p class="mt-2 text-gray-700 font-semibold">robpacpublishing.com</p>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <div class="font-extrabold">Hub</div>
-          <p class="mt-2 text-gray-700 font-semibold">robpacpublishing.com/mente</p>
-        </div>
+        <div id="accessError" class="mt-3 text-sm font-semibold text-red-600 hidden">Chiave non valida.</div>
       </div>
-    </section>
-  </main>
 
-  <footer class="bg-white border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-gray-600 font-semibold">
-      © <span id="y"></span> RobPac Publishing · Dr. Pac · Dentro la Mente
+      <div class="mt-8 text-xs text-gray-500 font-semibold">
+        © <span id="y_public"></span> RobPac Publishing
+      </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- PRIVATE VIEW: Full hub -->
+  <div id="privateView" class="hidden">
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between gap-4">
+        <a href="/" class="flex items-center gap-4">
+          <img src="/assets/dr-pac.png" alt="Dr. Pac Psicologia" class="h-20 sm:h-24 w-auto object-contain" />
+          <div class="leading-tight">
+            <div class="font-extrabold text-2xl sm:text-3xl">Dr. Pac</div>
+            <div class="text-sm sm:text-base text-gray-600 font-semibold">Dentro la Mente</div>
+          </div>
+        </a>
+
+        <nav class="hidden sm:flex items-center gap-6">
+          <a href="/" class="text-gray-700 hover:text-amber-700 font-semibold transition">RobPac Publishing</a>
+          <a href="#collane" class="text-gray-700 hover:text-amber-700 font-semibold transition">Collane</a>
+          <a href="#materiali" class="text-gray-700 hover:text-amber-700 font-semibold transition">Materiali</a>
+          <a href="#contatti" class="text-gray-700 hover:text-amber-700 font-semibold transition">Contatti</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-10">
+          <div class="max-w-3xl">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Dentro la Mente</h1>
+            <p class="mt-4 text-gray-700 text-lg font-semibold">
+              Un hub editoriale e didattico dedicato alle principali aree della psicologia, con un taglio rigoroso, accessibile e orientato allo studio.
+              Le collane sono pensate per accompagnare un percorso strutturato, dalla base teorica alla lettura critica dei modelli.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Nota di trasparenza: i contenuti hanno finalità informative e formative e non sostituiscono valutazioni cliniche, psicoterapia o interventi professionali personalizzati.
+            </p>
+
+            <div class="mt-7 flex flex-col sm:flex-row gap-3">
+              <a href="#collane" class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
+                Esplora le collane
+              </a>
+              <a href="#materiali" class="inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition">
+                Vai ai materiali
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collane" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex items-end justify-between gap-4 flex-wrap">
+          <div>
+            <h2 class="text-2xl font-extrabold">Collane</h2>
+            <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
+              Ogni collana raccoglie episodi, testi e materiali coerenti tra loro. L’ordine proposto è progressivo, ma puoi entrare dal tema che ti serve.
+            </p>
+          </div>
+          <div class="text-sm text-gray-600 font-semibold">
+            Aggiornamenti continui · Struttura “cross-collane” pronta per espansione
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <a class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition" href="#materiali">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicologia della Personalità</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">Attiva</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Tratti, modelli disposizionali, strumenti di misura, epistemologia minima, lettura critica della letteratura.
+            </div>
+            <div class="mt-3 text-amber-800 font-extrabold">Apri materiali →</div>
+          </a>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicologia dello Sviluppo</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Sviluppo tipico e atipico, attaccamento, traiettorie evolutive, contesti familiari e scolastici, indicatori di rischio.
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicologia Cognitiva</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Attenzione, memoria, decisione, bias, linguaggio, percezione, metodi sperimentali e interpretazione dei risultati.
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicologia Dinamica</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Modelli psicodinamici, difese, relazioni oggettuali, concetti clinici in forma didattica e critica delle semplificazioni.
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicologia del Lavoro</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Benessere organizzativo, stress, leadership, motivazione, selezione, assessment, etica e qualità delle evidenze.
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center justify-between gap-4">
+              <div class="font-extrabold text-lg">Psicobiologia</div>
+              <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">In arrivo</span>
+            </div>
+            <div class="mt-2 text-gray-700 font-semibold">
+              Neuroscienze di base, sistemi neuroendocrini, emozione e cognizione, limiti delle inferenze, miti e falsi “shortcut”.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="materiali" class="bg-white border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <h2 class="text-2xl font-extrabold">Materiali</h2>
+          <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
+            In questa sezione saranno raccolti i download collegati agli episodi e ai capitoli della collana, con organizzazione progressivamente più strutturata.
+            Sono previsti anche volumi completi e raccolte tematiche.
+          </p>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+              <div class="font-extrabold text-lg">eBook gratuiti</div>
+              <p class="mt-2 text-gray-700 font-semibold">
+                Area dedicata ai download collegati agli episodi e ai materiali di supporto.
+              </p>
+              <div class="mt-4">
+                <a href="/#freeEbooksGrid" class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
+                  Area download
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+              <div class="font-extrabold text-lg">Guide complete e volumi</div>
+              <p class="mt-2 text-gray-700 font-semibold">
+                In questa sezione saranno disponibili i prodotti editoriali più consistenti, inclusi eBook completi e raccolte tematiche.
+              </p>
+              <div class="mt-4">
+                <a href="/#books" class="inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition">
+                  Catalogo
+                </a>
+              </div>
+              <p class="mt-3 text-sm text-gray-600 font-semibold">
+                È prevista, se utile, una pagina dedicata esclusivamente alla linea “Dr. Pac”, distinta dal catalogo generale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contatti" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-extrabold">Contatti</h2>
+        <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
+          Per comunicazioni editoriali e richieste: contatto unico.
+        </p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="font-extrabold">Email</div>
+            <p class="mt-2 text-gray-700 font-semibold">robpacpublishing@gmail.com</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="font-extrabold">Sito</div>
+            <p class="mt-2 text-gray-700 font-semibold">robpacpublishing.com</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="font-extrabold">Hub</div>
+            <p class="mt-2 text-gray-700 font-semibold">robpacpublishing.com/mente</p>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <button id="logoutBtn" class="rounded-xl bg-gray-900 text-white px-5 py-3 font-extrabold hover:bg-black transition">
+            Esci (ripristina vista pubblica)
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-gray-600 font-semibold">
+        © <span id="y_private"></span> RobPac Publishing · Dr. Pac · Dentro la Mente
+      </div>
+    </footer>
+  </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    // Imposta qui la tua chiave (cambia questa stringa con una tua)
+    const ACCESS_KEY = "robpac-mente";
+
+    const publicView = document.getElementById("publicView");
+    const privateView = document.getElementById("privateView");
+    const accessBtn = document.getElementById("accessBtn");
+    const accessKeyInput = document.getElementById("accessKeyInput");
+    const accessError = document.getElementById("accessError");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    document.getElementById("y_public").textContent = new Date().getFullYear();
+    document.getElementById("y_private").textContent = new Date().getFullYear();
+
+    function showPrivate() {
+      publicView.classList.add("hidden");
+      privateView.classList.remove("hidden");
+    }
+
+    function showPublic() {
+      privateView.classList.add("hidden");
+      publicView.classList.remove("hidden");
+    }
+
+    // Auto-login se già autorizzato
+    try {
+      if (localStorage.getItem("mente_access_ok") === "1") {
+        showPrivate();
+      }
+    } catch (e) {}
+
+    accessBtn.addEventListener("click", () => {
+      const v = (accessKeyInput.value || "").trim();
+      if (v === ACCESS_KEY) {
+        try { localStorage.setItem("mente_access_ok", "1"); } catch (e) {}
+        accessError.classList.add("hidden");
+        showPrivate();
+      } else {
+        accessError.classList.remove("hidden");
+      }
+    });
+
+    accessKeyInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") accessBtn.click();
+    });
+
+    logoutBtn.addEventListener("click", () => {
+      try { localStorage.removeItem("mente_access_ok"); } catch (e) {}
+      showPublic();
+    });
   </script>
+</body>
 </body>
 </html>
