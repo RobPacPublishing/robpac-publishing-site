@@ -13,6 +13,8 @@
       if (qs.get("notifica") === "ok") {
         const b = document.getElementById("notifyOk");
         if (b) b.classList.remove("hidden");
+        const bp = document.getElementById("notifyOkPrivate");
+        if (bp) bp.classList.remove("hidden");
       }
     } catch (e) {}
 
@@ -45,8 +47,8 @@
         <input type="hidden" name="_subject" value="Dentro la Mente · Richiesta notifica apertura hub">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_url" value="https://robpacpublishing.com/mente/">
-        <input type="hidden" name="_next" value="https://robpacpublishing.com/mente/?notifica=ok">
+        <input type="hidden" name="_url" value="https://www.robpacpublishing.com/mente/">
+        <input type="hidden" name="_next" value="/mente/?notifica=ok">
         <div class="flex flex-col sm:flex-row gap-3">
           <input name="email" type="email" required
                  class="w-full rounded-xl border border-gray-300 px-4 py-3 font-semibold focus:outline-none focus:ring-2 focus:ring-amber-200"
@@ -107,6 +109,13 @@
     </header>
 
     <main>
+
+      <div id="notifyOkPrivate" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <div class="rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-emerald-900 font-extrabold">
+          Richiesta ricevuta. Ti avviseremo non appena la pagina sarà pienamente operativa.
+        </div>
+      </div>
+
       <section class="bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-10">
           <div class="max-w-3xl">
