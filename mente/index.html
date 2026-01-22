@@ -16,6 +16,12 @@
         const bp = document.getElementById("notifyOkPrivate");
         if (bp) bp.classList.remove("hidden");
       }
+
+      // Pulisci l’URL rimuovendo ?notifica=ok (senza ricaricare)
+      try {
+        const clean = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, document.title, clean);
+      } catch (e2) {}
     } catch (e) {}
 
   </script>
