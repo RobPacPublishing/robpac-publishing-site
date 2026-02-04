@@ -1,0 +1,7 @@
+# FORMATO:  type<TAB>title<TAB>desc<TAB>url<TAB>cta<TAB>badge
+# type: free oppure paid
+# ESEMPIO: free\tTitolo\tDescrizione\thttps://payhip.com/b/XXXXX\tTesto bottone\tBadge
+
+free	eBook gratuiti	Area dedicata ai download collegati agli episodi e ai materiali di supporto.	https://payhip.com/b/1ThmH	Area download	Free
+free	Presentazione (PPT)	Slide di supporto, scaricabili tramite Payhip, per accompagnare lo studio e la consultazione rapida.	https://payhip.com/b/Y5fEQ	Scarica la presentazione	Free
+paid	Manuale completo (PDF)	Prodotto editoriale completo disponibile in formato PDF a pagamento tramite Payhip.	https://payhip.com/b/I8Tjq	Catalogo	Manuale
