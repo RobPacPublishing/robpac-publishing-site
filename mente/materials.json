@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "type": "free",
+      "title": "eBook gratuiti",
+      "badge": "Free",
+      "desc": "Area dedicata ai download collegati agli episodi e ai materiali di supporto.",
+      "url": "https://payhip.com/b/1ThmH",
+      "cta": "Area download"
+    },
+    {
+      "type": "free",
+      "title": "Presentazione (PPT)",
+      "badge": "Free",
+      "desc": "Slide di supporto, scaricabili tramite Payhip, per accompagnare lo studio e la consultazione rapida.",
+      "url": "https://payhip.com/b/Y5fEQ",
+      "cta": "Scarica la presentazione"
+    },
+    {
+      "type": "paid",
+      "title": "Manuale completo (PDF)",
+      "badge": "Manuale",
+      "desc": "Prodotto editoriale completo disponibile in formato PDF a pagamento tramite Payhip.",
+      "url": "https://payhip.com/b/I8Tjq",
+      "cta": "Catalogo"
+    }
+  ]
+}

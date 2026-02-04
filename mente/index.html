@@ -137,51 +137,19 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 class="text-2xl font-extrabold">Materiali</h2>
         <p class="mt-2 text-gray-700 font-semibold max-w-3xl">
-          In questa area sono disponibili i materiali della collana. Il freebie è accessibile a costo zero tramite Payhip; il manuale completo è disponibile in formato PDF a pagamento tramite Payhip.
+          In questa area sono disponibili materiali gratuiti e manuali completi. I download e i pagamenti sono gestiti tramite Payhip.
         </p>
 
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <div class="font-extrabold text-lg">eBook gratuiti</div>
-            <p class="mt-2 text-gray-700 font-semibold">
-              Area dedicata ai download collegati agli episodi e ai materiali di supporto.
-            </p>
-            <div class="mt-4">
-              <a href="https://payhip.com/b/1ThmH" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
-                Area download
-              </a>
-            </div>
-          </div>
+        <div id="materialsError" class="hidden mt-6 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-red-900 font-extrabold"></div>
 
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <div class="font-extrabold text-lg">Guide complete e volumi</div>
-            <p class="mt-2 text-gray-700 font-semibold">
-              In questa sezione sono disponibili i prodotti editoriali più consistenti, inclusi eBook completi e raccolte tematiche.
-            </p>
-            <div class="mt-4">
-              <a href="https://payhip.com/b/I8Tjq" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition">
-                Catalogo
-              </a>
-            </div>
-            <p class="mt-3 text-sm text-gray-600 font-semibold">
-              È prevista, se utile, una pagina dedicata esclusivamente alla linea “Dr. Pac”, distinta dal catalogo generale.
-            </p>
-          </div>
+        <div class="mt-6">
+          <h3 class="text-xl font-extrabold">Gratuiti</h3>
+          <div id="materialsFree" class="mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+        </div>
 
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-            <div class="font-extrabold text-lg">Presentazione (PPT)</div>
-            <p class="mt-2 text-gray-700 font-semibold">
-              Slide di supporto, scaricabili tramite Payhip, per accompagnare lo studio e la consultazione rapida.
-            </p>
-            <div class="mt-4">
-              <a href="https://payhip.com/b/Y5fEQ" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition">
-                Scarica la presentazione
-              </a>
-            </div>
-          </div>
+        <div class="mt-10">
+          <h3 class="text-xl font-extrabold">Manuali</h3>
+          <div id="materialsPaid" class="mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
         </div>
       </div>
     </section>
@@ -220,6 +188,64 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    function esc(s) {
+      return String(s || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function makeCard(item) {
+      const badge = item.badge
+        ? '<span class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">' + esc(item.badge) + '</span>'
+        : '<span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gray-100 text-gray-700">' + (item.type === "paid" ? "Manuale" : "Free") + '</span>';
+
+      const btnText = item.cta || (item.type === "paid" ? "Apri su Payhip" : "Scarica su Payhip");
+      const btnClass = item.type === "paid"
+        ? 'inline-flex items-center justify-center rounded-xl bg-white text-amber-800 px-5 py-3 font-extrabold border border-amber-200 hover:bg-amber-50 transition'
+        : 'inline-flex items-center justify-center rounded-xl bg-amber-700 text-white px-5 py-3 font-extrabold hover:bg-amber-800 transition';
+
+      return (
+        '<div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">' +
+          '<div class="flex items-center justify-between gap-4">' +
+            '<div class="font-extrabold text-lg">' + esc(item.title) + '</div>' +
+            badge +
+          '</div>' +
+          (item.desc ? '<p class="mt-2 text-gray-700 font-semibold">' + esc(item.desc) + '</p>' : '') +
+          '<div class="mt-4">' +
+            '<a href="' + esc(item.url) + '" target="_blank" rel="noopener" class="' + btnClass + '">' + esc(btnText) + '</a>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    async function loadMaterials() {
+      const errBox = document.getElementById("materialsError");
+      const freeBox = document.getElementById("materialsFree");
+      const paidBox = document.getElementById("materialsPaid");
+
+      try {
+        const res = await fetch("./materials.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("materials.json non trovato o non accessibile.");
+
+        const data = await res.json();
+        const items = Array.isArray(data.items) ? data.items : [];
+        const free = items.filter(x => x && x.type === "free" && x.url);
+        const paid = items.filter(x => x && x.type === "paid" && x.url);
+
+        freeBox.innerHTML = free.length ? free.map(makeCard).join("") : '<div class="text-gray-600 font-semibold">Nessun contenuto gratuito disponibile in questo momento.</div>';
+        paidBox.innerHTML = paid.length ? paid.map(makeCard).join("") : '<div class="text-gray-600 font-semibold">Nessun manuale disponibile in questo momento.</div>';
+
+      } catch (e) {
+        errBox.textContent = "Impossibile caricare i materiali. Verifica che il file materials.json sia stato pubblicato correttamente.";
+        errBox.classList.remove("hidden");
+      }
+    }
+
+    loadMaterials();
   </script>
 </body>
 </html>
