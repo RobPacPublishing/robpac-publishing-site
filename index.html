@@ -176,7 +176,7 @@
 
     <!-- NAVBAR -->
     <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-4">
                     <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56">
@@ -212,11 +212,11 @@
             </div>
             
             <!-- Center Content Overlay -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+            <div class="absolute inset-0 relative flex flex-col items-center justify-center z-10 px-4">
                 <!-- Title Image -->
                 <!-- Subtitle Image -->
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                <div class="flex flex-col sm:flex-row gap-4 absolute bottom-10 left-1/2 -translate-x-1/2">
                     <button onclick="openModal()" class="bg-white text-amber-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-50 transition shadow-2xl cta-pulse transform hover:scale-105" aria-label="Download free book chapter now">
                         📖 Get Free eBook Now
                     </button>
@@ -224,8 +224,14 @@
                         Browse 100+ Books
                     </a>
                 </div>
-                
-                </div>
+<div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>Instant Access</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">✓</span>
+                        <span>100+ Books</span>
+                    </div>
                 </div>
             </div>
         </div>
