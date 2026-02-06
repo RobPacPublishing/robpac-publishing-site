@@ -254,6 +254,34 @@
             background-clip: text;
         }
     </style>
+
+<style>
+.hero::before,
+.hero::after,
+.hero-overlay,
+.hero-bg-text,
+.background-text,
+.decorative-text {
+  display: none !important;
+}
+
+.hero {
+  height: auto !important;
+  min-height: unset !important;
+  padding: 3.5rem 0 !important;
+}
+
+.hero img,
+.hero .bg-image,
+.hero-background {
+  filter: brightness(1.3) contrast(1.15) !important;
+}
+
+.hero * {
+  text-shadow: none !important;
+}
+</style>
+
 </head>
 <body class="bg-gray-50">
 
