@@ -18,14 +18,14 @@
     <meta property="og:url" content="https://www.robpacpublishing.com/">
     <meta property="og:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
     <meta property="og:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
-    <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png?v=2">
+    <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.robpacpublishing.com/">
     <meta property="twitter:title" content="RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness">
     <meta property="twitter:description" content="Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.">
-    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/hero.png?v=2">
+    <meta property="twitter:image" content="https://www.robpacpublishing.com/assets/hero.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.robpacpublishing.com/">
@@ -175,13 +175,36 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-20"> <div class="flex items-center gap-4"> <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56"> <div> <h1 class="text-2xl font-bold heading-font text-amber-700">RobPac Publishing</h1> <p class="text-xs text-gray-500">Independent Publishing House</p> </div> </div> <div class="hidden lg:flex space-x-6"> <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition relative top-6" aria-label="Go to homepage">Home</a> <a href="#featured" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="View featured books">Featured</a> <a href="#books" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Browse all books">All Books</a> <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Learn about us">About</a> <a href="/mente/" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Visit Dr. Pac hub">Dr. Pac</a> <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition shadow-md" aria-label="Get free book chapter"> Free eBook </button> </div> </div> </div> </nav>
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56">
+                    <div>
+                        <h1 class="text-2xl font-bold heading-font text-amber-700">RobPac Publishing</h1>
+                        <p class="text-xs text-gray-500">Independent Publishing House</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Go to homepage">Home</a>
+                    <a href="#featured" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="View featured books">Featured</a>
+                    <a href="#books" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Browse all books">All Books</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Learn about us">About</a>
+                    <a href="/mente/" class="text-gray-700 hover:text-amber-600 font-medium transition" aria-label="Visit Dr. Pac hub">Dr. Pac</a>
+
+                    <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition shadow-md" aria-label="Get free book chapter">
+                        Free eBook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- HERO BANNER SECTION -->
     <header id="home" class="relative overflow-hidden">
         <!-- Original Banner Background -->
         <div class="relative w-full" style="height: 450px;">
-            <img src="assets/hero.png?v=2" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
+            <img src="assets/hero.png" alt="Open book with magical light - RobPac Publishing banner showcasing world of books" class="absolute inset-0 w-full h-full object-cover" width="1920" height="450" loading="eager">
             
             <!-- Logo Position (Top Left) -->
             <div class="absolute top-8 left-8 z-20 hidden md:block">
@@ -189,11 +212,9 @@
             </div>
             
             <!-- Center Content Overlay -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
-                <!-- Title Image -->
-                <!-- Subtitle Image -->
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+            <div class="absolute inset-0 z-10 px-4">
+<!-- CTA Buttons -->
+                <div class="absolute left-1/2 -translate-x-1/2 bottom-4 sm:bottom-6 flex flex-col sm:flex-row gap-4">
                     <button onclick="openModal()" class="bg-white text-amber-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-amber-50 transition shadow-2xl cta-pulse transform hover:scale-105" aria-label="Download free book chapter now">
                         📖 Get Free eBook Now
                     </button>
@@ -201,8 +222,7 @@
                         Browse 100+ Books
                     </a>
                 </div>
-                
-                
+
             </div>
         </div>
     </header>
