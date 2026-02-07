@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RobPac Publishing - Admin Panel</title>
+<link href="admin.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>📚 RobPac Publishing - Admin Panel</h1>
+<p class="subtitle">Gestione Catalogo Libri</p>
+</div>
+<!-- Form Aggiungi Libro -->
+<div class="section">
+<h2>Aggiungi Nuovo Libro</h2>
+<form id="libro-form">
+<div class="form-group">
+<label for="titolo">Titolo *</label>
+<input id="titolo" placeholder="Titolo del libro" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="autore">Autore *</label>
+<input id="autore" placeholder="Nome dell'autore" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="categoria">Categoria *</label>
+<select id="categoria" required="">
+<option value="">Seleziona categoria</option>
+<option value="fiction">Fiction</option>
+<option value="self-help">Self-Help</option>
+<option value="cookbook">Cookbook</option>
+<option value="psychology">Psychology</option>
+</select>
+</div>
+<div class="form-group">
+<label for="descrizione">Descrizione *</label>
+<textarea id="descrizione" placeholder="Descrizione del libro" required="" rows="4"></textarea>
+</div>
+<div class="form-group">
+<label for="cover">Cover (nome file o percorso in /covers/) *</label>
+<input id="cover" placeholder="" required="" type="text"/>
+<small>Esempio: <code>/covers/nomefile.jpg</code> oppure <code>nomefile.jpg</code></small></div>
+<div class="form-group">
+<label for="amazonLink">Link Amazon (o altro) *</label>
+<input id="amazonLink" placeholder="https://www.amazon.com/dp/..." required="" type="url"/>
+</div><div class="form-group"><label for="payhipLink">Link Payhip (eBook)</label><input id="payhipLink" placeholder="https://payhip.com/b/..." type="url"/></div>
+<div class="form-group">
+<label for="rating">Rating (1-5)</label>
+<input id="rating" max="5" min="1" step="0.1" type="number" value="4.5"/>
+</div>
+<button class="btn btn-primary" type="submit">Aggiungi Libro</button>
+</form>
+</div>
+<!-- Strumenti Gestione -->
+<div class="section">
+<h2>Gestione Dati</h2>
+<div class="tools">
+<button class="btn btn-secondary" id="esporta-btn">📥 Esporta JSON</button>
+<button class="btn btn-secondary" id="importa-btn">📤 Importa JSON</button>
+<input accept=".json" id="importa-file" style="display: none;" type="file"/>
+</div>
+</div>
+<!-- Filtri e Ricerca -->
+<div class="section">
+<h2>Catalogo Libri</h2>
+<div class="filtri">
+<input id="cerca" placeholder="Cerca per titolo o autore..." type="text"/>
+<select id="filtro-categoria">
+<option value="">Tutte le categorie</option>
+<option value="fiction">Fiction</option>
+<option value="self-help">Self-Help</option>
+<option value="cookbook">Cookbook</option>
+<option value="psychology">Psychology</option>
+</select>
+</div>
+</div>
+<!-- Lista Libri -->
+<div class="libri-grid" id="libri-grid"></div>
+<!-- Statistiche -->
+<div class="section" id="statistiche" style="display: none;">
+<h2>Statistiche</h2>
+<div class="stats">
+<div class="stat-box">
+<div class="stat-value" id="tot-libri">0</div>
+<div class="stat-label">Libri Totali</div>
+</div>
+<div class="stat-box">
+<div class="stat-value" id="tot-fiction">0</div>
+<div class="stat-label">Fiction</div>
+</div>
+<div class="stat-box">
+<div class="stat-value" id="tot-self-help">0</div>
+<div class="stat-label">Self-Help</div>
+</div>
+<div class="stat-box">
+<div class="stat-value" id="tot-cookbook">0</div>
+<div class="stat-label">Cookbook</div>
+</div>
+<div class="stat-box">
+<div class="stat-value" id="tot-psychology">0</div>
+<div class="stat-label">Psychology</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notifiche -->
+<div class="notifica" id="notifica"></div>
+<!-- Modal Modifica -->
+<div class="modal" id="modal-modifica" style="display: none;">
+<div class="modal-content">
+<span class="close">×</span>
+<h2>Modifica Libro</h2>
+<form id="modifica-form">
+<input id="modifica-index" type="hidden"/>
+<div class="form-group">
+<label for="mod-titolo">Titolo</label>
+<input id="mod-titolo" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="mod-autore">Autore</label>
+<input id="mod-autore" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="mod-categoria">Categoria</label>
+<select id="mod-categoria" required="">
+<option value="fiction">Fiction</option>
+<option value="self-help">Self-Help</option>
+<option value="cookbook">Cookbook</option>
+<option value="psychology">Psychology</option>
+</select>
+</div>
+<div class="form-group">
+<label for="mod-descrizione">Descrizione</label>
+<textarea id="mod-descrizione" required="" rows="4"></textarea>
+</div>
+<div class="form-group">
+<label for="mod-cover">Link Copertina</label>
+<input id="mod-cover" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="mod-amazonLink">Link Amazon</label>
+<input id="mod-amazonLink" required="" type="url"/>
+</div><div class="form-group"><label for="mod-payhipLink">Link Payhip (eBook)</label><input id="mod-payhipLink" placeholder="https://payhip.com/b/..." type="url"/></div>
+<div class="form-group">
+<label for="mod-rating">Rating</label>
+<input id="mod-rating" max="5" min="1" step="0.1" type="number"/>
+</div>
+<button class="btn btn-primary" type="submit">Salva Modifiche</button>
+<button class="btn btn-secondary" onclick="chiudiModal()" type="button">Annulla</button>
+</form>
+</div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
