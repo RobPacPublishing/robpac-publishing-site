@@ -85,6 +85,7 @@ function aggiungiLibro() {
         cover: normalizeCover(document.getElementById('cover').value),
         description: document.getElementById('descrizione').value,
         amazonLink: document.getElementById('amazonLink').value,
+        payhip: (document.getElementById('payhipLink') && document.getElementById('payhipLink').value.trim()) ? document.getElementById('payhipLink').value.trim() : undefined,
         rating: parseFloat(document.getElementById('rating').value) || 4.5
     };
 
@@ -131,6 +132,7 @@ function renderLibri() {
                     <h3>${libro.title}</h3>
                     <p><strong>Autore:</strong> ${libro.author}</p>
                     <p><strong>Rating:</strong> ⭐ ${libro.rating}</p>
+                    ${libro.payhip ? '<p><strong>eBook:</strong> Payhip</p>' : ''}
                 </div>
                 <div class="libro-actions">
                     <button class="btn btn-warning btn-small" onclick="apriModale(${indexOriginale})">Modifica</button>
@@ -150,6 +152,7 @@ function apriModale(index) {
     document.getElementById('mod-descrizione').value = libro.description;
     document.getElementById('mod-cover').value = libro.cover;
     document.getElementById('mod-amazonLink').value = libro.amazonLink;
+    if (document.getElementById('mod-payhipLink')) document.getElementById('mod-payhipLink').value = (libro.payhip || '');
     document.getElementById('mod-rating').value = libro.rating;
     document.getElementById('modal-modifica').style.display = 'flex';
 }
@@ -169,6 +172,7 @@ function salvaModifiche(e) {
         cover: normalizeCover(document.getElementById('mod-cover').value),
         description: document.getElementById('mod-descrizione').value,
         amazonLink: document.getElementById('mod-amazonLink').value,
+        payhip: (document.getElementById('mod-payhipLink') && document.getElementById('mod-payhipLink').value.trim()) ? document.getElementById('mod-payhipLink').value.trim() : undefined,
         rating: parseFloat(document.getElementById('mod-rating').value) || 4.5
     };
 
