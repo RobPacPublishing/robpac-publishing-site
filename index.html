@@ -433,7 +433,8 @@ async function loadBooks() {
         books = arr.map(b => ({
             ...b,
             cover: normalizeCover(b.cover),
-            amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || ''
+            amazonLink: b.amazonLink || b.amazon || b.amazon_url || b.amazonURL || '',
+            payhipLink: b.payhipLink || b.payhip || b.payhip_url || b.payhipURL || ''
         }));
         displayBooks(books);
     
@@ -455,6 +456,17 @@ function filterBooks(cat) {
 
 function openBookModal(idx) {
     const book = books[idx];
+
+    const amazonBtn = book.amazonLink
+        ? `<a href="${book.amazonLink}" target="_blank" rel="noopener" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy Paperback on Amazon</a>`
+        : '';
+
+    const payhipBtn = book.payhipLink
+        ? `<a href="${book.payhipLink}" target="_blank" rel="noopener" class="flex-1 bg-gray-900 text-white py-4 rounded-xl font-bold text-center hover:bg-gray-800">Buy eBook on Payhip</a>`
+        : '';
+
+    const buttons = [amazonBtn, payhipBtn].filter(Boolean).join('');
+
     document.getElementById('bookModalContent').innerHTML = `
         <div class="md:col-span-2">
             <img src="${book.cover}" class="w-full rounded-xl shadow-lg" onerror="this.src='/covers/placeholder.svg'">
@@ -465,7 +477,7 @@ function openBookModal(idx) {
             <h3 class="text-lg font-bold mb-3">About This Book</h3>
             <p class="text-gray-700 leading-relaxed mb-6">${book.description}</p>
             <div class="flex gap-3">
-                <a href="${book.amazonLink}" target="_blank" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy on Amazon</a>
+                ${buttons || '<span class="text-gray-500 text-sm">Links coming soon.</span>'}
             </div>
         </div>`;
     document.getElementById('bookModal').classList.add('active');
