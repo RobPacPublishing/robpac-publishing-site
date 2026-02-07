@@ -458,11 +458,11 @@ function openBookModal(idx) {
     const book = books[idx];
 
     const amazonBtn = book.amazonLink
-        ? `<a href="${book.amazonLink}" target="_blank" rel="noopener" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy Paperback on Amazon</a>`
+        ? `<a href="${book.amazonLink}" target="_blank" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy Paperback on Amazon</a>`
         : '';
 
     const payhipBtn = book.payhipLink
-        ? `<a href="${book.payhipLink}" target="_blank" rel="noopener" class="flex-1 bg-gray-900 text-white py-4 rounded-xl font-bold text-center hover:bg-gray-800">Buy eBook on Payhip</a>`
+        ? `<a href="${book.payhipLink}" target="_blank" class="flex-1 bg-indigo-600 text-white py-4 rounded-xl font-bold text-center hover:bg-indigo-700">Buy eBook on Payhip</a>`
         : '';
 
     const buttons = [amazonBtn, payhipBtn].filter(Boolean).join('');
@@ -476,8 +476,8 @@ function openBookModal(idx) {
             <p class="text-xl text-gray-600 mb-4">by ${book.author}</p>
             <h3 class="text-lg font-bold mb-3">About This Book</h3>
             <p class="text-gray-700 leading-relaxed mb-6">${book.description}</p>
-            <div class="flex gap-3">
-                ${buttons || '<span class="text-gray-500 text-sm">Links coming soon.</span>'}
+            <div class="flex gap-3 flex-wrap">
+                ${buttons}
             </div>
         </div>`;
     document.getElementById('bookModal').classList.add('active');
