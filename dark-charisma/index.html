@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Dark Side of Charisma | RobPac Publishing</title>
   <meta name="description" content="A book exploring the dark side of charisma, revealing how charm and influence can be weaponized for manipulation. Learn to recognize tactics like gaslighting and protect yourself effectively." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -12,7 +13,6 @@
   <style>
     :root{
       --bg:#f6f4f1;
-      --card:#ffffff;
       --text:#1b1b1b;
       --muted:#5a5a5a;
       --line:rgba(0,0,0,.10);
@@ -21,7 +21,6 @@
       --shadow:0 14px 34px rgba(0,0,0,.10);
       --shadow2:0 10px 24px rgba(0,0,0,.10);
       --radius:14px;
-      --radius2:12px;
     }
 
     *{ box-sizing:border-box; }
@@ -166,13 +165,6 @@
     .catalog-block{
       margin-top:46px;
     }
-    .catalog-label{
-      margin:0 0 14px;
-      font-family:"Playfair Display", serif;
-      font-size:24px;
-      color:var(--gold2);
-      letter-spacing:.2px;
-    }
 
     .catalog-card{
       position:relative;
@@ -198,22 +190,13 @@
       display:flex;
       align-items:flex-end;
       padding:22px;
-      background:linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.44) 100%);
+      background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.28) 100%);
     }
     .catalog-cta{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:14px;
+      justify-content:flex-end;
       width:100%;
-    }
-
-    .catalog-cta .copy{
-      color:#fff;
-      font-weight:800;
-      font-size:20px;
-      letter-spacing:.2px;
-      text-shadow:0 6px 18px rgba(0,0,0,.35);
     }
 
     .catalog-cta .go{
@@ -247,7 +230,6 @@
 
     @media (max-width: 520px){
       .rightcol h1{ font-size:36px; }
-      .catalog-cta{ flex-direction:column; align-items:flex-start; }
       .catalog-cta .go{ width:100%; justify-content:center; }
       .catalog-card img{ height:260px; }
     }
@@ -270,13 +252,12 @@
     <main class="hero">
 
       <section class="leftcol" aria-label="Book actions">
+        <!-- Page lives at /dark-charisma/ so assets are one level up -->
         <img class="cover" src="../assets/covers/the-dark-side-of-charisma.jpg" alt="The Dark Side of Charisma: How Narcissists Use Charisma to Manipulate">
 
         <div class="cta">
-          <!-- TODO: Replace # with your Amazon paperback URL -->
-          <a class="btn primary" href="#" target="_blank" rel="noopener">Buy Paperback</a>
-          <!-- TODO: Replace # with your Payhip eBook URL -->
-          <a class="btn secondary" href="#" target="_blank" rel="noopener">Buy eBook</a>
+          <a class="btn primary" href="https://www.amazon.com/dp/B0DFC1QLKD" target="_blank" rel="noopener">Buy Paperback</a>
+          <a class="btn secondary" href="https://payhip.com/b/E3KzY" target="_blank" rel="noopener">Buy eBook</a>
         </div>
       </section>
 
@@ -295,13 +276,10 @@
         </p>
 
         <div class="catalog-block" aria-label="More from RobPac Publishing">
-          <p class="catalog-label">More from RobPac Publishing</p>
-
           <a class="catalog-card" href="https://www.robpacpublishing.com" aria-label="View the full catalog">
             <img src="../assets/cards/rpp-catalog-card-16x9.png" alt="Browse the full catalog">
             <div class="catalog-overlay">
               <div class="catalog-cta">
-                <div class="copy">Browse the Full Catalog</div>
                 <div class="go">View Catalog <span aria-hidden="true">→</span></div>
               </div>
             </div>
