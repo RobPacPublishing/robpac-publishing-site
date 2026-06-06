@@ -291,6 +291,9 @@
                 <button onclick="filterBooks('cookbook')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Cookbooks</button>
             </div>
             <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+            <div class="text-center mt-10">
+                <button id="loadMoreBooks" onclick="loadMoreBooks()" class="hidden bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700">Load More</button>
+            </div>
         </div>
     </section>
 
@@ -339,6 +342,10 @@
 
     <script>
 let books = [];
+const BOOKS_PAGE_SIZE = 24;
+let currentBooksToDisplay = [];
+let visibleBooksCount = BOOKS_PAGE_SIZE;
+
 function populateFeaturedCarousel() {
     const carousel = document.getElementById('featuredCarousel');
     if (!carousel) return;
@@ -373,7 +380,7 @@ function populateFeaturedCarousel() {
             <div class="carousel-item w-48">
                 <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-80 object-cover" onerror="this.src='/covers/placeholder.svg'">
+                        <img src="${book.cover}" class="w-full h-80 object-cover" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
                         ${badge}
                     </div>
                     <div class="p-6">
@@ -386,14 +393,20 @@ function populateFeaturedCarousel() {
     });
 }
 
-function displayBooks(booksToDisplay) {
+function displayBooks(booksToDisplay, reset = true) {
     const grid = document.getElementById('booksGrid');
     grid.innerHTML = '';
-    booksToDisplay.forEach(book => {
+
+    if (reset) {
+        currentBooksToDisplay = booksToDisplay;
+        visibleBooksCount = BOOKS_PAGE_SIZE;
+    }
+
+    currentBooksToDisplay.slice(0, visibleBooksCount).forEach(book => {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" onerror="this.src='/covers/placeholder.svg'">
+                <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
@@ -401,8 +414,27 @@ function displayBooks(booksToDisplay) {
                 </div>
             </div>`;
     });
+
+    updateLoadMoreButton();
 }
 
+function updateLoadMoreButton() {
+    const button = document.getElementById('loadMoreBooks');
+    if (!button) return;
+
+    const remaining = currentBooksToDisplay.length - visibleBooksCount;
+    if (remaining > 0) {
+        button.classList.remove('hidden');
+        button.textContent = `Load More (${remaining})`;
+    } else {
+        button.classList.add('hidden');
+    }
+}
+
+function loadMoreBooks() {
+    visibleBooksCount += BOOKS_PAGE_SIZE;
+    displayBooks(currentBooksToDisplay, false);
+}
 
 function normalizeCover(cover) {
     if (!cover) return '/covers/placeholder.svg';
@@ -469,7 +501,7 @@ function openBookModal(idx) {
 
     document.getElementById('bookModalContent').innerHTML = `
         <div class="md:col-span-2">
-            <img src="${book.cover}" class="w-full rounded-xl shadow-lg" onerror="this.src='/covers/placeholder.svg'">
+            <img src="${book.cover}" class="w-full rounded-xl shadow-lg" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
         </div>
         <div class="md:col-span-3">
             <h2 class="text-3xl font-bold heading-font mb-2">${book.title}</h2>
