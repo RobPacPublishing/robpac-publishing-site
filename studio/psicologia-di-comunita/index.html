@@ -6,78 +6,26 @@
   <title>Psicologia di Comunità | RobPac Publishing Studio</title>
   <meta name="description" content="Materiali pensati per studiare in modo più ordinato interventi, contesti e processi comunitari." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f3ec;
-      color: #1f2933;
-    }
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 20px;
-    }
-    .card {
-      max-width: 920px;
-      width: 100%;
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.08);
-      padding: 48px;
-      text-align: center;
-    }
-    .label {
-      color: #d97904;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      margin: 0 0 18px;
-      line-height: 1.05;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 28px;
-      color: #3f4b5a;
-    }
-    .box {
-      margin: 32px auto;
-      max-width: 620px;
-      padding: 24px;
-      border-radius: 18px;
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-    }
-    .box strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 14px;
-      background: #df7a00;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 14px 26px;
-      border-radius: 10px;
-    }
-    .back {
-      display: inline-block;
-      margin-top: 24px;
-      color: #6b7280;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f7f3ec; color: #1f2933; }
+    .page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 48px 20px; }
+    .card { max-width: 980px; width: 100%; background: #ffffff; border-radius: 24px; box-shadow: 0 18px 45px rgba(0,0,0,0.08); padding: 48px; text-align: center; }
+    .label { color: #d97904; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 16px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 4rem); margin: 0 0 18px; line-height: 1.05; }
+    p { font-size: 1.2rem; line-height: 1.6; max-width: 700px; margin: 0 auto 28px; color: #3f4b5a; }
+    h2 { margin: 36px 0 18px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    .materials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 24px 0 10px; text-align: left; }
+    .material-card { border: 1px solid #fed7aa; background: #fffaf4; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; min-height: 190px; }
+    .material-card img { width: 100%; max-height: 180px; object-fit: contain; border-radius: 12px; background: #fff; margin-bottom: 14px; }
+    .material-type { color: #d97904; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .material-card h3 { margin: 0 0 10px; font-size: 1.15rem; color: #1f2933; }
+    .material-card p { font-size: 0.98rem; margin: 0 0 16px; line-height: 1.5; color: #4b5563; }
+    .button { display: inline-block; margin-top: 14px; background: #df7a00; color: #ffffff; text-decoration: none; font-weight: 700; padding: 14px 26px; border-radius: 10px; }
+    .material-button { align-self: flex-start; margin-top: auto; padding: 10px 16px; font-size: 0.92rem; }
+    .button.disabled { background: #d1d5db; color: #4b5563; pointer-events: none; }
+    .box { margin: 32px auto; max-width: 620px; padding: 24px; border-radius: 18px; background: #fff7ed; border: 1px solid #fed7aa; }
+    .box strong { display: block; margin-bottom: 8px; font-size: 1.1rem; }
+    .back { display: inline-block; margin-top: 24px; color: #6b7280; text-decoration: none; font-size: 0.95rem; }
+    @media (max-width: 640px) { .card { padding: 32px 22px; } .materials-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -86,16 +34,44 @@
       <div class="label">RobPac Publishing Studio</div>
       <h1>Psicologia di Comunità</h1>
       <p>Materiali pensati per studiare in modo più ordinato interventi, contesti e processi comunitari.</p>
-
-      <div class="box">
-        <strong>Materiale in preparazione</strong>
-        Questa pagina raccoglierà risorse gratuite, estratti, schemi e materiali di supporto allo studio.
-      </div>
-
+      <h2>Materiali disponibili</h2>
+      <div id="materials"></div>
       <a class="button" href="/">Torna al catalogo</a>
       <br />
       <a class="back" href="/">www.robpacpublishing.com</a>
     </section>
   </main>
+  <script>
+    const MATERIA = 'psicologia-di-comunita';
+    const target = document.getElementById('materials');
+    const hasContent = item => item && (item.titolo || item.link);
+    const esc = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+
+    function emptyState() {
+      target.innerHTML = '<div class="box"><strong>Materiali in preparazione</strong>Questa pagina raccoglierà risorse gratuite, estratti, schemi e materiali di supporto allo studio.</div>';
+    }
+
+    function card(type, item, fallbackCta) {
+      const link = item.link || '';
+      const cover = item.cover ? `<img src="${esc(item.cover)}" alt="">` : '';
+      const button = link ? `<a class="button material-button" href="${esc(link)}">${esc(item.cta || fallbackCta)}</a>` : `<span class="button material-button disabled">${esc(item.cta || fallbackCta)}</span>`;
+      return `<article class="material-card">${cover}<div class="material-type">${esc(type)}</div><h3>${esc(item.titolo || type)}</h3>${item.descrizione ? `<p>${esc(item.descrizione)}</p>` : ''}${button}</article>`;
+    }
+
+    fetch('/studio-products.json')
+      .then(response => response.ok ? response.json() : Promise.reject(new Error('JSON non disponibile')))
+      .then(data => {
+        const list = Array.isArray(data) ? data : [];
+        const materia = list.find(item => item && item.materia === MATERIA);
+        if (!materia) return emptyState();
+        const cards = [];
+        if (hasContent(materia.ebookGratuito)) cards.push(card('eBook gratuito', materia.ebookGratuito, 'Scarica gratis'));
+        if (Array.isArray(materia.documenti)) materia.documenti.filter(hasContent).forEach(doc => cards.push(card(doc.tipo || 'Documento', doc, 'Apri documento')));
+        if (hasContent(materia.libroAmazon)) cards.push(card('Libro completo su Amazon', materia.libroAmazon, 'Acquista su Amazon'));
+        target.innerHTML = cards.length ? `<div class="materials-grid">${cards.join('')}</div>` : '';
+        if (!cards.length) emptyState();
+      })
+      .catch(emptyState);
+  </script>
 </body>
 </html>

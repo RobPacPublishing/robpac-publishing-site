@@ -105,6 +105,62 @@
 </div>
 </div>
 </div>
+<!-- Materiali Studio -->
+<div class="section studio-section">
+<h2>Materiali Studio</h2>
+<p class="section-note">Gestione separata dei contenuti per le sottopagine Studio.</p>
+<form id="studio-form">
+<div class="form-group">
+<label for="studio-materia">Materia</label>
+<select id="studio-materia" required="">
+<option value="psicologia-dello-sviluppo">Psicologia dello Sviluppo</option>
+<option value="psicologia-del-lavoro">Psicologia del Lavoro</option>
+<option value="psicologia-dinamica">Psicologia Dinamica</option>
+<option value="psicologia-di-comunita">Psicologia di Comunità</option>
+<option value="psicologia-della-personalita">Psicologia della Personalità</option>
+</select>
+</div>
+<div class="studio-form-grid">
+<fieldset class="studio-fieldset">
+<legend>eBook gratuito</legend>
+<div class="form-group"><label for="studio-ebook-titolo">Titolo</label><input id="studio-ebook-titolo" type="text"/></div>
+<div class="form-group"><label for="studio-ebook-descrizione">Descrizione</label><textarea id="studio-ebook-descrizione" rows="3"></textarea></div>
+<div class="form-group"><label for="studio-ebook-cover">Cover</label><input id="studio-ebook-cover" type="text" placeholder="/assets/..."/></div>
+<div class="form-group"><label for="studio-ebook-link">Link download</label><input id="studio-ebook-link" type="url" placeholder="https://... oppure /assets/..."/></div>
+<div class="form-group"><label for="studio-ebook-cta">CTA</label><input id="studio-ebook-cta" type="text" value="Scarica gratis"/></div>
+</fieldset>
+<fieldset class="studio-fieldset">
+<legend>Libro Amazon collegato</legend>
+<div class="form-group"><label for="studio-amazon-titolo">Titolo libro Amazon</label><input id="studio-amazon-titolo" type="text"/></div>
+<div class="form-group"><label for="studio-amazon-descrizione">Descrizione breve</label><textarea id="studio-amazon-descrizione" rows="3"></textarea></div>
+<div class="form-group"><label for="studio-amazon-cover">Cover</label><input id="studio-amazon-cover" type="text" placeholder="/covers/..."/></div>
+<div class="form-group"><label for="studio-amazon-link">Link Amazon</label><input id="studio-amazon-link" type="url" placeholder="https://www.amazon..."/></div>
+<div class="form-group"><label for="studio-amazon-cta">CTA</label><input id="studio-amazon-cta" type="text" value="Acquista su Amazon"/></div>
+</fieldset>
+</div>
+<fieldset class="studio-fieldset">
+<legend>Documenti aggiuntivi</legend>
+<div class="studio-doc-grid">
+<div class="form-group"><label for="studio-doc-titolo">Titolo documento</label><input id="studio-doc-titolo" type="text"/></div>
+<div class="form-group"><label for="studio-doc-tipo">Tipo</label><select id="studio-doc-tipo"><option value="PDF">PDF</option><option value="Schema">Schema</option><option value="Infografica">Infografica</option><option value="Appunti">Appunti</option></select></div>
+<div class="form-group"><label for="studio-doc-link">Link documento</label><input id="studio-doc-link" type="text" placeholder="/assets/..."/></div>
+<div class="form-group"><label for="studio-doc-cta">CTA</label><input id="studio-doc-cta" type="text" value="Apri documento"/></div>
+</div>
+<div class="form-group"><label for="studio-doc-descrizione">Descrizione</label><textarea id="studio-doc-descrizione" rows="2"></textarea></div>
+<button class="btn btn-secondary" id="studio-add-doc-btn" type="button">Aggiungi documento</button>
+<div class="studio-doc-list" id="studio-doc-list"></div>
+</fieldset>
+<div class="tools">
+<button class="btn btn-primary" type="submit">Salva Materiale Studio</button>
+<button class="btn btn-secondary" id="studio-reset-btn" type="button">Svuota materia</button>
+<button class="btn btn-secondary" id="studio-export-btn" type="button">Esporta JSON Studio</button>
+<button class="btn btn-secondary" id="studio-import-btn" type="button">Importa JSON Studio</button>
+<input accept=".json" id="studio-import-file" style="display: none;" type="file"/>
+</div>
+</form>
+<h3 class="studio-summary-title">Riepilogo Materiali Studio</h3>
+<div class="studio-summary-grid" id="studio-summary-grid"></div>
+</div>
 </div>
 <!-- Notifiche -->
 <div class="notifica" id="notifica"></div>
