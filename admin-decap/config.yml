@@ -22,6 +22,7 @@ collections:
           - label: "Libri"
             name: "books"
             widget: "list"
+            allow_remove: false
             summary: "{{fields.title}} — {{fields.author}}"
             fields:
               - { label: "Titolo", name: "title", widget: "string" }
@@ -42,6 +43,8 @@ collections:
           - label: "Materiali"
             name: "items"
             widget: "list"
+            allow_add: false
+            allow_remove: false
             summary: "{{fields.nome}}"
             fields:
               - { label: "Materia slug", name: "materia", widget: "string" }
