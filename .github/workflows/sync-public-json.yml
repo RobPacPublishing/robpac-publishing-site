@@ -1,0 +1,35 @@
+name: Sync public JSON from CMS data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cms-data/books-source.json'
+      - 'cms-data/studio-products-source.json'
+      - 'build-public-json-from-cms.mjs'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-public-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate public JSON files
+        run: node build-public-json-from-cms.mjs
+
+      - name: Commit regenerated JSON files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Sync public JSON from CMS data"
+          file_pattern: "books.json studio-products.json"

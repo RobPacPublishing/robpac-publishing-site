@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "materia": "psicologia-dello-sviluppo",
+      "nome": "Psicologia dello Sviluppo",
+      "ebookGratuito": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Scarica gratis"
+      },
+      "documenti": [],
+      "libroAmazon": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Acquista su Amazon"
+      }
+    },
+    {
+      "materia": "psicologia-del-lavoro",
+      "nome": "Psicologia del Lavoro",
+      "ebookGratuito": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Scarica gratis"
+      },
+      "documenti": [],
+      "libroAmazon": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Acquista su Amazon"
+      }
+    },
+    {
+      "materia": "psicologia-dinamica",
+      "nome": "Psicologia Dinamica",
+      "ebookGratuito": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Scarica gratis"
+      },
+      "documenti": [],
+      "libroAmazon": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Acquista su Amazon"
+      }
+    },
+    {
+      "materia": "psicologia-di-comunita",
+      "nome": "Psicologia di Comunità",
+      "ebookGratuito": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Scarica gratis"
+      },
+      "documenti": [],
+      "libroAmazon": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Acquista su Amazon"
+      }
+    },
+    {
+      "materia": "psicologia-della-personalita",
+      "nome": "Psicologia della Personalità",
+      "ebookGratuito": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Scarica gratis"
+      },
+      "documenti": [],
+      "libroAmazon": {
+        "titolo": "",
+        "descrizione": "",
+        "cover": "",
+        "link": "",
+        "cta": "Acquista su Amazon"
+      }
+    }
+  ]
+}

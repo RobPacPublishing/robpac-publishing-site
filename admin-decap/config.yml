@@ -1,0 +1,78 @@
+backend:
+  name: github
+  repo: RobPacPublishing/robpac-publishing-site
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "catalogo_libri"
+    label: "Catalogo libri Amazon"
+    files:
+      - name: "books_source"
+        label: "Catalogo libri"
+        file: "cms-data/books-source.json"
+        format: "json"
+        fields:
+          - label: "Libri"
+            name: "books"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.author}}"
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Autore", name: "author", widget: "string" }
+              - { label: "Categoria", name: "category", widget: "string" }
+              - { label: "Cover", name: "cover", widget: "image", required: false }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - { label: "Link Amazon", name: "amazon", widget: "string", required: false }
+
+  - name: "materiali_studio"
+    label: "Materiali Studio"
+    files:
+      - name: "studio_products_source"
+        label: "Materiali Studio"
+        file: "cms-data/studio-products-source.json"
+        format: "json"
+        fields:
+          - label: "Materiali"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Materia slug", name: "materia", widget: "string" }
+              - { label: "Nome materia", name: "nome", widget: "string" }
+
+              - label: "Ebook gratuito"
+                name: "ebookGratuito"
+                widget: "object"
+                fields:
+                  - { label: "Titolo", name: "titolo", widget: "string", required: false }
+                  - { label: "Descrizione", name: "descrizione", widget: "text", required: false }
+                  - { label: "Cover", name: "cover", widget: "image", required: false }
+                  - { label: "Link", name: "link", widget: "string", required: false }
+                  - { label: "CTA", name: "cta", widget: "string", default: "Scarica gratis" }
+
+              - label: "Documenti"
+                name: "documenti"
+                widget: "list"
+                required: false
+                summary: "{{fields.titolo}}"
+                fields:
+                  - { label: "Titolo", name: "titolo", widget: "string" }
+                  - { label: "Descrizione", name: "descrizione", widget: "text", required: false }
+                  - { label: "Cover", name: "cover", widget: "image", required: false }
+                  - { label: "File / Link", name: "link", widget: "string", required: false }
+                  - { label: "CTA", name: "cta", widget: "string", default: "Scarica" }
+
+              - label: "Libro Amazon"
+                name: "libroAmazon"
+                widget: "object"
+                fields:
+                  - { label: "Titolo", name: "titolo", widget: "string", required: false }
+                  - { label: "Descrizione", name: "descrizione", widget: "text", required: false }
+                  - { label: "Cover", name: "cover", widget: "image", required: false }
+                  - { label: "Link", name: "link", widget: "string", required: false }
+                  - { label: "CTA", name: "cta", widget: "string", default: "Acquista su Amazon" }
