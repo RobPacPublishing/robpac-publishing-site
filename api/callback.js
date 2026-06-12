@@ -79,12 +79,17 @@ module.exports = async function handler(req, res) {
 
     const tokenData = await tokenResponse.json();
 
-    if (tokenData.error) {
+    if (tokenData.error || !tokenData.access_token) {
       res.status(400).send(renderHtml('error', tokenData));
       return;
     }
 
-    res.status(200).send(renderHtml('success', tokenData));
+    res.status(200).send(
+      renderHtml('success', {
+        token: tokenData.access_token,
+        provider: 'github',
+      })
+    );
   } catch (error) {
     res.status(500).send(renderHtml('error', { error: error.message }));
   }
