@@ -13,6 +13,8 @@ public_folder: "/assets/uploads"
 collections:
   - name: "catalogo_libri"
     label: "Catalogo libri Amazon"
+    media_folder: "covers-web-optimized"
+    public_folder: "/covers-web-optimized"
     files:
       - name: "books_source"
         label: "Catalogo libri"

@@ -8,6 +8,8 @@ on:
       - 'cms-data/books-source.json'
       - 'cms-data/studio-products-source.json'
       - 'build-public-json-from-cms.mjs'
+      - 'optimize-cms-book-covers.mjs'
+      - 'covers-web-optimized/**'
 
 permissions:
   contents: write
@@ -25,6 +27,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install image optimizer
+        run: npm install sharp
+
+      - name: Optimize CMS book covers
+        run: node optimize-cms-book-covers.mjs
+
       - name: Generate public JSON files
         run: node build-public-json-from-cms.mjs
 
@@ -32,4 +40,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Sync public JSON from CMS data"
-          file_pattern: "books.json studio-products.json"
+          file_pattern: "books.json studio-products.json cms-data/books-source.json covers-web-optimized"
