@@ -421,6 +421,23 @@ const BOOKS_PAGE_SIZE = 12;
 let currentBooksToDisplay = [];
 let visibleBooksCount = BOOKS_PAGE_SIZE;
 
+
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    }[char]));
+}
+
+function renderSubcategoryBadge(book, extraClass = '') {
+    const subcategory = book?.subcategory ? String(book.subcategory).trim() : '';
+    if (!subcategory) return '';
+    return '<div class="inline-flex max-w-full items-center rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-xs font-semibold text-amber-800 ' + extraClass + '">' + escapeHtml(subcategory) + '</div>';
+}
+
 function populateFeaturedCarousel() {
     const carousel = document.getElementById('featuredCarousel');
     if (!carousel) return;
@@ -460,7 +477,8 @@ function populateFeaturedCarousel() {
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 line-clamp-2">${book.title}</h3>
-                        <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
+                        <p class="text-gray-500 text-sm mb-2">by ${book.author}</p>
+                        ${renderSubcategoryBadge(book, 'mb-3')}
                         <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700">View Details</button>
                     </div>
                 </div>
@@ -484,7 +502,8 @@ function displayBooks(booksToDisplay, reset = true) {
                 <img src="${book.cover}" class="w-full h-80 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
                 <div class="p-4">
                     <h3 class="font-bold text-lg mb-1 line-clamp-2">${book.title}</h3>
-                    <p class="text-gray-500 text-sm mb-3">by ${book.author}</p>
+                    <p class="text-gray-500 text-sm mb-2">by ${book.author}</p>
+                        ${renderSubcategoryBadge(book, 'mb-3')}
                     <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm">View Details</button>
                 </div>
             </div>`;
@@ -580,7 +599,8 @@ function openBookModal(idx) {
         </div>
         <div class="md:col-span-3">
             <h2 class="text-3xl font-bold heading-font mb-2">${book.title}</h2>
-            <p class="text-xl text-gray-600 mb-4">by ${book.author}</p>
+            <p class="text-xl text-gray-600 mb-2">by ${book.author}</p>
+            ${renderSubcategoryBadge(book, 'mb-4')}
             <h3 class="text-lg font-bold mb-3">About This Book</h3>
             <p class="text-gray-700 leading-relaxed mb-6">${book.description}</p>
             <div class="flex gap-3 flex-wrap">
