@@ -5,7 +5,60 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/the-dark-side-of-charisma.webp",
     "description": "A book exploring the dark side of charisma, revealing how charm and influence can be weaponized for manipulation. It offers tools to identify emotional manipulation tactics used by charismatic narcissists in both professional and personal settings. The guide teaches readers to recognize signs of manipulation like gaslighting, defend themselves effectively, and use their own charisma ethically. Essential reading for anyone looking to protect themselves from manipulators and develop authentic relationships built on trust.",
-    "amazon": "https://www.amazon.com/dp/B0DFC1QLKD"
+    "amazon": "https://www.amazon.com/dp/B0DFC1QLKD",
+    "asin": "B0DFCD8HJH",
+    "asinKindle": "B0DFCD8HJH",
+    "asinPaperback": "B0DFC1QLKD",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DFCD8HJH",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 1,
+        "sourcePage": ""
+      },
+      {
+        "format": "Kindle",
+        "asin": "B0DFZ18JQC",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 160,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DFC1QLKD",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 2,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DG2BNBT5",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 161,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DFCD8HJH",
+      "B0DFZ18JQC",
+      "B0DFC1QLKD",
+      "B0DG2BNBT5"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the dark side of charisma how narcissists use charisma to manipulate::ryan walker",
+      "kdpTitle": "The Dark Side of Charisma: How Narcissists Use Charisma to Manipulate",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Whispers in the Abyss: A Symphony of Realities",
@@ -13,7 +66,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/whispers-in-the-abyss.webp",
     "description": "A mind-bending journey following Audrey Connors, a forensic acoustician with the extraordinary ability to hear what others can't. When she discovers a mysterious sound file, she's pulled into a cosmic conflict spanning multiple realities. This thriller blends cutting-edge science with philosophy, exploring consciousness, free will, and the nature of reality itself. With an intricate plot, well-developed characters, and cosmic scope, it's perfect for fans of hard sci-fi and metaphysical adventures. Critics call it \"a tour de force of imagination\" that's \"redefining the boundaries of science fiction.\"",
-    "amazon": "https://www.amazon.com/dp/B0DK8W7DHW"
+    "amazon": "https://www.amazon.com/dp/B0DK8W7DHW",
+    "asin": "B0DK7N3MZ2",
+    "asinKindle": "B0DK7N3MZ2",
+    "asinPaperback": "B0DK8W7DHW",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DK7N3MZ2",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 53,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DK8W7DHW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 54,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DK7N3MZ2",
+      "B0DK8W7DHW"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-whispers in the abyss a symphony of realities::jackson blackwood",
+      "kdpTitle": "Whispers in the Abyss: A Symphony of Realities",
+      "kdpAuthor": "Jackson Blackwood",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "RUMINAZIONE MENTALE: Libera la mente dal pensiero ossessivo",
@@ -22,7 +110,42 @@
     "cover": "/covers-web/ruminazione-mentale.webp",
     "description": "Una guida completa per liberarsi dalla ruminazione mentale e dai pensieri ossessivi che possono causare stress, ansia e isolamento. Il libro offre una comprensione approfondita delle cause della ruminazione e strategie pratiche per gestirla efficacemente. Copre aspetti come le strategie cognitive e comportamentali, l'importanza dello stile di vita, le relazioni interpersonali, e l'uso della tecnologia per il benessere mentale. Utile per chiunque desideri migliorare la propria consapevolezza emotiva, sviluppare resilienza mentale e vivere una vita più equilibrata e produttiva.",
     "amazon": "https://www.amazon.it/dp/B0D8TSCF4B",
-    "payhip": "https://payhip.com/b/ZqHvU"
+    "payhip": "https://payhip.com/b/ZqHvU",
+    "asin": "B0DDM7V5TW",
+    "asinKindle": "B0DDM7V5TW",
+    "asinPaperback": "B0D8TSCF4B",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DDM7V5TW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 55,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0D8TSCF4B",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 56,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DDM7V5TW",
+      "B0D8TSCF4B"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-ruminazione mentale libera la mente dal pensiero ossessivo::massimo recaldi",
+      "kdpTitle": "RUMINAZIONE MENTALE: Libera la mente dal pensiero ossessivo",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Carnivore Diet Cookbook: Revitalize Your Health: Irresistible Meat Recipes for Rapid Weight Loss, Muscle Gain, and Pain Relief",
@@ -30,7 +153,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/carnivore-diet-cookbook.webp",
     "description": "A comprehensive guide to the carnivore diet featuring meat-based recipes designed for weight loss, muscle gain, and pain relief. This cookbook offers easy-to-follow recipes suitable for busy professionals, health enthusiasts, and parents seeking healthier lifestyle options. It provides practical tips, expert advice, and nutritional insights to help readers overcome health concerns and dietary challenges. The book presents the carnivore diet as a revolutionary nutritional approach that can transform health through simple, delicious recipes that fit into busy schedules.",
-    "amazon": "https://www.amazon.com/dp/B0DCK41S5J"
+    "amazon": "https://www.amazon.com/dp/B0DCK41S5J",
+    "asin": "B0DCH8R63M",
+    "asinKindle": "B0DCH8R63M",
+    "asinPaperback": "B0DCK41S5J",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DCH8R63M",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 39,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DCK41S5J",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 40,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DCH8R63M",
+      "B0DCK41S5J"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-carnivore diet cookbook revitalize your health irresistible meat recipes for rapid weight loss muscle gain and pain relief::jordan prescott",
+      "kdpTitle": "Carnivore Diet Cookbook: Revitalize Your Health: Irresistible Meat Recipes for Rapid Weight Loss, Muscle Gain, and Pain Relief",
+      "kdpAuthor": "Jordan Prescott",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "La Via del Guerriero Illuminato: Virtù Marziali e Saggezza Buddhista",
@@ -39,7 +197,42 @@
     "cover": "/covers-web/la-via-del-guerriero-illuminato.webp",
     "description": "🔥 Scopri i segreti millenari delle arti marziali tradizionali attraverso una prospettiva completamente nuova!\n\nQuesto non è il solito libro sulle arti marziali. È un viaggio profondo attraverso la saggezza del guerriero, dove tecniche antiche si trasformano in strumenti di crescita personale e spirituale per la vita moderna.\n\n⚡ Cosa troverai in questo libro:\n\nLa fusione unica tra filosofia buddhista e pratica marziale\nTecniche concrete per trasformare la tua pratica quotidiana\nLa via del guerriero applicata alle sfide contemporanee\n🎯 Perfetto per praticanti di ogni livello che cercano di approfondire la dimensione interiore della loro arte.",
     "amazon": "https://www.amazon.it/dp/B0DLWKX93J",
-    "payhip": "https://payhip.com/b/3IYGe"
+    "payhip": "https://payhip.com/b/3IYGe",
+    "asin": "B0DLVBLRLZ",
+    "asinKindle": "B0DLVBLRLZ",
+    "asinPaperback": "B0DLWKX93J",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DLVBLRLZ",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 57,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DLWKX93J",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 58,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DLVBLRLZ",
+      "B0DLWKX93J"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-la via del guerriero illuminato virtu marziali e saggezza buddhista::adrian stone",
+      "kdpTitle": "La Via del Guerriero Illuminato: Virtù Marziali e Saggezza Buddhista",
+      "kdpAuthor": "Adrian Stone",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Nonna Lina's Italian Kitchen: Stories and Simple Recipes from a Centenarian's Heart",
@@ -47,7 +240,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/nonna-lina-s-italian-kitchen.webp",
     "description": "Discover authentic Italian cooking through the eyes of a remarkable centenarian in this touching collection of recipes and memories. Boston chef Anthony (Tony) Lucchesi preserves his grandmother's culinary legacy in \"Nonna Lina's Italian Kitchen,\" taking readers from Southern Italy to Boston's North End through 55 detailed recipes and family stories.\nExplore time-honored pasta dishes, bread-making secrets, simple vegetable preparations, traditional preservation techniques, and sweet treats that embody an Italian grandmother's love. This cookbook is a master class in \"cucina povera\"—the ingenious \"poor cooking\" tradition transforming humble ingredients into extraordinary meals.\nEach recipe includes Nonna Lina's personal memories and invaluable tips passed down through generations. Perfect for home cooks seeking authentic Italian recipes, food lovers interested in traditional techniques, and anyone wanting to connect with Italian heritage. Features family-tested recipes with clear instructions, stories behind each dish, traditional techniques explained in modern terms, and Nonna's wisdom throughout.",
-    "amazon": "https://www.amazon.com/dp/B0DM6LZJDM"
+    "amazon": "https://www.amazon.com/dp/B0DM6LZJDM",
+    "asin": "B0DLV3W63L",
+    "asinKindle": "B0DLV3W63L",
+    "asinPaperback": "B0DM6LZJDM",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DLV3W63L",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 59,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DM6LZJDM",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 60,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DLV3W63L",
+      "B0DM6LZJDM"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-nonna lina s italian kitchen stories and simple recipes from a centenarian s heart::antony lucchesi",
+      "kdpTitle": "Nonna Lina's Italian Kitchen: Stories and Simple Recipes from a Centenarian's Heart",
+      "kdpAuthor": "Antony Lucchesi",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Perception and Attention Biases: Understanding and Overcoming Cognitive Distortions (Understanding the Mind)",
@@ -56,7 +284,42 @@
     "cover": "/covers-web/perception-and-attention-biases.webp",
     "description": "A comprehensive guide exploring the hidden cognitive biases that shape our decisions, judgments, and perceptions. Drawing from cognitive psychology and neuroscience research, the book explains why we sometimes see nonexistent patterns, how technology exploits our natural biases, how attention shapes our reality, and strategies professionals use to overcome perceptual limitations. It translates complex scientific concepts into practical knowledge, combining theory with real-world examples and techniques for enhancing cognitive capabilities. Designed for professionals, students, and anyone interested in improving decision-making, the book provides tools to better understand how the mind works and make more informed choices.",
     "amazon": "https://www.amazon.com/dp/B0DNM6SP55",
-    "payhip": "https://payhip.com/b/EZMAt"
+    "payhip": "https://payhip.com/b/EZMAt",
+    "asin": "B0DDZPWF53",
+    "asinKindle": "B0DDZPWF53",
+    "asinPaperback": "B0DNM6SP55",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DDZPWF53",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 29,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DNM6SP55",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 30,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DDZPWF53",
+      "B0DNM6SP55"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-perception and attention biases understanding and overcoming cognitive distortions::john keagan",
+      "kdpTitle": "Perception and Attention Biases: Understanding and Overcoming Cognitive Distortions",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.8287,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "RESTLESS SILENCE",
@@ -64,7 +327,42 @@
     "category": "Fiction & Literature",
     "cover": "/assets/uploads/restless-silence-front-print-001.png",
     "description": "Restless Silence takes you deep into the inner world of a protagonist trapped between the comfort of stasis and the desire for evolution. This introspective journey explores the conflict between hope and resignation, asking profound questions about the possibility of change and the fear of the unknown.\n\nCaught in the in-between, the protagonist grapples with the tension between staying the same and the unsettling prospect of transformation. Each moment teeters between fleeting hope and the weight of resignation, forcing the reader to confront their thoughts on growth, stagnation, and the delicate balance of existence.\n\nWith rich, reflective prose, Restless Silence is a thought-provoking exploration of life’s quiet battles—the internal struggle between standing still and moving forward. This book is for readers who appreciate introspective narratives that challenge the mind and stir the soul.\n\nIf you've ever questioned whether real change is possible or wondered how to navigate the space between comfort and the unknown, this book will resonate deeply with you.",
-    "amazon": "https://www.amazon.com/dp/B0DH48RWM4"
+    "amazon": "https://www.amazon.com/dp/B0DH48RWM4",
+    "asin": "B0D2LVQ52S",
+    "asinKindle": "B0D2LVQ52S",
+    "asinPaperback": "B0DH48RWM4",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0D2LVQ52S",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 61,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DH48RWM4",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 62,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0D2LVQ52S",
+      "B0DH48RWM4"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-restless silence::ryan walker",
+      "kdpTitle": "RESTLESS SILENCE",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Santa's Kitchen Cookbook: 60+ Merry Recipes for Family Fun and Festive Feasts",
@@ -72,7 +370,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/santa-s-kitchen.webp",
     "description": "A delightful Christmas cookbook featuring over 60 festive, family-friendly recipes that transform your kitchen into Santa's magical workshop. The collection includes Christmas morning breakfasts, appetizers, main courses, side dishes, desserts, beverages, and edible gift ideas. Suitable for cooks of all skill levels, the book features a special \"Santa's Helpers' Corner\" with kitchen safety tips for children and suggestions for family cooking activities. Perfect for creating memorable holiday traditions and entertaining guests during the Christmas season, this cookbook combines practical cooking instructions with festive joy.",
-    "amazon": "https://www.amazon.com/dp/B0DJ6XT1TS"
+    "amazon": "https://www.amazon.com/dp/B0DJ6XT1TS",
+    "asin": "B0DJ5G6YN3",
+    "asinKindle": "B0DJ5G6YN3",
+    "asinPaperback": "B0DJ6XT1TS",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJ5G6YN3",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 63,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJ6XT1TS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 64,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJ5G6YN3",
+      "B0DJ6XT1TS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-santa s kitchen cookbook 60 merry recipes for family fun and festive feasts::candice cauldron",
+      "kdpTitle": "Santa's Kitchen Cookbook: 60+ Merry Recipes for Family Fun and Festive Feasts",
+      "kdpAuthor": "Candice Cauldron",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Born Again: A Journey of Spiritual Renewal and Transformation in Christ",
@@ -80,7 +413,42 @@
     "category": "Society & Culture",
     "cover": "/covers-web/born-again.webp",
     "description": "\"Born Again: A Journey of Spiritual Renewal and Transformation in Christ\" offers a comprehensive exploration of the concept of spiritual rebirth in evangelical Christianity. This insightful book delves into the biblical foundations, historical context, and contemporary relevance of being \"born again,\" providing readers with a deep understanding of this transformative experience.\n\nFrom the words of Jesus to modern-day testimonies, the author examines the theological implications and practical applications of spiritual renewal. With sensitivity to cultural challenges and a focus on personal faith, this book offers valuable insights for both newcomers to the faith and long-time believers seeking to deepen their spiritual journey.\n\nAddressing common misconceptions and offering guidance on living out one's faith daily, \"Born Again\" serves as both a scholarly resource and a practical guide. It explores topics such as the role of the Holy Spirit, the assurance of salvation, and the call to evangelism, all while emphasizing the profound personal transformation at the heart of the born-again experience.\n\nWhether you're curious about evangelical beliefs, seeking to understand your own spiritual journey, or looking to reinvigorate your faith, this book provides a thoughtful, balanced, and inspiring examination of what it truly means to be born again in Christ.",
-    "amazon": "https://www.amazon.com/dp/B0DK4M2YKC"
+    "amazon": "https://www.amazon.com/dp/B0DK4M2YKC",
+    "asin": "B0DK2X7M89",
+    "asinKindle": "B0DK2X7M89",
+    "asinPaperback": "B0DK4M2YKC",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DK2X7M89",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 43,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DK4M2YKC",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 44,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DK2X7M89",
+      "B0DK4M2YKC"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-born again a journey of spiritual renewal and transformation in christ::graham mayer",
+      "kdpTitle": "Born Again: A Journey of Spiritual Renewal and Transformation in Christ",
+      "kdpAuthor": "Graham Mayer",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Halloween Cookbook for Little Monsters: Spooky Snacks and Creepy Treats",
@@ -88,7 +456,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/halloween-cookbook-for-little-monsters.webp",
     "description": "A Halloween-themed cookbook offering over 60 fun and easy recipes for families. \"Spooky Snacks and Creepy Treats\" includes morning breakfast ideas, snacks, main dishes, sides, desserts, and drinks—all designed with a Halloween twist. Beyond recipes, it serves as a complete party planning guide with entertaining ideas, edible crafts, fall activities, and nutrition notes for health-conscious parents. With easy-to-follow instructions, the cookbook aims to help families create memorable Halloween celebrations through food, making it a comprehensive resource for anyone looking to add festive flair to their October gatherings. Perfect for parents wanting to create special Halloween experiences for their \"little monsters.\"",
-    "amazon": "https://www.amazon.com/dp/B0DJ5CNMNL"
+    "amazon": "https://www.amazon.com/dp/B0DJ5CNMNL",
+    "asin": "B0DHVV1R8J",
+    "asinKindle": "B0DHVV1R8J",
+    "asinPaperback": "B0DJ5CNMNL",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DHVV1R8J",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 10,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJ5CNMNL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 11,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DHVV1R8J",
+      "B0DJ5CNMNL"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-halloween cookbook for little monsters spooky snacks and creepy treats::candice cauldron",
+      "kdpTitle": "Halloween Cookbook for Little Monsters: Spooky Snacks and Creepy Treats",
+      "kdpAuthor": "Candice Cauldron",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mindfulness for Beginners: Your Path to Calm and Clarity",
@@ -96,7 +499,78 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/mindfulness-for-beginners.webp",
     "description": "A beginner-friendly guide to mindfulness that teaches fundamental practices for cultivating awareness, reducing stress, and building emotional resilience. The book provides practical instruction on integrating mindfulness into daily routines through techniques like mindful breathing and body scans, applicable to everyday activities including eating, working, and communicating. It explains the science behind how mindfulness rewires the brain for improved focus, compassion, and calm. Designed for those seeking anxiety relief, better relationships, or greater purpose, the guide offers step-by-step approaches to transform one's life through present-moment awareness and develop lasting well-being.",
-    "amazon": "https://www.amazon.com/dp/B0DH4BZX9B"
+    "amazon": "https://www.amazon.com/dp/B0DH4BZX9B",
+    "asin": "B0DH2Y94DK",
+    "asinKindle": "B0DH2Y94DK",
+    "asinPaperback": "B0DH4BZX9B",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DH2Y94DK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 65,
+        "sourcePage": ""
+      },
+      {
+        "format": "Kindle",
+        "asin": "B0DKY6K8P7",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 115,
+        "sourcePage": ""
+      },
+      {
+        "format": "Kindle",
+        "asin": "B0DKY69GTG",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 150,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DH4BZX9B",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 66,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DL2V4DK2",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 116,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DL2Y4QZ6",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 151,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DH2Y94DK",
+      "B0DKY6K8P7",
+      "B0DKY69GTG",
+      "B0DH4BZX9B",
+      "B0DL2V4DK2",
+      "B0DL2Y4QZ6"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mindfulness for beginners your path to calm and clarity::ava wells",
+      "kdpTitle": "Mindfulness for Beginners: Your Path to Calm and Clarity",
+      "kdpAuthor": "Ava Wells",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Pellegrini di Speranza: Storia, Fede e Testimonianze nel Giubileo 2025",
@@ -105,7 +579,42 @@
     "cover": "/covers-web/pellegrini-di-speranza-updated.webp",
     "description": "Scopri Giubileo 2025: Pellegrini di Speranza, un viaggio emozionante e spirituale attraverso la storia e il significato dell'Anno Santo. Questo libro offre un percorso approfondito che unisce la dimensione storica e spirituale del Giubileo, fornendo al lettore strumenti pratici per vivere con autenticità l’esperienza del pellegrinaggio.\n\nAttraverso racconti avvincenti, riflessioni profonde e consigli utili, ogni pagina invita a riscoprire la misericordia di Dio, a comprendere il valore del perdono e a vivere la speranza nella vita quotidiana.\n\nPerfetto per pellegrini, studiosi e chiunque desideri approfondire il significato di questo evento straordinario.",
     "amazon": "https://www.amazon.it/dp/B0DV4FFQ8Y",
-    "payhip": "https://payhip.com/b/NI7KC"
+    "payhip": "https://payhip.com/b/NI7KC",
+    "asin": "B0DV3SF4G3",
+    "asinKindle": "B0DV3SF4G3",
+    "asinPaperback": "B0DV4FFQ8Y",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DV3SF4G3",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 67,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DV4FFQ8Y",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 68,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DV3SF4G3",
+      "B0DV4FFQ8Y"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-pellegrini di speranza storia fede e testimonianze nel giubileo 2025::lorenzo de sanctis",
+      "kdpTitle": "Pellegrini di Speranza: Storia, Fede e Testimonianze nel Giubileo 2025",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Starlit Encounters: Tales of Love, Fate, and Second Chances",
@@ -113,7 +622,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/starlit-encounters.webp",
     "description": "Love can be found in the most unexpected places—between the lines of a song, beneath the glow of city lights, or in the whispers of the stars above. Starlit Encounters: Tales of Love, Fate, and Second Chances is a heartfelt collection of romantic short stories that explore the serendipitous moments that bring people together in the most beautiful and unpredictable ways.\n\nFollow a woman who discovers a playlist that mirrors her love for the cosmos, a marketing executive who hires a fake boyfriend only to find something real, and two strangers whose paths cross on a fateful night in Paris. With each turn of the page, you'll find stories filled with longing, hope, and the courage it takes to embrace love when it comes knocking.\n\nPerfect for fans of tender, uplifting romance and those who believe in the magic of destiny, Starlit Encounters invites you to fall in love with love all over again.",
-    "amazon": "https://www.amazon.com/dp/B0DV34H3TT"
+    "amazon": "https://www.amazon.com/dp/B0DV34H3TT",
+    "asin": "B0DTYZ5HLL",
+    "asinKindle": "B0DTYZ5HLL",
+    "asinPaperback": "B0DV34H3TT",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DTYZ5HLL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 69,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DV34H3TT",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 70,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DTYZ5HLL",
+      "B0DV34H3TT"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-starlit encounters tales of love fate and second chances::sofia valiani",
+      "kdpTitle": "Starlit Encounters: Tales of Love, Fate, and Second Chances",
+      "kdpAuthor": "Sofia Valiani",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mindful Leadership: A Science-Based Approach to Stress Management for Modern Professionals",
@@ -121,7 +665,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/mindful-leadership.webp",
     "description": "A science-based guide that combines neuroscience with business applications to help professionals enhance leadership capabilities and organizational performance through mindfulness. Supported by research from Harvard, Stanford, and MIT, it showcases successful mindfulness implementations at major corporations that improved productivity, reduced healthcare costs, and strengthened team dynamics. The book addresses modern workplace challenges like digital fatigue and information overload, offering practical techniques for better decision-making under pressure, managing technology stress, building sustainable performance, developing emotional intelligence, and implementing organizational change. Designed for executives and professionals at all levels seeking to transform workplace pressure into excellence.",
-    "amazon": "https://www.amazon.com/dp/B0DTPVWTTF"
+    "amazon": "https://www.amazon.com/dp/B0DTPVWTTF",
+    "asin": "B0DTQ9RQ4X",
+    "asinKindle": "B0DTQ9RQ4X",
+    "asinPaperback": "B0DTPVWTTF",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DTQ9RQ4X",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 71,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DTPVWTTF",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 72,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DTQ9RQ4X",
+      "B0DTPVWTTF"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mindful leadership a science based approach to stress management for modern professionals::john keagan",
+      "kdpTitle": "Mindful Leadership: A Science-Based Approach to Stress Management for Modern Professionals",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Emozioni Intrecciate: Cinque storie, un intreccio di emozioni indimenticabili",
@@ -129,7 +708,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/emozioni-intrecciate-step2.webp",
     "description": "\"Emozioni Intrecciate\" è una raccolta di cinque racconti che esplorano l’amore, le seconde possibilità e la forza delle connessioni umane. Ambientate in luoghi suggestivi come Parigi, un villaggio italiano immerso nella natura e una libreria fuori dal tempo, queste storie raccontano l’incontro tra personaggi imperfetti, autentici e pronti a riscoprire se stessi.\n\nOgni racconto vi porterà in un viaggio unico: il battito di un amore inaspettato, il fascino di un mistero custodito nel tempo, il coraggio di affrontare il passato per abbracciare il futuro. Perfetto per chi cerca emozioni autentiche e un pizzico di magia nella vita di tutti i giorni.\n\nSe amate le storie che parlano al cuore e che vi lasciano con un sorriso e una riflessione, questa collana è ciò che fa per voi.",
-    "amazon": "https://www.amazon.it/dp/B0DTF3SFX1"
+    "amazon": "https://www.amazon.it/dp/B0DTF3SFX1",
+    "asin": "B0DTBT5QHS",
+    "asinKindle": "B0DTBT5QHS",
+    "asinPaperback": "B0DTF3SFX1",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DTBT5QHS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 73,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DTF3SFX1",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 74,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DTBT5QHS",
+      "B0DTF3SFX1"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-emozioni intrecciate cinque storie un intreccio di emozioni indimenticabili::sofia valiani",
+      "kdpTitle": "Emozioni Intrecciate: Cinque storie, un intreccio di emozioni indimenticabili",
+      "kdpAuthor": "Sofia Valiani",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Poetic Future: Humanity, Technology, and the Art of Progress",
@@ -137,7 +751,42 @@
     "category": "Society & Culture",
     "cover": "/covers-web/the-poetic-future.webp",
     "description": "In The Poetic Future: Humanity, Technology, and the Art of Progress, explore the intersection of cutting-edge innovation and timeless human values. This book offers a profound journey into how technology reflects, challenges, and amplifies what it means to be human. Through a narrative that blends philosophy, history, and speculative thought, it delves into the ethical dilemmas of progress, the transformative power of empathy, and the importance of preserving individuality in an increasingly digital world.\n\nWhether you are a technologist, artist, philosopher, or simply curious about the future, this book invites you to envision a harmonious relationship between humanity and innovation. Discover how creativity, ethics, and imagination can shape a future that is not only advanced but deeply meaningful—a future worth aspiring to",
-    "amazon": "https://www.amazon.com/dp/B0DT5LGHNM"
+    "amazon": "https://www.amazon.com/dp/B0DT5LGHNM",
+    "asin": "B0DT1Q6SSS",
+    "asinKindle": "B0DT1Q6SSS",
+    "asinPaperback": "B0DT5LGHNM",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DT1Q6SSS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 75,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DT5LGHNM",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 76,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DT1Q6SSS",
+      "B0DT5LGHNM"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the poetic future humanity technology and the art of progress::j cipher monroe",
+      "kdpTitle": "The Poetic Future: Humanity, Technology, and the Art of Progress",
+      "kdpAuthor": "J. Cipher Monroe",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "SHINRIN-YOKU: The Healing Power of the Forest: A comprehensive guide to regaining balance, well-being, and connection with nature",
@@ -145,7 +794,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/shinrin-yoku-the-healing-power-of-the-forest.webp",
     "description": "Discover the transformative power of Shinrin-Yoku, or forest bathing, a Japanese practice that invites you to reconnect with nature for physical, mental, and emotional well-being. Blending ancient traditions, scientific research, and practical guidance, this book provides a complete roadmap to immerse yourself in the healing energy of forests. Learn the origins of Shinrin-Yoku, explore its profound health benefits, and uncover how this simple yet powerful practice can help reduce stress, enhance creativity, and foster a mindful, harmonious lifestyle. Whether you're seeking personal renewal or a deeper connection with the natural world, this guide will inspire you to embrace the serenity and wisdom of the forest.",
-    "amazon": "https://www.amazon.com/dp/B0DSVXW35W"
+    "amazon": "https://www.amazon.com/dp/B0DSVXW35W",
+    "asin": "B0DSV4TSZ4",
+    "asinKindle": "B0DSV4TSZ4",
+    "asinPaperback": "B0DSVXW35W",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DSV4TSZ4",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 77,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSVXW35W",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 78,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DSV4TSZ4",
+      "B0DSVXW35W"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-shinrin yoku the healing power of the forest a comprehensive guide to regaining balance well being and connection with nature::saito k jackson",
+      "kdpTitle": "SHINRIN-YOKU: The Healing Power of the Forest: A comprehensive guide to regaining balance, well-being, and connection with nature",
+      "kdpAuthor": "Saito K. Jackson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Shinrin-Yoku: Il Potere Guaritore della Foresta: Una guida completa per ritrovare equilibrio, benessere e connessione con la natura",
@@ -154,7 +838,42 @@
     "cover": "/covers-web/shinrin-yoku-il-potere-guaritore-della-foresta.webp",
     "description": "Scopri il potere rigenerante della foresta con Shinrin-Yoku: Il Potere Guaritore della Foresta, una guida completa che ti accompagna in un viaggio unico per riconnetterti con la natura e ritrovare il benessere. Questa pratica giapponese, conosciuta anche come \"bagno nella foresta\", è un approccio semplice ma profondo per ridurre lo stress, migliorare la salute e vivere con maggiore consapevolezza.\n\nIl libro esplora le radici culturali dello Shinrin-Yoku, i suoi benefici scientificamente provati e fornisce consigli pratici per integrare questa pratica nella tua vita quotidiana, anche se vivi in un contesto urbano. Attraverso tecniche per attivare i sensi, camminate consapevoli e pause meditative, imparerai a immergerti nell’atmosfera della foresta e a trarne il massimo beneficio per il corpo e la mente.\n\nChe tu sia alla ricerca di equilibrio emotivo, maggiore creatività o semplicemente di un momento di pace, questo libro ti guiderà passo dopo passo in un’esperienza trasformativa. Scopri come la natura può diventare il tuo rifugio e la tua fonte di energia, in ogni stagione e in ogni luogo.",
     "amazon": "https://www.amazon.it/dp/B0DSVWJKV1",
-    "payhip": "https://payhip.com/b/PAoVf"
+    "payhip": "https://payhip.com/b/PAoVf",
+    "asin": "B0DSV59W6S",
+    "asinKindle": "B0DSV59W6S",
+    "asinPaperback": "B0DSVWJKV1",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DSV59W6S",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 79,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSVWJKV1",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 80,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DSV59W6S",
+      "B0DSVWJKV1"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-shinrin yoku il potere guaritore della foresta una guida completa per ritrovare equilibrio benessere e connessione con la natura::saito k jackson",
+      "kdpTitle": "Shinrin-Yoku: Il Potere Guaritore della Foresta: Una guida completa per ritrovare equilibrio, benessere e connessione con la natura",
+      "kdpAuthor": "Saito K. Jackson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Il Silenzio delle Vette: La verità ha sempre un prezzo",
@@ -162,7 +881,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/il-silenzio-delle-vette.webp",
     "description": "In una remota valle alpina, il villaggio di Oberruhe sembra un paradiso idilliaco, congelato nel tempo. Le sue strade acciottolate, le case in legno e l’eco delle campane della chiesa raccontano una storia di tranquillità. Ma sotto questa facciata serena, si cela un sistema di controllo spietato. La Concordia, l’organizzazione che governa il villaggio, sostiene che una peste mortale abbia devastato il mondo esterno, rendendo l'isolamento l’unica salvezza possibile.\n\nElisa Hauser, una giovane dal cuore ribelle e dalla mente curiosa, non ha mai creduto completamente a quelle storie. Quando scopre un’antica mappa che rivela un passaggio segreto oltre le montagne, la sua determinazione a scoprire la verità la porta a scontrarsi con i segreti oscuri di Oberruhe.\n\nTra complessi sotterranei, una tecnologia avanzata che contrasta con l'apparente semplicità del villaggio, e un sistema progettato per soffocare ogni volontà, Elisa dovrà guidare una ribellione per la libertà. Ma il costo della verità sarà altissimo.\n\nUn romanzo distopico che intreccia suspense, introspezione e azione, esplorando i limiti del controllo e la forza della resistenza umana. Se hai amato \"The Giver\", \"The Hunger Games\" o \"1984\", “Oltre le Montagne” ti porterà in un viaggio di scoperta e ribellione che non dimenticherai.",
-    "amazon": "https://www.amazon.it/dp/B0DSP6RNJB"
+    "amazon": "https://www.amazon.it/dp/B0DSP6RNJB",
+    "asin": "B0DSLJ558D",
+    "asinKindle": "B0DSLJ558D",
+    "asinPaperback": "B0DSP6RNJB",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DSLJ558D",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 81,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSP6RNJB",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 82,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DSLJ558D",
+      "B0DSP6RNJB"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-il silenzio delle vette la verita ha sempre un prezzo::alessandra montalcini",
+      "kdpTitle": "Il Silenzio delle Vette: La verità ha sempre un prezzo",
+      "kdpAuthor": "Alessandra Montalcini",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Oltre il Sentiero: Etica, Natura e Vita nel Postumano: Un dialogo tra il viandante e il suo tempo",
@@ -170,7 +924,51 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/oltre-il-sentiero.webp",
     "description": "In un’epoca dominata dalla tecnica, dall’iperconnessione e dalla crisi ambientale, il viandante emerge come una figura archetipica e rivoluzionaria, capace di offrire una nuova etica per vivere in equilibrio con il mondo. Questo libro, ispirato ai principi de L’etica del viandante di Umberto Galimberti, approfondisce il concetto del cammino come ricerca esistenziale e come strumento per affrontare le sfide del presente.\n\nCosa troverai in questo libro:\n\nUna riflessione filosofica e narrativa sul rapporto tra uomo, tecnica e natura.\nStorie di moderni viandanti, cammini storici e comunità che riscoprono la lentezza e la sostenibilità.\nUn’analisi dei concetti chiave del nostro tempo: Antropocene, limite, lentezza, solidarietà.\nSpunti pratici per vivere in armonia con i ritmi naturali e riscoprire la bellezza del cammino, fisico e interiore.\nOltre il Sentiero è solo un libro per chi cerca nuove prospettive sul futuro, un equilibrio tra progresso e rispetto per la terra, e un’etica capace di connettere l’uomo con la natura e con sé stesso.",
-    "amazon": "https://www.amazon.it/dp/B0DSPZGTLJ"
+    "amazon": "https://www.amazon.it/dp/B0DSPZGTLJ",
+    "asin": "B0DSPZGTLJ",
+    "asinKindle": "B0DSPZGTLJ",
+    "asinPaperback": "B0DSTQLVXK",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DSPZGTLJ",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 84,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSTQLVXK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 83,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSSN3TKC",
+        "isbn": "",
+        "status": "Bozza",
+        "sourceIndex": 85,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DSPZGTLJ",
+      "B0DSTQLVXK",
+      "B0DSSN3TKC"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-oltre il sentiero etica natura e vita nel postumano un dialogo tra il viandante e il suo tempo::lorenzo de sanctis",
+      "kdpTitle": "Oltre il Sentiero: Etica, Natura e Vita nel Postumano: Un dialogo tra il viandante e il suo tempo",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Focus and Mental Clarity: A Step-by-Step Guide to Overcoming Procrastination and Building Habits for Success",
@@ -178,7 +976,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/focus-and-mental-clarity.webp",
     "description": "A practical guide addressing procrastination, distraction, and self-doubt by explaining the science of focus and psychology of procrastination. The book offers actionable strategies to rewire the brain for better concentration, overcome emotional triggers of procrastination, build sustainable habits, align goals with personal values, and develop emotional resilience. Through real-world examples and practical tools, it provides a blueprint for achieving personal growth, career advancement, and life balance by taking intentional action and maintaining momentum toward meaningful goals.",
-    "amazon": "https://www.amazon.com/dp/B0DSKBTXVV"
+    "amazon": "https://www.amazon.com/dp/B0DSKBTXVV",
+    "asin": "B0DSJRX3WX",
+    "asinKindle": "B0DSJRX3WX",
+    "asinPaperback": "B0DSKBTXVV",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DSJRX3WX",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 86,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DSKBTXVV",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 87,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DSJRX3WX",
+      "B0DSKBTXVV"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-focus and mental clarity a step by step guide to overcoming procrastination and building habits for success::john keagan",
+      "kdpTitle": "Focus and Mental Clarity: A Step-by-Step Guide to Overcoming Procrastination and Building Habits for Success",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Cucina al Contrario: Ribalta la Tua Tavola!",
@@ -186,7 +1019,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/cucina-al-contrario.webp",
     "description": "\"Cucina al Contrario\" è un viaggio gastronomico rivoluzionario che sfida le convenzioni culinarie tradizionali.\n\nIn questo ricettario unico, ogni piatto è un'avventura dove dolce diventa salato, le consistenze si invertono e i contorni diventano protagonisti.\n\nCon oltre 50 ricette dettagliate, scoprirete come trasformare una lasagna in un'esperienza croccante, come rendere il gelato piccante e come far diventare le verdure il cuore di un dessert raffinato.\n\nUn libro per chi ama sperimentare senza perdere il comfort dei sapori familiari, perfetto per cuochi amatoriali e professionisti che vogliono esplorare nuovi territori gastronomici.",
-    "amazon": "https://www.amazon.it/dp/B0DRRVKS5P"
+    "amazon": "https://www.amazon.it/dp/B0DRRVKS5P",
+    "asin": "B0DRRVKS5P",
+    "asinPaperback": "B0DRRVKS5P",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DRRVKS5P",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 90,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DRRVKS5P"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-cucina al contrario ribalta la tua tavola::chef savorelli",
+      "kdpTitle": "Cucina al Contrario: Ribalta la Tua Tavola!",
+      "kdpAuthor": "Chef Savorelli",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mocktail Magic: Il Mondo dei Cocktail Analcolici",
@@ -194,7 +1052,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/mocktail-magic.webp",
     "description": "Benvenuti nell’universo dei mocktail! \n🍹✨ Mocktail Magic è il ricettario definitivo per chi desidera creare bevande deliziose, colorate e completamente analcoliche. Perfetto per feste, brunch, serate rilassanti o momenti di creatività in cucina, questo libro ti guiderà passo dopo passo nella preparazione di oltre 100 ricette uniche.\n\nScopri mocktail frizzanti, cremosi, esotici e detox, con tecniche avanzate e suggerimenti per decorazioni mozzafiato. Impara a preparare sciroppi fatti in casa, sperimenta con ingredienti sorprendenti e stupisci i tuoi ospiti con drink che sono veri e propri capolavori.\n\nChe tu sia un principiante o un esperto, Mocktail Magic trasformerà ogni bicchiere in un’esperienza indimenticabile! 🍹✨\n\n📖 Cosa troverai all’interno:\n\nRicette per ogni occasione e stagione.\nTecniche di preparazione e trucchi professionali.\nIdee creative per abbinamenti e decorazioni.\nSorprese gourmet per chi ama stupire.\nPronto a shakerare la tua creatività? Mocktail Magic è il tuo compagno ideale!",
-    "amazon": "https://www.amazon.it/dp/B0DRFMKC2W"
+    "amazon": "https://www.amazon.it/dp/B0DRFMKC2W",
+    "asin": "B0DRDN8MVW",
+    "asinKindle": "B0DRDN8MVW",
+    "asinPaperback": "B0DRFMKC2W",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DRDN8MVW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 91,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DRFMKC2W",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 92,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DRDN8MVW",
+      "B0DRFMKC2W"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mocktail magic il mondo dei cocktail analcolici::chef savorelli",
+      "kdpTitle": "Mocktail Magic: Il Mondo dei Cocktail Analcolici",
+      "kdpAuthor": "Chef Savorelli",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Overcoming Self-Sabotage: Unlocking Your True Potential",
@@ -202,7 +1095,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/overcoming-self-sabotage.webp",
     "description": "Unlock the Power Within: Transform Your Life by Overcoming Self-Sabotage\nDo you feel like something is holding you back from achieving your dreams? In Overcoming Self-Sabotage, discover the transformative strategies to break free from limiting beliefs, silence self-doubt, and create a life of authenticity and fulfillment. This deeply introspective guide delves into the roots of self-sabotage, offering actionable techniques to embrace your fears, reframe failure, and align your goals with your true self.\n\nThrough inspiring insights and practical exercises, you’ll learn how to:\n\nBuild resilience and confidence.\nTransform limiting narratives into empowering ones.\nFoster authentic relationships and goals rooted in purpose.\nTake control of your life and unleash your true potential. Your journey to self-discovery and growth starts here.",
-    "amazon": "https://www.amazon.com/dp/B0DR5BH3YN"
+    "amazon": "https://www.amazon.com/dp/B0DR5BH3YN",
+    "asin": "B0DR2GG71Y",
+    "asinKindle": "B0DR2GG71Y",
+    "asinPaperback": "B0DR5BH3YN",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DR2GG71Y",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 93,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DR5BH3YN",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 94,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DR2GG71Y",
+      "B0DR5BH3YN"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-overcoming self sabotage unlocking your true potential::john keagan",
+      "kdpTitle": "Overcoming Self-Sabotage: Unlocking Your True Potential",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "GALVESTON Diet Cookbook Master Midlife Nutrition with Easy, Tasty Recipes That Work: Master Midlife Nutrition with Easy, Tasty Recipes That Work",
@@ -210,7 +1138,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/galveston-diet-cookbook.webp",
     "description": "A comprehensive cookbook designed specifically for midlife nutrition challenges, featuring recipes and meal plans based on the Galveston Diet principles. It offers solutions for hormonal changes, weight gain, and energy loss common during midlife transitions. The book includes over 80 easy-to-follow recipes for all mealtimes, 7-day meal plans for different phases, practical strategies for overcoming weight loss plateaus and managing cravings, plus tools like grocery lists and meal prep guidance. Created for busy professionals who want to address midlife health concerns without sacrificing flavor, it focuses on reducing inflammation and promoting sustainable weight management through delicious, accessible recipes tailored to midlife metabolic needs.",
-    "amazon": "https://www.amazon.com/dp/B0DDSBVRDW"
+    "amazon": "https://www.amazon.com/dp/B0DDSBVRDW",
+    "asin": "B0DDRHMSXB",
+    "asinKindle": "B0DDRHMSXB",
+    "asinPaperback": "B0DDSBVRDW",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DDRHMSXB",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 95,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DDSBVRDW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 96,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DDRHMSXB",
+      "B0DDSBVRDW"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-galveston diet cookbookmaster midlife nutrition with easy tasty recipes that work master midlife nutrition with easy tasty recipes that work::vivian harper",
+      "kdpTitle": "GALVESTON Diet CookbookMaster Midlife Nutrition with Easy, Tasty Recipes That Work: Master Midlife Nutrition with Easy, Tasty Recipes That Work",
+      "kdpAuthor": "Vivian Harper",
+      "matchScore": 0.8200000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Psychology of Saving: Mastering Your Money Mindset",
@@ -218,7 +1181,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/the-psychology-of-saving.webp",
     "description": "A comprehensive guide examining the psychological barriers to financial success, going beyond typical budgeting advice to address the emotional aspects of money management. The book explores how mental patterns and emotional triggers impact financial decisions, offering strategies to overcome impulsive spending, cognitive biases, and negative money mindsets. It provides practical techniques for building consistent saving habits, developing a healthy relationship with money, and creating long-term wealth through psychological mastery. With case studies and actionable exercises, the guide helps readers transform their approach to finances while maintaining emotional wellbeing, ultimately leading to greater financial freedom through mindset shifts and sustainable habits.",
-    "amazon": "https://www.amazon.com/dp/B0DH8963ZG"
+    "amazon": "https://www.amazon.com/dp/B0DH8963ZG",
+    "asin": "B0DH5TCLDK",
+    "asinKindle": "B0DH5TCLDK",
+    "asinPaperback": "B0DH8963ZG",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DH5TCLDK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 20,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DH8963ZG",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 21,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DH5TCLDK",
+      "B0DH8963ZG"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the psychology of saving mastering your money mindset::ryan walker",
+      "kdpTitle": "The Psychology of Saving: Mastering Your Money Mindset",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Master Your Anger: A Practical Guide to Understanding and Managing Your Emotions",
@@ -226,7 +1224,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/master-your-anger.webp",
     "description": "Unlock the Power of Emotional Freedom!\nDiscover how to transform anger into your greatest strength with Master Your Anger: A Practical Guide to Understanding and Managing Your Emotions. From identifying triggers to mastering mindfulness and turning conflicts into growth opportunities, this book is your ultimate roadmap to emotional resilience. Whether you’re seeking calmer relationships, greater self-awareness, or tools to navigate life’s challenges, this guide offers actionable strategies backed by science.\n\nYour journey to emotional balance starts today. Don’t wait—take control of your well-being and achieve your goals.",
-    "amazon": "https://www.amazon.com/dp/B0DPKWMDH8"
+    "amazon": "https://www.amazon.com/dp/B0DPKWMDH8",
+    "asin": "B0DPJBPWWV",
+    "asinKindle": "B0DPJBPWWV",
+    "asinPaperback": "B0DPKWMDH8",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPJBPWWV",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 27,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPKWMDH8",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 28,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPJBPWWV",
+      "B0DPKWMDH8"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-master your anger a practical guide to understanding and managing your emotions::john keagan",
+      "kdpTitle": "Master Your Anger: A Practical Guide to Understanding and Managing Your Emotions",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "La Psicologia della Superstizione: Origini, Funzioni e Impatti",
@@ -235,7 +1268,42 @@
     "cover": "/covers-web/la-psicologia-della-superstizione.webp",
     "description": "Esplora i segreti più profondi della mente umana con La psicologia della superstizione, un viaggio affascinante tra credenze, tradizioni e scoperte scientifiche.\nQuesto libro ti guiderà attraverso le origini storiche e culturali delle superstizioni, le dinamiche psicologiche che le alimentano e il loro impatto nella società moderna, fino all'era digitale.\nSe sei curioso di capire perché crediamo in ciò che non possiamo spiegare, questo libro ti fornirà risposte illuminanti e spunti sorprendenti. Non perdere l'occasione di arricchire la tua mente con un’opera che unisce scienza e cultura.",
     "amazon": "https://www.amazon.it/dp/B0DPKW7M7M",
-    "payhip": "https://payhip.com/b/qhWRt"
+    "payhip": "https://payhip.com/b/qhWRt",
+    "asin": "B0DPJFXF19",
+    "asinKindle": "B0DPJFXF19",
+    "asinPaperback": "B0DPKW7M7M",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPJFXF19",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 32,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPKW7M7M",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 33,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPJFXF19",
+      "B0DPKW7M7M"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-la psicologia della superstizione origini funzioni e impatti::john keagan",
+      "kdpTitle": "La Psicologia della Superstizione: Origini, Funzioni e Impatti",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Depression: Integrating Molecular Mechanisms and Psychosocial Perspectives",
@@ -243,7 +1311,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/depression.webp",
     "description": "\"Depression: Integrating Molecular Mechanisms and Psychosocial Perspectives\" is your definitive guide to understanding the complex interplay of biology, psychology, and society in one of the most pervasive mental health challenges of our time. This groundbreaking book unravels the science behind depression, exploring neurotransmitters, neuroplasticity, and inflammation alongside the profound impact of stress, relationships, and culture.\n\nWhether you're a mental health professional, researcher, student, or someone looking to deepen their understanding, this book offers a rare blend of cutting-edge research and practical insights. Each chapter is designed to illuminate depression's multifaceted nature and equip readers with knowledge for tackling this global issue.\n\nTake a step toward clarity and transformation.",
-    "amazon": "https://www.amazon.com/dp/B0DPHJN4NP"
+    "amazon": "https://www.amazon.com/dp/B0DPHJN4NP",
+    "asin": "B0DPGJZDRY",
+    "asinKindle": "B0DPGJZDRY",
+    "asinPaperback": "B0DPHJN4NP",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPGJZDRY",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 97,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPHJN4NP",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 98,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPGJZDRY",
+      "B0DPHJN4NP"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-depression integrating molecular mechanisms and psychosocial perspectives::john keagan",
+      "kdpTitle": "Depression: Integrating Molecular Mechanisms and Psychosocial Perspectives",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Side Hustle Architecture: Building Sustainable Parallel Income Systems in the Digital Economy",
@@ -251,7 +1354,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/side-hustle-architecture.webp",
     "description": "Transform Your Income Potential: The Ultimate Guide to Building Sustainable Side Hustles in the Digital Age  Are you ready to master the art of parallel income generation? This comprehensive guide reveals sophisticated strategies for creating and scaling successful side hustles while maintaining your primary career. Unlike conventional guides that offer quick fixes, this book provides a thorough framework for building sustainable income streams in today's digital economy.  Discover how to leverage emerging technologies, optimize your resources, and create scalable systems that generate passive income. Learn advanced monetization strategies, understand market dynamics, and implement proven frameworks for long-term success.  This book goes beyond basic advice to deliver:  Strategic frameworks for identifying viable opportunities Advanced operational models for sustainable growth Sophisticated pricing and revenue diversification strategies Future-proof approaches to market evolution Expert guidance on automation and scaling systems Whether you're a professional seeking to diversify your income or an entrepreneur ready to expand your revenue streams, this book provides the advanced knowledge and practical frameworks needed to succeed in the modern economy.",
-    "amazon": "https://www.amazon.com/dp/B0DPDM2YD1"
+    "amazon": "https://www.amazon.com/dp/B0DPDM2YD1",
+    "asin": "B0DPCXDT9X",
+    "asinKindle": "B0DPCXDT9X",
+    "asinPaperback": "B0DPDM2YD1",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPCXDT9X",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 99,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPDM2YD1",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 100,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPCXDT9X",
+      "B0DPDM2YD1"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-side hustle architecture building sustainable parallel income systems in the digital economy::alexander j barrett",
+      "kdpTitle": "Side Hustle Architecture: Building Sustainable Parallel Income Systems in the Digital Economy",
+      "kdpAuthor": "Alexander J. Barrett",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Entropia e resilienza: La frammentazione dell’ordine mondiale nella guerra tra Russia e Ucraina (Italian Edition)",
@@ -259,7 +1397,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/entropia-e-resilienza.webp",
     "description": "\"Entropia e Resilienza: La frammentazione dell’ordine mondiale nella guerra tra Russia e Ucraina\" è un viaggio intenso e profondo nelle dinamiche di un mondo sempre più instabile e frammentato.\nDalla geopolitica alle sfide sociali, dai cambiamenti climatici alle innovazioni tecnologiche, questo libro esplora come il caos e il disordine plasmano la nostra realtà e come possiamo adattarci e prosperare in tempi di incertezza.\nAttraverso un'analisi lucida e rigorosa, offre uno sguardo sulle lezioni apprese dai conflitti moderni, con un focus particolare sulla crisi Russia-Ucraina, e propone strategie concrete per affrontare le sfide globali.\nUna lettura essenziale per chi cerca di comprendere le radici del disordine e di trovare soluzioni per un futuro resiliente.",
-    "amazon": "https://www.amazon.com/dp/B0DPBW59QC"
+    "amazon": "https://www.amazon.com/dp/B0DPBW59QC",
+    "asin": "B0DP7YG96S",
+    "asinKindle": "B0DP7YG96S",
+    "asinPaperback": "B0DPBW59QC",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DP7YG96S",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 101,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPBW59QC",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 102,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DP7YG96S",
+      "B0DPBW59QC"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-entropia e resilienza la frammentazione dell ordine mondiale nella guerra tra russia e ucraina::rob pac",
+      "kdpTitle": "Entropia e resilienza: La frammentazione dell’ordine mondiale nella guerra tra Russia e Ucraina",
+      "kdpAuthor": "Rob Pac",
+      "matchScore": 0.8408000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Silenzio Irrequieto",
@@ -267,7 +1440,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/silenzio-irrequieto.webp",
     "description": "Restless Silence è un viaggio profondo nella mente di un protagonista senza nome, intrappolato tra la stasi e l'evoluzione. Attraverso una narrazione introspettiva e riflessiva, l'autore esplora la lotta interiore di chi si trova sospeso in uno stato di immobilità esistenziale, dove la speranza è fragile e la rassegnazione offre una strana forma di conforto. In questo flusso di coscienza, il lettore viene invitato a entrare in una mente che si interroga continuamente su questioni di cambiamento, paura e accettazione.\nRestless Silence è un romanzo che affronta i temi dell'isolamento, della vulnerabilità e del conflitto interiore, senza fornire risposte definitive, ma lasciando aperta la riflessione su quale strada percorrere.",
-    "amazon": "https://www.amazon.it/dp/B0DH4L1NLK"
+    "amazon": "https://www.amazon.it/dp/B0DH4L1NLK",
+    "asin": "B0CW19LWJY",
+    "asinKindle": "B0CW19LWJY",
+    "asinPaperback": "B0DH4L1NLK",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0CW19LWJY",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 103,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DH4L1NLK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 104,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0CW19LWJY",
+      "B0DH4L1NLK"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-silenzio irrequieto::ryan walker",
+      "kdpTitle": "Silenzio Irrequieto",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Art of Letting Go: How to Finally Break Free from Toxic Relationships, Negative Thoughts, and Unfulfilling Jobs",
@@ -275,7 +1483,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/the-art-of-letting-go.webp",
     "description": "A transformative guide for those feeling trapped in cycles of stress, anxiety, and dissatisfaction. \"The Art of Letting Go\" offers practical strategies to break free from toxic relationships, negative thought patterns, and unfulfilling careers. The book helps readers heal old wounds, embrace mindfulness to live fully in the present, face the future with courage instead of fear, and break free from self-sabotaging mental patterns. Designed for both driven professionals and those seeking to rediscover themselves, it provides tools to release what no longer serves you and create a life of freedom, purpose, and fulfillment.",
-    "amazon": "https://www.amazon.com/dp/B0DCWXSCL3"
+    "amazon": "https://www.amazon.com/dp/B0DCWXSCL3",
+    "asin": "B0DCXFVBN8",
+    "asinKindle": "B0DCXFVBN8",
+    "asinPaperback": "B0DCWXSCL3",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DCXFVBN8",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 105,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DCWXSCL3",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 106,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DCXFVBN8",
+      "B0DCWXSCL3"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the art of letting go how to finally break free from toxic relationships negative thoughts and unfulfilling jobs::ryan walker",
+      "kdpTitle": "The Art of Letting Go: How to Finally Break Free from Toxic Relationships, Negative Thoughts, and Unfulfilling Jobs",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Memory Biases: A Comprehensive Scientific Analysis (Understanding the Mind)",
@@ -284,7 +1527,42 @@
     "cover": "/covers-web/memory-biases-step2.webp",
     "description": "A comprehensive scientific exploration of memory biases that reveals how the mind shapes reality, identity, and decision-making. This guide examines phenomena from the Mandela Effect to trauma's impact on memory formation, drawing from leading research worldwide. It explains why the brain selectively remembers certain events while forgetting others, and how emotional experiences create lasting memory imprints.\nThe book covers how memories form our sense of self, why groups share false memories, memory enhancement science, emotional influences on recollection, techniques for improving accuracy, recent research findings, and professional applications. Written for psychology students, mental health professionals, and curious readers, it translates complex neuroscientific concepts into accessible explanations with practical applications.\nEach chapter builds on previous content to create a comprehensive framework for understanding memory processes and their daily impact, making it valuable for education, professional development, and personal growth.",
     "amazon": "https://www.amazon.com/dp/B0DNWCM529",
-    "payhip": "https://payhip.com/b/Mynsg"
+    "payhip": "https://payhip.com/b/Mynsg",
+    "asin": "B0DNTSXHZB",
+    "asinKindle": "B0DNTSXHZB",
+    "asinPaperback": "B0DNWCM529",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DNTSXHZB",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 109,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DNWCM529",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 110,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DNTSXHZB",
+      "B0DNWCM529"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-memory biases a comprehensive scientific analysis::john keagan",
+      "kdpTitle": "Memory Biases: A Comprehensive Scientific Analysis",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.8408000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "IKIGAI, KAIZEN & HANSEI: A Practical Guide to Find Your Purpose",
@@ -292,7 +1570,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/ikigai-kaizen-hansei.webp",
     "description": "Discover the Secret to a Fulfilling Life with \"IKIGAI, KAIZEN & HANSEI: A Practical Guide to Find Your Purpose\"\n\nAre you searching for deeper meaning in your life? Do you want to align your passions with your career and make a positive impact on the world? This transformative guide combines three powerful Japanese concepts to help you unlock your true potential:\n\n🎯 Ikigai: Uncover your reason for being \n🌱 Kaizen: Embrace continuous improvement \n🔍 Hansei: Master the art of self-reflection\n\nThrough practical exercises, real-life examples, and actionable strategies, this book will show you how to:\n\nIdentify your unique talents and passions\nAlign your career with your personal values\nDevelop resilience and overcome challenges\nCreate meaningful relationships and build a supportive community\nLeave a lasting legacy that reflects your life's purpose\nDon't let another day pass feeling unfulfilled or disconnected from your true calling. Start your journey to a purpose-driven life today!",
-    "amazon": "https://www.amazon.com/dp/B0DK2BK2BH"
+    "amazon": "https://www.amazon.com/dp/B0DK2BK2BH",
+    "asin": "B0DJRR1SLK",
+    "asinKindle": "B0DJRR1SLK",
+    "asinPaperback": "B0DK2BK2BH",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJRR1SLK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 111,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DK2BK2BH",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 112,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJRR1SLK",
+      "B0DK2BK2BH"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-ikigai kaizen and hansei a practical guide to find your purpose::saito k jackson",
+      "kdpTitle": "IKIGAI, KAIZEN & HANSEI: A Practical Guide to Find Your Purpose",
+      "kdpAuthor": "Saito K. Jackson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Low-FODMAP Diet for Beginners: Your Comprehensive Guide to Managing IBS and Digestive Wellness",
@@ -300,7 +1613,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/low-fodmap-diet-for-beginners.webp",
     "description": "Take control of your digestive health with the ultimate beginner's guide to the Low-FODMAP Diet!\n\nAre you tired of dealing with uncomfortable digestive issues? You're not alone! This comprehensive cookbook and guide will help you navigate the low-FODMAP diet with confidence and ease.\n\nWhat's inside? 🥗 60+ delicious, easy-to-follow recipes 🍳 Clear, step-by-step instructions 📝 Complete food lists of what to eat and avoid 🔍 Simple explanations of the science behind FODMAPs ⭐ Success stories from real people 🍽️ Meal planning tips and shopping guides 💡 Expert advice for each phase of the diet\n\nFrom breakfast to dinner, snacks to desserts, we've got you covered with mouthwatering recipes that won't upset your stomach. Each recipe has been carefully crafted to be:\n\nEasy to prepare\nMade with readily available ingredients\nFull of flavor\nIBS-friendly\nPerfect for the whole family\nDon't let digestive issues control your life anymore! Join thousands of others who have found relief through the low-FODMAP diet.",
-    "amazon": "https://www.amazon.com/dp/B0DKVMTB9P"
+    "amazon": "https://www.amazon.com/dp/B0DKVMTB9P",
+    "asin": "B0D3S2LHDG",
+    "asinKindle": "B0D3S2LHDG",
+    "asinPaperback": "B0DKVMTB9P",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0D3S2LHDG",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 113,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DKVMTB9P",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 114,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0D3S2LHDG",
+      "B0DKVMTB9P"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-low fodmap diet for beginners your comprehensive guide to managing ibs and digestive wellness::grace mitchell",
+      "kdpTitle": "Low-FODMAP Diet for Beginners: Your Comprehensive Guide to Managing IBS and Digestive Wellness",
+      "kdpAuthor": "Grace Mitchell",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Miyu Introduces Her Friends: Coloring Book",
@@ -308,7 +1656,32 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/kvtxg9jms1rxxlkd2j3p.webp",
     "description": "Dive into a world of imagination with this delightful coloring book, perfect for young artists! Inside, you'll meet 10 unique characters, each with their own stories and personalities, ready to come to life with your child's favorite colors. From Hana, the nature explorer, to Nana, the aspiring astronomer, these friends bring a variety of interests and adventures that children will love to discover. Each page features a single character with clear, easy-to-color outlines, making it ideal for young kids to build confidence in coloring.\n\nDesigned with simplicity and creativity in mind, this coloring book is great for ages 4 and up. Perfect for family time, rainy days, or quiet play, this book encourages children to explore storytelling through art. Let their imaginations soar as they bring each character’s world to life!",
-    "amazon": "https://www.amazon.com/dp/B0DMNC122H"
+    "amazon": "https://www.amazon.com/dp/B0DMNC122H",
+    "asin": "B0DMNC122H",
+    "asinPaperback": "B0DMNC122H",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DMNC122H",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 117,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMNC122H"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-miyu introduces her friends coloring book::alexia b",
+      "kdpTitle": "Miyu Introduces Her Friends: Coloring Book",
+      "kdpAuthor": "Alexia B.",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "SAILOR MOUSE: Coloring Book",
@@ -316,7 +1689,32 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/noggnxrggh73zhug9rgh.webp",
     "description": "🌟 Set sail on a whimsical coloring journey with Adventures of the Sailor Mouse! 🐭⚓ This delightful coloring book features the charming and adventurous Sailor Mouse as he explores enchanting landscapes, from steering a boat by the lighthouse 🌊🚤 to picnicking under cherry blossoms 🌸.\n\n🎨 With 30 beautifully designed pages, this book offers hours of creative fun for kids and kids at heart. Perfect for sparking imagination ✨ and developing fine motor skills, it’s a must-have for young artists and adventure lovers alike.\n\n🌈 Unleash your creativity and let the Sailor Mouse brighten your world with color!",
-    "amazon": "https://www.amazon.com/dp/B0DPN2YZ2S"
+    "amazon": "https://www.amazon.com/dp/B0DPN2YZ2S",
+    "asin": "B0DPN2YZ2S",
+    "asinPaperback": "B0DPN2YZ2S",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DPN2YZ2S",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 121,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPN2YZ2S"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-sailor mouse coloring book::rob pac",
+      "kdpTitle": "SAILOR MOUSE: Coloring Book",
+      "kdpAuthor": "Rob Pac",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Anxiety Solution: Your Path to Peace",
@@ -324,7 +1722,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/the-anxiety-solution.webp",
     "description": "Transform your life and reclaim your peace of mind with \"The Anxiety Solution: Your Path to Peace\".\n\nThis comprehensive guide delves deep into the science, strategies, and insights needed to manage anxiety effectively.\n\nWhether you're looking for practical tools, expert advice, or simply hope, this book is your trusted companion on the journey to calm and clarity. Filled with actionable techniques and empowering encouragement, it's more than a book—it's a lifeline.",
-    "amazon": "https://www.amazon.com/dp/B0DQKKTSLK"
+    "amazon": "https://www.amazon.com/dp/B0DQKKTSLK",
+    "asin": "B0DQJHSPTC",
+    "asinKindle": "B0DQJHSPTC",
+    "asinPaperback": "B0DQKKTSLK",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DQJHSPTC",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 122,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DQKKTSLK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 123,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DQJHSPTC",
+      "B0DQKKTSLK"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the anxiety solution your path to peace::john keagan",
+      "kdpTitle": "The Anxiety Solution: Your Path to Peace",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Ecological Renaissance: Rebuilding Our Future with Nature",
@@ -332,7 +1765,42 @@
     "category": "Society & Culture",
     "cover": "/covers-web/the-ecological-renaissance.webp",
     "description": "Discover a groundbreaking vision for a regenerative future with The Ecological Renaissance: Rebuilding Our Future with Nature. This compelling book takes you on an inspiring journey to rethink humanity's relationship with the Earth, offering actionable insights into creating thriving ecosystems, resilient communities, and sustainable economies.\n\nFrom climate solutions and regenerative agriculture to global movements and cultural transformation, this book blends science, storytelling, and hope to empower readers to make meaningful change.\n\nWhether you're an environmental advocate, a policymaker, or simply someone looking to live more sustainably, The Ecological Renaissance provides the knowledge and tools to turn inspiration into action. The future isn’t just something to fear—it’s something to rebuild.",
-    "amazon": "https://www.amazon.com/dp/B0DQGQ7Y5N"
+    "amazon": "https://www.amazon.com/dp/B0DQGQ7Y5N",
+    "asin": "B0DJV4GJZL",
+    "asinKindle": "B0DJV4GJZL",
+    "asinPaperback": "B0DQGQ7Y5N",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJV4GJZL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 124,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DQGQ7Y5N",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 125,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJV4GJZL",
+      "B0DQGQ7Y5N"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the ecological renaissance rebuilding our future with nature::alex sterling",
+      "kdpTitle": "The Ecological Renaissance: Rebuilding Our Future with Nature",
+      "kdpAuthor": "Alex Sterling",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Balance in Chaos: Simple Steps to a Calmer, Healthier Life",
@@ -340,7 +1808,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/balance-in-chaos.webp",
     "description": "Unlock the secrets to a balanced and fulfilling life with \"Balance in Chaos\".\nThis empowering guide offers practical strategies, transformative insights, and actionable steps to help you reclaim control, find clarity, and live with intention.\n\nWhether you're seeking calm amidst chaos or striving for deeper connection and purpose, this book is your roadmap to a life of harmony and growth. Ready to take the first step?",
-    "amazon": "https://www.amazon.com/dp/B0DQ4SS1GW"
+    "amazon": "https://www.amazon.com/dp/B0DQ4SS1GW",
+    "asin": "B0DJFGZXCP",
+    "asinKindle": "B0DJFGZXCP",
+    "asinPaperback": "B0DQ4SS1GW",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJFGZXCP",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 126,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DQ4SS1GW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 127,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJFGZXCP",
+      "B0DQ4SS1GW"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-balance in chaos simple steps to a calmer healthier life::quinn parker",
+      "kdpTitle": "Balance in Chaos: Simple Steps to a Calmer, Healthier Life",
+      "kdpAuthor": "Quinn Parker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Psicologia della Personalità: L'essenza dell' individualità",
@@ -348,7 +1851,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/psicologia-della-personalita.webp",
     "description": "Scopri i fondamenti e le complessità della psicologia della personalità, un campo affascinante che esplora le caratteristiche uniche che rendono ciascuno di noi un individuo irripetibile. Dalla psicoanalisi alla teoria dei tratti, passando per il contributo della genetica e delle neuroscienze, questo libro offre una panoramica approfondita delle teorie e dei metodi di valutazione della personalità. Con uno stile chiaro e rigoroso, guida il lettore attraverso un viaggio nella comprensione di come nascono i tratti individuali e come questi possano evolversi attraverso l’interazione con l’ambiente e le esperienze personali. Ideale per studenti, professionisti e appassionati di psicologia.",
-    "amazon": "https://www.amazon.it/dp/B0DMS1BTZV"
+    "amazon": "https://www.amazon.it/dp/B0DMS1BTZV",
+    "asin": "B0DMNZPVTK",
+    "asinKindle": "B0DMNZPVTK",
+    "asinPaperback": "B0DMS1BTZV",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DMNZPVTK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 128,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMS1BTZV",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 129,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMNZPVTK",
+      "B0DMS1BTZV"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia della personalita l essenza dell individualita::massimo recaldi",
+      "kdpTitle": "Psicologia della Personalità: L'essenza dell' individualità",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.9262,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Psicologia Dinamica: Le profondità della psiche",
@@ -356,7 +1894,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/psicologia-dinamica.webp",
     "description": "La Psicologia Dinamica rappresenta una delle prospettive più affascinanti e ricche della psicologia contemporanea, concentrandosi sulla comprensione dei processi inconsci e dei conflitti che plasmano la mente umana. Questo saggio offre un'introduzione completa ai fondamenti della psicologia dinamica, dalle teorie di Sigmund Freud fino agli sviluppi moderni, esplorando temi quali i meccanismi di difesa, i metodi di indagine clinica e le tecniche di intervento terapeutico. Pensato per studenti, professionisti e appassionati, il testo guida il lettore attraverso le principali teorie e pratiche della psicologia dinamica, con un focus particolare sui processi interni che influenzano pensieri, emozioni e comportamenti. Un'opera che invita a riflettere sui meccanismi nascosti della psiche e offre strumenti concreti per comprendere e affrontare i conflitti interiori.",
-    "amazon": "https://www.amazon.it/dp/B0DMRBGVMS"
+    "amazon": "https://www.amazon.it/dp/B0DMRBGVMS",
+    "asin": "B0D1JPKTFQ",
+    "asinKindle": "B0D1JPKTFQ",
+    "asinPaperback": "B0DMRBGVMS",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0D1JPKTFQ",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 130,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMRBGVMS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 131,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0D1JPKTFQ",
+      "B0DMRBGVMS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia dinamica le profondita della psiche::massimo recaldi",
+      "kdpTitle": "Psicologia Dinamica: Le profondità della psiche",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.9262,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Psicologia dello Sviluppo: Comprendere il Ciclo di Vita",
@@ -364,7 +1937,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/psicologia-dello-sviluppo.webp",
     "description": "La Psicologia dello Sviluppo esplora l’affascinante processo di crescita che accompagna l’individuo dalle prime fasi dell’infanzia fino all’età adulta e oltre. Questo saggio fornisce una panoramica completa dei principali modelli teorici, dalle teorie cognitive di Piaget alle dinamiche sociali e psicosociali di Erikson e Bowlby, illustrando come fattori genetici, sociali e culturali influenzino la costruzione della personalità e l’identità.\nPensato per studenti, professionisti e appassionati della psicologia, il testo offre uno strumento approfondito per comprendere i meccanismi e le sfide dello sviluppo umano, con una particolare attenzione alle influenze del contesto ambientale e ai processi di autoregolazione.\nUn’opera che arricchisce la comprensione dell’individuo e del suo percorso evolutivo, dalle radici biologiche alle interazioni sociali.",
-    "amazon": "https://www.amazon.it/dp/B0DMV9NDBS"
+    "amazon": "https://www.amazon.it/dp/B0DMV9NDBS",
+    "asin": "B0DMSPGM3V",
+    "asinKindle": "B0DMSPGM3V",
+    "asinPaperback": "B0DMV9NDBS",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DMSPGM3V",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 132,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMV9NDBS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 133,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMSPGM3V",
+      "B0DMV9NDBS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia dello sviluppo comprendere il ciclo di vita::massimo recaldi",
+      "kdpTitle": "Psicologia dello Sviluppo: Comprendere il Ciclo di Vita",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.9262,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Psicologia del Lavoro: Comprendere e Ottimizzare il Benessere Organizzativo",
@@ -372,7 +1980,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/psicologia-del-lavoro.webp",
     "description": "La Psicologia del Lavoro è una disciplina in rapida espansione che offre strumenti e teorie per comprendere le dinamiche delle organizzazioni e per migliorare la qualità della vita lavorativa. Questo saggio approfondisce i principali concetti della psicologia del lavoro, dalle teorie motivazionali ai modelli di leadership, dalle dinamiche di gruppo alla gestione del benessere e dello stress. Con un approccio rigoroso e accessibile, il testo guida il lettore attraverso le migliori pratiche per costruire un ambiente lavorativo che favorisca la collaborazione, il rispetto e la produttività. Ideale per studenti, professionisti delle risorse umane e leader aziendali, questo libro fornisce un quadro completo dei fattori che influenzano il successo organizzativo e il benessere dei dipendenti.",
-    "amazon": "https://www.amazon.it/dp/B0DMRWX57P"
+    "amazon": "https://www.amazon.it/dp/B0DMRWX57P",
+    "asin": "B0DMP8MGCX",
+    "asinKindle": "B0DMP8MGCX",
+    "asinPaperback": "B0DMRWX57P",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DMP8MGCX",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 35,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMRWX57P",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 36,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMP8MGCX",
+      "B0DMRWX57P"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia del lavoro comprendere e ottimizzare il benessere organizzativo::massimo recaldi",
+      "kdpTitle": "Psicologia del Lavoro: Comprendere e Ottimizzare il Benessere Organizzativo",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.9262,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Psicologia di Comunità: Costruire Benessere Collettivo",
@@ -380,7 +2023,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/psicologia-di-comunita.webp",
     "description": "La Psicologia di Comunità è una disciplina che esplora il ruolo delle relazioni, dell’ambiente e delle dinamiche sociali nel promuovere il benessere collettivo. Questo saggio offre una panoramica completa delle principali teorie e dei modelli di intervento che guidano la psicologia di comunità, come il modello ecologico, l’empowerment e la resilienza.\n\nAnalizzando le sfide contemporanee, come le disuguaglianze economiche, le crisi ambientali e l’integrazione culturale, l’autore propone strategie pratiche per costruire comunità coese e inclusive.\n\nAdatto a studenti, professionisti e chiunque sia interessato al miglioramento sociale, questo testo fornisce gli strumenti per comprendere e promuovere un cambiamento positivo, basato sulla partecipazione e sul rispetto reciproco.",
-    "amazon": "https://www.amazon.it/dp/B0DMVQNKYS"
+    "amazon": "https://www.amazon.it/dp/B0DMVQNKYS",
+    "asin": "B0DMTM4644",
+    "asinKindle": "B0DMTM4644",
+    "asinPaperback": "B0DMVQNKYS",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DMTM4644",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 134,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMVQNKYS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 135,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMTM4644",
+      "B0DMVQNKYS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia di comunita costruire benessere collettivo::massimo recaldi",
+      "kdpTitle": "Psicologia di Comunità: Costruire Benessere Collettivo",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.9262,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Dark Psychology and Manipulation: Understanding the Hidden Architecture of Psychological Influence",
@@ -388,7 +2066,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/dark-psychology-and-manipulation-understanding-the-hidden-architecture-of-psychological-influence.webp",
     "description": "Discover the hidden mechanisms of psychological influence in this groundbreaking examination of dark psychology. Drawing from cutting-edge research in neuroscience, behavioral psychology, and social dynamics, this comprehensive guide reveals the sophisticated architecture of manipulation while providing powerful protective strategies.\n\nUnlike superficial treatments of this subject, this authoritative work delivers:\n\nDeep analysis of manipulation mechanics based on scientific research\nAdvanced frameworks for identifying influence attempts\nProfessional-grade protection strategies\nEthical considerations for knowledge application\nFuture trends and emerging threats in psychological manipulation\nWhether you're a professional seeking to protect yourself and others or someone interested in understanding the psychology of influence, this book provides invaluable insights into one of the most challenging aspects of human behavior.",
-    "amazon": "https://www.amazon.com/dp/B0DPTZ4XMK"
+    "amazon": "https://www.amazon.com/dp/B0DPTZ4XMK",
+    "asin": "B0DPSZR32T",
+    "asinKindle": "B0DPSZR32T",
+    "asinPaperback": "B0DPTZ4XMK",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPSZR32T",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 136,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPTZ4XMK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 137,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPSZR32T",
+      "B0DPTZ4XMK"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-dark psychology and manipulation understanding the hidden architecture of psychological influence::andrew patterson",
+      "kdpTitle": "Dark Psychology and Manipulation: Understanding the Hidden Architecture of Psychological Influence",
+      "kdpAuthor": "Andrew Patterson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Dark Psychology and Manipulation: Mastering the Hidden Arts of Influence",
@@ -396,7 +2109,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/dark-psychology-and-manipulation-mastering-the-hidden-arts-of-influence.webp",
     "description": "Unlock the Secrets of Influence and Mastery with Dark Psychology and Manipulation!\nDive into the ultimate guide that reveals the hidden tactics of persuasion, manipulation, and emotional control. Learn to recognize and counter deceptive techniques while harnessing the power of positive influence to take charge of your decisions and relationships.\n\nPacked with actionable insights and real-world examples, this book equips you with the tools to navigate a world filled with covert strategies and subtle pressures. Don’t just defend yourself—become the master of your mind and interactions.\n\nTake control of your future. Empower your decisions.",
-    "amazon": "https://www.amazon.com/dp/B0DPTYPTGQ"
+    "amazon": "https://www.amazon.com/dp/B0DPTYPTGQ",
+    "asin": "B0DPRNPX51",
+    "asinKindle": "B0DPRNPX51",
+    "asinPaperback": "B0DPTYPTGQ",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPRNPX51",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 138,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPTYPTGQ",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 139,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPRNPX51",
+      "B0DPTYPTGQ"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-dark psychology and manipulation mastering the hidden arts of influence::neil danielson",
+      "kdpTitle": "Dark Psychology and Manipulation: Mastering the Hidden Arts of Influence",
+      "kdpAuthor": "Neil Danielson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Polpette Revolution: Sapori Tondi per Ogni Occasione",
@@ -404,7 +2152,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/polpette-revolution.webp",
     "description": "Scopri il libro di ricette che rivoluziona la cucina con un'idea irresistibile: polpette per ogni occasione e gusto! Dai sapori tradizionali italiani alle creazioni dolci e originali, questo ricettario offre oltre 100 ricette uniche e facili da seguire, con varianti gourmet, vegetariane, regionali e persino light.\nOgni ricetta è accompagnata da istruzioni dettagliate per ottenere piatti perfetti ogni volta, che conquisteranno grandi e piccini. Se ami la cucina creativa, questo libro è un must!\nNon lasciarti sfuggire la possibilità di trasformare ogni pasto in un momento speciale.",
-    "amazon": "https://www.amazon.it/dp/B0DPQHJR2R"
+    "amazon": "https://www.amazon.it/dp/B0DPQHJR2R",
+    "asin": "B0DPNFT74G",
+    "asinKindle": "B0DPNFT74G",
+    "asinPaperback": "B0DPQHJR2R",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DPNFT74G",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 140,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DPQHJR2R",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 141,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPNFT74G",
+      "B0DPQHJR2R"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-polpette revolution sapori tondi per ogni occasione::chef savorelli",
+      "kdpTitle": "Polpette Revolution: Sapori Tondi per Ogni Occasione",
+      "kdpAuthor": "Chef Savorelli",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Chess For Beginners: The Ultimate Guide - Learn Basics and Secret Tactics Like a Pro",
@@ -412,7 +2195,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/assets/uploads/cover.png",
     "description": "Unlock the secrets of chess with Chess for Beginners, your ultimate guide to mastering the fundamentals and building a strong foundation in the game. Whether you're completely new to chess or looking to sharpen your skills, this book breaks down essential concepts in a clear, engaging way that ensures quick progress and lasting knowledge. You'll explore the key rules, strategies, and tactics that can transform you from a novice into a confident player, ready to face any opponent.\n\nFrom understanding the board and mastering piece movement to exploring essential strategies like control of the center, piece development, and advanced tactics such as forks, pins, and skewers, this book covers it all. But chess is more than just moves—Chess for Beginners teaches you how to think ahead, plan your attacks, and outsmart your opponent, all while enjoying the journey of learning this timeless game.\n\nPacked with practical advice, annotated games, and tips on avoiding common pitfalls, this is your guide to becoming a well-rounded player. Whether your goal is casual play or competitive success, Chess for Beginners provides the tools you need to start winning more games today!",
-    "amazon": "https://www.amazon.com/dp/B0DH4F1JMK"
+    "amazon": "https://www.amazon.com/dp/B0DH4F1JMK",
+    "asin": "B0DH3KG5CC",
+    "asinKindle": "B0DH3KG5CC",
+    "asinPaperback": "B0DH4F1JMK",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DH3KG5CC",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 142,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DH4F1JMK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 143,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DH3KG5CC",
+      "B0DH4F1JMK"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-chess for beginners the ultimate guide learn basics and secret tactics like a pro::lucas grant",
+      "kdpTitle": "Chess For Beginners: The Ultimate Guide - Learn Basics and Secret Tactics Like a Pro",
+      "kdpAuthor": "Lucas Grant",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "BEEKEEPING FOR BEGINNERS: From Hive to Honey: Mastering the Art of Beekeeping",
@@ -420,7 +2238,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/beekeeping-for-beginners.webp",
     "description": "🐝 Dive into the fascinating world of beekeeping with \"Beekeeping for Beginners: From Hive to Honey\"! 🍯\n\nThis comprehensive and accessible manual will guide you step-by-step on your journey from novice to expert beekeeper. Discover the secrets to successfully managing your hives, from choosing the right equipment to producing your first jar of golden honey.\n\nWhat you'll find inside:\n\nDetailed advice on selecting and preparing equipment\nSeason-by-season hive management guides\nInsights into bee biology and behavior\nTechniques for preventing and managing pests and diseases\nStrategies for urban and sustainable beekeeping\nMethods for harvesting and processing honey and other hive products\nWhether you're an aspiring urban beekeeper or a countryside enthusiast, \"From Hive to Honey\" provides the knowledge and confidence you need to care for your bees and reap the sweet rewards of your labor. 🌼\n\nStart your beekeeping adventure today and join the global community of enthusiasts making a difference, one hive at a time! 🌍\n\n👥 Perfect for bee-ginners and great as a gift!",
-    "amazon": "https://www.amazon.com/dp/B0DK5BKG3L"
+    "amazon": "https://www.amazon.com/dp/B0DK5BKG3L",
+    "asin": "B0DK422B1P",
+    "asinKindle": "B0DK422B1P",
+    "asinPaperback": "B0DK5BKG3L",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DK422B1P",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 18,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DK5BKG3L",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 19,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DK422B1P",
+      "B0DK5BKG3L"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-beekeeping for beginners from hive to honey mastering the art of beekeeping::adam clayton",
+      "kdpTitle": "BEEKEEPING FOR BEGINNERS: From Hive to Honey: Mastering the Art of Beekeeping",
+      "kdpAuthor": "Adam Clayton",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Low-Carb Living: Delicious Recipes for a Balanced Lifestyle: 95 Flavorful, Low-Carb Dishes for Every Meal and Every Occasion",
@@ -428,7 +2281,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/low-carb-living.webp",
     "description": "🌱 Low-Carb Living: Delicious Recipes for a Balanced Lifestyle 🌱\n\nImmerse yourself in a journey of flavor and health with Low-Carb Living, the ultimate cookbook for anyone seeking to enjoy a balanced lifestyle without sacrificing taste. With 100 meticulously crafted recipes, this guide is perfect for beginners and seasoned low-carb followers alike. From mouthwatering appetizers to satisfying desserts, each recipe has been tailored to keep carbs low and taste high! 🥑🍲🍓\n\nEasy-to-follow instructions: Ideal for busy weekdays and special occasions alike.\nDetailed Nutritional Tips: Learn how each recipe supports your low-carb goals.\nQuick and Delicious Meals: With easy substitutions, even family favorites become low-carb!\nWhether you’re managing carbs for health or simply curious about trying something new, this cookbook is your ticket to a fresh start and a delicious, healthier future. Grab your copy today and start cooking with confidence! 🌟",
-    "amazon": "https://www.amazon.com/dp/B0DMZS8FXR"
+    "amazon": "https://www.amazon.com/dp/B0DMZS8FXR",
+    "asin": "B0DMWGBPS8",
+    "asinKindle": "B0DMWGBPS8",
+    "asinPaperback": "B0DMZS8FXR",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DMWGBPS8",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 144,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMZS8FXR",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 145,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DMWGBPS8",
+      "B0DMZS8FXR"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-low carb living delicious recipes for a balanced lifestyle 95 flavorful low carb dishes for every meal and every occasion::grace mitchell",
+      "kdpTitle": "Low-Carb Living: Delicious Recipes for a Balanced Lifestyle: 95 Flavorful, Low-Carb Dishes for Every Meal and Every Occasion",
+      "kdpAuthor": "Grace Mitchell",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Artificial Intelligence and Global Inequality: Navigating the Digital Divide in the Age of AI",
@@ -436,7 +2324,42 @@
     "category": "Sciences & Knowledge",
     "cover": "/covers-web/artificial-intelligence-and-global-inequality.webp",
     "description": "In \"Artificial Intelligence and Global Inequality,\" Zane Everett delivers a compelling exploration of AI's impact on our world's socioeconomic landscape. This timely analysis delves into:\n\nThe double-edged sword of AI: its potential to both exacerbate and alleviate global inequalities\n\nThe ethical dilemmas posed by AI in healthcare, education, and governance\nStrategies for ensuring AI benefits humanity as a whole\n\nEverett combines rigorous research with accessible prose, offering insights for:\nPolicymakers navigating the AI revolution\nTech professionals seeking to create responsible AI\nEducators preparing students for an AI-driven future\nAnyone concerned about technology's role in shaping our society\n\n\"Artificial Intelligence and Global Inequality\" is not just a book—it's a roadmap for creating a more equitable digital future. Don't miss this crucial examination of one of the most pressing issues of our time.",
-    "amazon": "https://www.amazon.com/dp/B0DJLK3NWL"
+    "amazon": "https://www.amazon.com/dp/B0DJLK3NWL",
+    "asin": "B0DJ1XCCD9",
+    "asinKindle": "B0DJ1XCCD9",
+    "asinPaperback": "B0DJLK3NWL",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJ1XCCD9",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 146,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJLK3NWL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 147,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJ1XCCD9",
+      "B0DJLK3NWL"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-artificial intelligence and global inequality navigating the digital divide in the age of ai::zane everett",
+      "kdpTitle": "Artificial Intelligence and Global Inequality: Navigating the Digital Divide in the Age of AI",
+      "kdpAuthor": "Zane Everett",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Self-Awareness Revolution: Change Your Life from the Inside Out",
@@ -444,7 +2367,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/the-self-awareness-revolution.webp",
     "description": "Unlock the power of self-awareness and transform your life!\n\nDive into \"The Self-Awareness Revolution\" and discover how to:\n\nBoost your emotional intelligence \nMake better decisions with clarity and confidence \nEnhance your relationships and leadership skills \nAlign your career with your authentic self \nNavigate life's challenges with resilience and grace \nPacked with cutting-edge research, practical exercises, and real-life examples, this book is your roadmap to personal growth and success. \n\nDon't just survive - thrive! Start your self-awareness journey today and revolutionize your world from the inside out.",
-    "amazon": "https://www.amazon.com/dp/B0DKDV91C8"
+    "amazon": "https://www.amazon.com/dp/B0DKDV91C8",
+    "asin": "B0DKBBZ28H",
+    "asinKindle": "B0DKBBZ28H",
+    "asinPaperback": "B0DKDV91C8",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DKBBZ28H",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 148,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DKDV91C8",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 149,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DKBBZ28H",
+      "B0DKDV91C8"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the self awareness revolution change your life from the inside out::ryan walker",
+      "kdpTitle": "The Self-Awareness Revolution: Change Your Life from the Inside Out",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mediterranean Diet Cookbook: Timeless Recipes for Every Occasion",
@@ -452,7 +2410,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/mediterranean-diet-cookbook.webp",
     "description": "🌞 Discover the Mediterranean Secrets to a Perfect Feast 🌿\n\nFrom the bustling markets of Sicily to the sun-soaked coasts of Greece, Sophia Russo Bennett brings you on a journey through the heart of the Mediterranean with her mouth-watering recipes and expert tips. Whether you're hosting a vibrant dinner party or planning a festive holiday meal, this cookbook is your guide to creating unforgettable Mediterranean feasts.\n\nPacked with authentic recipes that celebrate the flavors of the Mediterranean—from succulent lamb roasts to refreshing Aperol Spritzes—you'll find everything you need to craft meals that impress your guests and bring warmth and joy to every occasion. 🍋🍷\n\nElevate your table setting with stunning presentation tips, and create a dining experience that reflects the true spirit of Mediterranean hospitality. Get ready to infuse your kitchen with rich, sun-drenched flavors and create memories that will last a lifetime. 🌿✨",
-    "amazon": "https://www.amazon.com/dp/B0DJCV1SMF"
+    "amazon": "https://www.amazon.com/dp/B0DJCV1SMF",
+    "asin": "B0DJ9NH8NN",
+    "asinKindle": "B0DJ9NH8NN",
+    "asinPaperback": "B0DJCV1SMF",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJ9NH8NN",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 152,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJCV1SMF",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 153,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJ9NH8NN",
+      "B0DJCV1SMF"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mediterranean diet cookbook timeless recipes for every occasion::sophia bennett russo",
+      "kdpTitle": "Mediterranean Diet Cookbook: Timeless Recipes for Every Occasion",
+      "kdpAuthor": "Sophia Bennett Russo",
+      "matchScore": 0.9500000000000001,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Unlock Your Inner Power: The 30-Day Challenge to Transform Your Life",
@@ -460,7 +2453,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/unlock-your-inner-power.webp",
     "description": "A comprehensive 30-day guide for personal transformation that helps readers reach their full potential through practical strategies and exercises. The book offers a structured day-by-day approach to overcome limiting beliefs, build confidence, and create positive life changes. It covers essential mindset shifts to stop self-sabotage, techniques for mastering emotions, methods for boosting productivity, strategies for enhancing relationships, and approaches for achieving financial wellness. Designed for anyone feeling stuck or seeking guidance, the program provides actionable exercises and frameworks to help readers become more adaptable, confident, and successful in all aspects of life.",
-    "amazon": "https://www.amazon.com/dp/B0DJ2RVBGF"
+    "amazon": "https://www.amazon.com/dp/B0DJ2RVBGF",
+    "asin": "B0DHW2SHMF",
+    "asinKindle": "B0DHW2SHMF",
+    "asinPaperback": "B0DJ2RVBGF",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DHW2SHMF",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 154,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJ2RVBGF",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 155,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DHW2SHMF",
+      "B0DJ2RVBGF"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-unlock your inner power the 30 day challenge to transform your life::ryan walker",
+      "kdpTitle": "Unlock Your Inner Power: The 30-Day Challenge to Transform Your Life",
+      "kdpAuthor": "Ryan Walker",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "KETO DIET COOKBOOK FOR BEGINNERS: Family-friendly keto recipes",
@@ -468,7 +2496,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/keto-diet-cookbook-for-beginners.webp",
     "description": "Discover the Power of Keto for Your Whole Family!\n\nAre you looking to embrace a healthier lifestyle but worried about how to make it work for your entire family? \"KETO DIET COOKBOOK FOR BEGINNERS: Family-friendly keto recipes\" is your ultimate guide to transforming your family's health without sacrificing taste or convenience.\n\nInside, you'll find:\n\n100+ delicious, easy-to-make keto recipes that even the pickiest eaters will love\nA comprehensive guide to starting and maintaining a keto lifestyle as a family\nTips for adapting keto for growing children and active teens\nStrategies for handling social situations and holidays while staying keto\nMeal plans and shopping lists to make your keto journey stress-free\nThis isn't just another diet cookbook – it's a family health revolution in your hands. From kid-approved breakfasts to satisfying dinners and guilt-free desserts, every recipe is designed with your family in mind.\n\nLearn how to:\n\nNavigate common challenges like picky eating and different nutritional needs\nBalance keto with other dietary requirements\nMake keto work for various activity levels within your family\nWith \"KETO DIET COOKBOOK FOR BEGINNERS,\" you're not just cooking – you're crafting a healthier, happier future for your loved ones.",
-    "amazon": "https://www.amazon.com/dp/B0DJ8N6BSG"
+    "amazon": "https://www.amazon.com/dp/B0DJ8N6BSG",
+    "asin": "B0DJ7P1K88",
+    "asinKindle": "B0DJ7P1K88",
+    "asinPaperback": "B0DJ8N6BSG",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJ7P1K88",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 156,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJ8N6BSG",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 157,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJ7P1K88",
+      "B0DJ8N6BSG"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-keto diet cookbook for beginners family friendly keto recipes::grace mitchell",
+      "kdpTitle": "KETO DIET COOKBOOK FOR BEGINNERS: Family-friendly keto recipes",
+      "kdpAuthor": "Grace Mitchell",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mindful Parenting: A Guide to Positive Discipline and Emotional Growth",
@@ -476,7 +2539,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/mindful-parenting.webp",
     "description": "Discover the transformative power of mindful parenting!\nAre you struggling with tantrums, defiance, and emotional meltdowns? Do you wish you could connect more deeply with your child? \"Mindful Parenting\" is your comprehensive guide to creating a harmonious, loving family life using positive discipline techniques and emotional intelligence strategies.\nIn this groundbreaking book, Eliza Siegel reveals:\n\nThe secret to ending power struggles and fostering cooperation\nHow to set loving boundaries that actually work\nProven techniques to boost your child's emotional intelligence\nStrategies for managing your own emotions during parenting challenges\nThe key to raising resilient, self-motivated kids\n\nDrawing from cutting-edge research and real-life success stories, Siegel offers practical, easy-to-implement tools that will revolutionize your approach to parenting. You'll learn how to:\n✓ Transform conflict into opportunities for growth and connection\n✓ Nurture your child's self-esteem and intrinsic motivation\n✓ Create a calm, positive home environment\n✓ Raise emotionally intelligent children ready to thrive in today's world\nWhether you're a new parent or dealing with teenage challenges, \"Mindful Parenting\" provides the roadmap you need to build strong, loving relationships with your children at every age.\nDon't wait another day to bring peace and joy back to your family life.",
-    "amazon": "https://www.amazon.com/dp/B0DJJDHNYW"
+    "amazon": "https://www.amazon.com/dp/B0DJJDHNYW",
+    "asin": "B0DJGY9ZLY",
+    "asinKindle": "B0DJGY9ZLY",
+    "asinPaperback": "B0DJJDHNYW",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJGY9ZLY",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 158,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJJDHNYW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 159,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJGY9ZLY",
+      "B0DJJDHNYW"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mindful parenting a guide to positive discipline and emotional growth::eliza siegel",
+      "kdpTitle": "Mindful Parenting: A Guide to Positive Discipline and Emotional Growth",
+      "kdpAuthor": "Eliza Siegel",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Emotions in Growth: Guiding Children in Emotional Management",
@@ -484,7 +2582,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/emotions-in-growth.webp",
     "description": "\"Emotions in Growth: Guiding Children in Emotional Management\"\n\nUnlock the secrets to nurturing emotionally intelligent and resilient children in today's complex world!\n\nThis comprehensive guide offers cutting-edge insights and practical strategies for parents, educators, and caregivers. Dive deep into:\n\nUnderstanding the adolescent brain and emotions\nNavigating cultural differences in emotional expression\nRecognizing signs of emotional distress and when to seek help\nHarnessing technology for emotional growth\nBuilding lifelong emotional resilience\nDon't miss this essential resource for anyone invested in the emotional well-being of the next generation. Your journey to becoming an emotional guide starts here!",
-    "amazon": "https://www.amazon.com/dp/B0DJQLWS1Q"
+    "amazon": "https://www.amazon.com/dp/B0DJQLWS1Q",
+    "asin": "B0DJPMMSNB",
+    "asinKindle": "B0DJPMMSNB",
+    "asinPaperback": "B0DJQLWS1Q",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJPMMSNB",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 162,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJQLWS1Q",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 163,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJPMMSNB",
+      "B0DJQLWS1Q"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-emotions in growth guiding children in emotional management::eliza siegel",
+      "kdpTitle": "Emotions in Growth: Guiding Children in Emotional Management",
+      "kdpAuthor": "Eliza Siegel",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "La Felicità Un'Illusione Moderna?: Viaggio Sarcastico nel Paese dei Sorrisi Forzati",
@@ -492,7 +2625,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/la-felicita.webp",
     "description": "Stanco di sorridere a 32 denti mentre dentro stai urlando? 🙃 \"La Felicità - Un'Illusione Moderna?\" è il tuo biglietto per un viaggio esilarante nel cuore dell'ossessione contemporanea per la felicità.\n\nCon una dose massiccia di sarcasmo 🎭 e una spruzzata di verità scomode, questo libro esplora:\n\nRoutine mattutine da incubo 🌅\nL'inferno dei social media 📱\nLa corsa al successo professionale 💼\nIl dating nell'era digitale ❤️\nL'ossessione per il corpo perfetto 💪\nLa mindfulness e altre bugie 🧘\nIl consumismo come ricetta per la (in)felicità 🛍️\nPreparati a ridere, piangere e forse anche a trovare un barlume di vera felicità in questo viaggio tragicomico attraverso la follia della vita moderna.",
-    "amazon": "https://www.amazon.it/dp/B0DJXX85LS"
+    "amazon": "https://www.amazon.it/dp/B0DJXX85LS",
+    "asin": "B0DJWR63LL",
+    "asinKindle": "B0DJWR63LL",
+    "asinPaperback": "B0DJXX85LS",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJWR63LL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 164,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJXX85LS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 165,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJWR63LL",
+      "B0DJXX85LS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-la felicita un illusione moderna viaggio sarcastico nel paese dei sorrisi forzati::marco fioretti",
+      "kdpTitle": "La Felicità Un'Illusione Moderna?: Viaggio Sarcastico nel Paese dei Sorrisi Forzati",
+      "kdpAuthor": "Marco Fioretti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Mindfulness per principianti: Il Percorso verso la Calma e la Chiarezza",
@@ -500,7 +2668,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/mindfulness-per-principianti.webp",
     "description": "✨ Mindfulness per Principianti: Trasforma la Tua Vita con Presenza e Pace ✨\n🌿 Scopri il potere trasformativo della mindfulness con questa guida completa progettata appositamente per i principianti! Mindfulness per Principianti ti insegnerà a coltivare la consapevolezza, ridurre lo stress e sviluppare la resilienza emotiva attraverso la semplice ma profonda pratica della mindfulness.\nIn questo libro, imparerai a integrare la mindfulness nella tua routine quotidiana, padroneggiando tecniche essenziali come la respirazione consapevole e il body scan, e applicando queste pratiche alle attività di tutti i giorni come mangiare, lavorare e comunicare. Con istruzioni passo dopo passo e approfondimenti dalla ricerca scientifica più recente, comprenderai come la mindfulness può riprogrammare il cervello per ottenere maggiore concentrazione, compassione e calma.\nChe tu stia cercando sollievo dall'ansia, relazioni migliori o un senso più profondo di scopo, Mindfulness per Principianti ti fornisce gli strumenti e le tecniche per trasformare la tua vita dall'interno. Inizia oggi il tuo viaggio nella mindfulness e scopri come la presenza può portare a un benessere duraturo e a una realizzazione profonda!\n✨ Benefici Chiave: ✨\nScopri come la mindfulness migliora la chiarezza mentale, la regolazione emotiva e la gestione dello stress.\nOttieni consigli pratici su come integrare la mindfulness nelle tue attività quotidiane.\nComprendi la scienza della mindfulness e come riprogramma il tuo cervello.\nSegui le tecniche passo dopo passo per la respirazione consapevole, la meditazione e altro!\n✅ Fai il primo passo verso una vita più serena, concentrata e appagante oggi stesso!",
-    "amazon": "https://www.amazon.it/dp/B0DHTQVF1C"
+    "amazon": "https://www.amazon.it/dp/B0DHTQVF1C",
+    "asin": "B0D9Q3GJ54",
+    "asinKindle": "B0D9Q3GJ54",
+    "asinPaperback": "B0DHTQVF1C",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0D9Q3GJ54",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 166,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DHTQVF1C",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 167,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0D9Q3GJ54",
+      "B0DHTQVF1C"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-mindfulness per principianti il percorso verso la calma e la chiarezza::ava wells",
+      "kdpTitle": "Mindfulness per principianti: Il Percorso verso la Calma e la Chiarezza",
+      "kdpAuthor": "Ava Wells",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Final Showdown: Will Max and His Friends Triumph Over Adversity and Claim the Treasure?",
@@ -508,7 +2711,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-final-showdown.webp",
     "description": "An action-packed adventure book for young readers aged 7-10 following Max, Lily, and Sam as they navigate dangerous jungles, solve ancient puzzles, and face off against the villain Drake Blackwood in search of the legendary Eldorado treasure. \"The Final Showdown\" combines thrilling escapades with themes of friendship, courage, and determination, making it ideal for children who enjoy exciting stories with relatable heroes. Designed to enhance reading comprehension while keeping young readers engaged, the book offers a compelling narrative that teaches valuable lessons about teamwork, perseverance, and self-confidence. It's structured to appeal to both established and emerging readers, helping parents foster a love of reading through an immersive storytelling experience.",
-    "amazon": "https://www.amazon.com/dp/B0DCP3BF8Q"
+    "amazon": "https://www.amazon.com/dp/B0DCP3BF8Q",
+    "asin": "B0DCNKTDP2",
+    "asinKindle": "B0DCNKTDP2",
+    "asinPaperback": "B0DCP3BF8Q",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DCNKTDP2",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 168,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DCP3BF8Q",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 169,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DCNKTDP2",
+      "B0DCP3BF8Q"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the final showdown will max and his friends triumph over adversity and claim the treasure::sam hunter",
+      "kdpTitle": "The Final Showdown: Will Max and His Friends Triumph Over Adversity and Claim the Treasure?",
+      "kdpAuthor": "Sam Hunter",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "OMBRE DI FERRO: Tra Passato e Rinascita",
@@ -516,7 +2754,42 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/ombre-di-ferro.webp",
     "description": "In una città dimenticata dal tempo, dove le ombre del passato si mescolano con le speranze del futuro, nasce una storia di coraggio, redenzione e rinascita. Pianodombra è un luogo carico di ricordi, un borgo che un tempo brulicava di vita e lavoro, ma che oggi lotta per risorgere dalle sue stesse ceneri.\n\nOmbre di Ferro: Tra Passato e Rinascita segue le vicende di un gruppo di personaggi profondamente legati a questa città decadente, ognuno alla ricerca del proprio posto nel mondo. Claudia, dopo anni di assenza, ritorna per affrontare i demoni del passato e dare un senso al presente. Rory, il custode della memoria del borgo, combatte per preservare le storie che rischiano di essere dimenticate. Tina, con la sua galleria d’arte, trasforma il dolore in bellezza, creando un rifugio per l’anima in un luogo segnato dalla distruzione.\n\nMentre Pianodombra si trasforma, i suoi abitanti si confrontano con scelte difficili e cambiamenti inevitabili. Alcuni, come Vince, sentono il richiamo dell’altrove, cercando di liberarsi dal peso del passato per costruire una nuova vita altrove. Altri, come Claudia, scoprono che il loro destino è indissolubilmente legato a quello della città.\n\nOmbre di Ferro è un dramma sociale intenso e toccante, che esplora la complessità dei legami umani e il potere della memoria in un mondo in continua evoluzione. Un romanzo che racconta la sfida di rinascere in un luogo segnato dalle cicatrici del tempo, e la forza di chi non si arrende, ma lotta per un futuro migliore.",
-    "amazon": "https://www.amazon.it/dp/B0DFC6YN4Z"
+    "amazon": "https://www.amazon.it/dp/B0DFC6YN4Z",
+    "asin": "B0DF851FXP",
+    "asinKindle": "B0DF851FXP",
+    "asinPaperback": "B0DFC6YN4Z",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DF851FXP",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 170,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DFC6YN4Z",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 171,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DF851FXP",
+      "B0DFC6YN4Z"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-ombre di ferro tra passato e rinascita::roberto pacetti",
+      "kdpTitle": "OMBRE DI FERRO: Tra Passato e Rinascita",
+      "kdpAuthor": "Roberto Pacetti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Digital Leash: Where Thoughts End and Programs Begin",
@@ -524,7 +2797,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-digital-leash.webp",
     "description": "In a world where your thoughts are no longer your own...\n\nOne journalist uncovers the truth behind the digital curtain.\n\nWelcome to 2036, where GlobalTech controls every aspect of life through its all-encompassing Nexus network.\n\nHowever, not everyone is willing to surrender their humanity to the algorithm.\n\nFollow Alex Garner's perilous journey as he:\n\nExposes corporate manipulation of water and food supplies 💧🌾\nUnravels the sinister purpose behind \"smart\" healthcare 🏥\nDiscovers the resistance hidden in plain sight 👥\n🚨 As the line between human and machine blurs, one question remains: Can the truth set us free, or is it already too late?\n\n\"The Digital Leash\" is a chilling yet hopeful exploration of our tech-driven future.\n\nAre you ready to unplug from the matrix?",
-    "amazon": "https://www.amazon.com/dp/B0DJF4ZT6F"
+    "amazon": "https://www.amazon.com/dp/B0DJF4ZT6F",
+    "asin": "B0DJDBQH7H",
+    "asinKindle": "B0DJDBQH7H",
+    "asinPaperback": "B0DJF4ZT6F",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DJDBQH7H",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 173,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DJF4ZT6F",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 174,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DJDBQH7H",
+      "B0DJF4ZT6F"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the digital leash where thoughts end and programs begin::j cipher monroe",
+      "kdpTitle": "The Digital Leash: Where Thoughts End and Programs Begin",
+      "kdpAuthor": "J. Cipher Monroe",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Oxford Odyssey (Lexicon Arcan)",
@@ -532,7 +2840,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-oxford-odyssey.webp",
     "description": "Dive into the most mind-bending adventure yet in the Lexicon Arcana series, where the very nature of knowledge comes alive! 🌟\nOxford's secret magical university harbours an ancient mystery that's about to change everything. When Hazel Blackwood discovers that books are achieving consciousness and digital magic is evolving beyond control, she must face her greatest challenge yet: understanding something that exists to prevent understanding itself!\nExperience a magical adventure where library books debate their existence, digital spells merge with ancient magic, and the very nature of knowledge hangs in the balance. Join Hazel, Thomas, and their transformed gargoyle guardian as they race against time to prevent an entity of anti-knowledge from unmaking consciousness itself! 🎓✨\nA revolutionary tale that will change how you think about magic, knowledge, and consciousness forever! 📚\nClick \"Buy Now\" to unlock the secrets of Oxford's magical quarters! Perfect for readers who love intellectual adventures, magical universities, and stories that challenge the very nature of understanding.",
-    "amazon": "https://www.amazon.com/dp/B0DLFCKWF4"
+    "amazon": "https://www.amazon.com/dp/B0DLFCKWF4",
+    "asin": "B0DLBBWVXW",
+    "asinKindle": "B0DLBBWVXW",
+    "asinPaperback": "B0DLFCKWF4",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DLBBWVXW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 16,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DLFCKWF4",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 17,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DLBBWVXW",
+      "B0DLFCKWF4"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the oxford odyssey::victoria ravenscroft",
+      "kdpTitle": "The Oxford Odyssey",
+      "kdpAuthor": "Victoria Ravenscroft",
+      "matchScore": 0.8408000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Plant-Powered Recipes: 90+ Delicious Vegetarian Recipes for Every Occasion",
@@ -540,7 +2883,42 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/plant-powered-recipes.webp",
     "description": "✨ Plant-Powered Recipes is more than a cookbook—it's your ultimate culinary adventure into the vibrant world of vegetarian cuisine! With 90+ diverse and delicious recipes, this book makes healthy, plant-based eating approachable and exciting. Designed for anyone ready to explore a healthier, more sustainable diet, each recipe is a step-by-step guide to creating nourishing meals for any time of day 🌞.\n\nFrom mouth-watering appetizers and comforting soups 🍲 to hearty main dishes, flavorful sides, and indulgent desserts 🍫, this collection has something for every craving. Plus, you’ll find practical tips and resources to ease your transition into vegetarian eating and help you make it a lasting part of your lifestyle 🌱.\n\nDon’t miss the chance to elevate your kitchen game and embrace the power of plants!",
-    "amazon": "https://www.amazon.com/dp/B0DN5Z3TG6"
+    "amazon": "https://www.amazon.com/dp/B0DN5Z3TG6",
+    "asin": "B0DN227VYT",
+    "asinKindle": "B0DN227VYT",
+    "asinPaperback": "B0DN5Z3TG6",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DN227VYT",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 175,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DN5Z3TG6",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 176,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DN227VYT",
+      "B0DN5Z3TG6"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-plant powered recipes 90 delicious vegetarian recipes for every occasion::grace mitchell",
+      "kdpTitle": "Plant-Powered Recipes: 90+ Delicious Vegetarian Recipes for Every Occasion",
+      "kdpAuthor": "Grace Mitchell",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Somatic Art Therapy for Beginners: Healing Depression and Anxiety Through Body and Creativity",
@@ -548,7 +2926,42 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/somatic-art-therapy-for-beginners.webp",
     "description": "🌸 Discover Inner Peace through Somatic Art Therapy 🌸\n\nDive into a transformative journey with Somatic Art Therapy! This book offers you a pathway to self-healing, blending mindfulness, body awareness, and creative expression. Designed especially for those managing stress, anxiety, and trauma, each page invites you to explore therapeutic exercises that connect your body’s wisdom with the healing power of art. Imagine finding calm in simple moments, grounding yourself in creative practices, and releasing emotional tension—all without the need for complex tools or prior experience.\n\n💡 Easy-to-follow exercises\n💡 Step-by-step guidance\n💡 Therapeutic, not technical—no artistic skills required",
-    "amazon": "https://www.amazon.com/dp/B0DMDYFFNF"
+    "amazon": "https://www.amazon.com/dp/B0DMDYFFNF",
+    "asin": "B0DM9VN5MK",
+    "asinKindle": "B0DM9VN5MK",
+    "asinPaperback": "B0DMDYFFNF",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DM9VN5MK",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 8,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DMDYFFNF",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 9,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DM9VN5MK",
+      "B0DMDYFFNF"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-somatic art therapy for beginners healing depression and anxiety through body and creativity::andrew thornton",
+      "kdpTitle": "Somatic Art Therapy for Beginners: Healing Depression and Anxiety Through Body and Creativity",
+      "kdpAuthor": "Andrew Thornton",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Winchester Whispers (Lexicon Arcan)",
@@ -556,7 +2969,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-winchester-whispers.webp",
     "description": "Step into a world where ancient magic meets modern mystery in this spellbinding first instalment of the Lexicon Arcana series! 🌟\nEleven-year-old Hazel Blackwood thought she was just an ordinary girl who loved ancient languages—until her silver birthmark began to glow in Winchester Cathedral's secret library. Now, alongside her tech-savvy friend Thomas and a gargoyle guardian, she must unlock the power of magical words before the mysterious Dr. Vale claims an ancient grimoire that could change the world forever.\nDiscover a magical Britain where books whisper their secrets; gargoyles come to life, and the line between ancient spells and modern technology blurs in extraordinary ways. Perfect for fans of enchanted libraries, magical mysteries, and friendships that transcend the ordinary! 🏰✨\nDon't miss this captivating tale of courage, friendship, and the power of finding your true voice. Join Hazel on her first extraordinary adventure! 🔮\nClick \"Buy Now\" to unlock the magic today! This book is perfect for readers aged 9-12 who love Philip Pullman, Diana Wynne Jones, and stories where ancient magic meets the modern world.",
-    "amazon": "https://www.amazon.com/dp/B0DLCR6LXQ"
+    "amazon": "https://www.amazon.com/dp/B0DLCR6LXQ",
+    "asin": "B0DLB36GBX",
+    "asinKindle": "B0DLB36GBX",
+    "asinPaperback": "B0DLCR6LXQ",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DLB36GBX",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 12,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DLCR6LXQ",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 13,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DLB36GBX",
+      "B0DLCR6LXQ"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the winchester whispers::victoria ravenscroft",
+      "kdpTitle": "The Winchester Whispers",
+      "kdpAuthor": "Victoria Ravenscroft",
+      "matchScore": 0.8408000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The Highlands Hex (Lexicon Arcan)",
@@ -564,7 +3012,42 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-highlands-hex.webp",
     "description": "Return to magical Britain in this thrilling second instalment of the Lexicon Arcana series, where ancient Highland magic awakens! 🌟\nFollowing the trail of her missing mother, Hazel Blackwood ventures into the misty Scottish Highlands, where magic runs wild and free. With her enhanced tech-wielding friend Thomas and their guardian gargoyle, she discovers a world where ancient powers stir, and the very language of magic is changing.\nExperience breathtaking magical encounters in the Highland wilderness, where kelpies emerge from misty lochs, ancient stone circles hold deadly secrets, and the fearsome Cu Sith hunt through the heather. As Hazel faces the terrifying Nuckelavee and the mysterious Wild Hunt, she must learn to blend Winchester's precise magic with Highland wild power before it's too late! 🏰✨\nIt is a spellbinding tale of courage, friendship, and the power of bridging different magical traditions. Don't let this magical adventure pass you by!",
-    "amazon": "https://www.amazon.com/dp/B0DLG3HL4R"
+    "amazon": "https://www.amazon.com/dp/B0DLG3HL4R",
+    "asin": "B0DL9Z9WKW",
+    "asinKindle": "B0DL9Z9WKW",
+    "asinPaperback": "B0DLG3HL4R",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0DL9Z9WKW",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 14,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DLG3HL4R",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 15,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DL9Z9WKW",
+      "B0DLG3HL4R"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the highlands hex::victoria ravenscroft",
+      "kdpTitle": "The Highlands Hex",
+      "kdpAuthor": "Victoria Ravenscroft",
+      "matchScore": 0.8408000000000001,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Oltre l'Orizzonte del Tempo: Cronache di una Famiglia Ritrovata",
@@ -572,7 +3055,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/oltre-l-orizzonte-del-tempo.webp",
     "description": "'Oltre l'Orizzonte del Tempo' è un avvincente romanzo che intreccia le vite di tre generazioni di donne, divise da oceani e segreti familiari. Quando Eleonora Alderighi, una psicoterapeuta milanese, scopre un misterioso diario appartenente a sua nonna, si imbarca in un viaggio emozionante che la porta da Milano a Roma, fino a Buenos Aires. Svela una storia d'amore nata durante la Seconda Guerra Mondiale, un segreto custodito per decenni e una famiglia divisa tra due continenti. Questo romanzo esplora temi di identità, perdono e il potere dell'amore di trascendere il tempo e la distanza, offrendo una riflessione profonda sui legami familiari e sul peso dei segreti attraverso le generazioni.",
-    "amazon": "https://www.amazon.it/dp/B0DHYCRXSY"
+    "amazon": "https://www.amazon.it/dp/B0DHYCRXSY",
+    "asin": "B0DHYCRXSY",
+    "asinPaperback": "B0DHYCRXSY",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DHYCRXSY",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 177,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DHYCRXSY"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-oltre l orizzonte del tempo cronache di una famiglia ritrovata::alessandra montalcini",
+      "kdpTitle": "Oltre l'Orizzonte del Tempo: Cronache di una Famiglia Ritrovata",
+      "kdpAuthor": "Alessandra Montalcini",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Adventures in Color: Living Vehicles!",
@@ -580,7 +3088,32 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/domn3ygqur1vms6kefsf.webp",
     "description": "🌈 Let Creativity Take the Wheel! 🌟\n\nEmbark on a colorful adventure with Adventures in Color: Living Vehicles! 🚗✈️🚂 This delightful coloring book is packed with:\n\nWhimsical Vehicles: Smiling cars, playful planes, cheerful trains, and fantastical cupcake cars.\nFun and Easy Designs: Bold lines and creative details, perfect for kids aged 4 to 8.\nEndless Creativity: Each page is a new adventure waiting to come alive with crayons, markers, or colored pencils!\n✨ Whether your child loves exploring or just enjoys a fun artistic escape, this book fuels imagination and creativity one color at a time.\n\n🎨 Perfect for gifts, travel, or rainy days. Ready to color your world? 🌟",
-    "amazon": "https://www.amazon.com/dp/B0DPHFGFV9"
+    "amazon": "https://www.amazon.com/dp/B0DPHFGFV9",
+    "asin": "B0DPHFGFV9",
+    "asinPaperback": "B0DPHFGFV9",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DPHFGFV9",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 180,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DPHFGFV9"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-adventures in color living vehicles::rob pac",
+      "kdpTitle": "Adventures in Color: Living Vehicles!",
+      "kdpAuthor": "Rob Pac",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "GESÙ NEL TERZO MILLENNIO: Tra Follia e Santità, Quale Ruolo Avrebbe Oggi il Figlio di Dio?",
@@ -588,7 +3121,42 @@
     "category": "Society & Culture",
     "cover": "/covers-web/gesu-nel-terzo-millennio.webp",
     "description": "Un'esplorazione teologica e sociologica che analizza come la figura di Gesù e i suoi insegnamenti sarebbero percepiti nel mondo contemporaneo. Il libro esamina l'impatto della globalizzazione e della tecnologia digitale sulla spiritualità, immaginando come il messaggio di Gesù potrebbe essere interpretato, distorto o amplificato attraverso i social media e in una società secolarizzata. Offre riflessioni su come il suo messaggio di amore radicale e non-violenza si confronterebbe con il secolarismo moderno, il potenziale ruolo di Gesù nel dialogo interreligioso come figura ponte tra diverse fedi, e le possibili reazioni pubbliche che spaziano dall'adorazione alla derisione all'indifferenza. Un'opera che invita a ripensare la spiritualità contemporanea e il significato della fede in un mondo interconnesso.",
-    "amazon": "https://www.amazon.it/dp/B0DF1TM77Z"
+    "amazon": "https://www.amazon.it/dp/B0DF1TM77Z",
+    "asin": "B0CW1MW2ZN",
+    "asinKindle": "B0CW1MW2ZN",
+    "asinPaperback": "B0DF1TM77Z",
+    "kdpFormats": [
+      {
+        "format": "Kindle",
+        "asin": "B0CW1MW2ZN",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 22,
+        "sourcePage": ""
+      },
+      {
+        "format": "Paperback",
+        "asin": "B0DF1TM77Z",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 23,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0CW1MW2ZN",
+      "B0DF1TM77Z"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-gesu nel terzo millennio tra follia e santita quale ruolo avrebbe oggi il figlio di dio::lorenzo de sanctis",
+      "kdpTitle": "GESÙ NEL TERZO MILLENNIO: Tra Follia e Santità, Quale Ruolo Avrebbe Oggi il Figlio di Dio?",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "PSICOLOGIA DELLA PERSONALITA'",
@@ -596,7 +3164,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/cedl4dtvxmxfyekuo5hz.webp",
     "description": "Psygnami: Psicologia della Personalità - Un riassunto essenziale per studenti universitari\n\nStai cercando un modo rapido ed efficace per studiare la Psicologia della Personalità? Questo Psygnami è lo strumento perfetto per studenti di psicologia e appassionati.\n\nIn questo libro troverai:\n\nUna spiegazione sintetica ma completa delle principali teorie della personalità (psicodinamica, comportamentale, umanistica, dei tratti e cognitiva)\nUn'analisi dei fattori genetici, ambientali e biologici che influenzano la personalità\nEsempi pratici di come la personalità si manifesta in ambito clinico, lavorativo e educativo\nRiferimenti a testi e ricerche scientifiche di qualità\nOrganizzato per capitoli chiari e concisi, questo libro ti aiuterà a comprendere i fondamenti della personalità e a prepararti per esami o presentazioni. Ogni argomento è spiegato in modo accessibile e approfondito, con note basate su fonti autorevoli del panorama scientifico.\n\nChe tu sia uno studente alle prime armi o un professionista alla ricerca di un rapido ripasso, questo Psygnami è la risorsa che stavi cercando.",
-    "amazon": "https://www.amazon.it/dp/B0DGQ9GJ14"
+    "amazon": "https://www.amazon.it/dp/B0DGQ9GJ14",
+    "asin": "B0DGQ9GJ14",
+    "asinPaperback": "B0DGQ9GJ14",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0DGQ9GJ14",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 181,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0DGQ9GJ14"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-psicologia della personalita::roberto pacetti",
+      "kdpTitle": "PSICOLOGIA DELLA PERSONALITA'",
+      "kdpAuthor": "Roberto Pacetti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Menti Divergenti",
@@ -612,7 +3205,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/jk3rblsqdup9efofzp7a.webp",
     "description": "Una guida pratica e scientificamente fondata che accompagna genitori e insegnanti nell'affrontare le sfide dell'adolescenza contemporanea. Basata sulle più recenti ricerche in psicologia dello sviluppo e neuroscienze, questa guida fornisce strumenti concreti per comprendere e sostenere gli adolescenti nelle loro trasformazioni fisiche, cognitive, emotive e sociali.\n\nIl volume analizza i comportamenti tipici dell'adolescenza - dalla ricerca di indipendenza all'uso della tecnologia, dai comportamenti a rischio alle dinamiche scolastiche - offrendo strategie efficaci di comunicazione e supporto. Particolare attenzione è dedicata all'ottimizzazione degli ambienti di sviluppo (familiare, scolastico, comunitario e digitale) per favorire una crescita positiva e resiliente.\n\nUno strumento indispensabile per ogni adulto che desidera trasformare le sfide dell'adolescenza in opportunità di crescita condivisa e consapevole.",
-    "amazon": "https://www.amazon.it/dp/B0F4WZKZ6N"
+    "amazon": "https://www.amazon.it/dp/B0F4WZKZ6N",
+    "asin": "B0F4WZKZ6N",
+    "asinPaperback": "B0F4WZKZ6N",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0F4WZKZ6N",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 31,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0F4WZKZ6N"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-adolescenza guida all addestramento per genitori e insegnanti::roberto pacetti",
+      "kdpTitle": "ADOLESCENZA: Guida all'addestramento per genitori e insegnanti",
+      "kdpAuthor": "Roberto Pacetti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Tra Fede e Nichilismo",
@@ -620,7 +3238,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/tra-fede-e-nichilismo.webp",
     "description": "Un dialogo immaginario tra Sant'Agostino e un esimio filosofo dei nostri tempi in un luogo sospeso tra cielo e terra. Due grandi pensatori separati da sedici secoli si confrontano sulle questioni fondamentali dell'esistenza: Dio, il nichilismo, il tempo, la morte, l'amore, la tecnica e il futuro dell'umano. Un'opera che esplora la frattura tra fede cristiana e pensiero contemporaneo, cercando punti di contatto inaspettati tra tradizione religiosa e filosofia post-metafisica.",
-    "amazon": "https://www.amazon.it/dp/B0F6MPZ752"
+    "amazon": "https://www.amazon.it/dp/B0F6MPZ752",
+    "asin": "B0F6MPZ752",
+    "asinPaperback": "B0F6MPZ752",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0F6MPZ752",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 38,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0F6MPZ752"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-tra fede e nichilismo::lorenzo de sanctis",
+      "kdpTitle": "Tra Fede e Nichilismo",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Il Codice Bergoglio: Crittografia di un Pontificato",
@@ -628,7 +3271,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/il-codice-bergoglio.webp",
     "description": "\"Il Codice Bergoglio\" è un saggio analitico e interdisciplinare che decifra, attraverso gli strumenti della semiotica, della teologia simbolica e dell’antropologia culturale, il sistema di segni, gesti e scelte comunicative di Papa Francesco.\nLungi dall'essere una semplice cronaca biografica o una raccolta di aneddoti noti, quest’opera svela come ogni gesto, parola e decisione del pontefice costituisca un linguaggio complesso, volto a rifondare l'immaginario ecclesiale contemporaneo.\nAttraverso un'indagine rigorosa e penetrante, il volume esplora la grammatica nascosta dietro alla semplicità apparente di Francesco, offrendo al lettore una chiave di lettura profonda del suo pontificato e della sua eredità simbolica destinata a proiettarsi oltre la sua persona.",
-    "amazon": "https://www.amazon.it/dp/B0F6VC8J7B"
+    "amazon": "https://www.amazon.it/dp/B0F6VC8J7B",
+    "asin": "B0F6VC8J7B",
+    "asinPaperback": "B0F6VC8J7B",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0F6VC8J7B",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 52,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0F6VC8J7B"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-il codice bergoglio crittografia di un pontificato::lorenzo de sanctis",
+      "kdpTitle": "Il Codice Bergoglio: Crittografia di un Pontificato",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "ECHO HOUSE: Oltre le Camere d'Eco: Un Nuovo Paradigma per Comprendere la Polarizzazione Convergente",
@@ -636,7 +3304,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/echo-house.webp",
     "description": "Un viaggio attraverso le architetture invisibili del pensiero contemporaneo. Echo House: Oltre le Camere d’Eco esplora il fenomeno delle camere dell’eco nei contesti digitali, politici e culturali con un approccio accademico ma accessibile. L’autore decostruisce i meccanismi di isolamento informativo e rafforzamento delle convinzioni individuali, analizzando l’impatto che questi ambienti chiusi hanno sulla percezione della realtà, sulla formazione dell’opinione pubblica e sul concetto stesso di verità. Attraverso una lettura interdisciplinare, che intreccia comunicazione, psicologia sociale, filosofia e teoria dei media, il saggio invita il lettore a riflettere criticamente sul proprio rapporto con l’informazione e sul potere invisibile delle “stanze” in cui abitiamo mentalmente. Pensato per studenti, ricercatori e lettori curiosi, questo testo fornisce una mappa concettuale per orientarsi nel rumore amplificato della contemporaneità.",
-    "amazon": "https://www.amazon.it/dp/B0F7QZBVW5"
+    "amazon": "https://www.amazon.it/dp/B0F7QZBVW5",
+    "asin": "B0F7QZBVW5",
+    "asinPaperback": "B0F7QZBVW5",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0F7QZBVW5",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 37,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0F7QZBVW5"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-echo house oltre le camere d eco un nuovo paradigma per comprendere la polarizzazione convergente::roberto pacetti",
+      "kdpTitle": "ECHO HOUSE: Oltre le Camere d'Eco: Un Nuovo Paradigma per Comprendere la Polarizzazione Convergente",
+      "kdpAuthor": "Roberto Pacetti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Autostima Infrangibile: 30 giorni di pratiche evidence-based per consolidare fiducia in sé, resilienza emotiva e benessere cognitivo",
@@ -644,7 +3337,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/autostima-infrangibile.webp",
     "description": "Un manuale integrato che fonde neuroscienze, mindfulness e psicologia cognitivo-comportamentale in un percorso articolato in trenta giorni per rafforzare autostima, resilienza e presenza consapevole.\nOgni capitolo propone esercizi concreti — dal dialogo interiore alle esposizioni graduali, dai micro-rituali quotidiani alle strategie per adattarsi agli imprevisti — corredati da spiegazioni scientifiche chiare e riferimenti peer-reviewed. Adatto a chi desideri un cambiamento duraturo, offre strumenti pratici per trasformare convinzioni limitanti in risorse, creare contesti di supporto e costruire un piano di sviluppo continuo.\nRicco di tecniche di auto-compassione, proiezioni di Sé ideale e percorsi avanzati, questo libro è la guida essenziale per chi ambisce a un’autostima infrangibile.",
-    "amazon": "https://www.amazon.it/dp/B0FB36DGV7"
+    "amazon": "https://www.amazon.it/dp/B0FB36DGV7",
+    "asin": "B0FB36DGV7",
+    "asinPaperback": "B0FB36DGV7",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FB36DGV7",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 50,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FB36DGV7"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-autostima infrangibile 30 giorni di pratiche evidence based per consolidare fiducia in se resilienza emotiva e benessere cognitivo::massimo recaldi",
+      "kdpTitle": "Autostima Infrangibile: 30 giorni di pratiche evidence-based per consolidare fiducia in sé, resilienza emotiva e benessere cognitivo",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "The 7-Day Puppy Training Miracle: Transform Your Puppy into a Well-Behaved Family Dog Using Proven Positive Methods",
@@ -652,7 +3370,32 @@
     "category": "Lifestyle & Hobbies",
     "cover": "/covers-web/the-7-day-puppy-training-miracle.webp",
     "description": "Transform Your Chaotic Puppy Into the Perfect Family Dog in Just 7 Days!\n\nAre you overwhelmed by your new puppy's endless energy, house training accidents, and destructive behavior? Do you feel like you're failing as a dog owner when your furry friend won't listen to basic commands?\n\nYou're not alone - and this book will change everything.\n\nThe 7-Day Puppy Training Miracle is the complete beginner's guide that transforms even the most stubborn puppies into well-behaved, happy family dogs using proven positive reinforcement methods. Written for busy people who want fast results without spending hours on complicated training.\n\nWhat Makes This Book Different:\n✅ Day-by-Day System: Clear daily plans that build on each other\n✅ 10 Minutes Per Day: Perfect for busy schedules - no marathon training sessions\n✅ Positive Methods Only: No harsh corrections or outdated dominance techniques\n✅ Real-World Solutions: Addresses actual problems new puppy owners face\n✅ Beginner-Friendly: Written for people with zero dog training experience",
-    "amazon": "https://www.amazon.com/dp/B0FBLQ7TMP"
+    "amazon": "https://www.amazon.com/dp/B0FBLQ7TMP",
+    "asin": "B0FBLQ7TMP",
+    "asinPaperback": "B0FBLQ7TMP",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FBLQ7TMP",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 49,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FBLQ7TMP"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the 7 day puppy training miracle transform your puppy into a well behaved family dog using proven positive methods::michael k anderson",
+      "kdpTitle": "The 7-Day Puppy Training Miracle: Transform Your Puppy into a Well-Behaved Family Dog Using Proven Positive Methods",
+      "kdpAuthor": "Michael K. Anderson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "THE HEIR OF THE STARS: The Prophecy of Light's Blood",
@@ -660,7 +3403,32 @@
     "category": "Fiction & Literature",
     "cover": "/covers-web/the-heir-of-the-stars.webp",
     "description": "In a world where magic flows through stellar crystals and ancient prophecies whisper of dark times, Lyra Nightwhisper lives as a simple healer in the village of Thornhaven. But when the Shadow Empire attacks her hometown, the girl's desperate touch awakens a forgotten power: the Light's Blood of the ancient Stellari.\n\nForced to flee, Lyra discovers she is the last descendant of a lost lineage, destined according to an ancient prophecy to awaken the three Eternal Guardians before Malachar, the Shadow Lord, completes his ritual to plunge the world into eternal darkness. Guided by the mysterious mage Theron Stormweaver and accompanied by the young elven warrior Kael Moonblade and the cunning thief Zara Shadowstep, Lyra must embark on a perilous journey through enchanted lands and cosmic dimensions.\n\nHer path will take her from the Whispering Forest to the Draconic Mountains, from the Cursed Lands to the very boundaries of reality itself, where she must confront cosmic entities and discover that the world's fate depends not on light's victory over darkness, but on the ability to make both forces dance together in a harmony that transcends all conflict.\n\nAn epic saga that reinvents fantasy classics through a narrative that evolves from traditional tropes toward unexpected cosmic horizons, where personal growth becomes universal evolution and friendship transforms into existence's most powerful force.\n\nPerfect for readers who loved Brandon Sanderson's The Stormlight Archive, Robin Hobb's Realm of the Elderlings, and anyone seeking fantasy that pushes beyond conventional boundaries into philosophical and cosmic territories while maintaining the heart and wonder that makes the genre magical.",
-    "amazon": "https://www.amazon.com/dp/B0FBSWMY92"
+    "amazon": "https://www.amazon.com/dp/B0FBSWMY92",
+    "asin": "B0FBSWMY92",
+    "asinPaperback": "B0FBSWMY92",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FBSWMY92",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 48,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FBSWMY92"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-the heir of the stars the prophecy of light s blood::a r blackthorne",
+      "kdpTitle": "THE HEIR OF THE STARS: The Prophecy of Light's Blood",
+      "kdpAuthor": "A.R. Blackthorne",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Tra le Pagine del Cuore: Una storia d'amore tra i libri",
@@ -668,7 +3436,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/tra-le-pagine-del-cuore.webp",
     "description": "Una libraia trentenne che ha trovato rifugio tra i libri dopo una delusione d'amore. Uno scrittore in crisi creativa che ha perso la capacità di raccontare storie. Un incontro casuale in una piccola libreria di Firenze che cambierà per sempre le loro vite.\n\nElena Rosati gestisce \"Pagine Sospese\", una libreria indipendente nel cuore di Firenze, dove ogni libro trova il suo lettore ideale. La sua vita scorre tranquilla e prevedibile finché Marco Santini, scrittore di thriller in cerca di ispirazione, non entra nel suo mondo cercando una raccolta di Neruda.\n\nQuello che inizia come una semplice discussione letteraria si trasforma in una collaborazione creativa, poi in un amore profondo e autentico. Insieme, Elena e Marco scoprono che l'amore può essere la più potente fonte di ispirazione, e decidono di raccontare la loro storia scrivendo un libro insieme.\n\n\"Tra le Pagine del Cuore\" è il romanzo che nasce da quella decisione: una storia d'amore contemporanea che celebra il potere dei libri di trasformare le vite, l'importanza dell'autenticità in un mondo artificiale, e la magia che accade quando due anime gemelle si riconoscono tra gli scaffali di una libreria.\n\nUna lettura perfetta per chi crede ancora nell'amore vero e nel potere delle storie di cambiare il mondo.",
-    "amazon": "https://www.amazon.it/dp/B0FCC1QN4V"
+    "amazon": "https://www.amazon.it/dp/B0FCC1QN4V",
+    "asin": "B0FCC1QN4V",
+    "asinPaperback": "B0FCC1QN4V",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FCC1QN4V",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 3,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FCC1QN4V"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-tra le pagine del cuore una storia d amore tra i libri::rob pac",
+      "kdpTitle": "Tra le Pagine del Cuore: Una storia d'amore tra i libri",
+      "kdpAuthor": "Rob Pac",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Visualizzazione Positiva e Mental Imagery Orientata all’Esito: Fondamenti Teorici, Metodologie e Applicazioni per il Benessere, la Performance e il Processo Creativo",
@@ -676,7 +3469,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/visualizzazione-positiva-e-mental-imagery-orientata-all-esito.webp",
     "description": "Una narrazione coinvolgente guida il lettore alla scoperta delle potenzialità della mente attraverso immagini interiori capaci di orientare emozioni, comportamenti e risultati concreti. Questo volume offre un percorso approfondito che integra basi neurocognitive, modelli teorici, protocolli pratici e riflessioni etiche, illustrando come coltivare la capacità di evocare scenari mentali positivi in contesti personali, professionali e creativi. L’approccio proposto non si limita a esercizi di fantasia, ma incoraggia una co-costruzione dell’esperienza immaginativa che rispetta la soggettività e valorizza la gradualità: ogni capitolo accompagna il lettore in una riflessione formale, senza ridurre il contenuto a istruzioni prefabbricate, ma offrendo chiavi di comprensione che favoriscono un dialogo interno continuo. I principi esposti consentono di integrare la visualizzazione positiva in pratiche di benessere mentale, performance sportiva, processi creativi, self-publishing e interventi clinici, con attenzione alla diversità culturale, all’equità di accesso e all’uso responsabile delle tecnologie emergenti. Chi affronta questo libro scopre come l’immaginazione guidata e autonoma diventi strumento di auto-regolazione e di resilienza, un ponte tra obiettivi desiderati e risorse interiori, capace di sostenere cambiamenti stabili nel tempo.",
-    "amazon": "https://www.amazon.it/dp/B0FCYG9RPG"
+    "amazon": "https://www.amazon.it/dp/B0FCYG9RPG",
+    "asin": "B0FCYG9RPG",
+    "asinPaperback": "B0FCYG9RPG",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FCYG9RPG",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 4,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FCYG9RPG"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-visualizzazione positiva e mental imagery orientata all esito fondamenti teorici metodologie e applicazioni per il benessere la performance e il processo creativo::roberto pacetti",
+      "kdpTitle": "Visualizzazione Positiva e Mental Imagery Orientata all’Esito: Fondamenti Teorici, Metodologie e Applicazioni per il Benessere, la Performance e il Processo Creativo",
+      "kdpAuthor": "Roberto Pacetti",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Due Cuori, Una Santità: Pier Giorgio Frassati e Carlo Acutis: Verso la canonizzazione",
@@ -684,7 +3502,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/due-cuori-una-santita.webp",
     "description": "Il 7 settembre 2025 la Chiesa cattolica proclamerà santi due giovani straordinari, testimoni di fede, carità e speranza: Pier Giorgio Frassati e Carlo Acutis. Un evento senza precedenti che unisce Torino e Milano, l’era industriale e l’epoca digitale, le vette alpine e il web. Questo libro ripercorre, con rigore e profondità spirituale, le loro vite, le loro opere e il significato ecclesiale di una canonizzazione congiunta che parla al cuore dei giovani del terzo millennio. Non è solo una biografia parallela, ma una meditazione sul volto contemporaneo della santità laicale, su come la fede si possa vivere nell’ordinarietà, con radicalità e amore.",
-    "amazon": "https://www.amazon.it/dp/B0FF33B47Z"
+    "amazon": "https://www.amazon.it/dp/B0FF33B47Z",
+    "asin": "B0FF33B47Z",
+    "asinPaperback": "B0FF33B47Z",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FF33B47Z",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 34,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FF33B47Z"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-due cuori una santita pier giorgio frassati e carlo acutis verso la canonizzazione::lorenzo de sanctis",
+      "kdpTitle": "Due Cuori, Una Santità: Pier Giorgio Frassati e Carlo Acutis: Verso la canonizzazione",
+      "kdpAuthor": "Lorenzo De Sanctis",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "SHIN-SHINOBI NO KOKORO: L'Anima del Nuovo Ninja: Riflessioni sulla Via dell'Ombra Compassionevole",
@@ -692,7 +3535,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/kl3ofnptj9p1v6afkdy4.webp",
     "description": "Un trattato che rilegge la tradizione shinobi come percorso etico e spirituale per l’uomo contemporaneo. “Shin-Shinobi no Kokoro – L’Anima del Nuovo Ninja” propone una riflessione rigorosa e poetica sulla via dell’ombra compassionevole, in cui la pratica dell’invisibilità etica, la disciplina del cuore e l’osservazione profonda formano una grammatica di crescita interiore. L’autore esplora il controllo delle emozioni, la pazienza come forza e il silenzio come spazio di ascolto, guidando il lettore a un’azione disinteressata che trascende l’ansia del risultato.\nAttraverso l’arte dell’osservazione compassionevole e la filosofia dell’azione senza aggressione, emerge una via di trasformazione che integra antica saggezza e istanze del presente.\nOgni capitolo invita a un’esercizio pratico della vigilanza interiore e della responsabilità verso sé, gli altri e le generazioni future, mostrando come le azioni compiute nell’ombra possano propagarsi oltre la propria vita.\nRivolto a chi cerca un orientamento etico profondo, questo testo si colloca come riferimento per chi desidera coniugare fermezza e apertura, forza e nonviolenza, disciplina e creatività in un cammino di autentica libertà interiore.",
-    "amazon": "https://www.amazon.it/dp/B0FG7HKPHL"
+    "amazon": "https://www.amazon.it/dp/B0FG7HKPHL",
+    "asin": "B0FG7HKPHL",
+    "asinPaperback": "B0FG7HKPHL",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FG7HKPHL",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 47,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FG7HKPHL"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-shin shinobi no kokoro l anima del nuovo ninja riflessioni sulla via dell ombra compassionevole::saito k jackson",
+      "kdpTitle": "SHIN-SHINOBI NO KOKORO: L'Anima del Nuovo Ninja: Riflessioni sulla Via dell'Ombra Compassionevole",
+      "kdpAuthor": "Saito K. Jackson",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Intelligenza Artificiale e Debito Cognitivo: Prospettive Critiche sulla Cooperazione Uomo-Macchina",
@@ -700,7 +3568,32 @@
     "category": "In lingua italiana",
     "cover": "/covers-web/intelligenza-artificiale-e-debito-cognitivo.webp",
     "description": "In un’epoca in cui l’intelligenza artificiale generativa ridefinisce il modo di scrivere, pensare e comunicare, questo saggio offre una riflessione approfondita, rigorosa e interdisciplinare sugli effetti cognitivi, culturali ed etici della cooperazione uomo-macchina.\n\nL’opera analizza i risultati neuroscientifici più recenti, esplora le implicazioni educative e sociali, e propone un approccio critico e consapevole alla supervisione dei testi generati dagli algoritmi. Senza cedere a facili entusiasmi o a condanne pregiudiziali, il volume invita a costruire un dialogo scientifico aperto, capace di garantire la responsabilità autoriale e la pluralità espressiva, pur riconoscendo le opportunità innovative offerte dai modelli linguistici avanzati.\n\nUno strumento essenziale per studiosi, educatori, professionisti della comunicazione e lettori interessati a comprendere le trasformazioni profonde della scrittura nell’era dell’intelligenza artificiale.",
-    "amazon": "https://www.amazon.it/dp/B0FH25BVCS"
+    "amazon": "https://www.amazon.it/dp/B0FH25BVCS",
+    "asin": "B0FH25BVCS",
+    "asinPaperback": "B0FH25BVCS",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FH25BVCS",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 5,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FH25BVCS"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-intelligenza artificiale e debito cognitivo prospettive critiche sulla cooperazione uomo macchina::massimo recaldi",
+      "kdpTitle": "Intelligenza Artificiale e Debito Cognitivo: Prospettive Critiche sulla Cooperazione Uomo-Macchina",
+      "kdpAuthor": "Massimo Recaldi",
+      "matchScore": 0.98,
+      "matchStatus": "match certo",
+      "reviewStatus": "approved"
+    }
   },
   {
     "title": "Empower Your Team: A Hands-On Guide to Managerial Soft Skills: Master Active Listening, Assertive Communication, Effective Delegation and Conflict Resolution for First-Time Managers in American Workplaces da John Keagan",
@@ -708,6 +3601,31 @@
     "category": "Personal Growth & Wellbeing",
     "cover": "/covers-web/empower-your-team.webp",
     "description": "Empower yourself with a definitive guide that seamlessly bridges the gap between theory and practice, equipping first‑time managers to master the interpersonal skills crucial for today’s dynamic workplaces. This volume delivers:\n\nRigorous Analysis of the foundational principles behind active listening, assertive communication, effective delegation, collaborative conflict resolution, and motivational strategies.\n\nAuthentic Case Studies—masked and narrated to preserve confidentiality—demonstrating how real organizations navigate complex team dynamics and leadership challenges.\n\nReady‑to‑Implement Frameworks that distill academic depth into practical tools, complete with downloadable resources to reinforce learning and accelerate on‑the‑job application.\n\nWhether you’re preparing for your first one‑on‑one, refining your feedback style, or steering cross‑functional initiatives, you will discover clear guidance, illustrative examples, and actionable worksheets designed to transform everyday challenges into opportunities for growth. Embrace the skills that build trust, inspire performance, and foster a culture of continuous improvement—your path to transformative leadership begins here.",
-    "amazon": "https://www.amazon.com/dp/B0FHW98R17"
+    "amazon": "https://www.amazon.com/dp/B0FHW98R17",
+    "asin": "B0FHW98R17",
+    "asinPaperback": "B0FHW98R17",
+    "kdpFormats": [
+      {
+        "format": "Paperback",
+        "asin": "B0FHW98R17",
+        "isbn": "",
+        "status": "Online",
+        "sourceIndex": 6,
+        "sourcePage": ""
+      }
+    ],
+    "kdpAllAsins": [
+      "B0FHW98R17"
+    ],
+    "catalogReview": {
+      "source": "RobPac Catalog Manager",
+      "appVersion": "0.3.0",
+      "selectedKdpGroupId": "kdp-group-empower your team a hands on guide to managerial soft skills master active listening assertive communication effective delegation and conflict resolution for first time managers in american workplaces::john keagan",
+      "kdpTitle": "Empower Your Team: A Hands-On Guide to Managerial Soft Skills: Master Active Listening, Assertive Communication, Effective Delegation and Conflict Resolution for First-Time Managers in American Workplaces",
+      "kdpAuthor": "John Keagan",
+      "matchScore": 0.8564,
+      "matchStatus": "match probabile",
+      "reviewStatus": "approved"
+    }
   }
 ]
