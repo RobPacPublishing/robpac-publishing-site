@@ -681,10 +681,13 @@
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-4xl font-black heading-font text-center mb-8">Browse Our Collection</h2>
             <div class="flex justify-center gap-3 mb-8 flex-wrap">
-                <button onclick="filterBooks('all')" class="filter-btn bg-amber-600 text-white px-6 py-2 rounded-full font-semibold">All Books</button>
-                <button onclick="filterBooks('self-help')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Self-Help</button>
-                <button onclick="filterBooks('fiction')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Fiction</button>
-                <button onclick="filterBooks('cookbook')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Cookbooks</button>
+                <button onclick="filterBooks(event, 'all')" class="filter-btn bg-amber-600 text-white px-6 py-2 rounded-full font-semibold">All Books</button>
+                <button onclick="filterBooks(event, 'Personal Growth & Wellbeing')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Personal Growth</button>
+                <button onclick="filterBooks(event, 'Fiction & Literature')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Fiction</button>
+                <button onclick="filterBooks(event, 'Lifestyle & Hobbies')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Lifestyle & Hobbies</button>
+                <button onclick="filterBooks(event, 'Sciences & Knowledge')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Sciences & Knowledge</button>
+                <button onclick="filterBooks(event, 'Society & Culture')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">Society & Culture</button>
+                <button onclick="filterBooks(event, 'In lingua italiana')" class="filter-btn bg-gray-100 text-gray-700 px-6 py-2 rounded-full font-semibold">In lingua italiana</button>
             </div>
             <div id="booksGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"></div>
             <div class="text-center mt-10">
@@ -891,13 +894,17 @@ async function loadBooks() {
     }
 }
 
-function filterBooks(cat) {
+function filterBooks(event, cat) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('bg-amber-600','text-white');
         btn.classList.add('bg-gray-100','text-gray-700');
     });
-    event.target.classList.remove('bg-gray-100','text-gray-700');
-    event.target.classList.add('bg-amber-600','text-white');
+
+    if (event && event.target) {
+        event.target.classList.remove('bg-gray-100','text-gray-700');
+        event.target.classList.add('bg-amber-600','text-white');
+    }
+
     displayBooks(cat === 'all' ? books : books.filter(b => b.category === cat));
 }
 
