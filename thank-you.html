@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received - RobPac Publishing</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/png" href="assets/logo3senzasfondo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50 flex flex-col">
+    <main class="flex-1 flex items-center justify-center px-4 py-16">
+        <section class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl border border-amber-100 p-10 text-center">
+            <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo" class="h-24 w-24 object-contain mx-auto mb-6">
+            <div class="text-5xl mb-5">✓</div>
+            <h1 class="heading-font text-4xl font-bold text-gray-900 mb-5">Request received</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">Your free eBook request has been sent to RobPac Publishing.</p>
+            <p class="text-gray-600 leading-relaxed mb-8">We will use the email address you supplied only to handle this request. This page confirms receipt of the request; it does not represent an automated download.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+                <a href="/" class="bg-amber-700 text-white px-7 py-3 rounded-full font-bold hover:bg-amber-800 transition">Return to Home</a>
+                <a href="/#books" class="bg-white border border-amber-200 text-amber-800 px-7 py-3 rounded-full font-bold hover:bg-amber-50 transition">Browse Books</a>
+            </div>
+        </section>
+    </main>
+    <footer class="py-8 text-center text-sm text-gray-500">
+        © <span id="thanksCurrentYear"></span> RobPac Publishing
+    </footer>
+    <script>
+        document.getElementById('thanksCurrentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
