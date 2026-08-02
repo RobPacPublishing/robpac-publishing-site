@@ -59,7 +59,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Whispers in the Abyss: A Symphony of Realities",
@@ -103,7 +104,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "RUMINAZIONE MENTALE: Libera la mente dal pensiero ossessivo",
@@ -148,7 +150,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Carnivore Diet Cookbook: Revitalize Your Health: Irresistible Meat Recipes for Rapid Weight Loss, Muscle Gain, and Pain Relief",
@@ -192,7 +195,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "La Via del Guerriero Illuminato: Virtù Marziali e Saggezza Buddhista",
@@ -242,7 +246,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Martial Arts, Philosophy & Spirituality"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Nonna Lina's Italian Kitchen: Stories and Simple Recipes from a Centenarian's Heart",
@@ -286,7 +291,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Perception and Attention Biases: Understanding and Overcoming Cognitive Distortions (Understanding the Mind)",
@@ -336,7 +342,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Psychology & Human Sciences"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "RESTLESS SILENCE",
@@ -380,7 +387,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Santa's Kitchen Cookbook: 60+ Merry Recipes for Family Fun and Festive Feasts",
@@ -424,7 +432,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Born Again: A Journey of Spiritual Renewal and Transformation in Christ",
@@ -473,7 +482,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Religion, Faith & Spirituality"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Halloween Cookbook for Little Monsters: Spooky Snacks and Creepy Treats",
@@ -517,7 +527,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Mindfulness for Beginners: Your Path to Calm and Clarity",
@@ -597,7 +608,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Pellegrini di Speranza: Storia, Fede e Testimonianze nel Giubileo 2025",
@@ -642,7 +654,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Starlit Encounters: Tales of Love, Fate, and Second Chances",
@@ -686,7 +699,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Mindful Leadership: A Science-Based Approach to Stress Management for Modern Professionals",
@@ -730,7 +744,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Emozioni Intrecciate: Cinque storie, un intreccio di emozioni indimenticabili",
@@ -774,7 +789,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "The Poetic Future: Humanity, Technology, and the Art of Progress",
@@ -823,7 +839,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Artificial Intelligence & Society"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "SHINRIN-YOKU: The Healing Power of the Forest: A comprehensive guide to regaining balance, well-being, and connection with nature",
@@ -867,7 +884,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Shinrin-Yoku: Il Potere Guaritore della Foresta: Una guida completa per ritrovare equilibrio, benessere e connessione con la natura",
@@ -912,7 +930,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Il Silenzio delle Vette: La verità ha sempre un prezzo",
@@ -956,7 +975,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Oltre il Sentiero: Etica, Natura e Vita nel Postumano: Un dialogo tra il viandante e il suo tempo",
@@ -1009,7 +1029,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Focus and Mental Clarity: A Step-by-Step Guide to Overcoming Procrastination and Building Habits for Success",
@@ -1053,7 +1074,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Cucina al Contrario: Ribalta la Tua Tavola!",
@@ -1087,7 +1109,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Mocktail Magic: Il Mondo dei Cocktail Analcolici",
@@ -1131,7 +1154,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Overcoming Self-Sabotage: Unlocking Your True Potential",
@@ -1175,7 +1199,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "GALVESTON Diet Cookbook Master Midlife Nutrition with Easy, Tasty Recipes That Work: Master Midlife Nutrition with Easy, Tasty Recipes That Work",
@@ -1219,7 +1244,8 @@
       "matchScore": 0.8200000000000001,
       "matchStatus": "match probabile",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Psychology of Saving: Mastering Your Money Mindset",
@@ -1263,7 +1289,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Master Your Anger: A Practical Guide to Understanding and Managing Your Emotions",
@@ -1307,7 +1334,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "La Psicologia della Superstizione: Origini, Funzioni e Impatti",
@@ -1352,7 +1380,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Depression: Integrating Molecular Mechanisms and Psychosocial Perspectives",
@@ -1401,7 +1430,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Psychology & Human Sciences"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Side Hustle Architecture: Building Sustainable Parallel Income Systems in the Digital Economy",
@@ -1445,7 +1475,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Entropia e resilienza: La frammentazione dell’ordine mondiale nella guerra tra Russia e Ucraina (Italian Edition)",
@@ -1489,7 +1520,8 @@
       "matchScore": 0.8408000000000001,
       "matchStatus": "match probabile",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Silenzio Irrequieto",
@@ -1533,7 +1565,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "The Art of Letting Go: How to Finally Break Free from Toxic Relationships, Negative Thoughts, and Unfulfilling Jobs",
@@ -1577,7 +1610,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Memory Biases: A Comprehensive Scientific Analysis (Understanding the Mind)",
@@ -1622,7 +1656,8 @@
       "matchScore": 0.8408000000000001,
       "matchStatus": "match probabile",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "IKIGAI, KAIZEN & HANSEI: A Practical Guide to Find Your Purpose",
@@ -1666,7 +1701,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Low-FODMAP Diet for Beginners: Your Comprehensive Guide to Managing IBS and Digestive Wellness",
@@ -1710,7 +1746,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Miyu Introduces Her Friends: Coloring Book",
@@ -1749,7 +1786,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Children & Coloring Books"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "SAILOR MOUSE: Coloring Book",
@@ -1788,7 +1826,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Children & Coloring Books"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Anxiety Solution: Your Path to Peace",
@@ -1832,7 +1871,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Ecological Renaissance: Rebuilding Our Future with Nature",
@@ -1876,7 +1916,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Balance in Chaos: Simple Steps to a Calmer, Healthier Life",
@@ -1920,7 +1961,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Psicologia della Personalità: L'essenza dell' individualità",
@@ -1964,7 +2006,8 @@
       "matchScore": 0.9262,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Psicologia Dinamica: Le profondità della psiche",
@@ -2008,7 +2051,8 @@
       "matchScore": 0.9262,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Psicologia dello Sviluppo: Comprendere il Ciclo di Vita",
@@ -2052,7 +2096,8 @@
       "matchScore": 0.9262,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Psicologia del Lavoro: Comprendere e Ottimizzare il Benessere Organizzativo",
@@ -2096,7 +2141,8 @@
       "matchScore": 0.9262,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Psicologia di Comunità: Costruire Benessere Collettivo",
@@ -2140,7 +2186,8 @@
       "matchScore": 0.9262,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Dark Psychology and Manipulation: Understanding the Hidden Architecture of Psychological Influence",
@@ -2184,7 +2231,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Dark Psychology and Manipulation: Mastering the Hidden Arts of Influence",
@@ -2228,7 +2276,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Polpette Revolution: Sapori Tondi per Ogni Occasione",
@@ -2272,7 +2321,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Chess For Beginners: The Ultimate Guide - Learn Basics and Secret Tactics Like a Pro",
@@ -2321,7 +2371,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Hobbies & Practical Skills"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "BEEKEEPING FOR BEGINNERS: From Hive to Honey: Mastering the Art of Beekeeping",
@@ -2370,7 +2421,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Hobbies & Practical Skills"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Low-Carb Living: Delicious Recipes for a Balanced Lifestyle: 95 Flavorful, Low-Carb Dishes for Every Meal and Every Occasion",
@@ -2414,7 +2466,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Artificial Intelligence and Global Inequality: Navigating the Digital Divide in the Age of AI",
@@ -2458,7 +2511,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Self-Awareness Revolution: Change Your Life from the Inside Out",
@@ -2502,7 +2556,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Mediterranean Diet Cookbook: Timeless Recipes for Every Occasion",
@@ -2546,7 +2601,8 @@
       "matchScore": 0.9500000000000001,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Unlock Your Inner Power: The 30-Day Challenge to Transform Your Life",
@@ -2590,7 +2646,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "KETO DIET COOKBOOK FOR BEGINNERS: Family-friendly keto recipes",
@@ -2634,7 +2691,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Mindful Parenting: A Guide to Positive Discipline and Emotional Growth",
@@ -2678,7 +2736,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Emotions in Growth: Guiding Children in Emotional Management",
@@ -2722,7 +2781,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "La Felicità Un'Illusione Moderna?: Viaggio Sarcastico nel Paese dei Sorrisi Forzati",
@@ -2766,7 +2826,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Mindfulness per principianti: Il Percorso verso la Calma e la Chiarezza",
@@ -2810,7 +2871,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "The Final Showdown: Will Max and His Friends Triumph Over Adversity and Claim the Treasure?",
@@ -2859,7 +2921,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Children & Adventure Fiction"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "OMBRE DI FERRO: Tra Passato e Rinascita",
@@ -2903,7 +2966,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "The Digital Leash: Where Thoughts End and Programs Begin",
@@ -2947,7 +3011,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Oxford Odyssey (Lexicon Arcan)",
@@ -2996,7 +3061,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Fantasy & Adventure Fiction"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Plant-Powered Recipes: 90+ Delicious Vegetarian Recipes for Every Occasion",
@@ -3040,7 +3106,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Somatic Art Therapy for Beginners: Healing Depression and Anxiety Through Body and Creativity",
@@ -3084,7 +3151,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Winchester Whispers (Lexicon Arcan)",
@@ -3133,7 +3201,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Fantasy & Adventure Fiction"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "The Highlands Hex (Lexicon Arcan)",
@@ -3182,7 +3251,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Fantasy & Adventure Fiction"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Oltre l'Orizzonte del Tempo: Cronache di una Famiglia Ritrovata",
@@ -3216,7 +3286,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Adventures in Color: Living Vehicles!",
@@ -3255,7 +3326,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Children & Coloring Books"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "GESÙ NEL TERZO MILLENNIO: Tra Follia e Santità, Quale Ruolo Avrebbe Oggi il Figlio di Dio?",
@@ -3304,7 +3376,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Religion, Faith & Spirituality"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "PSICOLOGIA DELLA PERSONALITA'",
@@ -3338,7 +3411,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Menti Divergenti",
@@ -3347,7 +3421,8 @@
     "subcategory": "Psicologia e scienze umane",
     "cover": "/covers-web/hyjcb9ngvznruucl9gq5.webp",
     "description": "Il presente elaborato offre una panoramica scientifica aggiornata e multidimensionale dell’autismo, organizzata in capitoli tematici che esplorano il fenomeno dalla sua definizione fino alle prospettive future della ricerca.",
-    "amazon": "https://www.etsy.com/it/listing/1899127981/autismo-una-panoramica-scientifica?ref=shop_home_active_1&logging_key=21ba00496619e8caa58a8a2c6377cefdef04ce1a%3A1899127981"
+    "amazon": "https://www.etsy.com/it/listing/1899127981/autismo-una-panoramica-scientifica?ref=shop_home_active_1&logging_key=21ba00496619e8caa58a8a2c6377cefdef04ce1a%3A1899127981",
+    "language": "it"
   },
   {
     "title": "ADOLESCENZA: Guida all'addestramento per genitori e insegnanti",
@@ -3381,7 +3456,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Tra Fede e Nichilismo",
@@ -3415,7 +3491,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Il Codice Bergoglio: Crittografia di un Pontificato",
@@ -3454,7 +3531,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Religion, Faith & Spirituality"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "ECHO HOUSE: Oltre le Camere d'Eco: Un Nuovo Paradigma per Comprendere la Polarizzazione Convergente",
@@ -3488,7 +3566,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Autostima Infrangibile: 30 giorni di pratiche evidence-based per consolidare fiducia in sé, resilienza emotiva e benessere cognitivo",
@@ -3522,7 +3601,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "The 7-Day Puppy Training Miracle: Transform Your Puppy into a Well-Behaved Family Dog Using Proven Positive Methods",
@@ -3561,7 +3641,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Hobbies & Practical Skills"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "THE HEIR OF THE STARS: The Prophecy of Light's Blood",
@@ -3600,7 +3681,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Fantasy & Adventure Fiction"
       }
-    }
+    },
+    "language": "en"
   },
   {
     "title": "Tra le Pagine del Cuore: Una storia d'amore tra i libri",
@@ -3639,7 +3721,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Romance & Literary Fiction"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Visualizzazione Positiva e Mental Imagery Orientata all’Esito: Fondamenti Teorici, Metodologie e Applicazioni per il Benessere, la Performance e il Processo Creativo",
@@ -3678,7 +3761,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Psychology & Human Sciences"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Due Cuori, Una Santità: Pier Giorgio Frassati e Carlo Acutis: Verso la canonizzazione",
@@ -3717,7 +3801,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Religion, Faith & Spirituality"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "SHIN-SHINOBI NO KOKORO: L'Anima del Nuovo Ninja: Riflessioni sulla Via dell'Ombra Compassionevole",
@@ -3756,7 +3841,8 @@
         "reviewStatus": "approved",
         "approvedSubcategory": "Martial Arts, Philosophy & Spirituality"
       }
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Intelligenza Artificiale e Debito Cognitivo: Prospettive Critiche sulla Cooperazione Uomo-Macchina",
@@ -3790,7 +3876,8 @@
       "matchScore": 0.98,
       "matchStatus": "match certo",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "it"
   },
   {
     "title": "Empower Your Team: A Hands-On Guide to Managerial Soft Skills: Master Active Listening, Assertive Communication, Effective Delegation and Conflict Resolution for First-Time Managers in American Workplaces da John Keagan",
@@ -3824,6 +3911,7 @@
       "matchScore": 0.8564,
       "matchStatus": "match probabile",
       "reviewStatus": "approved"
-    }
+    },
+    "language": "en"
   }
 ]

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo Italiano | RobPac Publishing</title>
+  <meta name="description" content="Esplora il Catalogo Italiano RobPac Publishing: narrativa, idee e conoscenza pubblicate in italiano.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.robpacpublishing.com/it/catalogo/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Catalogo Italiano | RobPac Publishing">
+  <meta property="og:description" content="Esplora il Catalogo Italiano RobPac Publishing: narrativa, idee e conoscenza pubblicate in italiano.">
+  <meta property="og:url" content="https://www.robpacpublishing.com/it/catalogo/">
+  <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/logo3senzasfondo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading-font { font-family: 'Playfair Display', serif; }
+    .book-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .book-card:hover { transform: translateY(-5px); box-shadow: 0 22px 44px rgba(0,0,0,.12); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <nav class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-5">
+      <a href="/" class="flex items-center gap-3 min-w-0">
+        <img src="/assets/logo3senzasfondo.png" alt="RobPac Publishing" class="h-12 w-12 object-contain">
+        <div class="min-w-0">
+          <p class="heading-font text-xl sm:text-2xl font-bold text-amber-700 truncate">RobPac Publishing</p>
+          <p class="text-xs text-gray-500">Casa editrice indipendente</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-3 sm:gap-5 text-sm font-semibold">
+        <a href="/" class="text-gray-700 hover:text-amber-700">Home</a>
+        <a href="/international/" class="hidden sm:inline text-gray-700 hover:text-amber-700">International Catalog</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-gradient-to-br from-amber-50 via-white to-orange-50 border-b border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
+      <p class="text-sm uppercase tracking-[.24em] font-bold text-amber-700 mb-4">Catalogo Italiano · Libri in italiano</p>
+      <h1 class="heading-font text-4xl lg:text-6xl font-black leading-tight max-w-5xl mb-5">Storie, idee e conoscenza in italiano</h1>
+      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">Scopri narrativa, psicologia, benessere, spiritualità, cultura e conoscenza pratica nel catalogo editoriale italiano di RobPac Publishing.</p>
+      <div class="mt-7 inline-flex items-center gap-3 rounded-full bg-white border border-amber-200 px-5 py-3 shadow-sm">
+        <span class="font-black text-amber-700" id="catalogCount">0</span>
+        <span class="text-sm text-gray-600">libri nel Catalogo Italiano</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 mb-10">
+      <div class="grid md:grid-cols-[1fr_auto] gap-4 items-center">
+        <label class="block">
+          <span class="sr-only">Cerca nel Catalogo Italiano</span>
+          <input id="catalogSearch" type="search" placeholder="Cerca nel Catalogo Italiano" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </label>
+        <select id="categoryFilter" class="border border-gray-300 rounded-xl px-4 py-3 bg-white min-w-[220px]">
+          <option value="all">Tutte le categorie</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="catalogGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"></section>
+    <p id="emptyState" class="hidden text-center text-gray-600 py-16">Nessun libro corrisponde alla ricerca.</p>
+
+    <section class="mt-16 rounded-3xl bg-gray-900 text-white p-8 lg:p-10 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
+      <div>
+        <p class="text-xs uppercase tracking-[.22em] font-bold text-amber-300 mb-2">RobPac Publishing</p>
+        <h2 class="heading-font text-3xl font-bold mb-3">Cerchi i libri pubblicati in inglese?</h2>
+        <p class="text-gray-300 max-w-2xl">Un unico editore, due cataloghi distinti per lingua e percorso editoriale.</p>
+      </div>
+      <a href="/international/" class="inline-flex justify-center bg-amber-600 hover:bg-amber-700 text-white px-7 py-3 rounded-full font-bold whitespace-nowrap">International Catalog →</a>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-10 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-5 justify-between text-sm text-gray-600">
+      <p>© <span id="year"></span> RobPac Publishing</p>
+      <div class="flex flex-wrap gap-5">
+        <a href="/privacy.html" class="hover:text-amber-700">Privacy</a>
+        <a href="/terms.html" class="hover:text-amber-700">Terms</a>
+        <a href="/" class="hover:text-amber-700">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CATALOG_LANGUAGE = "it";
+    const labels = {
+      view: "Vedi libro",
+      amazon: "Vedi su Amazon",
+      payhip: "Vedi eBook"
+    };
+    let catalogBooks = [];
+
+    function escapeHtml(value = '') {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function normalizeBook(book) {
+      return {
+        ...book,
+        language: book.language || (book.category === 'In lingua italiana' ? 'it' : 'en'),
+        amazonLink: book.amazonLink || book.amazon || '',
+        payhipLink: book.payhipLink || book.payhip || '',
+        cover: book.cover || '/covers/placeholder.svg'
+      };
+    }
+
+    function populateCategories() {
+      const select = document.getElementById('categoryFilter');
+      const categories = [...new Set(catalogBooks.map(book => book.category).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+      for (const category of categories) {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        select.appendChild(option);
+      }
+    }
+
+    function renderCatalog() {
+      const query = document.getElementById('catalogSearch').value.trim().toLowerCase();
+      const category = document.getElementById('categoryFilter').value;
+      const filtered = catalogBooks.filter(book => {
+        const matchesCategory = category === 'all' || book.category === category;
+        const haystack = [book.title, book.author, book.category, book.subcategory, book.description].join(' ').toLowerCase();
+        return matchesCategory && (!query || haystack.includes(query));
+      });
+
+      const grid = document.getElementById('catalogGrid');
+      const empty = document.getElementById('emptyState');
+      grid.innerHTML = filtered.map(book => {
+        const links = [];
+        if (book.amazonLink) links.push('<a href="' + escapeHtml(book.amazonLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.amazon) + '</a>');
+        if (book.payhipLink) links.push('<a href="' + escapeHtml(book.payhipLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.payhip) + '</a>');
+        return '<article class="book-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">' +
+          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=&quot;/covers/placeholder.svg&quot;"></div>' +
+          '<div class="p-4 flex flex-col flex-grow"><p class="text-xs uppercase tracking-wide font-bold text-amber-700 mb-2">' + escapeHtml(book.subcategory || book.category || '') + '</p>' +
+          '<h2 class="font-bold leading-snug mb-2">' + escapeHtml(book.title) + '</h2>' +
+          '<p class="text-sm text-gray-500 mb-4">' + (book.author ? (("di ") + escapeHtml(book.author)) : '') + '</p>' +
+          '<div class="mt-auto space-y-2">' + links.join('') + '</div></div></article>';
+      }).join('');
+      empty.classList.toggle('hidden', filtered.length !== 0);
+    }
+
+    async function initCatalog() {
+      const response = await fetch('/books.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Unable to load books.json');
+      const data = await response.json();
+      catalogBooks = (Array.isArray(data) ? data : []).map(normalizeBook).filter(book => book.language === CATALOG_LANGUAGE);
+      document.getElementById('catalogCount').textContent = catalogBooks.length;
+      populateCategories();
+      renderCatalog();
+    }
+
+    document.getElementById('catalogSearch').addEventListener('input', renderCatalog);
+    document.getElementById('categoryFilter').addEventListener('change', renderCatalog);
+    document.getElementById('year').textContent = new Date().getFullYear();
+    initCatalog().catch(error => {
+      console.error(error);
+      document.getElementById('emptyState').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -5,6 +5,25 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 
+function validateInlineScripts(relativePath) {
+  const absolutePath = path.join(root, relativePath);
+  if (!fs.existsSync(absolutePath)) {
+    errors.push(`Missing required file: ${relativePath}`);
+    return;
+  }
+
+  const html = fs.readFileSync(absolutePath, "utf8");
+  const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*type=["']application\/ld\+json["'])[^>]*>([\s\S]*?)<\/script>/gi)];
+
+  scripts.forEach((match, index) => {
+    try {
+      new Function(match[1]);
+    } catch (error) {
+      errors.push(`${relativePath}: inline script ${index + 1} has invalid JavaScript: ${error.message}`);
+    }
+  });
+}
+
 function read(relativePath) {
   const absolutePath = path.join(root, relativePath);
   if (!fs.existsSync(absolutePath)) {
@@ -48,6 +67,10 @@ books.forEach((book, index) => {
     else seen.set(key, index + 1);
   }
 
+  if (!["en", "it"].includes(String(book?.language ?? "").trim())) {
+    errors.push(`${label}: missing or invalid language; expected en or it.`);
+  }
+
   if (book?.cover && !localPathExists(book.cover)) {
     warnings.push(`${label}: local cover not found: ${book.cover}`);
   }
@@ -64,9 +87,25 @@ const indexHtml = read("index.html");
 const termsHtml = read("terms.html");
 read("privacy.html");
 read("thank-you.html");
+validateInlineScripts("international/index.html");
+validateInlineScripts("it/catalogo/index.html");
+const internationalHtml = read("international/index.html");
+const italianCatalogHtml = read("it/catalogo/index.html");
 
 if (!indexHtml.includes('href="privacy.html"') && !indexHtml.includes('href="/privacy.html"')) {
   errors.push("index.html does not link to privacy.html.");
+}
+
+if (!indexHtml.includes('href="/international/"')) {
+  errors.push("index.html does not link to the International Catalog.");
+}
+
+if (!indexHtml.includes('href="/it/catalogo/"')) {
+  errors.push("index.html does not link to the Catalogo Italiano.");
+}
+
+if (!internationalHtml.includes("International Catalog") || !italianCatalogHtml.includes("Catalogo Italiano")) {
+  errors.push("One or both catalog landing pages are missing their expected identity.");
 }
 
 if (!indexHtml.includes('id="currentYear"')) {
