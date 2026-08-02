@@ -122,7 +122,7 @@ function catalogPage({ lang, canonicalPath, title, description, eyebrow, heading
       <div>
         <p class="text-xs uppercase tracking-[.22em] font-bold text-amber-300 mb-2">RobPac Publishing</p>
         <h2 class="heading-font text-3xl font-bold mb-3">${escapeHtml(crossCta)}</h2>
-        <p class="text-gray-300 max-w-2xl">${isItalian ? 'Un unico editore, due cataloghi distinti per lingua, pubblico e percorso editoriale.' : 'One publishing house with two distinct catalogs for different languages, audiences, and editorial paths.'}</p>
+        <p class="text-gray-300 max-w-2xl">${isItalian ? 'Un unico editore, due cataloghi distinti per lingua e percorso editoriale.' : 'One publishing house with two distinct catalogs, each defined by its language and editorial direction.'}</p>
       </div>
       <a href="${crossHref}" class="inline-flex justify-center bg-amber-600 hover:bg-amber-700 text-white px-7 py-3 rounded-full font-bold whitespace-nowrap">${escapeHtml(crossLabel)} →</a>
     </section>
@@ -194,7 +194,7 @@ function catalogPage({ lang, canonicalPath, title, description, eyebrow, heading
         if (book.amazonLink) links.push('<a href="' + escapeHtml(book.amazonLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.amazon) + '</a>');
         if (book.payhipLink) links.push('<a href="' + escapeHtml(book.payhipLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.payhip) + '</a>');
         return '<article class="book-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">' +
-          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.src=\'/covers/placeholder.svg\'"></div>' +
+          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=&quot;/covers/placeholder.svg&quot;"></div>' +
           '<div class="p-4 flex flex-col flex-grow"><p class="text-xs uppercase tracking-wide font-bold text-amber-700 mb-2">' + escapeHtml(book.subcategory || book.category || '') + '</p>' +
           '<h2 class="font-bold leading-snug mb-2">' + escapeHtml(book.title) + '</h2>' +
           '<p class="text-sm text-gray-500 mb-4">' + (book.author ? ((${JSON.stringify(isItalian ? 'di ' : 'by ')}) + escapeHtml(book.author)) : '') + '</p>' +
@@ -246,9 +246,9 @@ write('international/index.html', catalogPage({
   lang: 'en',
   canonicalPath: '/international/',
   title: 'International Catalog | RobPac Publishing',
-  description: 'Explore the RobPac Publishing International Catalog: books published in English for readers worldwide.',
+  description: 'Explore the RobPac Publishing International Catalog: fiction, ideas, and practical knowledge published in English.',
   eyebrow: 'International Catalog · Books in English',
-  heading: 'Books published in English for readers worldwide',
+  heading: 'Stories, ideas and knowledge in English',
   intro: 'Explore fiction, personal growth, psychology, culture, lifestyle, and practical knowledge from the international editorial catalog of RobPac Publishing.',
   searchLabel: 'Search the International Catalog',
   allLabel: 'All categories',
@@ -267,9 +267,9 @@ write('it/catalogo/index.html', catalogPage({
   lang: 'it',
   canonicalPath: '/it/catalogo/',
   title: 'Catalogo Italiano | RobPac Publishing',
-  description: 'Esplora il Catalogo Italiano RobPac Publishing: libri pubblicati in italiano per il pubblico italiano.',
+  description: 'Esplora il Catalogo Italiano RobPac Publishing: narrativa, idee e conoscenza pubblicate in italiano.',
   eyebrow: 'Catalogo Italiano · Libri in italiano',
-  heading: 'Libri pubblicati in italiano per il pubblico italiano',
+  heading: 'Storie, idee e conoscenza in italiano',
   intro: 'Scopri narrativa, psicologia, benessere, spiritualità, cultura e conoscenza pratica nel catalogo editoriale italiano di RobPac Publishing.',
   searchLabel: 'Cerca nel Catalogo Italiano',
   allLabel: 'Tutte le categorie',
@@ -291,7 +291,7 @@ indexHtml = indexHtml
   .replaceAll('RobPac Publishing | 100+ Books - Fiction, Self-Help, Health & Wellness', 'RobPac Publishing | International and Italian Book Catalogs')
   .replaceAll('Independent publishing house with 100+ quality books on Amazon KDP. Explore fiction, self-help, diet cookbooks, psychology guides. Free chapter downloads available.', 'One independent publishing house with two distinct editorial catalogs: the International Catalog in English and the Catalogo Italiano in Italian.')
   .replaceAll('independent publisher, self-help books, fiction novels, diet cookbooks, psychology books, Amazon KDP, free book chapters, wellness guides', 'independent publisher, international book catalog, Italian book catalog, books in English, libri in italiano, Amazon KDP')
-  .replaceAll('Independent publishing house delivering quality content across fiction, self-help, health, and specialized non-fiction with over 100 titles on Amazon KDP.', 'Independent publishing house presenting two distinct editorial catalogs: books published in English for an international audience and books published in Italian for the Italian audience.');
+  .replaceAll('Independent publishing house delivering quality content across fiction, self-help, health, and specialized non-fiction with over 100 titles on Amazon KDP.', 'Independent publishing house presenting two distinct editorial catalogs: books published in English and books published in Italian, each with its own editorial direction.');
 
 const oldNav = /<div class="hidden lg:flex[^"]*">[\s\S]*?<button onclick="openModal\(\)"[\s\S]*?<\/button>\s*<\/div>/;
 const newNav = `                <div class="hidden lg:flex items-center space-x-5">
@@ -349,7 +349,7 @@ const gateway = `<!-- CATALOG GATEWAY START -->
     <div class="text-center max-w-3xl mx-auto mb-10">
       <p class="text-xs font-bold uppercase tracking-[0.25em] text-amber-700 mb-3">Two editorial catalogs</p>
       <h2 id="catalogs-heading" class="heading-font text-3xl lg:text-4xl font-black text-gray-950 mb-4">Choose the catalog you want to explore</h2>
-      <p class="text-gray-600 leading-relaxed">This is not a language switch. Each destination is a distinct editorial catalog with its own books, categories, audience, and reading paths.</p>
+      <p class="text-gray-600 leading-relaxed">This is not a language switch. Each destination is a distinct editorial catalog with its own books, categories, identity, and reading paths.</p>
     </div>
 
     <div class="grid lg:grid-cols-2 gap-7">
@@ -361,7 +361,7 @@ const gateway = `<!-- CATALOG GATEWAY START -->
           </div>
           <div class="rounded-full bg-white border border-amber-200 px-4 py-2 text-sm whitespace-nowrap"><strong id="internationalCatalogCount">0</strong> books</div>
         </div>
-        <p class="text-gray-700 leading-relaxed mb-6">Fiction, personal growth, psychology, culture, lifestyle, and practical knowledge for readers worldwide.</p>
+        <p class="text-gray-700 leading-relaxed mb-6">An editorial selection spanning fiction, personal growth, psychology, culture, lifestyle, and practical knowledge.</p>
         <div id="internationalCatalogPreview" class="grid grid-cols-4 gap-3 mb-7" aria-label="International Catalog preview"></div>
         <a href="/international/" class="inline-flex justify-center bg-amber-700 hover:bg-amber-800 text-white px-7 py-3 rounded-full font-bold">Explore the International Catalog →</a>
       </article>
@@ -374,7 +374,7 @@ const gateway = `<!-- CATALOG GATEWAY START -->
           </div>
           <div class="rounded-full bg-white border border-indigo-200 px-4 py-2 text-sm whitespace-nowrap"><strong id="italianCatalogCount">0</strong> libri</div>
         </div>
-        <p class="text-gray-700 leading-relaxed mb-6">Narrativa, psicologia, benessere, spiritualità, cultura e conoscenza pratica per il pubblico italiano.</p>
+        <p class="text-gray-700 leading-relaxed mb-6">Una selezione editoriale tra narrativa, psicologia, benessere, spiritualità, cultura e conoscenza pratica.</p>
         <div id="italianCatalogPreview" class="grid grid-cols-4 gap-3 mb-7" aria-label="Anteprima del Catalogo Italiano"></div>
         <a href="/it/catalogo/" class="inline-flex justify-center bg-indigo-700 hover:bg-indigo-800 text-white px-7 py-3 rounded-full font-bold">Esplora il Catalogo Italiano →</a>
       </article>
@@ -403,7 +403,7 @@ indexHtml = indexHtml
 indexHtml = indexHtml
   .replace('<p class="text-3xl font-bold text-amber-600">100+</p>\n                    <p class="text-sm text-gray-600 font-medium">Books Published</p>', '<p class="text-3xl font-bold text-amber-600"><span id="totalCatalogCount">0</span></p>\n                    <p class="text-sm text-gray-600 font-medium">Titles Across Two Catalogs</p>')
   .replace('<h3 class="font-bold text-lg mb-1">100+ Published Titles</h3>\n                                <p class="text-gray-600">Across major categories and genres</p>', '<h3 class="font-bold text-lg mb-1">Two Editorial Catalogs</h3>\n                                <p class="text-gray-600">International books and books in Italian</p>')
-  .replace('With over 100 titles on Amazon KDP, we collaborate with talented authors to bring engaging stories \n                        and valuable knowledge to readers worldwide.', 'Through two distinct editorial catalogs, we present books published in English for international readers and books published in Italian for the Italian audience.')
+  .replace('With over 100 titles on Amazon KDP, we collaborate with talented authors to bring engaging stories \n                        and valuable knowledge to readers worldwide.', 'Through two distinct editorial catalogs, we present books published in English and books published in Italian, each with its own themes and editorial direction.')
   .replace('Over 100 titles across fiction, self-help, health, and more.', 'Two distinct editorial catalogs within one independent publishing house.');
 
 indexHtml = indexHtml

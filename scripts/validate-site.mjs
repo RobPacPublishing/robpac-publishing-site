@@ -5,6 +5,25 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 
+function validateInlineScripts(relativePath) {
+  const absolutePath = path.join(root, relativePath);
+  if (!fs.existsSync(absolutePath)) {
+    errors.push(`Missing required file: ${relativePath}`);
+    return;
+  }
+
+  const html = fs.readFileSync(absolutePath, "utf8");
+  const scripts = [...html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*type=["']application\/ld\+json["'])[^>]*>([\s\S]*?)<\/script>/gi)];
+
+  scripts.forEach((match, index) => {
+    try {
+      new Function(match[1]);
+    } catch (error) {
+      errors.push(`${relativePath}: inline script ${index + 1} has invalid JavaScript: ${error.message}`);
+    }
+  });
+}
+
 function read(relativePath) {
   const absolutePath = path.join(root, relativePath);
   if (!fs.existsSync(absolutePath)) {
@@ -68,6 +87,8 @@ const indexHtml = read("index.html");
 const termsHtml = read("terms.html");
 read("privacy.html");
 read("thank-you.html");
+validateInlineScripts("international/index.html");
+validateInlineScripts("it/catalogo/index.html");
 const internationalHtml = read("international/index.html");
 const italianCatalogHtml = read("it/catalogo/index.html");
 

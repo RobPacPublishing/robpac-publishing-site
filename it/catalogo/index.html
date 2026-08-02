@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalogo Italiano | RobPac Publishing</title>
-  <meta name="description" content="Esplora il Catalogo Italiano RobPac Publishing: libri pubblicati in italiano per il pubblico italiano.">
+  <meta name="description" content="Esplora il Catalogo Italiano RobPac Publishing: narrativa, idee e conoscenza pubblicate in italiano.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.robpacpublishing.com/it/catalogo/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Catalogo Italiano | RobPac Publishing">
-  <meta property="og:description" content="Esplora il Catalogo Italiano RobPac Publishing: libri pubblicati in italiano per il pubblico italiano.">
+  <meta property="og:description" content="Esplora il Catalogo Italiano RobPac Publishing: narrativa, idee e conoscenza pubblicate in italiano.">
   <meta property="og:url" content="https://www.robpacpublishing.com/it/catalogo/">
   <meta property="og:image" content="https://www.robpacpublishing.com/assets/hero.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -43,7 +43,7 @@
   <header class="bg-gradient-to-br from-amber-50 via-white to-orange-50 border-b border-amber-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
       <p class="text-sm uppercase tracking-[.24em] font-bold text-amber-700 mb-4">Catalogo Italiano · Libri in italiano</p>
-      <h1 class="heading-font text-4xl lg:text-6xl font-black leading-tight max-w-5xl mb-5">Libri pubblicati in italiano per il pubblico italiano</h1>
+      <h1 class="heading-font text-4xl lg:text-6xl font-black leading-tight max-w-5xl mb-5">Storie, idee e conoscenza in italiano</h1>
       <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">Scopri narrativa, psicologia, benessere, spiritualità, cultura e conoscenza pratica nel catalogo editoriale italiano di RobPac Publishing.</p>
       <div class="mt-7 inline-flex items-center gap-3 rounded-full bg-white border border-amber-200 px-5 py-3 shadow-sm">
         <span class="font-black text-amber-700" id="catalogCount">0</span>
@@ -72,7 +72,7 @@
       <div>
         <p class="text-xs uppercase tracking-[.22em] font-bold text-amber-300 mb-2">RobPac Publishing</p>
         <h2 class="heading-font text-3xl font-bold mb-3">Cerchi i libri pubblicati in inglese?</h2>
-        <p class="text-gray-300 max-w-2xl">Un unico editore, due cataloghi distinti per lingua, pubblico e percorso editoriale.</p>
+        <p class="text-gray-300 max-w-2xl">Un unico editore, due cataloghi distinti per lingua e percorso editoriale.</p>
       </div>
       <a href="/international/" class="inline-flex justify-center bg-amber-600 hover:bg-amber-700 text-white px-7 py-3 rounded-full font-bold whitespace-nowrap">International Catalog →</a>
     </section>
@@ -144,7 +144,7 @@
         if (book.amazonLink) links.push('<a href="' + escapeHtml(book.amazonLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.amazon) + '</a>');
         if (book.payhipLink) links.push('<a href="' + escapeHtml(book.payhipLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.payhip) + '</a>');
         return '<article class="book-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">' +
-          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'"></div>' +
+          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=&quot;/covers/placeholder.svg&quot;"></div>' +
           '<div class="p-4 flex flex-col flex-grow"><p class="text-xs uppercase tracking-wide font-bold text-amber-700 mb-2">' + escapeHtml(book.subcategory || book.category || '') + '</p>' +
           '<h2 class="font-bold leading-snug mb-2">' + escapeHtml(book.title) + '</h2>' +
           '<p class="text-sm text-gray-500 mb-4">' + (book.author ? (("di ") + escapeHtml(book.author)) : '') + '</p>' +
