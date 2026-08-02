@@ -60,12 +60,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "RobPac Publishing",
-        "url": "https://www.robpacpublishing.com",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.robpacpublishing.com/?search={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
+        "url": "https://www.robpacpublishing.com"
     }
     </script>
     
@@ -679,7 +674,7 @@
                 <div class="hidden sm:block w-px h-12 bg-gray-300"></div>
                 <div>
                     <p class="text-3xl font-bold text-amber-600">✓</p>
-                    <p class="text-sm text-gray-600 font-medium">Quality Guaranteed</p>
+                    <p class="text-sm text-gray-600 font-medium">Independent Catalog</p>
                 </div>
             </div>
         </div>
@@ -763,15 +758,23 @@
                 <button onclick="backToChoice()" class="text-gray-600 mb-4">← Back to selection</button>
                 <div class="text-center mb-6">
                     <div class="text-6xl mb-4">📧</div>
-                    <h3 class="text-3xl font-black mb-2">Almost There!</h3>
-                    <p class="text-gray-600">Enter your email to receive: <span id="selectedEbookTitle" class="font-bold text-amber-600"></span></p>
+                    <h3 class="text-3xl font-black mb-2">Request Your Free eBook</h3>
+                    <p class="text-gray-600">Enter your details to request: <span id="selectedEbookTitle" class="font-bold text-amber-600"></span></p>
                 </div>
-                <form id="ebookDownloadForm" class="max-w-md mx-auto space-y-4">
+                <form id="ebookDownloadForm" method="POST" action="https://formsubmit.co/robpacpublishing@gmail.com" class="max-w-md mx-auto space-y-4">
                     <input type="hidden" id="selectedEbook" name="ebook" value="">
+                    <input type="hidden" id="formNext" name="_next" value="">
+                    <input type="hidden" name="_subject" value="New free eBook request from RobPac Publishing">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:outline-none">
                     <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:outline-none">
-                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-lg font-bold text-lg hover:from-amber-600 hover:to-orange-700">Send Me My Free eBook</button>
-                    <p class="text-center text-sm text-gray-500">🔒 100% Secure • No Spam • Unsubscribe Anytime</p>
+                    <label class="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
+                        <input type="checkbox" name="privacy_consent" value="accepted" required class="mt-1">
+                        <span>I have read the <a href="/privacy.html" target="_blank" rel="noopener" class="text-amber-700 underline">Privacy Policy</a> and consent to the processing of my data solely to handle this request.</span>
+                    </label>
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-lg font-bold text-lg hover:from-amber-600 hover:to-orange-700">Send My Request</button>
+                    <p class="text-center text-sm text-gray-500">Your details will be used only to process this request.</p>
                 </form>
             </div>
         </div>
@@ -831,8 +834,8 @@ function populateFeaturedCarousel() {
     const rest = books.filter(b => !bestsellers.includes(b) && !featured.includes(b));
     const list = [...bestsellers, ...featured, ...rest].slice(0, 10);
 
-    list.forEach((book, i) => {
-        const badge = isBestseller(book) || (bestsellers.length === 0 && i < 3)
+    list.forEach((book) => {
+        const badge = isBestseller(book)
             ? '<div class="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>'
             : (isFeatured(book)
                 ? '<div class="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEATURED</div>'
@@ -842,7 +845,7 @@ function populateFeaturedCarousel() {
             <div class="carousel-item featured-carousel-item">
                 <div class="book-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="openBookModal(${books.indexOf(book)})">
                     <div class="relative">
-                        <img src="${book.cover}" class="w-full h-64 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
+                        <img src="${book.cover}" alt="${escapeHtml(book.title)} cover" class="w-full h-64 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
                         ${badge}
                     </div>
                     <div class="p-4">
@@ -869,7 +872,7 @@ function displayBooks(booksToDisplay, reset = true) {
         const idx = books.indexOf(book);
         grid.innerHTML += `
             <div class="book-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="openBookModal(${idx})">
-                <img src="${book.cover}" class="w-full h-64 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
+                <img src="${book.cover}" alt="${escapeHtml(book.title)} cover" class="w-full h-64 object-contain bg-gray-100" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
                 <div class="p-4">
                     <h3 class="font-bold text-sm mb-1 line-clamp-2">${book.title}</h3>
                     <p class="text-gray-500 text-sm mb-2">by ${book.author}</p>
@@ -958,18 +961,18 @@ function openBookModal(idx) {
     const book = books[idx];
 
     const amazonBtn = book.amazonLink
-        ? `<a href="${book.amazonLink}" target="_blank" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy Paperback on Amazon</a>`
+        ? `<a href="${book.amazonLink}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-amber-600 text-white py-4 rounded-xl font-bold text-center hover:bg-amber-700">Buy Paperback on Amazon</a>`
         : '';
 
     const payhipBtn = book.payhipLink
-        ? `<a href="${book.payhipLink}" target="_blank" class="flex-1 bg-indigo-600 text-white py-4 rounded-xl font-bold text-center hover:bg-indigo-700">Buy eBook on Payhip</a>`
+        ? `<a href="${book.payhipLink}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-indigo-600 text-white py-4 rounded-xl font-bold text-center hover:bg-indigo-700">Buy eBook on Payhip</a>`
         : '';
 
     const buttons = [amazonBtn, payhipBtn].filter(Boolean).join('');
 
     document.getElementById('bookModalContent').innerHTML = `
         <div class="md:col-span-2">
-            <img src="${book.cover}" class="w-full rounded-xl shadow-lg" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
+            <img src="${book.cover}" alt="${escapeHtml(book.title)} cover" class="w-full rounded-xl shadow-lg" loading="lazy" decoding="async" onerror="this.src='/covers/placeholder.svg'">
         </div>
         <div class="md:col-span-3">
             <h2 class="text-3xl font-bold heading-font mb-2">${book.title}</h2>
@@ -1000,15 +1003,6 @@ function scrollCarousel(dir) {
 
 populateFeaturedCarousel();
 
-document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    alert('Thank you! Check your email for the download link.');
-    closeModal();
-});
-
-
-
 function openFreeEbookModal(type) {
     if(type !== undefined) {
         selectEbook(type);
@@ -1020,7 +1014,7 @@ function openFreeEbookModal(type) {
 }
 
 function selectEbook(type) {
-    document.getElementById('selectedEbook').value = type;
+    document.getElementById('selectedEbook').value = freeEbooks[type].title;
     document.getElementById('selectedEbookTitle').textContent = freeEbooks[type].title;
     document.getElementById('ebookChoice').style.display = 'none';
     document.getElementById('ebookForm').style.display = 'block';
@@ -1032,44 +1026,13 @@ function backToChoice() {
 }
 
 document.getElementById('ebookDownloadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = this.querySelector('input[name="name"]').value;
-    const email = this.querySelector('input[name="email"]').value;
-    const selectedEbook = document.getElementById('selectedEbook').value;
-    const ebookTitle = freeEbooks[selectedEbook].title;
-    
-    // Crea hidden form per FormSubmit
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://formsubmit.co/robpacpublishing@gmail.com';
-    form.style.display = 'none';
-    
-    const nameInput = document.createElement('input');
-    nameInput.type = 'hidden';
-    nameInput.name = 'name';
-    nameInput.value = name;
-    
-    const emailInput = document.createElement('input');
-    emailInput.type = 'hidden';
-    emailInput.name = 'email';
-    emailInput.value = email;
-    
-    const ebookInput = document.createElement('input');
-    ebookInput.type = 'hidden';
-    ebookInput.name = 'ebook';
-    ebookInput.value = ebookTitle;
-    
-    const redirectInput = document.createElement('input');
-    redirectInput.type = 'hidden';
-    redirectInput.name = '_next';
-    redirectInput.value = window.location.href;
-    
-    form.appendChild(nameInput);
-    form.appendChild(emailInput);
-    form.appendChild(ebookInput);
-    form.appendChild(redirectInput);
-    document.body.appendChild(form);
-    form.submit();
+    const selectedEbook = document.getElementById('selectedEbook').value.trim();
+    if (!selectedEbook) {
+        e.preventDefault();
+        alert('Please select a free eBook before submitting the form.');
+        return;
+    }
+    document.getElementById('formNext').value = new URL('/thank-you.html', window.location.origin).href;
 });
 
 // Free eBooks data - sincronizzato con modal
@@ -1098,7 +1061,7 @@ function renderFreeEbooks() {
             <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
             <h3 class="text-2xl font-bold mb-3">${ebook.title}</h3>
             <p class="text-gray-600 mb-6">${ebook.description}</p>
-            <button onclick="openFreeEbookModal(${idx})" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Download Free</button>
+            <button onclick="openFreeEbookModal(${idx})" class="bg-amber-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-amber-700">Request Free</button>
         </div>
     `).join('');
 }
@@ -1110,7 +1073,7 @@ function renderEbookChoice() {
             <div class="flex justify-center mb-4"><img src="${ebook.cover}" alt="${ebook.title} Cover" class="rounded-lg h-48 object-contain"></div>
             <h4 class="font-bold text-xl mb-2">${ebook.title}</h4>
             <p class="text-gray-600 text-sm mb-4">${ebook.description}</p>
-            <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Get This eBook</button>
+            <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700">Request This eBook</button>
         </div>
     `).join('');
 }
@@ -1121,8 +1084,8 @@ function renderEbookChoice() {
     <section class="py-20 bg-gradient-to-br from-purple-50 to-amber-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-black heading-font mb-4">Get Your Free eBook</h2>
-                <p class="text-xl text-gray-600">Download exclusive guides and start your reading journey today</p>
+                <h2 class="text-4xl font-black heading-font mb-4">Request a Free eBook</h2>
+                <p class="text-xl text-gray-600">Choose a guide and send us your request</p>
             </div>
             <div id="freeEbooksGrid" class="grid md:grid-cols-3 gap-8"></div>
         </div>
@@ -1196,9 +1159,9 @@ function renderEbookChoice() {
                         Over 100 titles across fiction, self-help, health, and more.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📘</a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📷</a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">🐦</a>
+                        <a href="https://www.facebook.com/robpacpublishing" target="_blank" rel="noopener noreferrer" aria-label="RobPac Publishing on Facebook" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📘</a>
+                        <a href="https://www.instagram.com/robpacpublishing" target="_blank" rel="noopener noreferrer" aria-label="RobPac Publishing on Instagram" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">📷</a>
+                        <a href="https://twitter.com/robpacpublish" target="_blank" rel="noopener noreferrer" aria-label="RobPac Publishing on X" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition text-xl">𝕏</a>
                     </div>
                 </div>
                 <div>
@@ -1208,19 +1171,20 @@ function renderEbookChoice() {
                         <li><a href="#books" class="hover:text-white transition">All Books</a></li>
                         <li><a href="#about" class="hover:text-white transition">About Us</a></li>
                         <li><a href="terms.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Categories</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">Fiction</a></li>
-                        <li><a href="#" class="hover:text-white transition">Self-Help</a></li>
-                        <li><a href="#" class="hover:text-white transition">Cookbooks</a></li>
+                        <li><a href="#books" class="hover:text-white transition">Fiction</a></li>
+                        <li><a href="/topics/stress-anxiety-emotional-balance/" class="hover:text-white transition">Self-Help</a></li>
+                        <li><a href="/topics/cookbooks-nutrition/" class="hover:text-white transition">Cookbooks</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2024 RobPac Publishing. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">© <span id="currentYear"></span> RobPac Publishing. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1230,6 +1194,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadBooks();
     renderFreeEbooks();
     renderEbookChoice();
+    const currentYear = document.getElementById('currentYear');
+    if (currentYear) currentYear.textContent = new Date().getFullYear();
 });
 </script>
 
