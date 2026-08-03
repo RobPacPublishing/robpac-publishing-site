@@ -232,7 +232,7 @@ const books = JSON.parse(read(booksPath));
 if (!Array.isArray(books)) throw new Error('books.json must contain an array.');
 let languageChanges = 0;
 for (const book of books) {
-  const inferred = book.category === 'In lingua italiana' ? 'it' : 'en';
+  const inferred = book.language || (book.category === 'In lingua italiana' ? 'it' : 'en');
   if (book.language !== inferred) {
     book.language = inferred;
     languageChanges += 1;
