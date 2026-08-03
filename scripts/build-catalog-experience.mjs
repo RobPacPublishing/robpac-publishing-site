@@ -71,30 +71,61 @@ function catalogPage({ lang, canonicalPath, title, description, eyebrow, heading
     .heading-font { font-family: 'Playfair Display', serif; }
     .book-card { transition: transform .25s ease, box-shadow .25s ease; }
     .book-card:hover { transform: translateY(-5px); box-shadow: 0 22px 44px rgba(0,0,0,.12); }
+
+    .mobile-menu > summary {
+      list-style: none;
+    }
+
+    .mobile-menu > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    @media (max-width: 639px) {
+      body {
+        overflow-x: hidden;
+      }
+    }
+
+    @media (max-width: 420px) {
+      #catalogGrid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-  <nav class="bg-white shadow-md sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-5">
-      <a href="/" class="flex items-center gap-3 min-w-0">
-        <img src="/assets/logo3senzasfondo.png" alt="RobPac Publishing" class="h-12 w-12 object-contain">
+  <nav class="bg-white shadow-md sticky top-0 z-40" role="navigation" aria-label="${isItalian ? 'Navigazione principale' : 'Main navigation'}">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 sm:gap-5">
+      <a href="/" class="flex flex-1 sm:flex-none items-center gap-3 min-w-0">
+        <img src="/assets/logo3senzasfondo.png" alt="RobPac Publishing" class="h-12 w-12 object-contain flex-none">
         <div class="min-w-0">
           <p class="heading-font text-xl sm:text-2xl font-bold text-amber-700 truncate">RobPac Publishing</p>
-          <p class="text-xs text-gray-500">${isItalian ? 'Casa editrice indipendente' : 'Independent Publishing House'}</p>
+          <p class="text-xs text-gray-500 truncate">${isItalian ? 'Casa editrice indipendente' : 'Independent Publishing House'}</p>
         </div>
       </a>
-      <div class="flex items-center gap-3 sm:gap-5 text-sm font-semibold">
+
+      <div class="hidden sm:flex items-center gap-5 text-sm font-semibold">
         <a href="/" class="text-gray-700 hover:text-amber-700">Home</a>
-        <a href="${crossHref}" class="hidden sm:inline text-gray-700 hover:text-amber-700">${crossLabel}</a>
+        <a href="${crossHref}" class="text-gray-700 hover:text-amber-700">${crossLabel}</a>
       </div>
+
+      <details class="mobile-menu relative flex-none sm:hidden">
+        <summary class="cursor-pointer rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-800" aria-label="${isItalian ? 'Apri il menu' : 'Open menu'}">
+          Menu
+        </summary>
+        <div class="absolute right-0 top-full z-50 mt-3 w-64 max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white p-3 shadow-xl">
+          <a href="/" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Home</a>
+          <a href="${crossHref}" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">${crossLabel}</a>
+        </div>
+      </details>
     </div>
   </nav>
 
   <header class="bg-gradient-to-br from-amber-50 via-white to-orange-50 border-b border-amber-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-18">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-18">
       <p class="text-sm uppercase tracking-[.24em] font-bold text-amber-700 mb-4">${escapeHtml(eyebrow)}</p>
-      <h1 class="heading-font text-4xl lg:text-6xl font-black leading-tight max-w-5xl mb-5">${escapeHtml(heading)}</h1>
-      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">${escapeHtml(intro)}</p>
+      <h1 class="heading-font text-3xl sm:text-4xl lg:text-6xl font-black leading-tight max-w-5xl mb-5">${escapeHtml(heading)}</h1>
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl">${escapeHtml(intro)}</p>
       <div class="mt-7 inline-flex items-center gap-3 rounded-full bg-white border border-amber-200 px-5 py-3 shadow-sm">
         <span class="font-black text-amber-700" id="catalogCount">0</span>
         <span class="text-sm text-gray-600">${escapeHtml(countLabel)}</span>
@@ -102,23 +133,23 @@ function catalogPage({ lang, canonicalPath, title, description, eyebrow, heading
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 mb-10">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-5 mb-8 sm:mb-10">
       <div class="grid md:grid-cols-[1fr_auto] gap-4 items-center">
         <label class="block">
           <span class="sr-only">${escapeHtml(searchLabel)}</span>
           <input id="catalogSearch" type="search" placeholder="${escapeHtml(searchLabel)}" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
         </label>
-        <select id="categoryFilter" class="border border-gray-300 rounded-xl px-4 py-3 bg-white min-w-[220px]">
+        <select id="categoryFilter" class="w-full md:w-auto md:min-w-[220px] border border-gray-300 rounded-xl px-4 py-3 bg-white">
           <option value="all">${escapeHtml(allLabel)}</option>
         </select>
       </div>
     </section>
 
-    <section id="catalogGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"></section>
+    <section id="catalogGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5"></section>
     <p id="emptyState" class="hidden text-center text-gray-600 py-16">${escapeHtml(emptyLabel)}</p>
 
-    <section class="mt-16 rounded-3xl bg-gray-900 text-white p-8 lg:p-10 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
+    <section class="mt-12 sm:mt-16 rounded-3xl bg-gray-900 text-white p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
       <div>
         <p class="text-xs uppercase tracking-[.22em] font-bold text-amber-300 mb-2">RobPac Publishing</p>
         <h2 class="heading-font text-3xl font-bold mb-3">${escapeHtml(crossCta)}</h2>
@@ -191,13 +222,13 @@ function catalogPage({ lang, canonicalPath, title, description, eyebrow, heading
       const empty = document.getElementById('emptyState');
       grid.innerHTML = filtered.map(book => {
         const links = [];
-        if (book.amazonLink) links.push('<a href="' + escapeHtml(book.amazonLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.amazon) + '</a>');
-        if (book.payhipLink) links.push('<a href="' + escapeHtml(book.payhipLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-bold text-sm">' + escapeHtml(labels.payhip) + '</a>');
+        if (book.amazonLink) links.push('<a href="' + escapeHtml(book.amazonLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-600 hover:bg-amber-700 text-white px-2 sm:px-3 py-2 rounded-lg font-bold text-xs sm:text-sm">' + escapeHtml(labels.amazon) + '</a>');
+        if (book.payhipLink) links.push('<a href="' + escapeHtml(book.payhipLink) + '" target="_blank" rel="noopener noreferrer" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-2 sm:px-3 py-2 rounded-lg font-bold text-xs sm:text-sm">' + escapeHtml(labels.payhip) + '</a>');
         return '<article class="book-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">' +
-          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-60 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=&quot;/covers/placeholder.svg&quot;"></div>' +
-          '<div class="p-4 flex flex-col flex-grow"><p class="text-xs uppercase tracking-wide font-bold text-amber-700 mb-2">' + escapeHtml(book.subcategory || book.category || '') + '</p>' +
-          '<h2 class="font-bold leading-snug mb-2">' + escapeHtml(book.title) + '</h2>' +
-          '<p class="text-sm text-gray-500 mb-4">' + (book.author ? ((${JSON.stringify(isItalian ? 'di ' : 'by ')}) + escapeHtml(book.author)) : '') + '</p>' +
+          '<div class="bg-gray-100"><img src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(book.title) + ' cover" class="w-full h-48 sm:h-60 object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=&quot;/covers/placeholder.svg&quot;"></div>' +
+          '<div class="p-3 sm:p-4 flex flex-col flex-grow"><p class="text-[0.68rem] sm:text-xs uppercase tracking-wide font-bold text-amber-700 mb-2">' + escapeHtml(book.subcategory || book.category || '') + '</p>' +
+          '<h2 class="text-sm sm:text-base font-bold leading-snug mb-2">' + escapeHtml(book.title) + '</h2>' +
+          '<p class="text-xs sm:text-sm text-gray-500 mb-4">' + (book.author ? ((${JSON.stringify(isItalian ? 'di ' : 'by ')}) + escapeHtml(book.author)) : '') + '</p>' +
           '<div class="mt-auto space-y-2">' + links.join('') + '</div></div></article>';
       }).join('');
       empty.classList.toggle('hidden', filtered.length !== 0);
@@ -293,8 +324,20 @@ indexHtml = indexHtml
   .replaceAll('independent publisher, self-help books, fiction novels, diet cookbooks, psychology books, Amazon KDP, free book chapters, wellness guides', 'independent publisher, international book catalog, Italian book catalog, books in English, libri in italiano, Amazon KDP')
   .replaceAll('Independent publishing house delivering quality content across fiction, self-help, health, and specialized non-fiction with over 100 titles on Amazon KDP.', 'Independent publishing house presenting two distinct editorial catalogs: books published in English and books published in Italian, each with its own editorial direction.');
 
-const oldNav = /<div class="hidden lg:flex[^"]*">[\s\S]*?<button onclick="openModal\(\)"[\s\S]*?<\/button>\s*<\/div>/;
-const newNav = `                <div class="hidden lg:flex items-center space-x-5">
+const oldNav = /    <!-- NAVBAR -->\n    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">[\s\S]*?\n    <\/nav>/;
+const newNav = `    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 gap-3">
+                <a href="#home" class="flex flex-1 min-w-0 items-center gap-3 sm:gap-4" aria-label="RobPac Publishing home">
+                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-12 w-12 sm:h-14 sm:w-14 object-contain flex-none" width="56" height="56">
+                    <div class="min-w-0">
+                        <p class="text-xl sm:text-2xl font-bold heading-font text-amber-700 truncate">RobPac Publishing</p>
+                        <p class="text-xs text-gray-500 truncate">Independent Publishing House</p>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-5">
                     <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition">Home</a>
                     <a href="/international/" class="text-gray-700 hover:text-amber-600 font-medium transition">International Catalog</a>
                     <a href="/it/catalogo/" class="text-gray-700 hover:text-amber-600 font-medium transition">Catalogo Italiano</a>
@@ -303,11 +346,29 @@ const newNav = `                <div class="hidden lg:flex items-center space-x-
                     <button onclick="openModal()" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition shadow-md" aria-label="Request a free eBook">
                         Free eBook
                     </button>
-                </div>`;
-if (!indexHtml.includes('href="/international/" class="text-gray-700 hover:text-amber-600 font-medium transition">International Catalog</a>')) {
-  indexHtml = replaceRegexRequired(indexHtml, oldNav, newNav, 'desktop navigation block');
-}
+                </div>
 
+                <details class="mobile-menu relative flex-none lg:hidden">
+                    <summary class="cursor-pointer rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-800" aria-label="Open navigation menu">
+                        ☰ Menu
+                    </summary>
+                    <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white p-3 shadow-xl">
+                        <a href="#home" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Home</a>
+                        <a href="/international/" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">International Catalog</a>
+                        <a href="/it/catalogo/" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Catalogo Italiano</a>
+                        <a href="#studio" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Studio</a>
+                        <a href="#about" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">About</a>
+                        <button onclick="openModal()" class="mt-2 w-full rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-3 font-bold text-white">
+                            Free eBook
+                        </button>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </nav>`;
+if (!indexHtml.includes('class="mobile-menu relative flex-none lg:hidden"')) {
+  indexHtml = replaceRegexRequired(indexHtml, oldNav, newNav, 'responsive homepage navigation block');
+}
 const oldHeroText = /                <div class="text-center lg:text-left">[\s\S]*?                <\/div>\n\n                <div class="hidden lg:block">/;
 const newHeroText = `                <div class="text-center lg:text-left">
                     <p class="text-sm font-bold uppercase tracking-[0.28em] text-amber-700 mb-5">RobPac Publishing</p>

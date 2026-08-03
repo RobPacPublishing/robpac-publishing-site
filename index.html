@@ -189,300 +189,39 @@
             background-clip: text;
         }
 
+        .mobile-menu > summary {
+            list-style: none;
+        }
+
+        .mobile-menu > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Single coherent mobile layout */
         @media (max-width: 640px) {
+            body {
+                overflow-x: hidden;
+            }
+
             #home {
                 min-height: auto;
             }
 
-            #home img {
-                object-position: center top;
-                transform: scale(1.02);
-            }
-
-            #home .text-5xl,
-            #home .text-6xl,
-            #home .text-7xl {
-                font-size: 2.35rem !important;
-                line-height: 1.08 !important;
-            }
-
-            #home .text-xl,
-            #home .text-2xl {
-                font-size: 1rem !important;
-                line-height: 1.5 !important;
-            }
-
-            #home .py-24,
-            #home .py-32 {
-                padding-top: 3.5rem !important;
-                padding-bottom: 3.5rem !important;
-            }
-
-            #booksGrid {
-                gap: 0.9rem !important;
-            }
-
-            #booksGrid .book-card img {
-                height: 13rem !important;
-            }
-
-            #booksGrid .book-card > div:last-child {
-                padding: 0.75rem !important;
-            }
-
-            #booksGrid .book-card h3 {
-                font-size: 0.86rem !important;
-                line-height: 1.22 !important;
-            }
-
-            #booksGrid .book-card p {
-                font-size: 0.75rem !important;
-                line-height: 1.35 !important;
-            }
-
-            #featuredCarousel .book-card img {
-                height: 15rem !important;
-            }
-        }
-
-
-        /* Mobile hero/card optimization v2 */
-        @media (max-width: 640px) {
-            body {
-                overflow-x: hidden;
-            }
-
-            #home {
-                min-height: 420px !important;
-                max-height: 460px !important;
-            }
-
-            #home img {
-                width: 100% !important;
-                height: 100% !important;
-                object-fit: cover !important;
-                object-position: 68% center !important;
-                transform: none !important;
-            }
-
             #home .max-w-7xl {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-
-            #home h1 {
-                font-size: 2rem !important;
-                line-height: 1.08 !important;
-                max-width: 92vw !important;
-                overflow-wrap: normal !important;
-                word-break: normal !important;
-                text-align: left !important;
-            }
-
-            #home p {
-                font-size: 0.95rem !important;
-                line-height: 1.35 !important;
-                max-width: 82vw !important;
-            }
-
-            #home a,
-            #home button {
-                width: 100% !important;
-                max-width: 230px !important;
-                padding: 0.9rem 1rem !important;
-                font-size: 0.95rem !important;
-                line-height: 1.25 !important;
-                margin-left: 0 !important;
-                margin-right: auto !important;
-            }
-
-            #home .flex {
-                align-items: flex-start !important;
-                gap: 0.9rem !important;
-            }
-
-            #booksGrid {
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-
-            #booksGrid .book-card img {
-                height: 11.5rem !important;
-            }
-
-            #featuredCarousel .book-card img {
-                height: 13rem !important;
-            }
-        }
-
-
-        /* Mobile final hero optimization */
-        @media (max-width: 640px) {
-            body {
-                overflow-x: hidden;
-            }
-
-            #home {
-                min-height: auto !important;
-                background: linear-gradient(135deg, #fff7ed 0%, #ffffff 48%, #ffedd5 100%) !important;
-            }
-
-            #home img {
-                display: none !important;
-            }
-
-            #home .absolute {
-                display: none !important;
-            }
-
-            #home .relative {
-                position: relative !important;
-            }
-
-            #home .max-w-7xl {
-                padding-left: 1.25rem !important;
-                padding-right: 1.25rem !important;
                 padding-top: 3rem !important;
                 padding-bottom: 3rem !important;
             }
 
             #home h1 {
-                color: #111827 !important;
-                text-shadow: none !important;
                 font-size: 2.15rem !important;
                 line-height: 1.08 !important;
-                text-align: center !important;
-                max-width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
             }
 
-            #home p {
-                color: #374151 !important;
-                text-shadow: none !important;
-                font-size: 1rem !important;
-                line-height: 1.45 !important;
-                text-align: center !important;
-                max-width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-
-            #home .flex {
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
-                gap: 0.85rem !important;
-            }
-
-            #home a,
-            #home button {
-                width: 100% !important;
-                max-width: 260px !important;
-                padding: 0.95rem 1rem !important;
-                font-size: 0.95rem !important;
-                line-height: 1.25 !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                text-align: center !important;
-            }
-
-            #booksGrid {
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-                gap: 0.9rem !important;
-            }
-
-            #booksGrid .book-card img {
-                height: 11.5rem !important;
-            }
-
-            #booksGrid .book-card > div:last-child {
-                padding: 0.75rem !important;
-            }
-
-            #booksGrid .book-card h3 {
-                font-size: 0.86rem !important;
-                line-height: 1.22 !important;
-            }
-
-            #booksGrid .book-card p {
-                font-size: 0.75rem !important;
-                line-height: 1.35 !important;
-            }
-
-            #featuredCarousel .book-card img {
-                height: 13rem !important;
-            }
-        }
-
-
-        /* Mobile: hide desktop hero completely */
-        @media (max-width: 640px) {
-            #home {
-                display: none !important;
-            }
-        }
-
-
-        /* Mobile featured carousel compact override */
-        @media (max-width: 640px) {
-            #featured {
-                padding-top: 3rem !important;
-                padding-bottom: 3rem !important;
-            }
-
-            #featured h2 {
-                font-size: 2.15rem !important;
-                line-height: 1.1 !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            #featuredCarousel {
-                padding-left: 0.5rem !important;
-                padding-right: 0.5rem !important;
-                gap: 0.75rem !important;
-            }
-
-            #featuredCarousel .featured-carousel-item {
-                flex: 0 0 48% !important;
-                max-width: 48% !important;
-            }
-
-            #featuredCarousel .book-card {
-                border-radius: 0.9rem !important;
-                box-shadow: 0 8px 18px rgba(0,0,0,0.10) !important;
-            }
-
-            #featuredCarousel .book-card img {
-                height: 10.5rem !important;
-            }
-
-            #featuredCarousel .book-card > div:last-child {
-                padding: 0.75rem !important;
-            }
-
-            #featuredCarousel .book-card h3 {
-                font-size: 0.82rem !important;
-                line-height: 1.18 !important;
-                margin-bottom: 0.35rem !important;
-            }
-
-            #featuredCarousel .book-card p {
-                font-size: 0.72rem !important;
-                line-height: 1.25 !important;
-                margin-bottom: 0.4rem !important;
-            }
-
-            #featuredCarousel .book-card span {
-                font-size: 0.66rem !important;
-                line-height: 1.15 !important;
-                padding: 0.25rem 0.45rem !important;
-            }
-
-            #featuredCarousel .book-card button,
-            #featuredCarousel .book-card a {
-                font-size: 0.78rem !important;
-                padding: 0.65rem 0.5rem !important;
-                border-radius: 0.55rem !important;
+            #home .flex a {
+                width: 100%;
+                max-width: 20rem;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
@@ -498,15 +237,16 @@
     <!-- NAVBAR -->
     <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-4">
-                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-14 w-14 object-contain" width="56" height="56">
-                    <div>
-                        <h1 class="text-2xl font-bold heading-font text-amber-700">RobPac Publishing</h1>
-                        <p class="text-xs text-gray-500">Independent Publishing House</p>
+            <div class="flex justify-between items-center h-20 gap-3">
+                <a href="#home" class="flex flex-1 min-w-0 items-center gap-3 sm:gap-4" aria-label="RobPac Publishing home">
+                    <img src="assets/logo3senzasfondo.png" alt="RobPac Publishing Logo - Independent Book Publisher" class="h-12 w-12 sm:h-14 sm:w-14 object-contain flex-none" width="56" height="56">
+                    <div class="min-w-0">
+                        <p class="text-xl sm:text-2xl font-bold heading-font text-amber-700 truncate">RobPac Publishing</p>
+                        <p class="text-xs text-gray-500 truncate">Independent Publishing House</p>
                     </div>
-                </div>
-                                <div class="hidden lg:flex items-center space-x-5">
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-5">
                     <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium transition">Home</a>
                     <a href="/international/" class="text-gray-700 hover:text-amber-600 font-medium transition">International Catalog</a>
                     <a href="/it/catalogo/" class="text-gray-700 hover:text-amber-600 font-medium transition">Catalogo Italiano</a>
@@ -516,6 +256,22 @@
                         Free eBook
                     </button>
                 </div>
+
+                <details class="mobile-menu relative flex-none lg:hidden">
+                    <summary class="cursor-pointer rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-bold text-amber-800" aria-label="Open navigation menu">
+                        ☰ Menu
+                    </summary>
+                    <div class="absolute right-0 top-full z-50 mt-3 w-72 max-w-[calc(100vw-2rem)] rounded-xl border border-gray-200 bg-white p-3 shadow-xl">
+                        <a href="#home" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Home</a>
+                        <a href="/international/" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">International Catalog</a>
+                        <a href="/it/catalogo/" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Catalogo Italiano</a>
+                        <a href="#studio" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">Studio</a>
+                        <a href="#about" class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-800">About</a>
+                        <button onclick="openModal()" class="mt-2 w-full rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-3 font-bold text-white">
+                            Free eBook
+                        </button>
+                    </div>
+                </details>
             </div>
         </div>
     </nav>
